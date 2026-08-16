@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this exploratory research notebook, please cite the repository and the underlying specialist corpora/publications relevant to the specific claim."
+title: "Cretan Language Research: Linear A Morphology and Minoan Linguistic Continuity"
+type: dataset
+authors:
+  - family-names: "Ferguson"
+    given-names: "Scott"
+version: 0.1.0
+date-released: 2026-08-16
+repository-code: "https://github.com/200even/cretan-language-research"
+keywords:
+  - Linear A
+  - Minoan
+  - Linear B
+  - historical linguistics
+  - Aegean epigraphy
+  - undeciphered scripts
