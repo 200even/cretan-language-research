@@ -1,0 +1,50 @@
+name: blind-affix-replication
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/rank-affixes.mjs'
+      - '.github/workflows/blind-affix-replication.yml'
+  workflow_dispatch:
+
+jobs:
+  rank-affixes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out research repository
+        uses: actions/checkout@v4
+
+      - name: Check out pinned Linear A Explorer corpus
+        shell: bash
+        run: |
+          git clone --quiet https://github.com/mwenge/lineara.xyz.git upstream-lineara
+          git -C upstream-lineara checkout --quiet 43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a
+          echo 'Upstream commit:'
+          git -C upstream-lineara rev-parse HEAD
+
+      - name: Run frozen blind affix ranking
+        run: |
+          node scripts/rank-affixes.mjs \
+            --corpus upstream-lineara/LinearAInscriptions.js \
+            --out-dir replication-output
+
+      - name: Record provenance
+        shell: bash
+        run: |
+          {
+            echo '# Replication provenance'
+            echo
+            echo '- research repo commit: `'"${GITHUB_SHA}"'`'
+            echo '- upstream corpus: `mwenge/lineara.xyz`'
+            echo '- upstream commit: `43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a`'
+            echo '- node: `'"$(node --version)"'`'
+            echo '- run: `'"${GITHUB_RUN_ID}"'`'
+          } > replication-output/PROVENANCE.md
+
+      - name: Upload frozen first-pass ranking
+        uses: actions/upload-artifact@v4
+        with:
+          name: blind-affix-ranking
+          path: replication-output/
+          if-no-files-found: error
