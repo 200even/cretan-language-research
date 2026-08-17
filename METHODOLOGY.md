@@ -29,6 +29,35 @@ For a candidate `X` ~ `X-SUFFIX` pair:
 - derived analytical databases are not allowed to create a form not present in the raw transcription;
 - comparable administrative positions matter more than raw edit distance.
 
+## Kober-grid protocol
+
+The current phase explicitly follows a Kober-style principle: **discover recurring internal structure before assigning language or meaning**.
+
+For a proposed paradigm grid:
+
+1. freeze the exact sign-level stem before semantic comparison;
+2. list every complete attested form that contains the stem at a plausible word boundary;
+3. record prefixes and suffixes without converting them into phonemes or grammatical labels;
+4. prefer same-tablet contrasts, then same-scribe contrasts, then cross-scribe/site replication;
+5. search for the same proposed affix on at least one independent stem;
+6. construct matched controls of similar sign length/frequency;
+7. only after the formal grid survives, test whether endings correlate with administrative role, geography, personnel, commodities, or other context;
+8. only after that stage compare external languages.
+
+A suffix is called **productive** only when the same sign-level extension is securely attached to at least two independent bases, unless an externally anchored paradigm supplies equivalent evidence.
+
+Current example: `PA-SE/PA-SE-JA` plus `KU-PA/KU-PA-JA` is stronger evidence for productive `-JA` morphology than a raw frequency count of words ending in `JA`.
+
+## Toponymic controls
+
+Place names are especially valuable because a stem can sometimes be identified independently of the undeciphered language.
+
+A toponym may enter the primary test only if its geographic identity is supported before the target morphology is scored, for example by secure Linear B continuity or strong specialist consensus.
+
+The next experiment is pre-registered in [`experiments/toponym-kober-grid.md`](experiments/toponym-kober-grid.md). Its primary anchors are Sybrita (`SU-KI-RI-TA`) and Phaistos (`PA-I-TO`).
+
+Toponymic endings known from Linear B are controls for what a real geographic paradigm looks like; they are **not** projected onto Linear A as Greek morphology.
+
 ## Evidence weighting
 
 ### Tier A — strong
@@ -79,9 +108,25 @@ Linear B is used primarily for:
 
 - positive controls on sign-value continuity;
 - known Minoan/pre-Greek names preserved in Mycenaean documents;
-- testing whether internal Linear A stems survive into later onomastics.
+- testing whether internal Linear A stems survive into later onomastics;
+- independently anchoring place names for controlled geographic morphology tests.
 
 A Linear B resemblance does **not** establish a Linear A translation. Greek morphological adaptation must be separated from inherited stem material.
+
+## External-language / contact-layer tests
+
+A proposed relationship to Sanskrit/Old Indo-Aryan, Hurrian, Anatolian, Semitic, Greek, Etruscan/Tyrsenian, or any other external language must use the same anti-overfitting standard as internal morphology.
+
+Minimum requirements for a sparse contact-layer claim:
+
+- more than isolated two-sign/short phonetic resemblances;
+- a coherent semantic cluster or recurrent morphology;
+- a positive-control corpus where the method can recover a known contact layer;
+- matched negative/null controls;
+- predeclared matching rules;
+- held-out or otherwise non-targeted confirmation where practical.
+
+The completed Mitanni Indo-Aryan pilot is recorded in [`experiments/mitanni-indo-aryan-pilot.md`](experiments/mitanni-indo-aryan-pilot.md). Its failure to show enrichment is treated as a negative result, not as a reason to loosen the matching rules.
 
 ## Computational safeguards
 
@@ -89,19 +134,23 @@ String similarity and AI-generated matches are treated as candidate generators o
 
 Particularly dangerous operations include:
 
-- unrestricted Levenshtein matching against desired Greek words;
+- unrestricted Levenshtein matching against desired external words;
 - allowing arbitrary internal sign substitutions;
 - treating analytical subword nodes as inscriptional words;
 - pooling scribes/sites without checking orthographic variation;
-- selecting only positive matches after inspecting the target.
+- selecting only positive matches after inspecting the target;
+- counting a substring match as though it were an independently segmented word;
+- using conventional Linear-B-derived readings as if they were exact Minoan phonetic transcriptions.
 
-Where practical, future tests should include negative controls and predeclared scoring rules.
+Where practical, tests should include negative controls, predeclared scoring rules, and a written pre-registration in `experiments/`.
 
 ## Versioning
 
 The initial exploration used `mwenge/lineara.xyz` at commit:
 
 `43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a`
+
+The morphology checkpoint of 2026-08-16 also used the current searchable `LinearAInscriptions.js` corpus as an exploration layer while checking individual forms against concordances/published discussions where possible.
 
 Any later rerun should record the upstream commit and note changed readings or classifications.
 
@@ -113,6 +162,8 @@ A lead should be downgraded immediately if:
 - a raw transcription contradicts a derived data layer;
 - scribal attribution accounts for the alternation;
 - an apparent word is only a substring;
-- additional attestations violate the proposed grammatical distribution.
+- additional attestations violate the proposed grammatical distribution;
+- a matched null/control set produces the same signal;
+- an apparent paradigm splits into personal-name, place-name, or unrelated lexical families under contextual checking.
 
 The desired outcome is not to preserve hypotheses. It is to preserve **auditability**.
