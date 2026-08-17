@@ -1,4 +1,4 @@
-# Frozen first-pass replication workflow. Do not tune scoring after seeing the first artifact.
+# Frozen first-pass replication workflow plus separately versioned sensitivity run.
 name: blind-affix-replication
 
 on:
@@ -24,28 +24,44 @@ jobs:
           echo 'Upstream commit:'
           git -C upstream-lineara rev-parse HEAD
 
-      - name: Run frozen blind affix ranking
+      - name: Reproduce frozen v0.1 ranking
         run: |
           node scripts/rank-affixes.mjs \
             --corpus upstream-lineara/LinearAInscriptions.js \
-            --out-dir replication-output
+            --out-dir replication-output-v0.1
+
+      - name: Run v0.2 obvious-logogram sensitivity analysis
+        run: |
+          node scripts/rank-affixes.mjs \
+            --corpus upstream-lineara/LinearAInscriptions.js \
+            --out-dir replication-output-v0.2 \
+            --exclude-obvious-logograms
 
       - name: Record provenance
         shell: bash
         run: |
-          {
-            echo '# Replication provenance'
-            echo
-            echo '- research repo commit: `'"${GITHUB_SHA}"'`'
-            echo '- upstream corpus: `mwenge/lineara.xyz`'
-            echo '- upstream commit: `43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a`'
-            echo '- node: `'"$(node --version)"'`'
-            echo '- run: `'"${GITHUB_RUN_ID}"'`'
-          } > replication-output/PROVENANCE.md
+          for dir in replication-output-v0.1 replication-output-v0.2; do
+            {
+              echo '# Replication provenance'
+              echo
+              echo '- research repo commit: `'"${GITHUB_SHA}"'`'
+              echo '- upstream corpus: `mwenge/lineara.xyz`'
+              echo '- upstream commit: `43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a`'
+              echo '- node: `'"$(node --version)"'`'
+              echo '- run: `'"${GITHUB_RUN_ID}"'`'
+            } > "$dir/PROVENANCE.md"
+          done
 
-      - name: Upload frozen first-pass ranking
+      - name: Upload frozen v0.1 reproduction
         uses: actions/upload-artifact@v4
         with:
-          name: blind-affix-ranking
-          path: replication-output/
+          name: blind-affix-ranking-v0.1
+          path: replication-output-v0.1/
+          if-no-files-found: error
+
+      - name: Upload v0.2 logogram sensitivity ranking
+        uses: actions/upload-artifact@v4
+        with:
+          name: blind-affix-ranking-v0.2-logogram-filter
+          path: replication-output-v0.2/
           if-no-files-found: error
