@@ -1,26 +1,70 @@
-# Lead: the `SI-DA-` family
+# Lead: the `SI-DA-` forms
 
-**Status:** high-priority paradigm candidate; lexical identity not yet proven.
+**Status:** wider unified paradigm downgraded/split; same-tablet ARKH 2 formal relationship survives strongly.
 
 ## Attested forms
 
-The current corpus search gives the following secure forms built around the sign sequence `SI-DA`:
+The corpus contains the following secure forms built around the sign sequence `SI-DA`:
 
-| Form | Attestation | Notes |
+| Form | Attestation | Current status |
 |---|---|---|
-| `SI-DA-TE` | ARKH 2.1 | administrative tablet |
-| `A-SI-DA-TO-I` | ARKH 2.2-3 | same tablet as `SI-DA-TE`; adds initial `A-` and changes the ending |
-| `SI-DA-RE` | HT 17.3; HT 122a.5 | two Haghia Triada administrative attestations |
-| `SI-DA-RO` | GO 2 | Gournia administrative tablet; hapax in the published discussion |
+| `SI-DA-TE` | ARKH 2.1 | **primary surviving lead** |
+| `A-SI-DA-TO-I` | ARKH 2.2-3 | **primary surviving lead; same tablet as `SI-DA-TE`** |
+| `SI-DA-RE` | HT 17.3; HT 122a.5 | comparison form only |
+| `SI-DA-RO` | GO 2 | comparison form only |
 
-The immediately striking comparison is on ARKH 2 itself:
+The strongest evidence is local:
 
 ```text
 SI-DA-TE
 A-SI-DA-TO-I
 ```
 
-Across the wider administrative corpus:
+Both occur on ARKH 2. This sharply reduces the probability that the resemblance is merely regional, chronological, or scribal coincidence.
+
+## What survives
+
+The evidence supports:
+
+> ARKH 2 contains two complete administrative words sharing `SI-DA` whose left and right margins differ in a structured way.
+
+That is a genuine formal relationship worth testing for morphology.
+
+The evidence does **not** currently justify combining every `SI-DA-*` word into the same lexeme or paradigm.
+
+## Result of the pre-registered geographic test
+
+The experiment in [`experiments/toponym-kober-grid.md`](../experiments/toponym-kober-grid.md) explicitly tested whether the wider `SI-DA-*` set forms a geographic/ethnic paradigm.
+
+It failed its support criterion.
+
+### `SI-DA-RO`
+
+The publication of GO 2 calls Cape Sidero/Sidaro a tempting comparison, but explicitly notes that it is doubtful Gournia would be auditing disbursements at such a distant place. The toponymic identification is therefore a hypothesis, not an anchor.
+
+### `SI-DA-RE`
+
+The same Gournia publication notes two distinct Haghia Triada contexts:
+
+- HT 17.3: connected with `VIN` / wine;
+- HT 122a.5: in a personnel list.
+
+An onomastic comparison with Linear B personal name `si-ta-ro` has also been reported in modern compilations. That possible continuity remains a useful competing explanation, but a primary specialist citation should be secured before promoting it.
+
+### ARKH 2
+
+ARKH 2 provides the secure pair:
+
+```text
+SI-DA-TE
+A-SI-DA-TO-I
+```
+
+The tablet also contains a `VINb` logogram and numerical entries, but there is currently no independent evidence connecting these forms to Cape Sidero or to the Haghia Triada `SI-DA-RE` contexts.
+
+## Revised model
+
+The previous graph:
 
 ```text
         SI-DA
@@ -30,59 +74,54 @@ Across the wider administrative corpus:
        A- ... -TO-I
 ```
 
-This is the closest current candidate to a Kober-style paradigm grid: a stable internal sign sequence recurring with several different margins, including a same-tablet prefixed/extended contrast.
+was too aggressive because it assumed lexical unity from sign overlap.
 
-## What can be claimed now
+The corrected model is:
 
-The evidence supports:
+```text
+PRIMARY FORMAL PAIR
 
-> `SI-DA` is a recurrent sign sequence embedded in several complete administrative words whose beginnings and endings vary systematically enough to justify treating them as a paradigm candidate.
+SI-DA-TE
+A-SI-DA-TO-I
+    ^^^^^
+  shared core
 
-The evidence does **not** yet support:
+COMPARISON ONLY
 
-- that all four forms belong to one lexeme;
-- that `A-` has a specific grammatical meaning;
-- that `-TE`, `-RE`, `-RO`, or `-TO-I` are case endings;
-- that the conventional syllabic readings reflect exact Minoan pronunciation.
+SI-DA-RE     HT 17 / HT 122a
+SI-DA-RO     GO 2
+```
 
-## Important counterevidence / alternative explanation
+The wider forms remain searchable comparisons, but they no longer contribute evidential weight to an ARKH 2 paradigm unless context or external identification independently reconnects them.
 
-`SI-DA-RE` has been compared with the Linear B personal name `si-ta-ro`, which makes an onomastic interpretation plausible for at least some attestations. In addition, the publication of GO 2 notes that `SI-DA-RO` resembles the place name Cape Sidero/Sidaro but treats the identification cautiously.
+## Why ARKH 2 remains valuable
 
-Those observations create three live alternatives:
-
-1. **true inflectional/derivational family:** all forms share one Minoan lexical stem;
-2. **onomastic family:** the sequence is productive primarily in personal/place names;
-3. **accidental convergence:** some forms share `SI-DA` without sharing lexical identity.
-
-The next experiment must discriminate among these rather than assuming option 1.
-
-## Why ARKH 2 is especially valuable
-
-Same-tablet contrasts receive high evidential weight in this project because they sharply reduce regional, chronological, and scribal explanations. ARKH 2 therefore deserves direct epigraphic checking before any semantic inference is made.
+Same-tablet contrasts receive high evidential weight in this project. The next useful work is therefore direct contextual and epigraphic analysis of ARKH 2 rather than adding more superficially similar `SI-DA-*` words.
 
 The minimum next checks are:
 
-- verify the sign shapes and segmentation of `SI-DA-TE` and `A-SI-DA-TO-I` directly against the facsimile/edition;
-- record neighboring entries, numerals, and logograms;
-- determine whether the two forms occupy parallel or contrasting administrative roles;
-- compare the `SI-DA-RE` contexts at HT 17 and HT 122a;
-- compare GO 2's `SI-DA-RO` context with the Haghia Triada examples.
+- verify sign shapes and segmentation of `SI-DA-TE` and `A-SI-DA-TO-I` directly against facsimile/GORILA;
+- reconstruct the association between each word, `VINb`, and the numbers 5, 12, 6, and 4;
+- determine whether the two words occupy parallel, contrastive, header, recipient, or commodity-modifying roles;
+- search for independent `A-X` pairs that reproduce whatever role the ARKH 2 prefix appears to mark;
+- search for exact ending families corresponding to `-TE` and `-TO-I` without assuming they are cases.
 
 ## Prediction
 
-If the `SI-DA-` forms constitute a true grammatical paradigm, their endings should correlate with recurring administrative or semantic roles more strongly than matched control words with the same edit distance.
+If the ARKH 2 pair is morphological, the `A-` and/or ending difference should correlate with a recurring structural distinction elsewhere in the administrative corpus.
 
-If the forms are mainly names, we should instead see them in personnel/toponymic positions and find supporting Linear B onomastic continuities.
+If no comparable structural distinction can be found, the pair may still be lexically related without being inflectional.
 
 ## Sources / provenance
 
-- LinA / Ancient Scripts Study sign concordance: `SI-DA-TE` ARKH 2.1; `SI-DA-RE` HT 17.3 and HT 122a.5; `A-SI-DA-TO-I` ARKH 2.2-3.
-- Watrous et al., “Excavations at Gournia, 2010–2012,” discussion of GO 2 and `SI-DA-RO`.
-- Published Linear A / Linear B onomastic comparisons for `SI-DA-RE` ~ `si-ta-ro` should be checked in the specialist literature before reclassifying the family as a name paradigm.
+- GORILA transcription of ARKH 2 for `SI-DA-TE` and `A-SI-DA-TO-I`.
+- LinA / Ancient Scripts Study sign concordance for attestations of `SI-DA-RE`, `SI-DA-RO`, and `SI-DA-TE`.
+- Watrous et al., “Excavations at Gournia, 2010–2012,” for the contexts of `SI-DA-RO` and `SI-DA-RE` and the cautious Cape Sidero comparison.
 
 ## Evidence tier
 
-**Tier A for the formal ARKH 2 contrast.**
+**Tier A:** the formal ARKH 2 `SI-DA-TE ~ A-SI-DA-TO-I` relationship.
 
-**Tier B for treating all `SI-DA-*` forms as one lexical paradigm until context and onomastic controls are completed.**
+**Comparison-only / unranked as one paradigm:** `SI-DA-RE` and `SI-DA-RO` until lexical identity is independently demonstrated.
+
+**Rejected:** treating all `SI-DA-*` forms as one geographic/ethnic paradigm on sign resemblance alone.
