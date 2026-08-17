@@ -106,17 +106,39 @@ This does not erase the structured ritual alternation, but it removes the basis 
 
 **Status:** **downgraded.** `-SI/-TI` may be lexically restricted, formula-specific, dialectal, phonological, or grammatical in a narrower construction. Function unknown.
 
-## 10. `SI-DA-*` as already-proven inflection
+## 10. A unified `SI-DA-*` paradigm
 
 **Original temptation:** `SI-DA-TE`, `SI-DA-RE`, `SI-DA-RO`, and `A-SI-DA-TO-I` visually form an unusually attractive Kober-style grid.
 
-**Countercontrols:**
+**Pre-registered control:** the toponymic Kober-grid experiment required evidence connecting more than one form to the same geographic/ethnic referent before the wider family could be promoted.
 
-- `SI-DA-RE` has a plausible Linear B personal-name continuation in `si-ta-ro`;
-- `SI-DA-RO` has been cautiously compared with Cape Sidero/Sidaro;
-- the ARKH 2 pair is formally strong, but contextual equivalence has not yet been established.
+**Result:** the family split under contextual checking.
 
-**Status:** **not rejected, but explicitly prevented from being promoted to proven inflection.** It remains a high-priority paradigm candidate in [`leads/SI-DA.md`](leads/SI-DA.md). The next experiment must test whether the family splits into personal-name, place-name, and unrelated lexical material.
+- ARKH 2 securely contains the same-tablet pair `SI-DA-TE ~ A-SI-DA-TO-I`.
+- `SI-DA-RO` on GO 2 is only tentatively compared with Cape Sidero/Sidaro; the publication itself raises a geographic objection.
+- `SI-DA-RE` occurs at HT 17.3 in a wine-related context and at HT 122a.5 in a personnel list.
+- no independent evidence currently ties those Haghia Triada/Gournia forms to the ARKH 2 pair as one lexeme.
+
+**Status:** **the unified paradigm is rejected/split.** The ARKH 2 pair remains a Tier A formal lead; `SI-DA-RE` and `SI-DA-RO` are comparison-only until lexical identity is independently demonstrated.
+
+See [`leads/SI-DA.md`](leads/SI-DA.md) and [`experiments/toponym-kober-grid.md`](experiments/toponym-kober-grid.md).
+
+## 11. Final `-JA` as a demonstrated geographic/genitive/ablative suffix
+
+**Original idea:** because `SU-KI-RI-TE-I-JA` is independently interpreted as an adjective/origin form derived from Sybrita `SU-KI-RI-TA`, final `JA` might itself mark “from,” “of,” ethnic adjective, genitive, or ablative function.
+
+**Pre-registered test:** require at least one additional geographically anchored `X -> X-JA` family beyond Sybrita.
+
+**Result:** the promotion criterion failed.
+
+- Sybrita is a real geographic derivative, but its formal change is `SU-KI-RI-TA -> SU-KI-RI-TE-I-JA`, not simple `X -> X-JA`.
+- Phaistos `PA-I-TO` is securely anchored and attested in Linear A, but no extended `PA-I-TO-...` form occurs in the current corpus.
+- `SE-TO-I-JA` is independently known as a place name in Linear B, but the current Linear A corpus does not provide a free base `SE-TO-I`; it cannot isolate final `JA` as a suffix.
+- exact administrative `PA-SE/PA-SE-JA` and `KU-PA/KU-PA-JA` pairs prove productivity but are semantically unanchored.
+
+**Status:** **rejected as a semantic assignment to `JA` alone.** Productive final `-JA` morphology survives strongly; its function remains unknown. A larger formation such as `-TE-I-JA` remains open.
+
+See [`leads/JA.md`](leads/JA.md) and [`experiments/toponym-kober-grid.md`](experiments/toponym-kober-grid.md).
 
 ---
 
