@@ -16,9 +16,12 @@ This file is intentionally prominent. A decipherment project that records only s
 
 **Original idea:** ritual `U-TI-NU` might be `U-TI + -NU`.
 
-**Problem discovered:** `U-TI` is independently segmented on HT 10b, but in the ritual formula the relevant signs occur inside the larger segmented word `TA-NA-I-*301-U-TI-NU` (and related variants).
+**Problems discovered:**
 
-**Status:** **downgraded.** A morpheme boundary before `U-TI` or `NU` remains possible, but the inscriptional segmentation does not prove it.
+- `U-TI` is independently segmented on HT 10b, but in the ritual formula the relevant signs occur inside the larger segmented word `TA-NA-I-*301-U-TI-NU` and related variants;
+- the apparent independent ritual `U-TI-NU` evidence from IO Za 11 is damaged: the secure reading is only `]-TI-NU`, not an intact free-standing `U-TI-NU`.
+
+**Status:** **downgraded.** A morpheme boundary before `U-TI` or `NU` remains possible, and `...U-TI-NU` remains a recurrent formulaic constituent, but the inscriptional evidence does not establish a free `U-TI-NU` word or an `U-TI + -NU` minimal pair.
 
 ## 3. Universal N-series declension (`X-NA / X-NE / X-NI / X-NU`)
 
@@ -66,6 +69,54 @@ This file is intentionally prominent. A decipherment project that records only s
 **Raw-transcription check:** HT 104 actually reads `DA-KU-SE-NE-TI`.
 
 **Status:** the derived reading is **rejected**, but the correction produced a stronger lead: cross-scribe `DA-KU-SE-NE` ~ `DA-KU-SE-NE-TI`.
+
+## 8. An obvious Mitanni-style Indo-Aryan layer in Linear A
+
+**Original idea:** because cuneiform Mitanni preserves a genuine but sparse Old Indo-Aryan superstrate, Linear A might contain a comparable Indo-Aryan lexical/religious layer even if the underlying Minoan language were unrelated.
+
+**Test:** a deliberately permissive pilot used ten Indo-Aryan/Mitanni-shaped targets derived from the known deity/numeral/equestrian package and compared exact whole-word Linear A hits against matched shuffled-syllable controls.
+
+**Primary result:**
+
+- target set: **3/10** hits;
+- matched shuffled controls: **2/10** hits;
+- one-sided Fisher exact test: **p = 0.50**.
+
+A more permissive treatment counting `SA-TA` as a possible satta/sapta-shaped match yields **4/10** versus **2/10**, still not meaningful enrichment (approximately **p = 0.31** under the same simple comparison).
+
+Short apparent hits such as `MI-TA`, `E-KA`, and `PA-ZA` therefore behave as expected chance resemblances in a large CV-syllabic corpus. Trivial permutations such as `TA-MI` also occur.
+
+**Status:** **rejected at pilot level.** No detectable Mitanni-style lexical package was found. This does not exclude an isolated Bronze Age loanword supported by independent context.
+
+Full record: [`experiments/mitanni-indo-aryan-pilot.md`](experiments/mitanni-indo-aryan-pilot.md).
+
+## 9. A general Linear A `-SI/-TI` inflectional opposition
+
+**Original idea:** the libation-formula variants `U-NA-KA-NA-SI` and `U-NA-RU-KA-NA-TI` might reveal a language-wide grammatical opposition between final `SI` and `TI`.
+
+**Cross-register test:** search ordinary administrative vocabulary for same-stem `X-SI/X-TI` pairs.
+
+**Result:** the obvious administrative candidates did not reproduce the opposition. Examples include:
+
+- `U-MI-NA-SI` without a corresponding `U-MI-NA-TI`;
+- `I-DU-NE-SI` without `I-DU-NE-TI`;
+- `PI-TA-KE-SI` without `PI-TA-KE-TI`.
+
+This does not erase the structured ritual alternation, but it removes the basis for calling `SI/TI` a general nominal or verbal paradigm.
+
+**Status:** **downgraded.** `-SI/-TI` may be lexically restricted, formula-specific, dialectal, phonological, or grammatical in a narrower construction. Function unknown.
+
+## 10. `SI-DA-*` as already-proven inflection
+
+**Original temptation:** `SI-DA-TE`, `SI-DA-RE`, `SI-DA-RO`, and `A-SI-DA-TO-I` visually form an unusually attractive Kober-style grid.
+
+**Countercontrols:**
+
+- `SI-DA-RE` has a plausible Linear B personal-name continuation in `si-ta-ro`;
+- `SI-DA-RO` has been cautiously compared with Cape Sidero/Sidaro;
+- the ARKH 2 pair is formally strong, but contextual equivalence has not yet been established.
+
+**Status:** **not rejected, but explicitly prevented from being promoted to proven inflection.** It remains a high-priority paradigm candidate in [`leads/SI-DA.md`](leads/SI-DA.md). The next experiment must test whether the family splits into personal-name, place-name, and unrelated lexical material.
 
 ---
 
