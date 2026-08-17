@@ -16,7 +16,7 @@ Repository/search starting point: https://www.repository.cam.ac.uk/
 
 **The Undeciphered Aegean Scripts** (Cambridge University Press, 2026), especially chapters on Linear A morphology, syntax, and orthography.
 
-Project use: combinatorial/contextual methodology; statistical identification of probable affixal behavior; regional/scribal orthographic controls.
+Project use: combinatorial/contextual methodology; statistical identification of probable affixal behavior; regional/scribal orthographic controls. Chapter 4 explicitly isolates a small set of signs highly likely to behave as prefixes/suffixes and identifies one suffix as especially compatible with genitive/ablative/toponymic-adjective function.
 
 Publisher: https://www.cambridge.org/
 
@@ -43,6 +43,28 @@ Open PDF starting point: https://ejournals.lib.uoc.gr/Ariadne/
 Project use: contextual identification of likely anthroponyms; `ku-pa3-nu` ~ Linear B `ka-pa3-no`; `ku-pa3-na-tu` ~ `ka-pa3-na-to`; scribal/orthographic cautions.
 
 Record: https://cris.unibo.it/handle/11585/795936
+
+## Geographic and contextual controls
+
+### Mnamon — Linear A examples and resources
+
+The Scuola Normale Superiore / CNR Mnamon resource provides curated script descriptions and selected inscription examples.
+
+Project use: external control for `SU-KI-RI-TA` (Sybrita) and the likely adjectival derivative `SU-KI-RI-TE-I-JA`; cross-checking which transliterations are purely conventional; links to SigLA, GORILA-related resources, and the PA-I-TO project.
+
+Resource: https://mnamon.sns.it/
+
+### Gournia excavation publication
+
+**“Excavations at Gournia, 2010–2012.”**
+
+Project use: publication context for GO 2 and the hapax `SI-DA-RO`; the discussion compares the form cautiously with Cape Sidero/Sidaro while noting contextual objections. This is used as an alternative hypothesis, not as a secure place-name identification.
+
+### PA-I-TO project / Linear B geographic control
+
+The PA-I-TO epigraphic project documents Linear B `pa-i-to` = Phaistos and corresponding ethnic/toponymic forms.
+
+Project use: positive control for what an independently anchored geographic paradigm looks like. Linear B Greek endings are not projected onto Linear A.
 
 ## Specific lexical transmission
 
@@ -78,12 +100,14 @@ Project use: methodological warning against treating all Pre-Greek material as a
 
 Project use: the proposal that Minoan contributed substantially to the vocabulary conventionally called “Pre-Greek,” potentially through Bronze Age adstratal contact.
 
-## Databases and editions
+## Databases, concordances, and editions
 
 - **GORILA** — Louis Godart & Jean-Pierre Olivier, *Recueil des inscriptions en linéaire A*.
 - **SigLA** — https://sigla.phis.me/
+- **Mnamon** — https://mnamon.sns.it/
 - **DĀMOS** — https://damos.hf.uio.no/
 - **Linear A Explorer** — https://github.com/mwenge/lineara.xyz
+- **LinA / Ancient Scripts Study sign concordance** — used as a secondary searchable index for exact sign-group attestations; individual high-value claims should still be checked against editions/facsimiles.
 
 ## Citation policy
 
