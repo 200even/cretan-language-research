@@ -1,8 +1,8 @@
 audit_id,priority,side,sign,v0_2_rank,v0_2_score,exact_pair,benchmark_state,audit_question,status
-AQ-RO-001,1,suffix,RO,1,6.649,"KI-DA ~ KI-DA-RO",new,"Same lexeme with productive -RO or onomastic/lexical coincidence?",pending
-AQ-RO-002,1,suffix,RO,1,6.649,"SA-MA ~ SA-MA-RO",new,"Same lexeme with productive -RO or onomastic/lexical coincidence?",pending
-AQ-RO-003,1,suffix,RO,1,6.649,"DI-NA ~ DI-NA-RO",new,"Same lexeme with productive -RO or onomastic/lexical coincidence?",pending
-AQ-RO-004,1,suffix,RO,1,6.649,"A-DA ~ A-DA-RO",new,"Same lexeme with productive -RO or onomastic/lexical coincidence?",pending
+AQ-RO-001,1,suffix,RO,1,6.649,"KI-DA ~ KI-DA-RO",rejected-control,"Same lexeme with productive -RO or onomastic/lexical coincidence?","rejected-damaged-base"
+AQ-RO-002,1,suffix,RO,1,6.649,"SA-MA ~ SA-MA-RO",reclassified-control,"Same lexeme with productive -RO or onomastic/lexical coincidence?","reclassified-onomastic-risk"
+AQ-RO-003,1,suffix,RO,1,6.649,"DI-NA ~ DI-NA-RO",rejected-control,"Same lexeme with productive -RO or onomastic/lexical coincidence?","rejected-damaged-base"
+AQ-RO-004,1,suffix,RO,1,6.649,"A-DA ~ A-DA-RO",Tier-B-candidate,"Same lexeme with productive -RO or onomastic/lexical coincidence?","survives-formal-audit"
 AQ-JA-001,2,suffix,JA,2,4.977,"PA-SE ~ PA-SE-JA",Tier-A-positive,"Revalidate context and attach primary-edition references",validated-seed
 AQ-JA-002,2,suffix,JA,2,4.977,"KU-PA ~ KU-PA-JA",Tier-A-positive,"Revalidate context and attach primary-edition references",validated-seed
 AQ-JA-003,2,suffix,JA,2,4.977,"A-SE ~ A-SE-JA",new,"Secure boundaries; comparable contexts; same lexical identity?",pending
