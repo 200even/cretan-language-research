@@ -1,294 +1,231 @@
-# Cretan Language Research
+# Linear A Morphology Benchmark
 
-**Exploratory, reproducible research on Linear A morphology, Minoan-to-Mycenaean linguistic continuity, and Pre-Greek survivals.**
+**A reproducible, epigraphically audited framework for testing morphological claims in Linear A.**
 
-> **Status:** Research notebook, not a decipherment.
->
-> **Current strongest general formal result:** final `-JA` behaves as productive morphology in at least two independent administrative stem pairs (`PA-SE/PA-SE-JA`, `KU-PA/KU-PA-JA`). Its semantic function remains unknown.
->
-> **Current strongest local paradigm candidate:** the same-tablet ARKH 2 pair `SI-DA-TE ~ A-SI-DA-TO-I`. The wider `SI-DA-RE/RO` forms are now comparison-only after a pre-registered geographic test failed to unify them.
+Linear A remains undeciphered. This repository does not propose a decipherment or identify the underlying Minoan language. It addresses a narrower prerequisite:
 
-## Author's note
+> **When two Linear A sign groups look morphologically related, how strong is the evidence that the relationship is real?**
 
-I am **not formally trained in Aegean epigraphy, historical linguistics, Mycenaean philology, or Bronze Age archaeology**. My professional background is in software engineering and technical product work. I am publishing these notes because the computational and methodological parts of the problem are unusually amenable to transparent, reproducible analysis.
+The project combines automated candidate discovery with inscription-level audit. Positive results, false positives, damaged readings, onomastic families, scribal confounds, and failed hypotheses are all preserved in a versioned benchmark so that proposed morphology can be reproduced and challenged rather than selected retrospectively.
 
-That lack of formal disciplinary training is a reason to apply **more methodological restraint, not less**. The working rules of this project are therefore:
+## Why this project exists
 
-- prefer inscription-internal and corpus-wide evidence over attractive etymological resemblance;
-- trace every claimed form back to a securely segmented inscriptional word;
-- record site, object, scribe, neighboring words, quantities, and logograms where available;
-- require cross-scribe evidence whenever a proposed alternation could instead be a scribal habit;
-- distinguish **orthographic**, **morphological**, **syntactic**, **phonological**, and **semantic** claims;
-- publish negative results and rejected hypotheses alongside surviving leads;
-- treat derived database classifications as hypotheses and check them against raw sign-by-sign transcriptions;
-- use Linear B or later Greek only as external controls after an internal Linear A pattern has been established;
-- avoid assigning translations when the evidence supports only a structural relationship;
-- pre-register high-risk semantic/external-language tests where practical;
-- state uncertainty explicitly and invite correction from specialists.
+Computational work on Linear A is unusually vulnerable to false patterns. The corpus is small, heterogeneous, partly fragmentary, and rich in personal names, place names, fixed formulae, commodity notation, and regional or scribal variation.
 
-This repository is best read as **open research infrastructure and a falsifiable lead log**.
+A string-level comparison can therefore produce an apparently excellent paradigm even when:
 
-## Morphology checkpoint — 2026-08-16
+- a word boundary is damaged;
+- a cleaned transcription has silently removed the damage marker;
+- a database-derived substring is mistaken for an inscriptional word;
+- two related-looking forms are actually personal names;
+- a pattern is confined to one scribe or genre;
+- a short CV sequence matches by chance.
 
-A corpus-wide extension of the earlier libation-formula work produced several important changes in direction.
+The central rule of this repository is simple:
 
-### 1. Productive final `-JA`
+**Discovery is computational. Promotion is epigraphic.**
 
-Two administrative bare/extended pairs survive the strict morphology filter:
+A candidate does not become evidence for morphology until its forms, boundaries, damage state, provenance, and context have been audited.
 
-- `PA-SE` (HT 18.1; HT 27b.5) ~ `PA-SE-JA` (HT Wc 3001-3002)
-- `KU-PA` (HT 110a.2; HT We 1020a; ZA 11a.5/b.3) ~ `KU-PA-JA` (HT 116a.1-2)
+## Current project status
 
-The same sign is added to two independent complete bases in ordinary administrative texts. That is stronger evidence for productive morphology than raw final-sign frequency.
+### Benchmark
 
-**Current assessment:** **Tier A formal morphology; function unknown.**
+[`BENCHMARK.md`](BENCHMARK.md) defines the evidence model. Machine-readable adjudications live in:
 
-A pre-registered geographic test did **not** support glossing final `JA` as “from,” genitive, ablative, ethnic adjective, or toponymic adjective. Sybrita provides a real geographic derivative `SU-KI-RI-TA -> SU-KI-RI-TE-I-JA`, but the semantic contribution cannot be isolated to `JA` alone.
+- [`data/morphology-benchmark.csv`](data/morphology-benchmark.csv) — accepted, candidate, rejected, and reclassified relationships;
+- [`data/morphology-audit-queue.csv`](data/morphology-audit-queue.csv) — candidates awaiting manual audit;
+- [`data/validated-leads.csv`](data/validated-leads.csv) — detailed inscription-level observations used by the current research leads.
 
-See [`leads/JA.md`](leads/JA.md) and [`experiments/toponym-kober-grid.md`](experiments/toponym-kober-grid.md).
+The benchmark deliberately includes negative examples. A morphology system that recovers attractive positives while also reproducing known damage artifacts is not considered successful.
 
-### 2. ARKH 2 `SI-DA-TE ~ A-SI-DA-TO-I`
+### Blind affix-ranking experiment
 
-ARKH 2 contains the same-tablet formal pair:
+The first automated experiment was frozen before comparison with Brent Davis's 2026 morphology analysis.
 
-- `SI-DA-TE` — ARKH 2.1
-- `A-SI-DA-TO-I` — ARKH 2.2-3
+The independent ranking uses:
 
-This remains a strong local morphology candidate because both forms occur on the same administrative tablet.
+- position of signs at word beginnings and endings;
+- exact whole-word relationships of the form `X ~ A-X` and `X ~ X-A`;
+- no proposed translation;
+- no external-language matching;
+- no hand-coded knowledge of Davis's reported affix identities.
 
-The earlier attempt to enlarge this into a single grid with:
+Protocol and results:
 
-- `SI-DA-RE` — HT 17.3; HT 122a.5
-- `SI-DA-RO` — GO 2
+- [`experiments/davis-2026-affix-replication.md`](experiments/davis-2026-affix-replication.md)
+- [`scripts/rank-affixes.mjs`](scripts/rank-affixes.mjs)
+- GitHub Actions workflow: [`.github/workflows/blind-affix-replication.yml`](.github/workflows/blind-affix-replication.yml)
 
-has been **downgraded**. The pre-registered geographic experiment failed to connect those forms to one place or role: `SI-DA-RO` is only tentatively compared with Cape Sidero/Sidaro, and `SI-DA-RE` occurs in differing wine/personnel contexts.
+The first pass and a separately versioned logogram-filter sensitivity run both recover strong edge signals for several signs. The important result is not the ranking alone, but what happens after audit.
 
-**Current assessment:** Tier A formal ARKH 2 pair; `SI-DA-RE/RO` comparison-only until lexical identity is independently demonstrated.
+### Example: why the audit layer matters
 
-See [`leads/SI-DA.md`](leads/SI-DA.md).
-
-### 3. External-language matching moved downstream
-
-A deliberately permissive pilot tested whether Linear A contains an obvious Mitanni-style Old Indo-Aryan package. Ten Indo-Aryan-shaped targets produced **3/10** whole-word hits versus **2/10** matched shuffled controls (one-sided Fisher exact **p = 0.50**). A more permissive variant still failed to show meaningful enrichment.
-
-Short matches such as `MI-TA`, `E-KA`, and `PA-ZA` therefore behave like expected chance resemblances in a large CV-syllabic corpus rather than a coherent contact-language signal.
-
-**Current assessment:** no detectable Mitanni-style Indo-Aryan lexical package in this pilot.
-
-See [`experiments/mitanni-indo-aryan-pilot.md`](experiments/mitanni-indo-aryan-pilot.md).
-
-### 4. A general `-SI/-TI` opposition did not replicate
-
-The libation-formula alternation remains structurally interesting, but same-stem administrative searches did not produce a general `X-SI/X-TI` paradigm. The stronger language-wide interpretation is therefore withdrawn.
-
-See [`REJECTED_HYPOTHESES.md`](REJECTED_HYPOTHESES.md).
-
-## Current research leads
-
-### 1. Productive final `-JA`
-
-**Assessment:** strongest current evidence for a productive suffix/final morphological element; semantic function unknown.
-
-See [`leads/JA.md`](leads/JA.md).
-
-### 2. ARKH 2 `SI-DA-TE ~ A-SI-DA-TO-I`
-
-**Assessment:** strongest same-tablet Kober-style formal pair currently under investigation. Wider `SI-DA-*` unity is not assumed.
-
-See [`leads/SI-DA.md`](leads/SI-DA.md).
-
-### 3. The `DA-KU-` family and possible `-TI`
-
-**Assessment:** strong formal lead, but `-TI` should not be generalized to a language-wide `-SI/-TI` opposition.
-
-On HT 103, Scribe 3 writes:
-
-- `DA-KU-NA`
-- `DA-KU-SE-NE`
-- `DA-KU-SE-NE`
-
-A bare `DA-KU` is independently attested on the Selakanos bronze double axe, although that object is too different in genre to establish an administrative paradigm by itself.
-
-On HT 104, Scribe 5 writes:
-
-- `DA-KU-SE-NE-TI 45 1/2`
-
-alongside:
-
-- `I-DU-TI 20 1/2`
-- `PA-DA-SU-TI 29`
-
-The cross-scribe alternation `DA-KU-SE-NE ~ DA-KU-SE-NE-TI` remains valuable. What failed was the broader claim that final `SI` and `TI` constitute a general Linear A paradigm.
-
-See [`leads/DA-KU.md`](leads/DA-KU.md).
-
-### 4. `*21F-TU` ~ `*21F-TU-NE`
-
-**Assessment:** strong evidence for a real formal relationship; grammatical function unknown.
-
-At Haghia Triada, Scribe 9 writes both the bare and extended forms:
-
-- HT 94b: `*21F-TU`
-- HT 87: `*21F-TU-NE`
-
-A second scribe independently writes:
-
-- HT 7b, Scribe 11: `*21F-TU-NE`
-
-See [`leads/21F-TU.md`](leads/21F-TU.md).
-
-### 5. The `KU-PA3-` family
-
-**Assessment:** strong lexical/onomastic family; weak evidence that `-NU` is ordinary nominal inflection.
-
-Secure forms include:
-
-- `KU-PA3`
-- `KU-PA3-NU`
-- `KU-PA3-PA3`
-- `KU-PA3-NA-TU`
-- `KU-PA3-RI-JA`
-
-Published comparisons connect Linear A `ku-pa3-nu` with Linear B `ka-pa3-no`, and `ku-pa3-na-tu` with `ka-pa3-na-to`. That favors Minoan personal-name formation / onomastics over a universal `-NU` case suffix.
-
-See [`leads/KU-PA3.md`](leads/KU-PA3.md).
-
-## Completed controlled experiments
-
-### Mitanni Indo-Aryan pilot
-
-**Outcome:** negative. No enrichment over matched shuffled controls.
-
-[`experiments/mitanni-indo-aryan-pilot.md`](experiments/mitanni-indo-aryan-pilot.md)
-
-### Toponymic Kober grid
-
-**Outcome:** useful negative refinement.
-
-- `-JA` remains productive morphology, but a geographic/ablative/genitive meaning was not demonstrated.
-- the wider `SI-DA-*` geographic paradigm failed and was split;
-- the ARKH 2 pair survives independently.
-
-[`experiments/toponym-kober-grid.md`](experiments/toponym-kober-grid.md)
-
-## Important negative results
-
-This project deliberately records hypotheses that failed stronger controls:
-
-- **No simple Linear A `ELUT-/E-RE-U-` precursor** was found for Mycenaean `e-re-u-ti-ja` / Eileithyia under conservative Linear A -> Linear B correspondence assumptions.
-- `U-TI / U-TI-NU` is **not** a secure minimal pair; IO Za 11 does not supply an intact free-standing `U-TI-NU`.
-- The apparent `NA/NE/NI/NU` mega-paradigm largely collapses when derived graph nodes, fragmentary words, genre differences, and scribal habits are filtered out.
-- `KU-PA3-NU` is better treated as part of an onomastic family than as evidence for a generic `-NU` suffix.
-- A general **`-SI/-TI` inflectional opposition** did not replicate in administrative same-stem pairs.
-- A permissive **Mitanni Indo-Aryan pilot** produced no enrichment over matched controls.
-- Final **`-JA` cannot currently be glossed as a geographic/genitive/ablative marker** despite the Sybrita derivative.
-- The wider **`SI-DA-*` geographic/ethnic paradigm is rejected/split**; only the ARKH 2 pair retains strong formal status.
-
-See [`REJECTED_HYPOTHESES.md`](REJECTED_HYPOTHESES.md).
-
-## Next experiments
-
-The controlled results now point back toward **administrative context**, not external etymology.
-
-### A. Determine the function of `-JA`
-
-For every secure `X/X-JA` pair:
-
-- reconstruct full tablet/roundel context;
-- identify whether the forms behave as person, place, commodity, recipient, origin, transaction label, or another class where possible;
-- compare numerical/logographic neighbors;
-- search for additional exact pairs;
-- test whether `-JA` predicts a recurring structural role.
-
-### B. Resolve the ARKH 2 pair
-
-For `SI-DA-TE / A-SI-DA-TO-I`:
-
-- check the facsimile/GORILA segmentation directly;
-- map the two forms against `VINb` and the numbers 5, 12, 6, 4;
-- search for independent `A-X` prefix pairs and `-TE/-TO-I` ending families;
-- determine whether the contrast predicts a recurring administrative role.
-
-No external-language identification is needed for either experiment.
-
-## Method
-
-The workflow is modeled on the conservative side of combinatorial decipherment:
-
-1. **Start with securely segmented inscriptional words**, not substrings generated by analytical graphs.
-2. Require a proposed stem to contain at least two syllabograms when testing suffix alternation.
-3. Record tablet/vessel, site, scribe, preceding/following words, and numerical/logographic context.
-4. Compare forms only in plausibly equivalent syntactic or administrative positions.
-5. Reject a proposed alternation when it is restricted to one scribe and can plausibly be orthographic.
-6. Prefer same-tablet and same-scribe contrasts; next prefer cross-scribe replication at the same site.
-7. Require at least two independent stems before calling an affix productive unless an externally anchored paradigm supplies equivalent evidence.
-8. Use matched controls and pre-registered criteria for semantic/cross-language tests.
-9. Only after an internal pattern survives do we compare Linear B, first-millennium Greek, or proposed substrate/contact vocabulary.
-10. Assign no lexical meaning unless independent contextual evidence supports it.
-
-Full protocol: [`METHODOLOGY.md`](METHODOLOGY.md).
-
-## Data provenance and connected projects
-
-The main searchable corpus used during this exploratory work is Michael Wengler's **Linear A Explorer / lineara.xyz** repository:
-
-- [`mwenge/lineara.xyz`](https://github.com/mwenge/lineara.xyz)
-- initial analyses were checked against upstream commit [`43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a`](https://github.com/mwenge/lineara.xyz/commit/43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a) (2026-08-03)
-
-That project in turn draws principally on published GORILA transcription/image material and other scholarly tabulations. It is an extremely useful exploration layer, but this repository **does not treat its derived transaction or relation graphs as primary evidence** when they disagree with the underlying inscription transcription.
-
-Other resources connected to the research include:
-
-- [SigLA](https://sigla.phis.me/) — systematic paleographic database for Linear A
-- [Mnamon](https://mnamon.sns.it/) — script resources and selected Linear A examples
-- [DAMOS](https://damos.hf.uio.no/) — searchable Linear B / Mycenaean database
-- scholarly work by Ester Salgarella, Brent Davis, Miguel Valerio, Rose Thomas, Anna P. Judson, Jose Miguel Jimenez Delgado, Robert Beekes, and others listed in [`SOURCES.md`](SOURCES.md)
-
-See [`UPSTREAM.md`](UPSTREAM.md) for provenance rules and external-project links.
-
-## Repository structure
+The blind pipeline ranked final `RO` as its strongest suffix candidate and generated four apparent exact pairs:
 
 ```text
-README.md
-METHODOLOGY.md
-REJECTED_HYPOTHESES.md
-SOURCES.md
-UPSTREAM.md
+KI-DA  ~ KI-DA-RO
+SA-MA  ~ SA-MA-RO
+DI-NA  ~ DI-NA-RO
+A-DA   ~ A-DA-RO
+```
+
+Manual epigraphic review split those four cases:
+
+- two short base forms were created by damage information being flattened in the computational corpus;
+- one pair is better treated as a likely onomastic/lexical comparison;
+- one pair, `A-DA ~ A-DA-RO`, survives as a genuine Tier B formal candidate.
+
+See [`audits/RO.md`](audits/RO.md).
+
+This is the behavior the benchmark is designed to measure. A high statistical score may identify a real distributional phenomenon while the apparent supporting paradigms still fail inscription-level scrutiny.
+
+## Current benchmark-positive morphology
+
+The seed benchmark is intentionally conservative. Its strongest formal positives currently include:
+
+| Relationship | Assessment | What it supports |
+|---|---|---|
+| `PA-SE ~ PA-SE-JA` | Tier A | exact final `JA` extension |
+| `KU-PA ~ KU-PA-JA` | Tier A | independent exact final `JA` extension |
+| `*21F-TU ~ *21F-TU-NE` | Tier A | same-scribe bare/extended contrast with cross-scribe replication |
+| `DA-KU-SE-NE ~ DA-KU-SE-NE-TI` | Tier A | exact final `TI` extension across scribes |
+| `SI-DA-TE ~ A-SI-DA-TO-I` | Tier B | strong same-tablet formal relationship; function unresolved |
+| `A-DA ~ A-DA-RO` | Tier B | secure cross-site formal relationship; lexical identity unresolved |
+
+These are **structural observations**, not translations. For example, the evidence that `JA` behaves productively does not establish that it means "from," "of," or any other grammatical category.
+
+## Research strategy
+
+The project follows a grammar-first, combinatorial approach:
+
+1. identify recurring formal relationships without choosing a language family;
+2. preserve exact inscriptional provenance and damage state;
+3. test candidates across scribes, sites, and genres;
+4. use negative controls and rejected cases to estimate false-positive behavior;
+5. infer grammatical function only when a form predicts a recurring administrative or syntactic role;
+6. compare external languages only after the internal structural prediction exists.
+
+This makes the project useful even if no lexical item is ever translated. A reliable constraint on Linear A morphology is already information that future decipherment hypotheses must explain.
+
+Full methodology: [`METHODOLOGY.md`](METHODOLOGY.md).
+
+## Reproduce the affix ranking
+
+The exploratory corpus is currently pinned to Michael Wengler's `mwenge/lineara.xyz` at commit:
+
+```text
+43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a
+```
+
+After checking out that version, run:
+
+```bash
+node scripts/rank-affixes.mjs \
+  --corpus /path/to/lineara.xyz/LinearAInscriptions.js \
+  --out-dir replication-output
+```
+
+For the separately versioned sensitivity analysis that removes known logogram labels:
+
+```bash
+node scripts/rank-affixes.mjs \
+  --corpus /path/to/lineara.xyz/LinearAInscriptions.js \
+  --out-dir replication-output-logogram-filter \
+  --exclude-known-logograms
+```
+
+GitHub Actions runs the same procedure against the pinned upstream commit and records the resulting artifact and provenance.
+
+## Data provenance
+
+This repository is **not** an authoritative edition of Linear A.
+
+The evidence hierarchy is:
+
+1. published inscription/facsimile editions, especially GORILA;
+2. specialist transcription and paleographic resources such as SigLA;
+3. published linguistic and contextual scholarship;
+4. computational corpora and derived analytical layers;
+5. this project's own inference.
+
+`lineara.xyz` is used as a highly productive searchable computational substrate, but cleaned or derived data never outrank the underlying inscription. The `RO` audit demonstrates why that distinction matters.
+
+See [`UPSTREAM.md`](UPSTREAM.md) and [`SOURCES.md`](SOURCES.md).
+
+## Repository map
+
+```text
+BENCHMARK.md                       benchmark definition and evidence tiers
+METHODOLOGY.md                     research protocol
+REJECTED_HYPOTHESES.md             failed and downgraded hypotheses
+SOURCES.md                         working bibliography
+UPSTREAM.md                        corpus provenance and source hierarchy
+
+scripts/
+  rank-affixes.mjs                 reproducible candidate-ranking pipeline
+
+data/
+  morphology-benchmark.csv         machine-readable adjudicated benchmark
+  morphology-audit-queue.csv       pending audit queue
+  validated-leads.csv              validated inscription observations
+
+audits/
+  RO.md                            audit of the first blind top-ranked suffix
+
+experiments/
+  davis-2026-affix-replication.md  blinded affix replication protocol/results
+  mitanni-indo-aryan-pilot.md      negative external-language pilot
+  toponym-kober-grid.md            pre-registered geographic morphology test
+
 leads/
-  21F-TU.md
   JA.md
   SI-DA.md
-  KU-PA3.md
   DA-KU.md
-experiments/
-  mitanni-indo-aryan-pilot.md
-  toponym-kober-grid.md
-data/
-  validated-leads.csv
+  21F-TU.md
+  KU-PA3.md
 ```
 
 ## What would count as progress?
 
-The goal is **not** to announce a translation of Linear A from isolated resemblances. Useful progress would be narrower:
+Useful contributions include:
 
-- demonstrate a suffix across independent stems and scribes;
-- show that the suffix predicts a recurring syntactic role;
-- distinguish an inflection from a derivational or onomastic ending;
-- identify an orthographic rule that survives regional/scribal controls;
-- reproduce a known Linear A -> Linear B continuity using rules learned without targeting it;
-- use independently anchored place names to falsify or constrain a grammatical hypothesis;
-- falsify an appealing hypothesis before it becomes a decipherment claim.
+- a newly validated morphological pair;
+- a convincing rejection of an apparent pair;
+- recovery of a recurring grammatical role for an affix;
+- proof that a candidate is instead onomastic, orthographic, regional, or scribal;
+- preservation of damage metadata that eliminates computational false positives;
+- successful independent replication of published morphology results;
+- a corpus-version comparison showing why two analyses disagree.
 
-## Corrections and specialist review
+A failed hypothesis is therefore a result if it narrows the space of defensible analyses.
 
-Corrections are welcome, especially concerning sign readings, scribal attribution, GORILA segmentation, administrative syntax, Linear B parallels, and existing scholarship that anticipates a lead recorded here.
+## Contributing and specialist review
 
-If a proposed lead is already established in the literature, the correct outcome is to **credit that work and reclassify the item from "lead" to "replication."**
+Corrections are welcome, especially from researchers working in Aegean epigraphy, Linear A palaeography, Mycenaean philology, Bronze Age administration, historical linguistics, or computational corpus methods.
 
-## AI use
+The most useful contributions are precise and falsifiable: inscription ID, reading, source/edition, proposed correction, and whether the correction strengthens, weakens, or invalidates an existing benchmark row.
 
-AI tools have been used to assist with corpus searching, alignment, hypothesis generation, source discovery, and drafting. They are **not treated as authorities**. Every serious claim is intended to remain traceable to inscriptional data or cited scholarship, and AI-generated pattern matches are subjected to the same rejection criteria as human-generated ones.
+See [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
-## License and reuse
+If a result in this repository is already established in the literature, it should be credited and reclassified as a **replication**, not presented as a new discovery.
 
-The analysis and original prose in this research notebook may be reused with attribution. Source corpora, inscription images, transcriptions, and scholarly publications remain subject to their respective copyrights and licenses. This repository links to upstream materials rather than republishing protected source content wholesale.
+## Scope and non-claims
+
+This repository does **not** claim:
+
+- a decipherment of Linear A;
+- that Minoan belongs to a particular language family;
+- that conventional Linear B-derived sign values reproduce exact Minoan pronunciation;
+- that a statistically edge-enriched sign is automatically a grammatical affix;
+- that a formal morphological relationship supplies a translation.
+
+The intended contribution is narrower:
+
+> **make Linear A morphology claims easier to reproduce, falsify, compare, and improve.**
+
+## Author and AI-assisted research
+
+This is an independent research project by Scott Ferguson, whose professional background is in software engineering and technical product work rather than Aegean epigraphy or historical linguistics. That is a reason for the project to expose its evidence and invite specialist correction, not to lower the evidentiary standard.
+
+AI tools have been used for corpus exploration, hypothesis generation, source discovery, coding assistance, and drafting. AI output is not treated as evidence. Claims are promoted only through traceable inscriptional data, reproducible computation, and cited scholarship.
