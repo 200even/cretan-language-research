@@ -1,3 +1,4 @@
+# Frozen first-pass replication workflow. Do not tune scoring after seeing the first artifact.
 name: blind-affix-replication
 
 on:
