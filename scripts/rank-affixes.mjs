@@ -11,9 +11,27 @@ const getArg = (name, fallback = null) => {
 
 const corpusPath = getArg('--corpus');
 const outDir = getArg('--out-dir', 'data/generated');
+const excludeObviousLogograms = args.includes('--exclude-obvious-logograms');
+
+// Named commodity/logographic labels that can occur inside hyphenated upstream
+// tokens and therefore passed the v0.1 typographic word filter. This list is
+// intentionally conservative and defines a sensitivity analysis, not a claim
+// to be a complete classification of all Linear A non-phonographic signs.
+const OBVIOUS_LOGOGRAM_LABELS = new Set([
+  'AROM',
+  'CAP',
+  'CYP',
+  'GAL',
+  'GRA',
+  'OLE',
+  'OLIV',
+  'VIN',
+  'VIR',
+  'VS',
+]);
 
 if (!corpusPath) {
-  console.error('Usage: node scripts/rank-affixes.mjs --corpus /path/to/LinearAInscriptions.js [--out-dir data/generated]');
+  console.error('Usage: node scripts/rank-affixes.mjs --corpus /path/to/LinearAInscriptions.js [--out-dir data/generated] [--exclude-obvious-logograms]');
   process.exit(2);
 }
 
@@ -33,8 +51,8 @@ const isNumeric = s =>
   /^\d+\/\d+$/.test(s) ||
   /^[¼½¾⅓⅔⅛⅜⅝⅞]+$/.test(s);
 
-// Mechanical completeness filter. This is intentionally stricter than the
-// upstream corpus and is part of the frozen first-pass replication protocol.
+// Mechanical completeness filter. With no sensitivity flag this reproduces
+// the frozen v0.1 behavior. The optional obvious-logogram exclusion is v0.2.
 const isCompleteSyllabicWord = raw => {
   const s = normalize(raw);
   if (!s || s === '\n' || isNumeric(s)) return false;
@@ -45,6 +63,7 @@ const isCompleteSyllabicWord = raw => {
 
   const parts = s.split('-').filter(Boolean);
   if (parts.length < 2) return false;
+  if (excludeObviousLogograms && parts.some(part => OBVIOUS_LOGOGRAM_LABELS.has(part))) return false;
 
   return parts.every(part =>
     /^(?:[A-Z]+(?:[₀₁₂₃₄₅₆₇₈₉]+)?|\*\d+[A-Z]?)$/.test(part)
@@ -257,6 +276,7 @@ const top = (side, count = 15) => ranked.filter(row => row.side === side).slice(
 
 let markdown = '# Blind affix-ranking output\n\n';
 markdown += `Corpus file: \`${path.basename(corpusPath)}\`\n\n`;
+markdown += `Sensitivity mode: **${excludeObviousLogograms ? 'v0.2 obvious-logogram exclusion' : 'v0.1 frozen mechanical filter'}**.\n\n`;
 markdown += `Secure syllabic word tokens analyzed: **${occurrences.length}**; unique forms: **${forms.size}**.\n\n`;
 markdown += 'Ranking combines sign enrichment at the relevant word edge with a modest bonus for exact whole-word extension pairs `X ~ A-X` or `X ~ X-A`. It does not use Davis\'s published affix identities.\n\n';
 
