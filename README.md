@@ -4,9 +4,9 @@
 
 > **Status:** Research notebook, not a decipherment.
 >
-> **Current strongest formal result:** final `-JA` behaves as productive morphology in at least two independent administrative stem pairs (`PA-SE/PA-SE-JA`, `KU-PA/KU-PA-JA`).
+> **Current strongest general formal result:** final `-JA` behaves as productive morphology in at least two independent administrative stem pairs (`PA-SE/PA-SE-JA`, `KU-PA/KU-PA-JA`). Its semantic function remains unknown.
 >
-> **Current highest-priority paradigm candidate:** the administrative `SI-DA-*` family, especially same-tablet `SI-DA-TE` ~ `A-SI-DA-TO-I`, with `SI-DA-RE` and `SI-DA-RO` as wider comparison forms. Unified lexical identity remains unproven.
+> **Current strongest local paradigm candidate:** the same-tablet ARKH 2 pair `SI-DA-TE ~ A-SI-DA-TO-I`. The wider `SI-DA-RE/RO` forms are now comparison-only after a pre-registered geographic test failed to unify them.
 
 ## Author's note
 
@@ -23,13 +23,14 @@ That lack of formal disciplinary training is a reason to apply **more methodolog
 - treat derived database classifications as hypotheses and check them against raw sign-by-sign transcriptions;
 - use Linear B or later Greek only as external controls after an internal Linear A pattern has been established;
 - avoid assigning translations when the evidence supports only a structural relationship;
+- pre-register high-risk semantic/external-language tests where practical;
 - state uncertainty explicitly and invite correction from specialists.
 
 This repository is best read as **open research infrastructure and a falsifiable lead log**.
 
 ## Morphology checkpoint — 2026-08-16
 
-A corpus-wide extension of the earlier libation-formula work produced three important changes in direction.
+A corpus-wide extension of the earlier libation-formula work produced several important changes in direction.
 
 ### 1. Productive final `-JA`
 
@@ -42,22 +43,27 @@ The same sign is added to two independent complete bases in ordinary administrat
 
 **Current assessment:** **Tier A formal morphology; function unknown.**
 
-See [`leads/JA.md`](leads/JA.md).
+A pre-registered geographic test did **not** support glossing final `JA` as “from,” genitive, ablative, ethnic adjective, or toponymic adjective. Sybrita provides a real geographic derivative `SU-KI-RI-TA -> SU-KI-RI-TE-I-JA`, but the semantic contribution cannot be isolated to `JA` alone.
 
-### 2. `SI-DA-*` as a Kober-style paradigm candidate
+See [`leads/JA.md`](leads/JA.md) and [`experiments/toponym-kober-grid.md`](experiments/toponym-kober-grid.md).
 
-The administrative corpus contains:
+### 2. ARKH 2 `SI-DA-TE ~ A-SI-DA-TO-I`
+
+ARKH 2 contains the same-tablet formal pair:
 
 - `SI-DA-TE` — ARKH 2.1
 - `A-SI-DA-TO-I` — ARKH 2.2-3
+
+This remains a strong local morphology candidate because both forms occur on the same administrative tablet.
+
+The earlier attempt to enlarge this into a single grid with:
+
 - `SI-DA-RE` — HT 17.3; HT 122a.5
 - `SI-DA-RO` — GO 2
 
-The ARKH 2 pair is especially valuable because the two forms occur on the same tablet. Across the corpus, the stable `SI-DA` sequence appears with several different margins.
+has been **downgraded**. The pre-registered geographic experiment failed to connect those forms to one place or role: `SI-DA-RO` is only tentatively compared with Cape Sidero/Sidaro, and `SI-DA-RE` occurs in differing wine/personnel contexts.
 
-However, the family is **not** treated as proven inflection. `SI-DA-RE` may be onomastic and has been compared with Linear B `si-ta-ro`; `SI-DA-RO` has been cautiously compared with Cape Sidero/Sidaro. The family may therefore split into personal-name, place-name, and/or lexical material.
-
-**Current assessment:** Tier A formal same-tablet contrast; Tier B unified paradigm hypothesis.
+**Current assessment:** Tier A formal ARKH 2 pair; `SI-DA-RE/RO` comparison-only until lexical identity is independently demonstrated.
 
 See [`leads/SI-DA.md`](leads/SI-DA.md).
 
@@ -71,6 +77,12 @@ Short matches such as `MI-TA`, `E-KA`, and `PA-ZA` therefore behave like expecte
 
 See [`experiments/mitanni-indo-aryan-pilot.md`](experiments/mitanni-indo-aryan-pilot.md).
 
+### 4. A general `-SI/-TI` opposition did not replicate
+
+The libation-formula alternation remains structurally interesting, but same-stem administrative searches did not produce a general `X-SI/X-TI` paradigm. The stronger language-wide interpretation is therefore withdrawn.
+
+See [`REJECTED_HYPOTHESES.md`](REJECTED_HYPOTHESES.md).
+
 ## Current research leads
 
 ### 1. Productive final `-JA`
@@ -79,9 +91,9 @@ See [`experiments/mitanni-indo-aryan-pilot.md`](experiments/mitanni-indo-aryan-p
 
 See [`leads/JA.md`](leads/JA.md).
 
-### 2. The `SI-DA-*` family
+### 2. ARKH 2 `SI-DA-TE ~ A-SI-DA-TO-I`
 
-**Assessment:** strongest current Kober-style paradigm candidate; must survive onomastic/toponymic controls.
+**Assessment:** strongest same-tablet Kober-style formal pair currently under investigation. Wider `SI-DA-*` unity is not assumed.
 
 See [`leads/SI-DA.md`](leads/SI-DA.md).
 
@@ -89,7 +101,7 @@ See [`leads/SI-DA.md`](leads/SI-DA.md).
 
 **Assessment:** strong formal lead, but `-TI` should not be generalized to a language-wide `-SI/-TI` opposition.
 
-On HT 103, Scribe 3 writes in closely parallel numerical positions:
+On HT 103, Scribe 3 writes:
 
 - `DA-KU-NA`
 - `DA-KU-SE-NE`
@@ -101,14 +113,12 @@ On HT 104, Scribe 5 writes:
 
 - `DA-KU-SE-NE-TI 45 1/2`
 
-alongside two other parallel entries ending in `-TI`:
+alongside:
 
 - `I-DU-TI 20 1/2`
 - `PA-DA-SU-TI 29`
 
-The three amounts sum to the tablet total `KU-RO 95`.
-
-The cross-scribe alternation `DA-KU-SE-NE` ~ `DA-KU-SE-NE-TI` remains valuable. What failed was the broader claim that final `SI` and `TI` constitute a general Linear A paradigm.
+The cross-scribe alternation `DA-KU-SE-NE ~ DA-KU-SE-NE-TI` remains valuable. What failed was the broader claim that final `SI` and `TI` constitute a general Linear A paradigm.
 
 See [`leads/DA-KU.md`](leads/DA-KU.md).
 
@@ -116,12 +126,12 @@ See [`leads/DA-KU.md`](leads/DA-KU.md).
 
 **Assessment:** strong evidence for a real formal relationship; grammatical function unknown.
 
-At Haghia Triada, Scribe 9 writes both the bare and extended forms in separate administrative tablets:
+At Haghia Triada, Scribe 9 writes both the bare and extended forms:
 
 - HT 94b: `*21F-TU`
 - HT 87: `*21F-TU-NE`
 
-A second scribe independently writes the extended form:
+A second scribe independently writes:
 
 - HT 7b, Scribe 11: `*21F-TU-NE`
 
@@ -143,6 +153,24 @@ Published comparisons connect Linear A `ku-pa3-nu` with Linear B `ka-pa3-no`, an
 
 See [`leads/KU-PA3.md`](leads/KU-PA3.md).
 
+## Completed controlled experiments
+
+### Mitanni Indo-Aryan pilot
+
+**Outcome:** negative. No enrichment over matched shuffled controls.
+
+[`experiments/mitanni-indo-aryan-pilot.md`](experiments/mitanni-indo-aryan-pilot.md)
+
+### Toponymic Kober grid
+
+**Outcome:** useful negative refinement.
+
+- `-JA` remains productive morphology, but a geographic/ablative/genitive meaning was not demonstrated.
+- the wider `SI-DA-*` geographic paradigm failed and was split;
+- the ARKH 2 pair survives independently.
+
+[`experiments/toponym-kober-grid.md`](experiments/toponym-kober-grid.md)
+
 ## Important negative results
 
 This project deliberately records hypotheses that failed stronger controls:
@@ -153,24 +181,35 @@ This project deliberately records hypotheses that failed stronger controls:
 - `KU-PA3-NU` is better treated as part of an onomastic family than as evidence for a generic `-NU` suffix.
 - A general **`-SI/-TI` inflectional opposition** did not replicate in administrative same-stem pairs.
 - A permissive **Mitanni Indo-Aryan pilot** produced no enrichment over matched controls.
-- The attractive `SI-DA-*` grid is **not yet permitted to count as proven inflection** until personal-name/place-name alternatives are tested.
+- Final **`-JA` cannot currently be glossed as a geographic/genitive/ablative marker** despite the Sybrita derivative.
+- The wider **`SI-DA-*` geographic/ethnic paradigm is rejected/split**; only the ARKH 2 pair retains strong formal status.
 
 See [`REJECTED_HYPOTHESES.md`](REJECTED_HYPOTHESES.md).
 
-## Next experiment: geographic Kober grid
+## Next experiments
 
-The next step was pre-registered before inspecting the full geographic outcome set.
+The controlled results now point back toward **administrative context**, not external etymology.
 
-Primary anchors:
+### A. Determine the function of `-JA`
 
-- `SU-KI-RI-TA` / `SU-KI-RI-TE-I-JA`, anchored through Sybrita;
-- `PA-I-TO`, anchored through Linear B Phaistos.
+For every secure `X/X-JA` pair:
 
-The test asks whether productive endings such as `-JA` are enriched in forms expressing origin, association, possession, ethnicity, or another relational role, while using matched non-toponymic controls.
+- reconstruct full tablet/roundel context;
+- identify whether the forms behave as person, place, commodity, recipient, origin, transaction label, or another class where possible;
+- compare numerical/logographic neighbors;
+- search for additional exact pairs;
+- test whether `-JA` predicts a recurring structural role.
 
-No Sanskrit, Greek, Hurrian, Luwian, Semitic, Etruscan, or other lexical matching is allowed while building the internal geographic grid.
+### B. Resolve the ARKH 2 pair
 
-Pre-registration: [`experiments/toponym-kober-grid.md`](experiments/toponym-kober-grid.md).
+For `SI-DA-TE / A-SI-DA-TO-I`:
+
+- check the facsimile/GORILA segmentation directly;
+- map the two forms against `VINb` and the numbers 5, 12, 6, 4;
+- search for independent `A-X` prefix pairs and `-TE/-TO-I` ending families;
+- determine whether the contrast predicts a recurring administrative role.
+
+No external-language identification is needed for either experiment.
 
 ## Method
 
@@ -183,9 +222,9 @@ The workflow is modeled on the conservative side of combinatorial decipherment:
 5. Reject a proposed alternation when it is restricted to one scribe and can plausibly be orthographic.
 6. Prefer same-tablet and same-scribe contrasts; next prefer cross-scribe replication at the same site.
 7. Require at least two independent stems before calling an affix productive unless an externally anchored paradigm supplies equivalent evidence.
-8. Only after an internal pattern survives do we compare Linear B, first-millennium Greek, or proposed substrate/contact vocabulary.
-9. Assign no lexical meaning unless independent contextual evidence supports it.
-10. Pre-register high-risk semantic/cross-language tests where practical.
+8. Use matched controls and pre-registered criteria for semantic/cross-language tests.
+9. Only after an internal pattern survives do we compare Linear B, first-millennium Greek, or proposed substrate/contact vocabulary.
+10. Assign no lexical meaning unless independent contextual evidence supports it.
 
 Full protocol: [`METHODOLOGY.md`](METHODOLOGY.md).
 
@@ -237,7 +276,7 @@ The goal is **not** to announce a translation of Linear A from isolated resembla
 - distinguish an inflection from a derivational or onomastic ending;
 - identify an orthographic rule that survives regional/scribal controls;
 - reproduce a known Linear A -> Linear B continuity using rules learned without targeting it;
-- use independently anchored place names to recover a grammatical relation;
+- use independently anchored place names to falsify or constrain a grammatical hypothesis;
 - falsify an appealing hypothesis before it becomes a decipherment claim.
 
 ## Corrections and specialist review
