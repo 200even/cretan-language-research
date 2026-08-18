@@ -1,0 +1,27 @@
+benchmark_id,expectation,rationale
+MB-RO-001,exclude_damage,known damaged base
+MB-RO-002,exclude_damage,known damaged base
+MB-TE-001,exclude_damage,known insecure boundaries
+MB-TE-003,exclude_damage,known damaged base
+MB-TE-005,exclude_damage,known broken base boundary
+MB-TE-006,exclude_damage,known damaged base
+MB-RE-002,exclude_damage,known damaged base
+MB-RE-003,exclude_damage,known damaged base
+MB-RE-004,exclude_damage,known damaged variant
+MB-RE-005,exclude_damage,known damaged base
+MB-RE-006,exclude_damage,known damaged base
+MB-A-001,exclude_damage,known doubly fragmentary base
+MB-A-007,exclude_damage,known damaged base
+MB-A-008,exclude_damage,known damaged forms
+MB-I-002,exclude_damage,known damaged prefixed form
+MB-I-004,exclude_damage,known damaged base
+MB-I-006,exclude_damage,known damaged prefixed form
+MB-I-007,exclude_damage,known damaged prefixed form
+MB-TI-002,exclude_damage,known damaged variant
+MB-TI-005,exclude_damage,known damaged forms
+MB-A-002,retain_secure,Tier A KA-RU ~ A-KA-RU
+MB-A-006,retain_secure,Tier A SI-KI-RA ~ A-SI-KI-RA
+MB-A-009,retain_secure,Tier A same-tablet TA-NA-TE ~ A-TA-NA-TE
+MB-I-005,retain_secure,Tier A QA-*118 ~ I-QA-*118
+MB-I-008,retain_secure,Tier A DA-MA-TE ~ I-DA-MA-TE
+MB-TI-001,retain_secure,Tier A DA-KU-SE-NE ~ DA-KU-SE-NE-TI
