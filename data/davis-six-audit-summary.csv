@@ -1,0 +1,8 @@
+element,side,blind_v0_2_rank,automatic_pairs,secure_tier_a,secure_tier_b,secure_comparison_or_reclassified,damage_or_insecure_boundary_failures,other_failures_or_unverified,notes
+A,prefix,1,8,2,2,0,3,1,"Independent same-tablet TA-NA-TE ~ A-TA-NA-TE adds a further Tier-A replication outside the eight automatic pairs"
+I,prefix,4,8,2,1,1,4,0,"TA-JA ~ I-TA-JA reclassified for strong contextual/lexical mismatch"
+RO,suffix,1,4,0,1,1,2,0,"RO remains strongly edge-enriched despite weak exact-pair survival"
+TE,suffix,4,6,0,1,1,4,0,"One damage-failed mechanical pair retains independent literature-based morphology relevance"
+RE,suffix,7,6,0,1,0,5,0,"Only secure automatic pair is strongly onomastic/derivational"
+TI,suffix,11,5,1,2,0,2,0,"DA-KU-SE-NE-TI retained with explicit alternative-segmentation caveat"
+TOTAL,, ,37,5,8,3,20,1,"20/37 = 54.1% of automatic pairs fail specifically because a relevant word boundary is damaged or insecure; categories reflect first-pass benchmark adjudication"
