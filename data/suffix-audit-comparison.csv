@@ -6,3 +6,6 @@ RA,3,3,2,0,0,1,1,1,not-established,"v0.5 source reconciliation removes the appar
 QE,,2,1,0,1,0,0,1,not-established,"v0.5 removes fragmentary SA-RO-QE and leaves Tier-A same-tablet KA-PA ~ KA-PA-QE"
 SU,,2,1,0,0,0,1,1,not-established,"v0.5 removes source-conflicted KU-NI base; A-RI ~ A-RI-SU remains comparison-only"
 WI,,2,1,0,0,1,0,1,not-established,"v0.5 removes flattened damaged JA-DI-WI; PA3-NI ~ PA3-NI-WI remains Tier-B possible relational/onomastic morphology"
+MI,,,2,0,1,0,0,1,not-established,"I-DA ~ I-DA-MI is Tier A in a replicated ritual slot; apparent JA-RE base is actually source-conflicted ]PA-RE"
+PA,,,2,0,0,1,1,0,not-established,"KA-KU ~ KA-KU-PA is Tier B; A-RI ~ A-RI-PA remains comparison-only"
+SA,,,2,0,0,0,1,1,not-established,"QA-*118-SA is actually left-fragmentary; A-JE ~ A-JE-SA is source-limited comparison-only"
