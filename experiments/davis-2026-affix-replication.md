@@ -1,228 +1,222 @@
-# Blinded replication: Davis 2026 Linear A affix analysis
+# Replication: Davis 2026 Linear A affix analysis
 
-**Status:** blind v0.1 completed and frozen; v0.2 logogram-sensitivity run completed; exact Davis-six overlap not yet scored because their identities have not been verified from an authoritative accessible source.  
+**Status:** unblinded; partial conceptual replication under the pre-registered cutoff.  
 **Registered:** 2026-08-16.  
+**Unblinded:** 2026-08-17, after the blind v0.1 and v0.2 artifacts were frozen.  
 **Target:** Brent Davis, *The Undeciphered Aegean Scripts* (Cambridge University Press, 2026), Chapter 4, “Linear A Morphology,” pp. 171–204.
 
-## Published target claim
+## Question
 
-The public Cambridge summary states that Davis refines a statistical method devised by David W. Packard and isolates **six Linear A signs** as especially likely to indicate morphology:
+Can an independently specified sign-edge analysis of a frozen Linear A corpus recover the same small set of likely affixes identified by Davis's refinement of Packard's statistical method?
 
-- **two** highly frequent at word beginnings, interpreted as likely prefixes;
-- **four** highly frequent at word endings, interpreted as likely suffixes;
-- one of the suffixes is argued to be particularly compatible with genitive / ablative / toponymic-adjectival function.
+This is a **conceptual replication**, not a line-by-line reimplementation of Davis's calculation. Our ranking combines word-edge enrichment with a modest bonus for apparent exact whole-word extensions. Davis's method was not available in full when the experiment was registered.
 
-The Cambridge book description also states that the book includes the data underlying its analyses.
+## Blinding and provenance
 
-The publicly accessible chapter summary used for pre-registration does **not** enumerate the six sign identities. This repository will not infer Davis's target set from its own ranking. Exact overlap is deferred until the six can be verified from Chapter 4, its underlying data, or another authoritative source.
+Before the first full-corpus output was generated:
 
-## Replication question
+- Davis's six sign identities were not known to the project;
+- they were not entered into code, benchmark data, or scoring rules;
+- weights were not tuned toward any desired sign;
+- no semantic or external-language information was used in the score.
 
-Can an independently specified, sign-level analysis of a frozen Linear A corpus recover a small set of boundary-enriched signs, and how much does that set overlap Davis’s six reported affix candidates?
+The blind outputs were frozen in GitHub Actions before unblinding.
 
-The first pass is an **independent conceptual replication**, not a line-by-line reimplementation of Davis's refined Packard calculation.
+On 2026-08-17, after the artifacts were frozen, Brent Davis supplied the six identities directly by email in response to a request for the information. The private email itself is not reproduced in this repository; only the six research targets needed for replication are recorded.
+
+Davis's candidates are:
+
+- prefixes: `A-`, `I-`;
+- suffixes: `-RE`, `-RO`, `-TE`, `-TI`.
+
+Machine-readable comparison: [`../data/davis-2026-unblinding.csv`](../data/davis-2026-unblinding.csv).
 
 ## Frozen corpus
 
 Primary exploratory corpus:
 
-- `mwenge/lineara.xyz`
-- commit `43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a`
-- file `LinearAInscriptions.js`
+- `mwenge/lineara.xyz`;
+- commit `43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a`;
+- file `LinearAInscriptions.js`.
 
-A later SigLA-derived rerun will be treated as a separate corpus-version replication rather than silently mixed with this one.
+A later SigLA-derived run should be treated as an independent corpus-version replication.
 
-## Frozen v0.1 inclusion rule
+## Frozen scoring rule
 
-The initial automatic pass used a mechanical approximation to complete syllabic words:
+For every sign `S`, separately at word beginnings and endings, the v0.1/v0.2 analysis calculated:
 
-- token contains at least two hyphen-separated sign labels;
-- excludes obvious numerical tokens;
-- excludes tokens with `+` ligature/logogram notation;
-- excludes tokens containing brackets, question marks, ellipses, or the corpus’s unknown/damaged placeholder glyph **when those markers survive in the cleaned token field**;
-- does not translate or phonetically normalize the sign sequence;
-- unknown numbered syllabograms such as `*306` may remain because the test concerns sign position, not spoken value.
+1. boundary occurrence count;
+2. internal occurrence count;
+3. log2 boundary enrichment with a 0.5 continuity correction;
+4. number of apparent exact whole-word extensions `X ~ S-X` or `X ~ X-S`.
 
-The emphasized qualification was learned from the first audit: some upstream `transliteratedWords` entries omit damage information visible in the raw sign record / damage-aware concordance. That can manufacture false exact `X ~ X-A` pairs.
-
-## Independent scoring rule
-
-For each sign `S`, calculate separately for word beginnings and word endings:
-
-1. `boundary_count(S)` — number of retained word tokens with `S` at the relevant edge;
-2. `internal_count(S)` — number of occurrences of `S` in non-edge positions;
-3. `boundary_enrichment(S)` — log2 ratio of boundary occurrence rate to internal occurrence rate, using a 0.5 continuity correction;
-4. `exact_extension_pairs(S)` — number of unique apparent whole-word pairs of the form:
-   - prefix: `X ~ S-X`, where `X` itself is independently represented and contains at least two signs;
-   - suffix: `X ~ X-S`, under the same mechanical rule.
-
-The frozen composite ranking is:
+The frozen score was:
 
 `score = boundary_enrichment + 0.75 * log2(1 + exact_extension_pairs) + 0.25 * log2(1 + boundary_count)`
 
-The scoring weights were not changed after the first output.
+Implementation: [`../scripts/rank-affixes.mjs`](../scripts/rank-affixes.mjs).
 
-Implementation: [`scripts/rank-affixes.mjs`](../scripts/rank-affixes.mjs).
+## v0.1 and v0.2
 
-## Blinding rule
+The original v0.1 mechanical filter retained 1,347 tokens and 966 unique forms. It exposed obvious logogram contamination because labels such as `VIN`, `CYP`, and `VS` could occur inside hyphenated upstream strings.
 
-Before the first full-corpus output was generated:
+The separately versioned v0.2 sensitivity analysis excluded a conservative list of obvious logogram labels while leaving the scoring rule unchanged. It retained:
 
-- Davis’s six sign identities were not entered into code, benchmark data, or scoring rules;
-- weights were not tuned toward a desired sign;
-- semantic information such as place-name identity was not added to the score;
-- external-language lexical comparisons were excluded.
+- **1,284 tokens**;
+- **930 unique forms**;
+- **116 ranked signs** on each edge.
 
-The original GitHub Actions artifact is preserved by digest and its readable summary is committed under [`results/blind-affix-replication-v0.1/`](../results/blind-affix-replication-v0.1/).
+The Davis comparison below uses the cleaner frozen **v0.2** ranking.
 
-## v0.1 result
+## Pre-registered evaluation
 
-Input retained by the mechanical filter:
+Before unblinding, the protocol specified:
 
-- **1,347** tokens;
-- **966** unique forms.
+- compare Davis's **2 prefixes** with our frozen **top 2 prefix candidates**;
+- compare Davis's **4 suffixes** with our frozen **top 4 suffix candidates**;
+- classify 5–6/6 as strong, 3–4/6 as partial, and 0–2/6 as weak/non-replication.
 
-### Leading prefixes
+These categories are descriptive, not inferential p-values.
 
-1. `A` — score 7.820; 154 left-edge occurrences; 11 apparent exact prefix pairs.
-2. `*411`
-3. `*86`
-4. `*306`
-5. `I` — score 4.552; 9 apparent exact prefix pairs.
-
-`A` therefore emerged as the strongest general prefix candidate without being manually targeted by the ranking.
-
-### Leading suffixes
-
-1. `RO` — score 6.424; 78 right-edge occurrences; 4 apparent exact pairs.
-2. `JA` — score 4.961; 8 apparent exact pairs.
-3. `TE`
-4. `VIN`
-5. `NE`
-6. `ME`
-
-The appearance of `VIN`, and lower-ranked `CYP` and `VS`, exposed a token-class contamination problem: named commodity/logogram labels could occur inside hyphenated upstream strings and pass the v0.1 typographic filter.
-
-This failure was **preserved**, not retroactively cleaned from the first result.
-
-## v0.2 obvious-logogram sensitivity analysis
-
-A separately versioned sensitivity pass excluded tokens containing a short conservative list of obvious named logogram labels while keeping the scoring rule unchanged.
-
-Input became:
-
-- **1,284** tokens;
-- **930** unique forms.
-
-Core signals remained stable or strengthened:
+## Unblinded result
 
 ### Prefixes
 
-1. `A` — score **7.842**, 11 apparent exact pairs.
-2. `*86`
-3. `*306`
-4. `I` — score **4.660**, 9 apparent exact pairs.
+| Davis candidate | frozen v0.2 rank | score | inside pre-registered top 2? |
+|---|---:|---:|---|
+| `A-` | **1 / 116** | 7.842 | **yes** |
+| `I-` | **4 / 116** | 4.660 | no |
+
+Prefix cutoff overlap: **1/2**.
 
 ### Suffixes
 
-1. `RO` — score **6.649**, 4 apparent exact pairs.
-2. `JA` — score **4.977**, 8 apparent exact pairs.
-3. `ME` — score **4.879**, 6 apparent exact pairs.
-4. `TE` — score **4.869**, 6 apparent exact pairs.
-5. `NE` — score **4.735**, 4 apparent exact pairs.
-11. `TI` — score **3.699**, 5 apparent exact pairs.
+| Davis candidate | frozen v0.2 rank | score | inside pre-registered top 4? |
+|---|---:|---:|---|
+| `-RO` | **1 / 116** | 6.649 | **yes** |
+| `-TE` | **4 / 116** | 4.869 | **yes** |
+| `-RE` | **7 / 116** | 4.241 | no |
+| `-TI` | **11 / 116** | 3.699 | no |
 
-The obvious commodity/logogram artifacts disappear while `A`, `RO`, `JA`, `ME`, `TE`, `NE`, and `TI` remain structurally interesting.
+Suffix cutoff overlap: **2/4**.
 
-Full result: [`results/blind-affix-replication-v0.2/README.md`](../results/blind-affix-replication-v0.2/README.md).
+### Pre-registered score
 
-## First blind-discovery audit: `RO`
+Total exact cutoff overlap: **3/6**.
 
-Because `RO` ranked #1 among suffix candidates in both runs, all four automatically generated `X ~ X-RO` pairs were audited first.
+Under the categories fixed before unblinding, this is a **partial conceptual replication**.
 
-Outcome:
+## A stronger descriptive pattern, reported separately
+
+The cutoff score is the primary result and is not changed after seeing Davis's targets.
+
+However, the full ranks contain an additional descriptive observation:
+
+- `A`: rank 1, top 0.9% of prefix ranks;
+- `I`: rank 4, top 3.4%;
+- `RO`: rank 1, top 0.9% of suffix ranks;
+- `TE`: rank 4, top 3.4%;
+- `RE`: rank 7, top 6.0%;
+- `TI`: rank 11, top 9.5%.
+
+Thus **all six Davis candidates fall within the top 10% of the corresponding 116-sign rankings**, and five of six are rank 7 or better.
+
+This is encouraging convergence, but the top-10% observation was not a pre-registered success criterion and must not replace the 3/6 primary score.
+
+## What the disagreements tell us
+
+Our top four suffixes were:
+
+1. `RO`;
+2. `JA`;
+3. `ME`;
+4. `TE`.
+
+Davis's suffix set is:
+
+- `RE`;
+- `RO`;
+- `TE`;
+- `TI`.
+
+Therefore `JA` and `ME` outrank Davis candidates `RE` and `TI` under our score.
+
+That difference is scientifically useful. Our score rewards exact apparent extensions as well as edge enrichment. It is not simply a reconstruction of Davis's Packard-style statistic. Future work should determine whether `JA` and `ME` are:
+
+- genuine morphology emphasized by our pair-sensitive score;
+- formulaic/onomastic/genre effects;
+- artifacts of corpus representation;
+- or signals that Davis's narrower top-four cutoff intentionally excludes.
+
+Likewise, Davis's `RE` and `TI` may be better detected by his distributional statistic than by ours.
+
+## The `RO` result clarifies the benchmark's role
+
+`RO` is especially informative.
+
+It is:
+
+- Davis's suffix candidate;
+- our **#1 blind suffix candidate**;
+- yet poorly supported by our automatically generated exact minimal pairs after epigraphic audit.
+
+The four raw `X ~ X-RO` pairs resolved as:
 
 | automatic pair | audit outcome |
 |---|---|
-| `KI-DA ~ KI-DA-RO` | **rejected**: supposed base is actually fragmentary `ki-da-[`; `KI-DA-RO` also has strong onomastic continuity |
-| `DI-NA ~ DI-NA-RO` | **rejected**: supposed bare form is damaged/fragmentary |
-| `SA-MA ~ SA-MA-RO` | **reclassified**: both forms real, but `SA-MA-RO` is strongly name/designation-like on HT 88; common lexical identity unproven |
-| `A-DA ~ A-DA-RO` | **Tier B candidate**: both forms complete, cross-site, administrative; grammatical relationship unproven |
+| `KI-DA ~ KI-DA-RO` | rejected: apparent base fragmentary |
+| `DI-NA ~ DI-NA-RO` | rejected: apparent base fragmentary |
+| `SA-MA ~ SA-MA-RO` | reclassified: likely onomastic/lexical comparison |
+| `A-DA ~ A-DA-RO` | Tier B candidate |
 
-Thus the strongest raw blind suffix signal yielded **zero new Tier-A paradigms**, one Tier-B formal candidate, and three false-positive/reclassification examples.
+See [`../audits/RO.md`](../audits/RO.md).
 
-This is not a failure of the project. It is a central benchmark result: high boundary enrichment can coexist with damage artifacts and onomastic clustering.
+This is **not a contradiction** of Davis's identification of `RO` as a suffix candidate. It demonstrates that two questions must be kept distinct:
 
-Full audit: [`audits/RO.md`](../audits/RO.md).
+1. **Is a sign strongly enriched at a word boundary?**
+2. **Do apparent whole-word minimal pairs provide clean epigraphic evidence for the same morphology?**
+
+A sign can score strongly on the first while many superficially supporting pairs fail the second.
+
+## The `TI` result shows the converse
+
+`TI` is Davis's suffix candidate but only rank **11** in our global suffix ranking. At the same time, the benchmark contains a strong local formal relationship:
+
+`DA-KU-SE-NE ~ DA-KU-SE-NE-TI`
+
+That pair survives as Tier A formal evidence across scribes.
+
+So a suffix can have a relatively modest global edge rank while possessing strong local paradigm evidence.
+
+Together, `RO` and `TI` support the benchmark's central design principle: **distributional evidence and epigraphically audited paradigm evidence are complementary, not interchangeable.**
 
 ## Corpus-engineering result
 
-The `RO` audit identifies a specific high-impact failure mode:
+The first `RO` audit also identified a high-impact failure mode:
 
-> **cleaned transliteration fields can flatten damage/boundary information and manufacture exact morphological pairs.**
+> cleaned transliteration fields can flatten damage/boundary information and manufacture exact morphological pairs.
 
-The next pipeline version therefore should not merely add more string filters. It should attach an explicit **damage/boundary mask** from raw sign transcriptions or an independently encoded specialist corpus before any exact-pair score is computed.
+The next extractor should attach an explicit damage/boundary mask from raw sign records or an independently encoded specialist corpus before exact-pair scoring.
 
-That requirement is now part of the benchmark design.
+## Next experiments
 
-## Benchmark behavior to date
+The unblinding changes the priority order.
 
-The automatic ranking already demonstrates several useful classes:
+1. **Audit `RE` and `TE` first**, because they are Davis suffixes and our pipeline independently generated multiple exact-pair candidates for each.
+2. **Audit `I-`**, Davis's second prefix and our rank #4 candidate.
+3. **Audit `A-`**, Davis's first prefix and our rank #1 candidate, with special attention to the 11 apparent exact prefix pairs.
+4. **Audit `TI` beyond the known `DA-KU-SE-NE` pair** to determine why a Davis suffix ranks only #11 globally.
+5. **Audit `JA` and `ME` as disagreement cases**, because they outrank two Davis suffixes under our scoring rule.
+6. Build the damage-aware corpus layer and repeat the ranking.
+7. Reimplement Davis's exact Packard refinement if the chapter/data become available.
+8. Repeat the experiment against an independently encoded SigLA-derived corpus.
 
-- `JA`: independently recovers two existing Tier-A benchmark positives.
-- `NE`: recovers a Tier-A positive (`*21F-TU ~ *21F-TU-NE`) and a known rejected/scribal-confounded pair (`PA-RA ~ PA-RA-NE`).
-- `TI`: contains a Tier-A local exact extension despite only modest global boundary enrichment.
-- `NU`: ranks low and its apparent exact pairs correspond to previously downgraded/reclassified cases.
-- `RO`: ranks extremely high globally but mostly fails exact-pair audit.
+## Interpretation
 
-These contrasts make [`data/morphology-benchmark.csv`](../data/morphology-benchmark.csv) useful for evaluating future discovery methods on more than raw recall.
+This experiment does **not** independently prove that all six signs are grammatical affixes. It shows that a separately designed and frozen analysis, using a different scoring rule, places all six of Davis's candidates unusually high and reproduces three inside its stricter pre-registered cutoffs.
 
-## Exact Davis comparison remains locked
+The most important outcome is methodological convergence:
 
-The blind ranking is already frozen, so target leakage is no longer a concern. However, an exact replication score still requires an authoritative enumeration of Davis’s two prefix and four suffix signs.
+> two independently specified approaches are detecting substantially the same word-edge structure in Linear A, while disagreeing enough to create useful test cases for the benchmark.
 
-Until that is obtained, this repository records:
-
-- the published **shape** of Davis's result;
-- our already-frozen independent ranking;
-- no guessed overlap score.
-
-When the six target identities are verified, they can be compared directly with the frozen artifacts without changing the algorithm.
-
-## Next analyses
-
-1. audit the six newly generated `JA` pairs beyond the two existing Tier-A seeds;
-2. audit the 11 `A-X` and 9 `I-X` pairs;
-3. audit `ME` and `TE` families;
-4. build a damage-aware candidate extractor from raw sign/boundary metadata;
-5. rerun with site/scribe/genre stratification;
-6. obtain and compare Davis's authoritative six sign identities;
-7. repeat against an independently encoded SigLA-derived corpus.
-
-The audit queue is machine-readable at [`data/morphology-audit-queue.csv`](../data/morphology-audit-queue.csv).
-
-## Evaluation once Davis's identities are available
-
-Record:
-
-- overlap among our frozen top 2 prefix candidates and Davis’s 2 prefixes;
-- overlap among our frozen top 4 suffix candidates and Davis’s 4 suffixes;
-- Davis-candidate ranks outside those cutoffs;
-- benchmark-positive relationships supporting each high-ranked sign;
-- benchmark-negative/reclassified families that make a high rank misleading.
-
-### Descriptive categories
-
-**Strong conceptual replication:** at least 5/6 corresponding candidates recovered.  
-**Partial replication:** 3–4/6.  
-**Weak/non-replication:** 0–2/6.
-
-These thresholds are descriptive labels, not inferential p-values.
-
-## Publication standard
-
-The first useful external product is not “a new decipherment.” It is:
-
-> a versioned Linear A morphology benchmark plus an independently reproducible affix-ranking experiment, including false positives, damage controls, and failed hypotheses.
-
-The first two runs support that framing. The automatic method can recover real-looking structural signals, but manual epigraphic adjudication materially changes what those signals mean.
+That is a stronger foundation for future grammatical work than selecting candidate affixes after inspecting published answers.
