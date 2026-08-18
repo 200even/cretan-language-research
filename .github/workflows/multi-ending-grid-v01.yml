@@ -1,3 +1,4 @@
+# Rerun after integration of the audited I-DA-A and I-DA-DA benchmark cells.
 name: multi-ending-grid-v01
 
 on:
