@@ -1,0 +1,6 @@
+pair,v02_status,v03_status,final_adjudication,evidence_tier,main_issue,notes
+"*21F-TU ~ *21F-TU-NE",automatic-pair,accepted_secure,positive,A,"none decisive","Same-scribe Scribe 9 base/extended contrast plus independent extended replication by Scribe 11; function varies by context"
+"QE-TU ~ QE-TU-NE",automatic-pair,excluded_insecure_base,rejected,rejected,"damaged left boundary","HT41 preserves ]QE-TU; HT12 QE-TU-NE is complete but cannot create a whole-word paradigm"
+"PA-TA ~ PA-TA-NE",automatic-pair,excluded_insecure_base,rejected,rejected,"damaged left boundary","KH79+89 preserves ]PA-TA; PA-TA-NE complete elsewhere"
+"PA-RA ~ PA-RA-NE",automatic-pair,accepted_secure,reclassified,rejected,"scribal segregation + onomastic lexical-identity confound","Bare HT form is Scribe 9 and PA-RA-NE is Scribe 8; PA-RA-NE is independently treated as a Minoan personal name in Linear A/B comparison"
+TOTAL,"4 apparent pairs","2 damage-secure","1 credible morphology family; 1 lexical control; 2 damage rejects",,"manual survival 1/4","NE has a strong local paradigm but productivity across independent stems is not established"
