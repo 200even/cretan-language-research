@@ -1,0 +1,41 @@
+name: multi-ending-grid-v01
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build-multi-ending-grid-v01.mjs'
+      - 'results/source-consistent-v0.5/exact-pairs.csv'
+      - 'data/morphology-benchmark.csv'
+      - 'data/v06-regression-backlog.csv'
+      - 'experiments/multi-ending-grid-v01.md'
+      - '.github/workflows/multi-ending-grid-v01.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-grid:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build stem-ending matrix
+        run: |
+          node scripts/build-multi-ending-grid-v01.mjs \
+            --pairs results/source-consistent-v0.5/exact-pairs.csv \
+            --benchmark data/morphology-benchmark.csv \
+            --forward-controls data/v06-regression-backlog.csv \
+            --out-dir results/multi-ending-grid-v0.1
+      - name: Persist generated grid
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/multi-ending-grid-v0.1
+          if git diff --cached --quiet; then
+            echo 'No grid changes.'
+          else
+            git commit -m 'Record multi-ending stem grid v0.1'
+            git push origin HEAD:main
+          fi
