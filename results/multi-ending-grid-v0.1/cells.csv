@@ -1,0 +1,46 @@
+base,ending,variant,structural_status,forward_excluded,forward_failure_class,manual_tier,manual_adjudication,manual_reason,warning_classes,secure_sites,secure_scribes
+*21F-TU,NE,*21F-TU-NE,accepted_secure,no,,A,positive,Same scribe writes bare and extended forms; extended form replicated by second scribe,,1,2
+*306-TU,JA,*306-TU-JA,accepted_secure,no,,B,reclassified,Repeated complete exact base and complete JA form; context suggests derivational/onomastic rather than generic inflectional morphology,designation_or_onomastic,1,2
+A-DA,RA,A-DA-RA,accepted_secure,no,,C,comparison-only,Complete exact extension but cross-site support and discourse mismatch leave common lexical identity unproved,,2,0
+A-DA,RO,A-DA-RO,accepted_secure,no,,B,candidate,Secure cross-site exact final extension; common lexical identity and grammatical function remain unproven,,2,0
+A-DU,ZA,A-DU-ZA,accepted_secure,no,,,,,,2,5
+A-JE,SA,A-JE-SA,accepted_secure,no,,C,comparison-only,Formal extension is transmitted but A-JE-SA depends on an old reading of a now-lost painted inscription and cannot be independently rechecked,,2,0
+A-MA,JA,A-MA-JA,accepted_secure,no,,C,comparison-only,Both strings are complete but two-sign base and documentary mismatch leave common lexical identity unestablished,,3,1
+A-MI,TA,A-MI-TA,accepted_secure,no,,,,,,2,1
+A-PA3,DI,A-PA3-DI,accepted_secure,no,,,,,,2,0
+A-RA-TU,ME,A-RA-TU-ME,accepted_secure,no,,B,candidate,"Complete formal final-ME extension survives, but no same-site/scribe contextual identity or grammatical function is established",,2,0
+A-RI,PA,A-RI-PA,accepted_secure,no,,C,comparison-only,Exact short-string extension survives but site/document/chronology mismatch leaves common lexical identity unproved,,2,0
+A-RI,SU,A-RI-SU,accepted_secure,no,,C,comparison-only,Complete strings but site/chronology/document mismatch leaves common lexical identity unproved,,2,1
+A-SE,JA,A-SE-JA,accepted_secure,no,,B,candidate,Multiple complete base attestations plus complete administrative JA form; short base and lexical function prevent Tier-A promotion,,2,3
+DA-KU,NA,DA-KU-NA,accepted_secure,no,,B,candidate,Shows formal extension but bare form is on a bronze double axe while extended form is administrative,,2,1
+DA-KU-SE-NE,TI,DA-KU-SE-NE-TI,accepted_secure,no,,A,positive,Exact final TI extension across scribes survives; retain explicit segmentation caveat,,1,2
+I-DA,A,I-DA-A,accepted_secure,no,,,,,,3,1
+I-DA,DA,I-DA-DA,accepted_secure,no,,,,,,3,1
+I-DA,MI,I-DA-MI,accepted_secure,no,,A,positive,PKZa18 and SYZa1 place complete I-DA / I-DA-MI between dividers in closely comparable ritual formula positions before JA- material,,3,1
+I-JA,TE,I-JA-TE,accepted_secure,no,,C,comparison-only,Secure sign-level resemblance but no contextual evidence establishes I-JA-TE as a TE-derivative of I-JA,,2,0
+JA-KU,TI,JA-KU-TI,accepted_secure,no,,B,candidate,Secure exact final extension; lexical identity and grammatical role unresolved,,2,0
+JA-RE,MI,JA-RE-MI,accepted_secure,yes,normalized_sign_reading_and_boundary_divergence,not-comparable,rejected,Normalized ARKH1b JA-RE changes the first sign and drops the insecure left boundary preserved as ]PA-RE; exact MI pair invalid,,2,2
+JA-SI,E,JA-SI-E,accepted_secure,no,,,,,,2,0
+KA-KU,PA,KA-KU-PA,accepted_secure,no,,B,candidate,Complete base and repeatedly attested extended form support common lexical identity; role difference leaves function unresolved,,1,2
+KA-PA,QE,KA-PA-QE,accepted_secure,no,,A,positive,Complete exact same-tablet extension in one scribal production; function unknown,,1,4
+KU-PA,JA,KU-PA-JA,accepted_secure,no,,A,positive,Second independent exact base plus final JA; ordinary PA sign distinct from PA3,,2,1
+KU-PA,RI,KU-PA-RI,accepted_secure,no,,,,,,3,1
+KU-PA,ZU,KU-PA-ZU,accepted_secure,no,,,,,,3,2
+KU-PA3,NU,KU-PA3-NU,accepted_secure,no,,,,,,2,4
+KU-PA3,PA3,KU-PA3-PA3,accepted_secure,no,,,,,,1,2
+KU-RA,MU,KU-RA-MU,accepted_secure,no,,,,,,3,3
+MI-DA,NI,MI-DA-NI,accepted_secure,no,,,,,,1,2
+MI-DA,RA,MI-DA-RA,accepted_secure,no,,B,reclassified,"Both forms are complete; editors call MI-DA-RA a hapax and cannot determine whether it is anthroponym or toponym, leaving a plausible onomastic/derivational relation but no demonstrated generic inflection",,2,1
+PA-JA,RE,PA-JA-RE,accepted_secure,no,,B,reclassified,"Secure exact extension, but PA-JA-RE is a probable Minoan personal name with Linear B pa-ja-ro continuity; ordinary inflection not established",onomastic,2,4
+PA-RA,NE,PA-RA-NE,accepted_secure,no,,,,,onomastic,2,2
+PA-SE,JA,PA-SE-JA,accepted_secure,no,,A,positive,Exact complete base plus final JA; independent administrative attestations,,1,3
+PA3-NI,NA,PA3-NI-NA,accepted_secure,no,,,,,,1,2
+PA3-NI,WI,PA3-NI-WI,accepted_secure,no,,B,reclassified,Complete repeated base and complete ritual extension support possible onomastic/relational/derivational morphology; generic inflection unproved,,2,2
+QA-*118,SA,QA-*118-SA,accepted_secure,yes,lost_left_boundary,not-comparable,rejected,Damage-preserving HT70 transcription shows insecure left boundary omitted by v0.5 normalized tokenization,,2,1
+RI-RU-MA,TI,RI-RU-MA-TI,accepted_secure,no,,B,candidate,Secure exact final extension; no semantic gloss promoted,,2,1
+RU-MA-TA,SE,RU-MA-TA-SE,accepted_secure,no,,,,,,2,2
+SA-MA,RO,SA-MA-RO,accepted_secure,no,,,,,onomastic_or_designation,2,3
+SI-RU,TE,SI-RU-TE,accepted_secure,no,,B,reclassified,"Both forms are complete, but SI-RU-TE is a recurrent libation-formula element and lexical identity with administrative SI-RU is unproven",,5,0
+SI-TE,TU,SI-TE-TU,accepted_secure,no,,,,,,2,1
+SU-PU2,*188,SU-PU2-*188,accepted_secure,no,,,,,,1,2
+TU-SU,PU2,TU-SU-PU2,accepted_secure,no,,,,,,2,0
