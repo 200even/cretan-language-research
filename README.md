@@ -16,6 +16,26 @@ A candidate does not become evidence for morphology until its forms, boundaries,
 
 ## Current headline results
 
+### Current discovery substrate: structural-aware v0.4
+
+v0.4 extends the validated damage-aware extractor with type/source controls for **editorial continuation, complex-logogram flattening, cross-script contamination, and authoritative source corrections**. Lexical/onomastic warnings are annotated separately rather than used as hidden exclusions.
+
+The frozen expanded regression gate passes:
+
+> **26/26 structural/source negatives excluded; 11/11 secure controls retained.**
+
+The run begins with 1,285 candidate syllabic occurrences and retains **951** after structural/type/source masking. The new extractor automatically reproduces several conclusions that previously required manual audit:
+
+- final `JA`: 7 v0.3 apparent pairs → **5** v0.4 structural pairs; both manually rejected false pairs disappear automatically;
+- final `ME`: 4 → **1**, matching the completed manual source/type audit;
+- final `NE`: 2 structural pairs remain, but one is explicitly flagged onomastic, leaving the Tier-A `*21F-TU` family as the clean core.
+
+Top v0.4 suffixes by structural exact paradigms are `JA` (5), `TI` (3), `RA` (3), and `TE` (3). These are candidate-generation counts, not probabilities or translations.
+
+Experiment: [`experiments/structural-aware-v04.md`](experiments/structural-aware-v04.md)  
+Generated results: [`results/structural-aware-v0.4/`](results/structural-aware-v0.4/)  
+Regression: [`results/structural-aware-v0.4/REGRESSION.md`](results/structural-aware-v0.4/REGRESSION.md)
+
 ### 1. Damage-aware v0.3 passes its benchmark
 
 The first large-scale exact-pair method was contaminated by normalized words whose damaged boundaries had disappeared. The Davis-six audit initially found that more than half of its apparent exact pairs were affected.
@@ -216,6 +236,9 @@ No post-hoc weight change is applied to v0.3. A future version should add a sepa
 - [`data/ne-audit-summary.csv`](data/ne-audit-summary.csv)
 - [`data/suffix-audit-comparison.csv`](data/suffix-audit-comparison.csv)
 - [`data/v03-regression-set.csv`](data/v03-regression-set.csv)
+- [`data/v04-regression-set.csv`](data/v04-regression-set.csv)
+- [`data/v04-source-overrides.csv`](data/v04-source-overrides.csv)
+- [`data/v04-lexical-warnings.csv`](data/v04-lexical-warnings.csv)
 
 Negative and reclassified examples are deliberately retained.
 
@@ -274,16 +297,17 @@ The older frozen v0.1/v0.2 implementation remains at [`scripts/rank-affixes.mjs`
 
 ## Next work
 
-The three non-Davis suffix screens now have full manual outcomes: `JA` is productive, while `ME` and `NE` are not established as productive across independent stems. The next priority is therefore **v0.4 corpus/type control**, not another semantic drill-down.
+v0.4 is now the current candidate-generation substrate. The next research priority is **manual audit of final `RA`**, the strongest new non-Davis suffix candidate after structural/type controls.
 
-1. keep the `JA` and `NE` functional stop rules in force until genuinely new independent paradigms appear;
-2. register permanent controls for cross-face continuation, authoritative-source gaps, damaged bases, onomastic lexical-identity confounds, and complex-logogram flattening;
-3. make v0.4 distinguish syllabic words, complex signs/logograms, headings, and editorial continuations before paradigm generation;
-4. rerun the corpus under v0.4 before choosing the next non-Davis suffix family;
-5. compare audited survival rates against Davis's suffixes and the known positive prefixes;
-6. seek same-tablet or same-scribe multi-stem paradigms as the strongest path toward grammatical function.
+1. audit the three v0.4 `RA` relationships: `SA-RA ~ SA-RA-RA`, `A-DA ~ A-DA-RA`, and `MI-DA ~ MI-DA-RA`;
+2. require the same boundary, source-type, context, scribe, and lexical-identity standards used for `JA`, `ME`, and `NE`;
+3. if `RA` collapses, move to the clean two-pair candidates `QE`, `SU`, and `WI`;
+4. keep the `JA` and `NE` functional stop rules in force until genuinely new independent paradigms appear;
+5. preserve the v0.4 extraction statistic unchanged while a separately registered future experiment addresses low-frequency instability in raw boundary enrichment;
+6. continue to prefer same-tablet or same-scribe multi-stem paradigms as the strongest route toward grammatical function.
 
-The current comparative survival table is [`data/suffix-audit-comparison.csv`](data/suffix-audit-comparison.csv).
+Current structural ranking: [`results/structural-aware-v0.4/paradigm-ranking.csv`](results/structural-aware-v0.4/paradigm-ranking.csv).  
+Cross-suffix audited comparison: [`data/suffix-audit-comparison.csv`](data/suffix-audit-comparison.csv).
 
 ## Repository map
 
@@ -299,6 +323,9 @@ scripts/
   build-boundary-mask.mjs
   rank-affixes-v03.mjs
   evaluate-v03-regression.mjs
+  build-structural-mask-v04.mjs
+  rank-affixes-v04.mjs
+  evaluate-v04-regression.mjs
 
 data/
   morphology-benchmark.csv
@@ -311,6 +338,9 @@ data/
   ne-audit-summary.csv
   suffix-audit-comparison.csv
   v03-regression-set.csv
+  v04-regression-set.csv
+  v04-source-overrides.csv
+  v04-lexical-warnings.csv
 
 audits/
   A.md
@@ -326,10 +356,12 @@ audits/
 results/
   davis-six-audit-synthesis.md
   damage-aware-v0.3/
+  structural-aware-v0.4/
 
 experiments/
   davis-2026-affix-replication.md
   damage-aware-v03.md
+  structural-aware-v04.md
   mitanni-indo-aryan-pilot.md
   toponym-kober-grid.md
 

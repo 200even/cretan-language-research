@@ -54,6 +54,30 @@ The validated v0.3 regression gate currently removes **19/19** known damage-crea
 
 An important corollary is that the benchmark can be wrong. When a regression test contradicts a human label, the underlying inscription is rechecked. The `KU-NI ~ KU-NI-TE` case demonstrated this: direct inspection of HT 79+83 showed a complete `KU-NI` occurrence, so the negative benchmark label was corrected rather than forcing the extractor to reproduce it.
 
+## Structural/type-aware extraction protocol (v0.4)
+
+v0.4 extends damage awareness into **source and token type**. Before a normalized spelling can participate in a morphology pair, the pipeline now checks whether the attestation is actually eligible to be treated as a Linear A syllabic free word.
+
+The structural mask recognizes:
+
+- physical fragment boundaries;
+- explicit cross-line / cross-face lexical continuation marked by leading or trailing hyphens;
+- complex signs or ligatures typed in a source table's **logogram** column, including normalized flattenings such as `MA+RU ME {*561}` → apparent `MA-RU-ME`;
+- rows explicitly typed as Hieroglyphic (for example `H:`) so cross-script seal material does not enter the Linear A free-word pool;
+- versioned authoritative source corrections when the pinned exploratory source lacks a later or more precise reading.
+
+Rules:
+
+1. exclusions are counted per inscription/form attestation, never as global spelling bans;
+2. overlapping structural reasons do not cause the same occurrence to be excluded twice;
+3. authoritative overrides must be epigraphic/source corrections, not semantic interpretations;
+4. lexical-class and onomastic concerns are stored as **warnings**, not hidden extraction exclusions;
+5. a structurally retained pair remains only a formal candidate until common lexical identity and contextual equivalence are audited.
+
+The frozen v0.4 regression gate passes **26/26** structural/source negatives while retaining **11/11** secure controls. See [`experiments/structural-aware-v04.md`](experiments/structural-aware-v04.md).
+
+A useful consequence is that corpus preprocessing is now itself benchmarked: the extractor must reproduce known failures such as cross-face `JA-SA`, complex/logographic `MA-RU-ME`, and authoritative-boundary `PU2-RE` without being told which affix is being tested.
+
 ## Separate morphology evidence dimensions
 
 The v0.3 audit also showed that one composite “morphology score” obscures different kinds of evidence. The project therefore reports at least these dimensions separately:
@@ -237,6 +261,9 @@ Particularly dangerous operations include:
 - using conventional Linear-B-derived readings as if they were exact Minoan phonetic transcriptions;
 - generating morphology pairs from cleaned words before restoring damaged boundary information;
 - globally blacklisting a spelling because one attestation of it is damaged.
+- admitting explicitly cross-script (e.g. Hieroglyphic) sign groups into the Linear A free-word morphology pool;
+- treating a complex/logographic source entry as an ordinary syllabic word because a normalized corpus flattened its notation;
+- treating editorial continuation across a line or object face as an independent word boundary.
 - flattening complex logograms or ligatures into hyphenated syllabic-looking strings and then treating them as ordinary words;
 - treating a line or face break as a word boundary when the edition explicitly continues the same lexical item across the break.
 
@@ -248,7 +275,7 @@ The initial exploration used `mwenge/lineara.xyz` at commit:
 
 `43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a`
 
-The frozen v0.1/v0.2 analyses remain preserved as historical results. v0.3 is a separately versioned damage-aware pipeline and does not retroactively alter the pre-registered Davis comparison score.
+The frozen v0.1/v0.2 analyses remain preserved as historical results. v0.3 is the frozen damage-aware pipeline; v0.4 is the separately versioned structural/type-aware discovery substrate. Neither later version retroactively alters the pre-registered Davis comparison score.
 
 Any later rerun should record the upstream commit and note changed readings or classifications.
 
