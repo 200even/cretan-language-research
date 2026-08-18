@@ -1,0 +1,4 @@
+benchmark_id,base,variant,v04_status,final_tier,adjudication,main_reason
+MB-RA-001,SA-RA,SA-RA-RA,accepted_secure,rejected,reclassified,"HT30 itself contains SA-RA2 and Younger proposes SA-RA2 and SA-RA-RA may be one and the same; exact suffix segmentation is not the strongest inscription-internal analysis"
+MB-RA-002,A-DA,A-DA-RA,accepted_secure,C,comparison-only,"Complete forms but tablet recipient context versus silver hairpin funerary/personal-object context leaves common lexical identity unproved"
+MB-RA-003,MI-DA,MI-DA-RA,accepted_secure,B,reclassified,"Complete exact extension; MI-DA is recipient/designation-like and editors say MI-DA-RA may be anthroponym or toponym, supporting possible onomastic/derivational relation but not generic inflection"
