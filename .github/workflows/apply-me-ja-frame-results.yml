@@ -1,0 +1,31 @@
+name: apply-me-ja-frame-results
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/apply-me-ja-frame-results.mjs'
+      - '.github/workflows/apply-me-ja-frame-results.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/apply-me-ja-frame-results.mjs
+      - name: Commit research updates
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md METHODOLOGY.md REJECTED_HYPOTHESES.md data/morphology-benchmark.csv data/morphology-audit-queue.csv
+          if git diff --cached --quiet; then
+            echo 'No changes needed.'
+          else
+            git commit -m 'Integrate ME audit and JA list-frame results'
+            git push origin HEAD:main
+          fi
