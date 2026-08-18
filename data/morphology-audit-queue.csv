@@ -3,34 +3,46 @@ AQ-RO-001,1,suffix,RO,1,6.649,"KI-DA ~ KI-DA-RO",rejected-control,"Same lexeme w
 AQ-RO-002,1,suffix,RO,1,6.649,"SA-MA ~ SA-MA-RO",reclassified-control,"Same lexeme with productive -RO or onomastic/lexical coincidence?","reclassified-onomastic-risk"
 AQ-RO-003,1,suffix,RO,1,6.649,"DI-NA ~ DI-NA-RO",rejected-control,"Same lexeme with productive -RO or onomastic/lexical coincidence?","rejected-damaged-base"
 AQ-RO-004,1,suffix,RO,1,6.649,"A-DA ~ A-DA-RO",Tier-B-candidate,"Same lexeme with productive -RO or onomastic/lexical coincidence?","survives-formal-audit"
-AQ-JA-001,2,suffix,JA,2,4.977,"PA-SE ~ PA-SE-JA",Tier-A-positive,"Revalidate context and attach primary-edition references",validated-seed
-AQ-JA-002,2,suffix,JA,2,4.977,"KU-PA ~ KU-PA-JA",Tier-A-positive,"Revalidate context and attach primary-edition references",validated-seed
-AQ-JA-003,2,suffix,JA,2,4.977,"A-SE ~ A-SE-JA",new,"Secure boundaries; comparable contexts; same lexical identity?",pending
-AQ-JA-004,2,suffix,JA,2,4.977,"*306-TU ~ *306-TU-JA",new,"Is *306 phonographic here and are both forms securely segmented?",pending
-AQ-JA-005,2,suffix,JA,2,4.977,"A-MA ~ A-MA-JA",new,"Same lexical identity or short-form coincidence?",pending
-AQ-JA-006,2,suffix,JA,2,4.977,"JA-SA ~ JA-SA-JA",new,"Same lexical identity; formula/name confound?",pending
-AQ-JA-007,2,suffix,JA,2,4.977,"A-RI ~ A-RI-JA",new,"Same lexical identity; site/scribe distribution?",pending
-AQ-JA-008,2,suffix,JA,2,4.977,"PU₂-RE ~ PU₂-RE-JA",new,"Secure sign value/boundary and contextual equivalence?",pending
-AQ-A-001,3,prefix,A,1,7.842,"RA-NA-RE ~ A-RA-NA-RE",new,"Does A- correlate with a recurring administrative role?",pending
-AQ-A-002,3,prefix,A,1,7.842,"KA-RU ~ A-KA-RU",new,"Does A- correlate with a recurring administrative role?",pending
-AQ-A-003,3,prefix,A,1,7.842,"SA-RA₂ ~ A-SA-RA₂",new,"Does A- correlate with a recurring administrative role?",pending
-AQ-A-004,3,prefix,A,1,7.842,"PA-RA-NE ~ A-PA-RA-NE",mixed,"Does A- survive the known PA-RA/PA-RA-NE scribal complication?",pending
-AQ-A-005,3,prefix,A,1,7.842,"SA-SA-RA-ME ~ A-SA-SA-RA-ME",ritual-comparison,"Is this productive prefixation or formulaic variation?",pending
-AQ-A-006,3,prefix,A,1,7.842,"SI-KI-RA ~ A-SI-KI-RA",known-candidate,"Verify contexts and prior scholarship on optional A-",pending
-AQ-A-007,3,prefix,A,1,7.842,"DA-RA ~ A-DA-RA",new,"Does A- correlate with a recurring administrative role?",pending
-AQ-A-008,3,prefix,A,1,7.842,"RI-JA ~ A-RI-JA",new,"Does A- correlate with a recurring administrative role?",pending
-AQ-I-001,4,prefix,I,4,4.660,"RU-JA ~ I-RU-JA",new,"Productive I- prefix or lexical coincidence?",pending
-AQ-I-002,4,prefix,I,4,4.660,"KI-RA ~ I-KI-RA",new,"Productive I- prefix or lexical coincidence?",pending
-AQ-I-003,4,prefix,I,4,4.660,"TA-JA ~ I-TA-JA",new,"Productive I- prefix or lexical coincidence?",pending
-AQ-I-004,4,prefix,I,4,4.660,"KU-TA ~ I-KU-TA",new,"Productive I- prefix or lexical coincidence?",pending
-AQ-I-005,4,prefix,I,4,4.660,"QA-*118 ~ I-QA-*118",new,"Is *118 phonographic in both contexts?",pending
-AQ-I-006,4,prefix,I,4,4.660,"JA-PA ~ I-JA-PA",new,"Productive I- prefix or lexical coincidence?",pending
-AQ-I-007,4,prefix,I,4,4.660,"KU-PI ~ I-KU-PI",new,"Productive I- prefix or lexical coincidence?",pending
-AQ-I-008,4,prefix,I,4,4.660,"DA-MA-TE ~ I-DA-MA-TE",new,"Productive I- prefix or lexical coincidence?",pending
-AQ-NE-001,5,suffix,NE,5,4.735,"*21F-TU ~ *21F-TU-NE",Tier-A-positive,"Primary-edition revalidation; benchmark positive control",validated-seed
-AQ-NE-002,5,suffix,NE,5,4.735,"QE-TU ~ QE-TU-NE",new,"Secure same-lexeme relationship?",pending
-AQ-NE-003,5,suffix,NE,5,4.735,"PA-TA ~ PA-TA-NE",new,"Secure same-lexeme relationship?",pending
-AQ-NE-004,5,suffix,NE,5,4.735,"PA-RA ~ PA-RA-NE",rejected-control,"Does expanded corpus remove or preserve scribal confound?",negative-control
-AQ-TI-001,6,suffix,TI,11,3.699,"DA-KU-SE-NE ~ DA-KU-SE-NE-TI",Tier-A-positive,"Primary-edition revalidation; local positive despite lower global rank",validated-seed
-AQ-NU-001,7,suffix,NU,34,2.027,"KU-PA₃ ~ KU-PA₃-NU",reclassified-control,"Confirm onomastic explanation remains best",negative-control
-AQ-NU-002,7,suffix,NU,34,2.027,"U-TI ~ U-TI-NU",rejected-control,"Confirm fragment/segmentation failure remains decisive",negative-control
+AQ-TE-001,2,suffix,TE,4,4.869,"DU-RI ~ DU-RI-TE",rejected-control,"Are both word boundaries secure?","rejected-damaged-boundaries"
+AQ-TE-002,2,suffix,TE,4,4.869,"SI-RU ~ SI-RU-TE",Tier-B-comparison,"Same lexeme across administrative and ritual registers?","survives-formal-context-unresolved"
+AQ-TE-003,2,suffix,TE,4,4.869,"KU-NI ~ KU-NI-TE",rejected-control,"Is the base a complete word?","rejected-damaged-base"
+AQ-TE-004,2,suffix,TE,4,4.869,"I-JA ~ I-JA-TE",Tier-C-comparison,"Does contextual evidence support derivation rather than coincidence?","comparison-only"
+AQ-TE-005,2,suffix,TE,4,4.869,"A-DI-KI-TE ~ A-DI-KI-TE-TE",literature-supported,"Can the exact-pair claim be separated from the published Dikte morphology argument?","reclassified-not-clean-pair"
+AQ-TE-006,2,suffix,TE,4,4.869,"A-TA-NA ~ A-TA-NA-TE",rejected-control,"Is A-TA-NA actually complete?","rejected-damaged-base"
+AQ-RE-001,3,suffix,RE,7,4.241,"PA-JA ~ PA-JA-RE",Tier-B-reclassified,"Ordinary inflection or onomastic derivation?","survives-formal-onomastic"
+AQ-RE-002,3,suffix,RE,7,4.241,"KI-*310 ~ KI-*310-RE",rejected-control,"Is the base complete?","rejected-damaged-base"
+AQ-RE-003,3,suffix,RE,7,4.241,"TE-JA ~ TE-JA-RE",reclassified-control,"Is TE-JA complete and is TE-JA-RE onomastic?","rejected-fragmentary-base-onomastic-variant"
+AQ-RE-004,3,suffix,RE,7,4.241,"A-DU ~ A-DU-RE",rejected-control,"Is the extended word boundary secure?","rejected-damaged-variant"
+AQ-RE-005,3,suffix,RE,7,4.241,"DU-RA ~ DU-RA-RE",rejected-control,"Is the base complete?","rejected-damaged-base"
+AQ-RE-006,3,suffix,RE,7,4.241,"A-TA ~ A-TA-RE",rejected-control,"Is the base complete?","rejected-damaged-base"
+AQ-JA-001,4,suffix,JA,2,4.977,"PA-SE ~ PA-SE-JA",Tier-A-positive,"Revalidate context and attach primary-edition references",validated-seed
+AQ-JA-002,4,suffix,JA,2,4.977,"KU-PA ~ KU-PA-JA",Tier-A-positive,"Revalidate context and attach primary-edition references",validated-seed
+AQ-JA-003,4,suffix,JA,2,4.977,"A-SE ~ A-SE-JA",new,"Secure boundaries; comparable contexts; same lexical identity?",pending
+AQ-JA-004,4,suffix,JA,2,4.977,"*306-TU ~ *306-TU-JA",new,"Is *306 phonographic here and are both forms securely segmented?",pending
+AQ-JA-005,4,suffix,JA,2,4.977,"A-MA ~ A-MA-JA",new,"Same lexical identity or short-form coincidence?",pending
+AQ-JA-006,4,suffix,JA,2,4.977,"JA-SA ~ JA-SA-JA",new,"Same lexical identity; formula/name confound?",pending
+AQ-JA-007,4,suffix,JA,2,4.977,"A-RI ~ A-RI-JA",new,"Same lexical identity; site/scribe distribution?",pending
+AQ-JA-008,4,suffix,JA,2,4.977,"PU₂-RE ~ PU₂-RE-JA",new,"Secure sign value/boundary and contextual equivalence?",pending
+AQ-A-001,5,prefix,A,1,7.842,"RA-NA-RE ~ A-RA-NA-RE",new,"Does A- correlate with a recurring administrative role?",pending
+AQ-A-002,5,prefix,A,1,7.842,"KA-RU ~ A-KA-RU",new,"Does A- correlate with a recurring administrative role?",pending
+AQ-A-003,5,prefix,A,1,7.842,"SA-RA₂ ~ A-SA-RA₂",new,"Does A- correlate with a recurring administrative role?",pending
+AQ-A-004,5,prefix,A,1,7.842,"PA-RA-NE ~ A-PA-RA-NE",mixed,"Does A- survive the known PA-RA/PA-RA-NE scribal complication?",pending
+AQ-A-005,5,prefix,A,1,7.842,"SA-SA-RA-ME ~ A-SA-SA-RA-ME",ritual-comparison,"Is this productive prefixation or formulaic variation?",pending
+AQ-A-006,5,prefix,A,1,7.842,"SI-KI-RA ~ A-SI-KI-RA",known-candidate,"Verify contexts and prior scholarship on optional A-",pending
+AQ-A-007,5,prefix,A,1,7.842,"DA-RA ~ A-DA-RA",new,"Does A- correlate with a recurring administrative role?",pending
+AQ-A-008,5,prefix,A,1,7.842,"RI-JA ~ A-RI-JA",new,"Does A- correlate with a recurring administrative role?",pending
+AQ-I-001,6,prefix,I,4,4.660,"RU-JA ~ I-RU-JA",new,"Productive I- prefix or lexical coincidence?",pending
+AQ-I-002,6,prefix,I,4,4.660,"KI-RA ~ I-KI-RA",new,"Productive I- prefix or lexical coincidence?",pending
+AQ-I-003,6,prefix,I,4,4.660,"TA-JA ~ I-TA-JA",new,"Productive I- prefix or lexical coincidence?",pending
+AQ-I-004,6,prefix,I,4,4.660,"KU-TA ~ I-KU-TA",new,"Productive I- prefix or lexical coincidence?",pending
+AQ-I-005,6,prefix,I,4,4.660,"QA-*118 ~ I-QA-*118",new,"Is *118 phonographic in both contexts?",pending
+AQ-I-006,6,prefix,I,4,4.660,"JA-PA ~ I-JA-PA",new,"Productive I- prefix or lexical coincidence?",pending
+AQ-I-007,6,prefix,I,4,4.660,"KU-PI ~ I-KU-PI",new,"Productive I- prefix or lexical coincidence?",pending
+AQ-I-008,6,prefix,I,4,4.660,"DA-MA-TE ~ I-DA-MA-TE",new,"Productive I- prefix or lexical coincidence?",pending
+AQ-NE-001,7,suffix,NE,5,4.735,"*21F-TU ~ *21F-TU-NE",Tier-A-positive,"Primary-edition revalidation; benchmark positive control",validated-seed
+AQ-NE-002,7,suffix,NE,5,4.735,"QE-TU ~ QE-TU-NE",new,"Secure same-lexeme relationship?",pending
+AQ-NE-003,7,suffix,NE,5,4.735,"PA-TA ~ PA-TA-NE",new,"Secure same-lexeme relationship?",pending
+AQ-NE-004,7,suffix,NE,5,4.735,"PA-RA ~ PA-RA-NE",rejected-control,"Does expanded corpus remove or preserve scribal confound?",negative-control
+AQ-TI-001,8,suffix,TI,11,3.699,"DA-KU-SE-NE ~ DA-KU-SE-NE-TI",Tier-A-positive,"Primary-edition revalidation; local positive despite lower global rank",validated-seed
+AQ-NU-001,9,suffix,NU,34,2.027,"KU-PA₃ ~ KU-PA₃-NU",reclassified-control,"Confirm onomastic explanation remains best",negative-control
+AQ-NU-002,9,suffix,NU,34,2.027,"U-TI ~ U-TI-NU",rejected-control,"Confirm fragment/segmentation failure remains decisive",negative-control
