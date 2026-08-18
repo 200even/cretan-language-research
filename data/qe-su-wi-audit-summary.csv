@@ -1,0 +1,7 @@
+suffix,base,variant,evidence_tier,adjudication,structural_issue,context_note,provenance
+QE,KA-PA,KA-PA-QE,A,positive,none,"same-tablet HT6a exact extension; same scribal production; role contrast interesting but function unknown","audits/QE.md; HT6 commentary; HT6a transaction layer"
+QE,SA-RO,SA-RO-QE,rejected,rejected,"variant right boundary insecure: SA-RO-QE[","normalized v0.4 item representation overstated completeness","audits/QE.md; HT62[+]73 commentary"
+SU,KU-NI,KU-NI-SU,rejected,rejected,"base source-conflicted/insecure: damage-preserving commentary gives ]KU-NI[","KU-NI-SU is repeated and complete but exact base+SU paradigm is not established","audits/SU.md; HT79 commentary; HT10/HT86/HT95"
+SU,A-RI,A-RI-SU,C,comparison-only,none,"Phaistos MM II word-only list vs Haghia Triada LM IB quantified account; lexical identity unproved","audits/SU.md; PH6; HT118"
+WI,JA-DI,JA-DI-WI,rejected,rejected,"variant is segmented damaged material: ]JA[ ]DI-[ ]WI[","normalized corpus flattened multiple fragments into one word","audits/WI.md; PHWc39; KNZb35 commentary"
+WI,PA3-NI,PA3-NI-WI,B,reclassified,none,"repeated administrative base vs ritual formula extension; possible onomastic/relational/derivational morphology","audits/WI.md; HT85/HT102; SYZa4; Thomas 2020"
