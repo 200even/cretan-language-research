@@ -1,0 +1,31 @@
+name: apply-ja-function-docs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/apply-ja-function-docs.mjs'
+      - '.github/workflows/apply-ja-function-docs.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/apply-ja-function-docs.mjs
+      - name: Commit documentation updates
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md METHODOLOGY.md
+          if git diff --cached --quiet; then
+            echo 'No changes needed.'
+          else
+            git commit -m 'Record negative JA contextual-function test'
+            git push origin HEAD:main
+          fi
