@@ -5,6 +5,12 @@
 **Primary result directory:** [`../results/damage-aware-v0.3/`](../results/damage-aware-v0.3/).  
 **Purpose:** remove damage-created exact morphology pairs before candidate ranking and separate boundary distribution from paradigmatic evidence.
 
+## Later source-hierarchy erratum (2026-08-18)
+
+The v0.3 development narrative below records what the project concluded **at the time of the frozen run**: normalized HT 79+83 tokenization appeared to supply a complete `KU-NI`, so a provisional damage-negative label was removed. A later audit compared that tokenization with the separate GORILA-derived damage-preserving commentary, which gives `]KU-NI[`.
+
+Accordingly, the later Tier-B promotion of `KU-NI ~ KU-NI-TE` is withdrawn and the current Davis-six manual source/damage count is **20/37 (54.1%)**, not 19/37. The frozen v0.3 regression result remains **19/19 registered negatives excluded and 6/6 registered positives retained**, because `KU-NI` was not one of those six positive controls. This is a later benchmark/source correction, not a retroactive change to the experiment.
+
 ## Research question
 
 The Davis-six first-pass audit found that more than half of the automatic `X ~ affix+X` / `X ~ X+affix` candidates appeared to fail because a relevant word boundary had been flattened in the cleaned computational corpus.
@@ -21,7 +27,7 @@ A second objective is methodological:
 
 Before the validated run, the repository froze a regression set in [`../data/v03-regression-set.csv`](../data/v03-regression-set.csv).
 
-After correcting one erroneous human label discovered by the experiment itself, the final regression gate contains:
+At the time the regression was frozen, after removing one then-believed erroneous human label, the gate contained:
 
 - **19** independently adjudicated damage/insecure-boundary relationships that the extractor must exclude;
 - **6** strong secure controls that the extractor must retain.
@@ -164,7 +170,7 @@ It does clarify *why* the six behave differently:
 - `A-`: high-frequency boundary signal and the strongest secure prefix-paradigm signal;
 - `I-`: weak on pure enrichment but strong in secure exact paradigms;
 - `-RO`: strongest boundary-enrichment suffix but relatively weak as a clean exact paradigm;
-- `-TE`: moderate distributional signal with three secure formal comparisons after correcting `KU-NI`;
+- `-TE`: the frozen v0.3 output retained three formal strings, but later source audit invalidated `KU-NI` as a secure base; current manual exact-pair evidence is narrower;
 - `-RE`: weak exact-pair signal, consistent with the hypothesis that much of its morphology may be onomastic/derivational rather than ordinary bare/extended alternation;
 - `-TI`: comparatively weak pure boundary enrichment but strong paradigmatic support.
 
@@ -211,11 +217,9 @@ Its surviving forms include ritual/formulaic material, so lexical-class stratifi
 
 ## Quantified damage correction
 
-The revised Davis-six first-pass accounting is:
+At the time of the frozen v0.3 write-up, the project reported **19/37 = 51.4%** after promoting `KU-NI` from normalized item tokenization. The later source-hierarchy audit showed the damage-preserving reading `]KU-NI[` and withdrew that promotion.
 
-> **19/37 = 51.4%** of the original automatic exact pairs fail specifically because a relevant boundary is damaged or insecure.
-
-The earlier figure of 20/37 (54.1%) was corrected when v0.3 demonstrated that `KU-NI ~ KU-NI-TE` had been wrongly labeled negative. The correction is itself a positive property of the benchmark workflow: computational regression tests can expose erroneous human adjudications as well as corpus artifacts.
+The **current manual Davis-six accounting is 20/37 = 54.1%** damage/source-insecure failures. The v0.3 regression artifact itself remains unchanged and still passes the gate that was actually registered and run.
 
 ## Limitations
 

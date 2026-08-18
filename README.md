@@ -16,13 +16,15 @@ A candidate does not become evidence for morphology until its forms, boundaries,
 
 ## Current headline results
 
-### Current discovery substrate: structural-aware v0.4
+### Latest frozen discovery substrate: structural-aware v0.4 (v0.5 source-consistency revision pending)
 
 v0.4 extends the validated damage-aware extractor with type/source controls for **editorial continuation, complex-logogram flattening, cross-script contamination, and authoritative source corrections**. Lexical/onomastic warnings are annotated separately rather than used as hidden exclusions.
 
 The frozen expanded regression gate passes:
 
 > **26/26 structural/source negatives excluded; 11/11 secure controls retained.**
+
+That is the historical result against the **then-frozen v0.4 benchmark**. The later QE/SU/WI audit found three source-representation misses and showed that one retention control (`KU-NI`) had been mislabeled as secure. The frozen run is not rewritten; those discoveries are registered for v0.5 and mean v0.4 should no longer be treated as source-complete.
 
 The run begins with 1,285 candidate syllabic occurrences and retains **951** after structural/type/source masking. The new extractor automatically reproduces several conclusions that previously required manual audit:
 
@@ -197,19 +199,25 @@ The top damage-aware suffix results are:
 
 This is not a probability ranking of “true suffixes.” It demonstrates that edge concentration, exact stem alternation, lexical class, and grammatical function are distinct empirical questions.
 
-## A benchmark correction discovered by the pipeline
+## A benchmark correction, followed by a correction of the correction
 
-The first manual audit labeled `KU-NI ~ KU-NI-TE` as a false pair because a fragmentary `KU-NI` attestation had been generalized to the form as a whole.
+The `KU-NI` case is now an explicit example of why source hierarchy matters.
 
-v0.3 refused to reproduce that negative label. Direct inspection of HT 79+83 showed a complete `KU-NI` occurrence, while `KU-NI-TE` is complete at KH 92.
+During v0.3 development, the benchmark treated `KU-NI ~ KU-NI-TE` as damage-created. The normalized HT 79+83 item page then appeared to show a complete `KU-NI`, so the project withdrew that negative label and reported 19/37 Davis-six pairs as damage/insecure failures.
 
-The benchmark was corrected instead of tuning the program to a bad human label.
+The later QE/SU/WI comparative audit checked the same token against the separate GORILA-derived **damage-preserving** commentary for HT 79 [+] 83. That source gives:
 
-The revised Davis-six damage count is therefore:
+```text
+]KU-NI[
+```
 
-> **19/37 = 51.4%** of the original apparent exact pairs fail specifically because a relevant boundary is damaged or insecure.
+The Tier-B promotion of `KU-NI ~ KU-NI-TE` has therefore been withdrawn. This does **not** change the frozen v0.3 regression PASS, because `KU-NI` was not among its six retained-positive controls. It does change the later manual Davis-six audit accounting.
 
-This is still more than half, but the correction matters: the benchmark is intended to be falsifiable too.
+The current targeted Davis-six source/damage count is:
+
+> **20/37 = 54.1%** of the original apparent exact pairs fail because a relevant boundary is damaged, insecure, or contradicted by a higher-fidelity source representation.
+
+The sequence of corrections is deliberately preserved. A benchmark that can reverse its own prior promotion when better source evidence appears is behaving as a falsifiable benchmark should.
 
 ## Why raw boundary rank is not enough
 

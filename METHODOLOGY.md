@@ -74,7 +74,7 @@ Rules:
 4. lexical-class and onomastic concerns are stored as **warnings**, not hidden extraction exclusions;
 5. a structurally retained pair remains only a formal candidate until common lexical identity and contextual equivalence are audited.
 
-The frozen v0.4 regression gate passes **26/26** structural/source negatives while retaining **11/11** secure controls. See [`experiments/structural-aware-v04.md`](experiments/structural-aware-v04.md).
+The frozen v0.4 run passed its **then-registered** gate: 26/26 exclusion controls removed and 11/11 retention controls retained. A later source-consistency audit showed that one retention control (`KU-NI`) had itself been mislabeled as secure and exposed three additional source failures outside the frozen gate. The historical PASS is preserved, but v0.4 is not treated as source-complete; the new controls are registered for v0.5. See [`experiments/structural-aware-v04.md`](experiments/structural-aware-v04.md).
 
 A useful consequence is that corpus preprocessing is now itself benchmarked: the extractor must reproduce known failures such as cross-face `JA-SA`, complex/logographic `MA-RU-ME`, and authoritative-boundary `PU2-RE` without being told which affix is being tested.
 

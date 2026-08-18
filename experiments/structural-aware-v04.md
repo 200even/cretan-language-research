@@ -6,6 +6,16 @@
 **Predecessor:** [`damage-aware-v03.md`](damage-aware-v03.md).  
 **Generated results:** [`../results/structural-aware-v0.4/`](../results/structural-aware-v0.4/).
 
+## Post-v0.4 source-consistency erratum (2026-08-18)
+
+v0.4 **passed the regression gate that was frozen before its ranking**, and that historical PASS is preserved. Later hostile audit of the tied `QE`, `SU`, and `WI` candidates nevertheless found source representations not covered by that gate:
+
+- HT 73 preserves `SA-RO-QE[`, not a securely final `SA-RO-QE`;
+- KN Zb 35 preserves separated damaged segments `]JA[ ]DI-[ ]WI[`, not one complete `JA-DI-WI` word;
+- the damage-preserving HT 79 [+] 83 commentary gives `]KU-NI[`, contradicting normalized tokenization that had made `KU-NI` a v0.4 retention control.
+
+Thus the statement “26/26 negatives excluded; 11/11 retention controls retained” remains true **of the frozen benchmark/run**, but one of those retention labels is no longer considered epigraphically correct and the benchmark was incomplete. The new failures are frozen forward in `data/v05-regression-backlog.csv`. v0.4 is therefore the latest historical discovery run, not the final source-consistent extractor.
+
 ## Research question
 
 v0.3 demonstrated that physical damage must be restored before exact morphology pairs are generated. Subsequent manual audits exposed additional false-positive classes that v0.3 could not represent:
@@ -34,7 +44,7 @@ It includes:
 - the `HT 24a` complex/logographic `MA+RU ME {*561}` control;
 - authoritative-source correction for the `PU2-RE ~ PU2-RE-JA` false pair;
 - additional `NE` damaged-base controls;
-- secure `JA`, `NE`, `KU-NI`, and `ME` formal controls to detect over-filtering.
+- then-adjudicated `JA`, `NE`, `KU-NI`, and `ME` retention controls to detect over-filtering (the `KU-NI` label was later withdrawn; see erratum above).
 
 **Success criterion:** every frozen exclusion must cease to be an accepted exact pair, and every frozen retention control must remain accepted.
 
@@ -48,7 +58,7 @@ The first validated run passes the expanded gate:
 
 See [`../results/structural-aware-v0.4/REGRESSION.md`](../results/structural-aware-v0.4/REGRESSION.md).
 
-The retained controls include the Tier-A `A-`, `I-`, `TI`, `JA`, and `NE` relationships plus the corrected `KU-NI ~ KU-NI-TE` and surviving `A-RA-TU ~ A-RA-TU-ME` formal candidate.
+The frozen run retained all then-registered positive controls. Later audit withdrew the `KU-NI ~ KU-NI-TE` control because the damage-preserving source gives `]KU-NI[`; the other frozen results remain historical outputs.
 
 ## Data layers
 
