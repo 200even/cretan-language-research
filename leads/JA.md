@@ -1,6 +1,6 @@
 # Lead: productive final `-JA`
 
-**Status:** strong productive-morphology result; full seven-pair audit completed; grammatical/semantic function unknown.
+**Status:** strong productive-morphology result; full seven-pair audit and four-family contextual-function test completed; grammatical/semantic function remains unknown.
 
 ## Current claim
 
@@ -60,6 +60,49 @@ The `KU-PA` family here uses ordinary `PA` and must not be conflated with the di
 
 `*306-TU` recurs in Haghia Triada account/personnel-style lists; `*306-TU-JA` is complete on HT 115b. The family is strong formally but may belong to personal-name/designation morphology. No phonetic value is assigned to `*306`.
 
+## Contextual-function test
+
+The completed experiment [`../experiments/ja-context-function-test.md`](../experiments/ja-context-function-test.md) tested whether adding `JA` predicts the **same observable documentary or transaction-role change across at least two independent Tier-A/B families**.
+
+It does not.
+
+### Family outcomes
+
+| family | coarse contextual result |
+|---|---|
+| `PA-SE ~ PA-SE-JA` | apparent tablet → roundel/receipt-label shift, but not categorical because damaged tablet `]PA-SE-JA` also exists |
+| `KU-PA ~ KU-PA-JA` | **role preservation**: both behave as administrative participant/recipient-like entries |
+| `A-SE ~ A-SE-JA` | **role preservation**: both behave as administrative recipient/designation-like entries |
+| `*306-TU ~ *306-TU-JA` | possible model-dependent recipient → sender contrast, but not independently established and not replicated |
+
+The registered promotion criterion therefore fails.
+
+The test specifically rejects simple assignments of `JA` as a marker for:
+
+- recipient;
+- sender/source;
+- roundel/receipt;
+- sealed document;
+- commodity association.
+
+The key control is that both `KU-PA` and `A-SE` occur in essentially the same coarse administrative slot with and without final `JA`.
+
+Machine-readable context matrix: [`../data/ja-context-function-matrix.csv`](../data/ja-context-function-matrix.csv).
+
+### Interpretation
+
+This negative result **does not weaken the productive-morphology claim**. It narrows the search space.
+
+The current evidence is compatible with:
+
+- derivational morphology that preserves the broad administrative slot;
+- agreement/inflection conditioned by syntax not visible in coarse tablet layout;
+- onomastic/designation morphology in some lexical classes;
+- multifunctional `JA`;
+- a clitic-like element whose trigger is not document type or simple transaction role.
+
+“Relational/derivational” may be used as a working search hypothesis, but not as an established grammatical label.
+
 ## Two false positives exposed by the audit
 
 ### `JA-SA ~ JA-SA-JA`
@@ -101,22 +144,25 @@ What survives is productive final morphology, function unknown.
 
 ## Next test
 
-The next informative `JA` experiment is not another string search. It should test whether the four Tier-A/B families show a **repeatable contextual role shift** between base and extended form.
+The next informative `JA` experiment should move from coarse document roles to **micro-syntax**.
 
-Priority comparisons:
+Priority design:
 
-1. tablet/roundel behavior of `PA-SE/PA-SE-JA`;
-2. commodity/account role of `KU-PA/KU-PA-JA`;
-3. possible place/designation role of `A-SE/A-SE-JA`;
-4. probable onomastic/personnel role of `*306-TU/*306-TU-JA`.
+1. encode immediate left/right neighbors of every secure base and `JA` form;
+2. distinguish transaction signs from commodity logograms and numerals;
+3. match each `JA` form to non-`JA` recipient/designation entries from the same tablets/scribes where possible;
+4. test whether `JA` predicts a recurring neighboring-sign construction even when the broad role is unchanged;
+5. keep roundels separate from tablet syntax;
+6. require replication across at least two independent families before assigning function.
 
-A grammatical function should be proposed only if the same contextual contrast appears across more than one independent family.
+This is now a much sharper question than asking what `JA` “means” globally.
 
 ## Sources / provenance
 
 - GORILA-derived upstream records for Haghia Triada, Zakros, Khania, Malia, Iouktas, Samothrace, and Knossos.
 - Maurizio Del Freo, Julien Zurbach & Carl Knappett, “A Fragment of a Libation Table Inscribed in Linear A from Petsophas, Palaikastro (PK Za 28),” in *Megistos Kouros* (2022).
-- Michael Wengler, `mwenge/lineara.xyz`, pinned exploratory corpus.
+- Michael Wengler, `mwenge/lineara.xyz`, pinned exploratory corpus and explicitly secondary transaction-analysis layer.
+- Erik Hallager, *The Minoan Roundel and Other Sealed Documents in the Neopalatial Linear A Administration* (1996), for the archaeological interpretation of roundels as receipts.
 - Mnamon and Heraklion Archaeological Museum for the Sybrita geographic derivative.
 - Brent Davis, *The Undeciphered Aegean Scripts* (2026), for the broader statistical morphology framework.
 
