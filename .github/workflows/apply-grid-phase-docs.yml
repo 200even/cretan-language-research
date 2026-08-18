@@ -1,0 +1,31 @@
+name: apply-grid-phase-docs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/apply-grid-phase-docs.mjs'
+      - '.github/workflows/apply-grid-phase-docs.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/apply-grid-phase-docs.mjs
+      - name: Commit documentation
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md METHODOLOGY.md
+          if git diff --cached --quiet; then
+            echo 'No documentation changes.'
+          else
+            git commit -m 'Document completed grid phase and calibration frontier'
+            git push origin HEAD:main
+          fi
