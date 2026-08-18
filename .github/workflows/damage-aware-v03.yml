@@ -12,6 +12,9 @@ on:
       - '.github/workflows/damage-aware-v03.yml'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   damage-aware-morphology:
     runs-on: ubuntu-latest
@@ -41,6 +44,8 @@ jobs:
             --out-dir replication-output-v0.3
 
       - name: Evaluate frozen regression set
+        id: regression
+        continue-on-error: true
         run: |
           node scripts/evaluate-v03-regression.mjs \
             --benchmark data/morphology-benchmark.csv \
@@ -61,7 +66,25 @@ jobs:
             echo '- damage source: upstream `commentary/*.html` fragment markers'
             echo '- node: `'"$(node --version)"'`'
             echo '- run: `'"${GITHUB_RUN_ID}"'`'
+            echo '- regression step outcome: `'"${{ steps.regression.outcome }}"'`'
           } > replication-output-v0.3/PROVENANCE.md
+
+      - name: Persist v0.3 result in repository
+        if: always()
+        shell: bash
+        run: |
+          rm -rf results/damage-aware-v0.3
+          mkdir -p results/damage-aware-v0.3
+          cp -a replication-output-v0.3/. results/damage-aware-v0.3/
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/damage-aware-v0.3
+          if git diff --cached --quiet; then
+            echo 'No generated result changes to commit.'
+          else
+            git commit -m 'Record damage-aware v0.3 morphology results'
+            git push origin HEAD:main
+          fi
 
       - name: Upload v0.3 artifact
         if: always()
@@ -70,3 +93,7 @@ jobs:
           name: damage-aware-morphology-v0.3
           path: replication-output-v0.3/
           if-no-files-found: error
+
+      - name: Enforce regression result
+        if: steps.regression.outcome == 'failure'
+        run: exit 1
