@@ -1,0 +1,9 @@
+audit_id,base_form,variant_form,v0_3_state,post_audit_tier,adjudication,principal_issue,notes
+AQ-JA-001,PA-SE,PA-SE-JA,accepted_secure,A,positive,"support-type distribution","Multiple complete base tablets and two complete roundels; formal morphology strong, function unknown"
+AQ-JA-002,KU-PA,KU-PA-JA,accepted_secure,A,positive,"function unknown","Administrative base replicated across sites; complete JA form in Haghia Triada commodity tablet"
+AQ-JA-003,A-SE,A-SE-JA,accepted_secure,B,candidate,"short base / lexical identity","Multiple base attestations and one administrative JA form; possible place role unanchored"
+AQ-JA-004,*306-TU,*306-TU-JA,accepted_secure,B,reclassified,"onomastic/designation concentration","Repeated exact base; extended form complete; likely derivational/onomastic risk"
+AQ-JA-005,A-MA,A-MA-JA,accepted_secure,C,comparison-only,"short base / cross-site-support mismatch","Real strings but lexical identity not established"
+AQ-JA-006,JA-SA,JA-SA-JA,accepted_secure,rejected,rejected,"cross-face continuation / ritual abbreviation","IO Za12 JA-SA continues as JA-SA-|SA-RA-ME; KN Zg55 likely abbreviation of same family"
+AQ-JA-008,PU2-RE,PU2-RE-JA,accepted_secure,rejected,rejected,"authoritative fragment boundaries / source coverage","2022 editio princeps gives ]-PU2-RE for PK Za28 and ]PU2-RE-JA for ZA Zb34"
+TOTAL,,,7,"A=2;B=2;C=1;rejected=2",,"4/7 survive at Tier A/B","v0.3 remains frozen as candidate-generation result"
