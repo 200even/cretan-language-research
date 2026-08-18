@@ -1,0 +1,31 @@
+name: apply-qe-su-wi-integration
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/apply-qe-su-wi-integration.mjs'
+      - '.github/workflows/apply-qe-su-wi-integration.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/apply-qe-su-wi-integration.mjs
+      - name: Commit comparative audit integration
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audits/TE.md data/davis-six-audit-summary.csv results/davis-six-audit-synthesis.md data/morphology-benchmark.csv data/morphology-audit-queue.csv data/suffix-audit-comparison.csv METHODOLOGY.md README.md experiments/qe-su-wi-comparative-audit.md
+          if git diff --cached --quiet; then
+            echo 'No integration changes needed.'
+          else
+            git commit -m 'Integrate QE SU WI audit and KU-NI correction'
+            git push origin HEAD:main
+          fi
