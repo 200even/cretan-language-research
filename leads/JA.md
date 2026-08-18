@@ -1,6 +1,6 @@
 # Lead: productive final `-JA`
 
-**Status:** strong productive-morphology result; full seven-pair audit and four-family contextual-function test completed; grammatical/semantic function remains unknown.
+**Status:** strong productive-morphology result; full seven-pair audit, contextual-function test, and literal micro-syntax test completed; grammatical/semantic function remains unknown.
 
 ## Current claim
 
@@ -50,7 +50,7 @@ Machine-readable summary: [`../data/ja-audit-summary.csv`](../data/ja-audit-summ
 
 The `KU-PA` family here uses ordinary `PA` and must not be conflated with the distinct `KU-PA3-...` onomastic family.
 
-## New Tier-B families
+## Tier-B families
 
 ### `A-SE ~ A-SE-JA`
 
@@ -66,42 +66,71 @@ The completed experiment [`../experiments/ja-context-function-test.md`](../exper
 
 It does not.
 
-### Family outcomes
-
 | family | coarse contextual result |
 |---|---|
-| `PA-SE ~ PA-SE-JA` | apparent tablet → roundel/receipt-label shift, but not categorical because damaged tablet `]PA-SE-JA` also exists |
+| `PA-SE ~ PA-SE-JA` | apparent tablet → roundel/receipt-label shift, but not categorical |
 | `KU-PA ~ KU-PA-JA` | **role preservation**: both behave as administrative participant/recipient-like entries |
 | `A-SE ~ A-SE-JA` | **role preservation**: both behave as administrative recipient/designation-like entries |
-| `*306-TU ~ *306-TU-JA` | possible model-dependent recipient → sender contrast, but not independently established and not replicated |
+| `*306-TU ~ *306-TU-JA` | possible model-dependent recipient → sender contrast, not replicated |
 
-The registered promotion criterion therefore fails.
-
-The test specifically rejects simple assignments of `JA` as a marker for:
-
-- recipient;
-- sender/source;
-- roundel/receipt;
-- sealed document;
-- commodity association.
-
-The key control is that both `KU-PA` and `A-SE` occur in essentially the same coarse administrative slot with and without final `JA`.
+The test rejects simple assignments of `JA` as a marker for recipient, sender/source, roundel/receipt, sealed document, or commodity association.
 
 Machine-readable context matrix: [`../data/ja-context-function-matrix.csv`](../data/ja-context-function-matrix.csv).
 
+## Micro-syntax test
+
+The next registered experiment, [`../experiments/ja-micro-syntax.md`](../experiments/ja-micro-syntax.md), moved below the coarse sender/recipient level and encoded the literal local sequence around 19 secure attestations:
+
+- divider/separator;
+- transaction/special sign;
+- commodity/logogram;
+- numeral/fraction;
+- inherited list/section context.
+
+The promotion criterion required the **same literal base → `JA` construction shift in at least two independent families**.
+
+### Result
+
+> **0/4 Tier-A/B families show a replicated `JA`-specific micro-syntactic shift.**
+
+No single right-neighbor construction is unique to or repeatedly produced by `JA`.
+
+The clearest literal control is `*306-TU`:
+
+```text
+HT 9a:   *306-TU    > 10
+HT 9b:   *306-TU    > 8
+HT 119:  *306-TU    > 2
+HT 122a: *306-TU    > 1
+HT 115b: *306-TU-JA > 1
+```
+
+The local written construction is preserved even though the upstream derived transaction model labels the bare forms recipient-like and the HT 115b `JA` form sender-like. That model-level contrast therefore cannot be treated as a visible grammatical consequence of `JA`.
+
+Two same-tablet controls are also important:
+
+- HT 115a: `*47-NU-RA-JA` is modeled as sender while `A-SE-JA` is modeled as recipient;
+- HT 115b: `TI-NU-JA` is modeled as recipient while `*306-TU-JA` is modeled as sender.
+
+Thus final `JA` is not consistently tied to one transaction role even on the same document.
+
+Evidence matrix: [`../data/ja-micro-syntax-matrix.csv`](../data/ja-micro-syntax-matrix.csv).  
+Summary: [`../data/ja-micro-syntax-summary.csv`](../data/ja-micro-syntax-summary.csv).
+
 ### Interpretation
 
-This negative result **does not weaken the productive-morphology claim**. It narrows the search space.
+This second negative functional result still does **not** weaken the productive-morphology claim. It shows that the function is not recoverable from the current coarse roles or immediate-neighbor features.
 
-The current evidence is compatible with:
+The surviving search space includes:
 
-- derivational morphology that preserves the broad administrative slot;
-- agreement/inflection conditioned by syntax not visible in coarse tablet layout;
-- onomastic/designation morphology in some lexical classes;
-- multifunctional `JA`;
-- a clitic-like element whose trigger is not document type or simple transaction role.
+- derivational morphology whose effect is lexical rather than positional;
+- agreement/inflection conditioned by a non-local relation;
+- oblique/relational morphology not equivalent to the derived sender/recipient labels;
+- onomastic/designation morphology in some families;
+- multiple functions or homographic `JA` elements;
+- a construction visible only in broader list/clause structure.
 
-“Relational/derivational” may be used as a working search hypothesis, but not as an established grammatical label.
+None is established.
 
 ## Two false positives exposed by the audit
 
@@ -144,18 +173,15 @@ What survives is productive final morphology, function unknown.
 
 ## Next test
 
-The next informative `JA` experiment should move from coarse document roles to **micro-syntax**.
+The immediate-neighbor level is now exhausted without a replicated function. The next `JA` work should move outward to **broader structural frames** while auditing `ME` in parallel:
 
-Priority design:
-
-1. encode immediate left/right neighbors of every secure base and `JA` form;
-2. distinguish transaction signs from commodity logograms and numerals;
-3. match each `JA` form to non-`JA` recipient/designation entries from the same tablets/scribes where possible;
-4. test whether `JA` predicts a recurring neighboring-sign construction even when the broad role is unchanged;
-5. keep roundels separate from tablet syntax;
-6. require replication across at least two independent families before assigning function.
-
-This is now a much sharper question than asking what `JA` “means” globally.
+1. encode section headings and repeated list frames around each secure `JA` family;
+2. match `JA` forms to non-`JA` designations on the same tablet and, where possible, same scribe;
+3. test lexical-class concentration: place/institution, person/designation, transaction participant, or other category;
+4. keep roundel syntax separate from tablet list syntax;
+5. use Sybrita only as a positive control for relational/derivational formation, not as a gloss for `JA` alone;
+6. audit the v0.3 `ME` families so the project does not overfit indefinitely around one suffix;
+7. require replication across at least two independent families before any functional assignment.
 
 ## Sources / provenance
 
