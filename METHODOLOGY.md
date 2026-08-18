@@ -46,6 +46,8 @@ Rules:
 - if the same spelling occurs once fragmentary and once complete, the complete occurrence remains eligible;
 - explanatory commentary must not contaminate the inscription transcription mask;
 - exact `X ~ X-A` / `X ~ A-X` relationships are generated only after boundary masking;
+- support/type classification must distinguish ordinary syllabic words from logograms, ligatures, and complex signs before morphology generation;
+- editorial line/face continuation must be reconciled before a segment is admitted as a free word;
 - a surviving exact string relationship is still only a **formal candidate** until lexical identity, context, onomastics, and scribal factors are audited.
 
 The validated v0.3 regression gate currently removes **19/19** known damage-created/insecure relationships while retaining **6/6** secure positive controls. See [`experiments/damage-aware-v03.md`](experiments/damage-aware-v03.md).
@@ -235,6 +237,8 @@ Particularly dangerous operations include:
 - using conventional Linear-B-derived readings as if they were exact Minoan phonetic transcriptions;
 - generating morphology pairs from cleaned words before restoring damaged boundary information;
 - globally blacklisting a spelling because one attestation of it is damaged.
+- flattening complex logograms or ligatures into hyphenated syllabic-looking strings and then treating them as ordinary words;
+- treating a line or face break as a word boundary when the edition explicitly continues the same lexical item across the break.
 
 Where practical, tests should include negative controls, predeclared scoring rules, a versioned regression set, and a written pre-registration or experiment record in `experiments/`.
 

@@ -51,3 +51,7 @@ AQ-NE-003,8,suffix,NE,5,4.735,"PA-TA ~ PA-TA-NE",new,"Secure same-lexeme relatio
 AQ-NE-004,8,suffix,NE,5,4.735,"PA-RA ~ PA-RA-NE",rejected-control,"Does expanded corpus remove or preserve scribal confound?",negative-control
 AQ-NU-001,9,suffix,NU,34,2.027,"KU-PA₃ ~ KU-PA₃-NU",reclassified-control,"Confirm onomastic explanation remains best",negative-control
 AQ-NU-002,9,suffix,NU,34,2.027,"U-TI ~ U-TI-NU",rejected-control,"Confirm fragment/segmentation failure remains decisive",negative-control
+AQ-ME-001,8,suffix,ME,3,4.879,"A-RA-TU ~ A-RA-TU-ME",Tier-B-candidate,"Same lexeme across Zakros tablet and Haghia Triada roundel?","survives-formal-audit-tier-b"
+AQ-ME-002,8,suffix,ME,3,4.879,"JA-SA-SA-RA ~ JA-SA-SA-RA-ME",rejected-control,"Is the apparent bare form an independent word?","rejected-cross-face-continuation"
+AQ-ME-003,8,suffix,ME,3,4.879,"MA-RU ~ MA-RU-ME",rejected-control,"Is the extended form an ordinary syllabic word or complex logographic notation?","rejected-logogram-flattening"
+AQ-ME-004,8,suffix,ME,3,4.879,"SA-RA ~ SA-RA-ME",rejected-control,"Is SA-RA-ME independently segmented?","rejected-cross-face-continuation"

@@ -107,6 +107,25 @@ Function test: [`experiments/ja-context-function-test.md`](experiments/ja-contex
 Context matrix: [`data/ja-context-function-matrix.csv`](data/ja-context-function-matrix.csv)  
 Summary: [`data/ja-context-function-summary.csv`](data/ja-context-function-summary.csv)
 
+### Comparative audit: `ME` collapses under source/type controls
+
+The same v0.3 screen that elevated `JA` ranked final `ME` #2 by accepted exact paradigms. A full audit produces a sharply different outcome:
+
+| v0.3 `ME` pair | manual result |
+|---|---|
+| `A-RA-TU ~ A-RA-TU-ME` | **Tier B candidate** |
+| `JA-SA-SA-RA ~ ...-ME` | rejected: cross-face continuation |
+| `MA-RU ~ MA-RU-ME` | rejected: complex/logographic `*561` notation flattened as syllabic text |
+| `SA-RA ~ SA-RA-ME` | rejected: cross-face continuation |
+
+So only **1/4** damage-secure automatic pairs survives as a credible morphology candidate. The current benchmark therefore does **not** establish productive final `ME` morphology. This is an important contrast with `JA`, where four independent Tier-A/B families survived equivalent scrutiny.
+
+The `ME` audit adds a new corpus failure mode: **complex-sign/logogram flattening can manufacture a syllabic-looking affix paradigm**.
+
+Audit: [`audits/ME.md`](audits/ME.md)  
+Lead: [`leads/ME.md`](leads/ME.md)  
+Summary: [`data/me-audit-summary.csv`](data/me-audit-summary.csv)
+
 ### 5. Different affixes have different evidentiary profiles
 
 v0.3 deliberately separates two dimensions that the earlier composite score conflated.
@@ -171,6 +190,9 @@ No post-hoc weight change is applied to v0.3. A future version should add a sepa
 - [`data/ja-audit-summary.csv`](data/ja-audit-summary.csv)
 - [`data/ja-context-function-matrix.csv`](data/ja-context-function-matrix.csv)
 - [`data/ja-context-function-summary.csv`](data/ja-context-function-summary.csv)
+- [`data/ja-list-frame-matrix.csv`](data/ja-list-frame-matrix.csv)
+- [`data/ja-list-frame-summary.csv`](data/ja-list-frame-summary.csv)
+- [`data/me-audit-summary.csv`](data/me-audit-summary.csv)
 - [`data/v03-regression-set.csv`](data/v03-regression-set.csv)
 
 Negative and reclassified examples are deliberately retained.
@@ -230,18 +252,16 @@ The older frozen v0.1/v0.2 implementation remains at [`scripts/rank-affixes.mjs`
 
 ## Next work
 
-The coarse contextual-function test is complete and negative. The immediate `JA` priority is now **micro-syntax**, not another global semantic guess:
+The current priority is now **comparative morphology**, not further semantic drilling on `JA`.
 
-1. encode immediate left/right neighbors for every secure `PA-SE`, `KU-PA`, `A-SE`, `*306-TU` and corresponding `JA` form;
-2. distinguish transaction signs from commodity logograms, numerals, and dividers;
-3. match `JA` forms to non-`JA` recipient/designation entries from the same tablets and scribes;
-4. test whether `JA` predicts a recurring neighboring-sign construction even when the broad administrative role is unchanged;
-5. keep roundels separate from tablet syntax;
-6. audit the four v0.3 `ME` pairs under the same standards;
-7. extend v0.4 regression coverage to cross-face segmentation and authoritative-source gaps;
-8. require replication across at least two independent families before assigning any grammatical function.
+1. keep the `JA` functional stop rule in force until genuinely new evidence appears;
+2. audit `NE` next, because it already contains the Tier-A `*21F-TU ~ *21F-TU-NE` control plus unresolved v0.2/v0.3 candidates;
+3. compare audited survival rates and evidence profiles across `JA`, `ME`, `NE`, and Davis's suffixes;
+4. register v0.4 extraction controls for cross-face continuation, authoritative-source gaps, and complex-logogram flattening;
+5. stratify morphology by lexical class rather than forcing one affix model across personnel, ritual, commodity, and ordinary administrative vocabulary;
+6. seek new same-tablet/same-scribe paradigms before assigning grammatical functions.
 
-The working search hypothesis may be described as **relational/derivational or agreement-like**, but no such function is established yet.
+The completed `JA` list/frame test is negative: even broader account hierarchy does not recover a general `JA` function. See [`experiments/ja-list-frame-test.md`](experiments/ja-list-frame-test.md).
 
 ## Repository map
 
@@ -274,6 +294,7 @@ audits/
   TE.md
   RE.md
   TI.md
+  ME.md
   JA.md
 
 results/

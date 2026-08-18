@@ -165,3 +165,14 @@ See [`audits/JA.md`](audits/JA.md).
 ## Principle
 
 When a lead fails, the failure is part of the result. Any future claim should link here when it supersedes an earlier interpretation.
+
+## `ME` automatic exact-pair controls
+
+The v0.3 screen produced four damage-secure apparent `X ~ X-ME` relationships. Full source/type audit rejects three:
+
+- `JA-SA-SA-RA ~ JA-SA-SA-RA-ME`: IO Za 16 continues the same word across faces as `JA-SA-SA-RA- | -ME`.
+- `SA-RA ~ SA-RA-ME`: IO Za 12 continues `JA-SA- | -SA-RA-ME`; `SA-RA-ME` is not a free word there.
+- `MA-RU ~ MA-RU-ME`: HT 24a tabulates the supposed extended form as complex/logographic `MA+RU ME {*561}`, not an ordinary syllabic word parallel to HT 117a `MA-RU`.
+
+Only `A-RA-TU ~ A-RA-TU-ME` remains as a Tier-B formal candidate. Productive final `ME` is therefore not established by the current exact-pair benchmark. See [`audits/ME.md`](audits/ME.md).
+
