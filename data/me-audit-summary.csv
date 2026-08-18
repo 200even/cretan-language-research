@@ -1,0 +1,6 @@
+pair,automatic_v03_status,final_adjudication,evidence_tier,main_issue,notes
+"A-RA-TU ~ A-RA-TU-ME",accepted_secure,candidate,B,"cross-site/support; lexical identity unresolved","ZA7a complete base with numeral 4; HTWc3024 complete roundel form with OVISf and six impressions"
+"JA-SA-SA-RA ~ JA-SA-SA-RA-ME",accepted_secure,rejected,rejected,cross-face-continuation,"IOZa16 breaks JA-SA-SA-RA- / -ME across faces; commentary reconstructs one full word"
+"MA-RU ~ MA-RU-ME",accepted_secure,rejected-reclassified,rejected,logogram-complex-sign-flattening,"HT117a MA-RU is personnel/list entry; HT24a supposed MA-RU-ME is tabulated in logogram column as MA+RU ME {*561}"
+"SA-RA ~ SA-RA-ME",accepted_secure,rejected,rejected,cross-face-continuation,"IOZa12 SA-RA-ME is continuation of JA-SA- | -SA-RA-ME, not independent word"
+TOTAL,"4 accepted by v0.3","1 Tier-B survivor; 3 rejected",,"manual survival 1/4","Current exact-pair evidence does not establish productive final ME morphology"
