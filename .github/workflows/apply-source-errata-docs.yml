@@ -1,0 +1,31 @@
+name: apply-source-errata-docs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/apply-source-errata-docs.mjs'
+      - '.github/workflows/apply-source-errata-docs.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/apply-source-errata-docs.mjs
+      - name: Commit source-hierarchy errata
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md METHODOLOGY.md experiments/damage-aware-v03.md experiments/structural-aware-v04.md
+          if git diff --cached --quiet; then
+            echo 'No errata changes needed.'
+          else
+            git commit -m 'Document post-v0.4 source hierarchy errata'
+            git push origin HEAD:main
+          fi
