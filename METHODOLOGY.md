@@ -339,3 +339,7 @@ A lead should be downgraded immediately if:
 A previous rejection should likewise be **withdrawn** if better epigraphic evidence demonstrates that the rejection was based on an incomplete or misgeneralized reading.
 
 The desired outcome is not to preserve hypotheses. It is to preserve **auditability**.
+
+## Grid-search stop rule
+
+Three registered combinatorial searches now constrain paradigm claims. The bare-stem matrix found no repeated two-stem ending set; the sibling-ending search found one formal rectangle but hostile audit rejected it; allowing terminal depths of one and two signs produced no additional rectangle. Therefore increasingly permissive segmentation is not an acceptable way to manufacture a paradigm. Future grid work requires genuinely new evidence or an independently encoded corpus. Statistical calibration precedes any further semantic interpretation.

@@ -313,24 +313,24 @@ The older frozen v0.1/v0.2 implementation remains at [`scripts/rank-affixes.mjs`
 
 ## Next work
 
-The preregistered comparative audit of `MI`, `PA`, and `SA` is complete. **None meets the two-family productivity rule.**
+The suffix sweep and first combinatorial grid phase are now complete. No new suffix after `JA` met the registered two-family productivity rule, and three increasingly permissive grid searches did **not** recover a promotable Kober-style paradigm.
 
-- `MI`: **1 Tier A + 1 rejected**. `I-DA ~ I-DA-MI` is a strong cross-site libation-formula relationship; the apparent `JA-RE` base collapses against damage-preserving `]PA-RE`.
-- `PA`: **1 Tier B + 1 Tier C**. `KA-KU ~ KA-KU-PA` survives as a credible administrative formal family.
-- `SA`: **1 Tier C + 1 rejected**. `QA-*118-SA` is actually left-fragmentary; `A-JE ~ A-JE-SA` remains source-limited.
+Current grid results:
 
-The project now stops descending the suffix ranking and moves to **multi-ending stem grids**. The first preregistered anchor is `I-DA`, because the completed MI audit establishes `I-DA-MI` at Tier A while frozen v0.5 also contains `I-DA-A` and `I-DA-DA`.
+- **v0.1 bare-stem matrix:** 7 multi-ending stems, **0** two-stem overlaps. `I-DA` is the strongest local family: `I-DA-MI` Tier A, `I-DA-A` Tier B, `I-DA-DA` Tier C.
+- **v0.2 sibling endings:** 33 sibling families and exactly **1** formal 2×2 rectangle (`TI-TI` / `KU-RU` × `KU` / `MA`), but hostile audit rejects promotion.
+- **v0.3 nested depths:** 679 candidate cells, 48 multi-terminal families, still only the same rectangle; no depth-2 grid. `I-TI-TI-KU-NI` supplies an explicit competing stem-depth warning.
 
-Immediate sequence:
+A grid stop rule is now in force: **do not increase segmentation freedom merely to force a paradigm.**
 
-1. hostile-audit the `I-DA-A` and `I-DA-DA` cells;
-2. build a corpus-wide stem × final-ending matrix from v0.5 exact pairs, masking known source conflicts and preserving manual tiers;
-3. search for a second independent stem sharing at least two endings before calling anything a paradigm grid;
-4. only after a formal grid survives, test contextual/grammatical function.
+The next research milestones are:
 
-Registered grid protocol: [`experiments/multi-ending-grid-v01.md`](experiments/multi-ending-grid-v01.md).  
-Comparative audit: [`results/mi-pa-sa-comparative-audit.md`](results/mi-pa-sa-comparative-audit.md).  
-Forward source controls: [`data/v06-regression-backlog.csv`](data/v06-regression-backlog.csv).
+1. **statistical calibration / null models** for the morphology signals already recovered, preserving source security, word lengths, sign frequencies, and site/scribe structure where feasible;
+2. quantify how surprising the strongest results are, especially productive `JA`, the Davis-affix rankings, and high-quality local families such as `I-DA ~ I-DA-MI`;
+3. then replicate the extraction and structural tests against an **independently encoded corpus** (SigLA-derived or equivalent where feasible);
+4. only after statistical and independent-corpus replication should external language-family predictions be given substantial weight.
+
+Grid protocols/results: [`experiments/multi-ending-grid-v01.md`](experiments/multi-ending-grid-v01.md), [`experiments/sibling-ending-grid-v02.md`](experiments/sibling-ending-grid-v02.md), [`experiments/nested-stem-grid-v03.md`](experiments/nested-stem-grid-v03.md).
 
 ## Repository map
 
