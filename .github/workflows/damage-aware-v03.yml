@@ -1,0 +1,72 @@
+name: damage-aware-v03
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build-boundary-mask.mjs'
+      - 'scripts/rank-affixes-v03.mjs'
+      - 'scripts/evaluate-v03-regression.mjs'
+      - 'data/v03-regression-set.csv'
+      - 'data/morphology-benchmark.csv'
+      - '.github/workflows/damage-aware-v03.yml'
+  workflow_dispatch:
+
+jobs:
+  damage-aware-morphology:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out research repository
+        uses: actions/checkout@v4
+
+      - name: Check out pinned Linear A Explorer corpus
+        shell: bash
+        run: |
+          git clone --quiet https://github.com/mwenge/lineara.xyz.git upstream-lineara
+          git -C upstream-lineara checkout --quiet 43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a
+          git -C upstream-lineara rev-parse HEAD
+
+      - name: Build damage boundary mask
+        run: |
+          mkdir -p replication-output-v0.3
+          node scripts/build-boundary-mask.mjs \
+            --commentary-dir upstream-lineara/commentary \
+            --out replication-output-v0.3/boundary-mask.csv
+
+      - name: Run damage-aware v0.3 rankings
+        run: |
+          node scripts/rank-affixes-v03.mjs \
+            --corpus upstream-lineara/LinearAInscriptions.js \
+            --boundary-mask replication-output-v0.3/boundary-mask.csv \
+            --out-dir replication-output-v0.3
+
+      - name: Evaluate frozen regression set
+        run: |
+          node scripts/evaluate-v03-regression.mjs \
+            --benchmark data/morphology-benchmark.csv \
+            --regression data/v03-regression-set.csv \
+            --pairs replication-output-v0.3/exact-pairs.csv \
+            --out-dir replication-output-v0.3
+
+      - name: Record provenance
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo '# v0.3 provenance'
+            echo
+            echo '- research repo commit: `'"${GITHUB_SHA}"'`'
+            echo '- upstream corpus: `mwenge/lineara.xyz`'
+            echo '- upstream commit: `43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a`'
+            echo '- damage source: upstream `commentary/*.html` fragment markers'
+            echo '- node: `'"$(node --version)"'`'
+            echo '- run: `'"${GITHUB_RUN_ID}"'`'
+          } > replication-output-v0.3/PROVENANCE.md
+
+      - name: Upload v0.3 artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: damage-aware-morphology-v0.3
+          path: replication-output-v0.3/
+          if-no-files-found: error
