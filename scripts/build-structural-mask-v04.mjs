@@ -73,6 +73,7 @@ const getRow = (id, form) => {
     boundary_insecure_count: 0,
     continuation_fragment_count: 0,
     complex_logogram_count: 0,
+    cross_script_count: 0,
     source_override_count: 0,
     reasons: new Set(),
     evidence: new Set(),
@@ -123,29 +124,44 @@ for (const file of files) {
     }
   }
 
-  // Type scan. If an edition explicitly places a complex sign in a LOGOGRAM
-  // column, derive the syllabic-looking flattened representation that a
-  // normalized corpus could accidentally create and mask it at that inscription.
+  // Type scans operate on explicit table columns/markers rather than word shape.
   for (const tableMatch of html.matchAll(/<table\b[^>]*>[\s\S]*?<\/table>/gi)) {
     const table = tableMatch[0];
     const trMatches = [...table.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)];
     if (!trMatches.length) continue;
     const parsedRows = trMatches.map(tr => [...tr[1].matchAll(/<(?:td|th)\b[^>]*>([\s\S]*?)<\/(?:td|th)>/gi)].map(c => stripHtml(c[1])));
-    const headerIndex = parsedRows.findIndex(cells => cells.some(c => c.includes('LOGOGRAM')));
+
+    const headerIndex = parsedRows.findIndex(cells => cells.some(c => c.includes('LOGOGRAM')) || cells.some(c => c.includes('STATEMENT')));
     if (headerIndex < 0) continue;
     const logogramCol = parsedRows[headerIndex].findIndex(c => c.includes('LOGOGRAM'));
-    if (logogramCol < 0) continue;
+    const statementCol = parsedRows[headerIndex].findIndex(c => c.includes('STATEMENT'));
 
-    for (let r = headerIndex + 1; r < parsedRows.length; r++) {
-      const cell = parsedRows[r][logogramCol] || '';
-      if (!cell || (!cell.includes('+') && !/\{\s*\*\d+/i.test(cell))) continue;
-      for (const segment of cell.split(/[•·;]/)) {
-        if (!segment.includes('+') && !/\{\s*\*\d+/i.test(segment)) continue;
-        const withoutBraces = segment.replace(/\{[^}]*\}/g, ' ');
-        const tokens = withoutBraces.match(new RegExp(SIGN, 'g')) || [];
-        if (tokens.length < 2) continue;
-        const flattened = tokens.join('-');
-        add(id, flattened, 'complex_logogram_count', 'complex_logogram', cell);
+    // Complex/logographic entries can be flattened by a normalized corpus into
+    // strings such as MA-RU-ME even though the edition types MA+RU ME {*561}
+    // in a LOGOGRAM column.
+    if (logogramCol >= 0) {
+      for (let r = headerIndex + 1; r < parsedRows.length; r++) {
+        const cell = parsedRows[r][logogramCol] || '';
+        if (!cell || (!cell.includes('+') && !/\{\s*\*\d+/i.test(cell))) continue;
+        for (const segment of cell.split(/[•·;]/)) {
+          if (!segment.includes('+') && !/\{\s*\*\d+/i.test(segment)) continue;
+          const withoutBraces = segment.replace(/\{[^}]*\}/g, ' ');
+          const tokens = withoutBraces.match(new RegExp(SIGN, 'g')) || [];
+          if (tokens.length < 2) continue;
+          add(id, tokens.join('-'), 'complex_logogram_count', 'complex_logogram', cell);
+        }
+      }
+    }
+
+    // Some corpus rows originate in explicitly Hieroglyphic seal impressions.
+    // A statement beginning H: is not admitted as a Linear A free-word token.
+    if (statementCol >= 0) {
+      for (let r = headerIndex + 1; r < parsedRows.length; r++) {
+        const cell = parsedRows[r][statementCol] || '';
+        if (!/^H\s*:/.test(cell)) continue;
+        for (const m of cell.matchAll(new RegExp(WORD, 'g'))) {
+          add(id, m[0], 'cross_script_count', 'non_linear_a_script', cell);
+        }
       }
     }
   }
@@ -168,15 +184,15 @@ const escapeCsv = value => {
 
 const output = [...rows.values()].map(row => ({
   ...row,
-  // Counts can describe the same attestation through more than one evidence
-  // layer, so use the maximum rather than summing and double-excluding it.
-  exclude_count: Math.max(row.boundary_insecure_count, row.continuation_fragment_count, row.complex_logogram_count, row.source_override_count),
+  // Evidence layers can describe the same attestation, so use the maximum
+  // rather than summing and accidentally excluding one occurrence twice.
+  exclude_count: Math.max(row.boundary_insecure_count, row.continuation_fragment_count, row.complex_logogram_count, row.cross_script_count, row.source_override_count),
   reason_classes: [...row.reasons].sort().join('|'),
   evidence_text: [...row.evidence].slice(0, 5).join(' || '),
 })).filter(row => row.exclude_count > 0)
   .sort((a, b) => a.commentary_id.localeCompare(b.commentary_id) || a.form.localeCompare(b.form));
 
-const headers = ['commentary_id','form','exclude_count','boundary_insecure_count','continuation_fragment_count','complex_logogram_count','source_override_count','reason_classes','evidence_text'];
+const headers = ['commentary_id','form','exclude_count','boundary_insecure_count','continuation_fragment_count','complex_logogram_count','cross_script_count','source_override_count','reason_classes','evidence_text'];
 const csv = [headers.join(','), ...output.map(row => headers.map(h => escapeCsv(row[h])).join(','))].join('\n') + '\n';
 fs.mkdirSync(path.dirname(outPath), { recursive: true });
 fs.writeFileSync(outPath, csv);
@@ -185,8 +201,9 @@ const totals = {
   boundary: output.reduce((s, r) => s + r.boundary_insecure_count, 0),
   continuation: output.reduce((s, r) => s + r.continuation_fragment_count, 0),
   logogram: output.reduce((s, r) => s + r.complex_logogram_count, 0),
+  crossScript: output.reduce((s, r) => s + r.cross_script_count, 0),
   source: output.reduce((s, r) => s + r.source_override_count, 0),
 };
 console.log(`Structural mask rows: ${output.length}`);
-console.log(`Evidence counts: boundary=${totals.boundary}, continuation=${totals.continuation}, complex_logogram=${totals.logogram}, source_override=${totals.source}`);
+console.log(`Evidence counts: boundary=${totals.boundary}, continuation=${totals.continuation}, complex_logogram=${totals.logogram}, cross_script=${totals.crossScript}, source_override=${totals.source}`);
 console.log(`Wrote ${outPath}`);
