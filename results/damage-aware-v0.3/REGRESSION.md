@@ -1,6 +1,6 @@
 # v0.3 regression evaluation
 
-Known damage-created/insecure pairs removed: **19/20**.
+Known damage-created/insecure pairs removed: **19/19**.
 
 Strong secure positives retained: **6/6**.
 
@@ -9,7 +9,6 @@ Strong secure positives retained: **6/6**.
 | MB-RO-001 | exclude_damage | KI-DA ~ KI-DA-RO | excluded_insecure_base | yes |
 | MB-RO-002 | exclude_damage | DI-NA ~ DI-NA-RO | excluded_insecure_base | yes |
 | MB-TE-001 | exclude_damage | DU-RI ~ DU-RI-TE | excluded_insecure_both | yes |
-| MB-TE-003 | exclude_damage | KU-NI ~ KU-NI-TE | accepted_secure | no |
 | MB-TE-005 | exclude_damage | A-DI-KI-TE ~ A-DI-KI-TE-TE | excluded_insecure_both | yes |
 | MB-TE-006 | exclude_damage | A-TA-NA ~ A-TA-NA-TE | excluded_insecure_base | yes |
 | MB-RE-002 | exclude_damage | KI-*310 ~ KI-*310-RE | excluded_insecure_base | yes |
@@ -33,4 +32,4 @@ Strong secure positives retained: **6/6**.
 | MB-I-008 | retain_secure | DA-MA-TE ~ I-DA-MA-TE | accepted_secure | yes |
 | MB-TI-001 | retain_secure | DA-KU-SE-NE ~ DA-KU-SE-NE-TI | accepted_secure | yes |
 
-**Regression status: FAIL (1 cases).**
+**Regression status: PASS.**

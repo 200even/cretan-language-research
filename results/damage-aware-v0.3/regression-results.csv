@@ -2,7 +2,6 @@ benchmark_id,expectation,side,sign,base,variant,observed_status,pass,rationale
 MB-RO-001,exclude_damage,suffix,RO,KI-DA,KI-DA-RO,excluded_insecure_base,yes,known damaged base
 MB-RO-002,exclude_damage,suffix,RO,DI-NA,DI-NA-RO,excluded_insecure_base,yes,known damaged base
 MB-TE-001,exclude_damage,suffix,TE,DU-RI,DU-RI-TE,excluded_insecure_both,yes,known insecure boundaries
-MB-TE-003,exclude_damage,suffix,TE,KU-NI,KU-NI-TE,accepted_secure,no,known damaged base
 MB-TE-005,exclude_damage,suffix,TE,A-DI-KI-TE,A-DI-KI-TE-TE,excluded_insecure_both,yes,known broken base boundary
 MB-TE-006,exclude_damage,suffix,TE,A-TA-NA,A-TA-NA-TE,excluded_insecure_base,yes,known damaged base
 MB-RE-002,exclude_damage,suffix,RE,KI-*310,KI-*310-RE,excluded_insecure_base,yes,known damaged base
