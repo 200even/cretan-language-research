@@ -1,0 +1,88 @@
+name: davis-universe-matched-v02
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/rank-affixes.mjs'
+      - 'scripts/evaluate-davis-universe-v02.mjs'
+      - 'data/davis-2026-main-grid-universe.csv'
+      - 'data/davis-2026-unblinding.csv'
+      - 'experiments/davis-2026-universe-matched-v02.md'
+      - '.github/workflows/davis-universe-matched-v02.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  universe-matched-comparison:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out research repository
+        uses: actions/checkout@v4
+
+      - name: Check out pinned Linear A Explorer corpus
+        shell: bash
+        run: |
+          git clone --quiet https://github.com/mwenge/lineara.xyz.git upstream-lineara
+          git -C upstream-lineara checkout --quiet 43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a
+          test "$(git -C upstream-lineara rev-parse HEAD)" = "43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a"
+
+      - name: Reproduce frozen v0.2 ranking
+        run: |
+          rm -rf replication-output-davis-v02
+          mkdir -p replication-output-davis-v02/v02-rerun
+          node scripts/rank-affixes.mjs \
+            --corpus upstream-lineara/LinearAInscriptions.js \
+            --exclude-obvious-logograms \
+            --out-dir replication-output-davis-v02/v02-rerun
+
+      - name: Apply Davis 50-sign universe
+        run: |
+          node scripts/evaluate-davis-universe-v02.mjs \
+            --ranking replication-output-davis-v02/v02-rerun/affix-ranking.csv \
+            --universe data/davis-2026-main-grid-universe.csv \
+            --targets data/davis-2026-unblinding.csv \
+            --out-dir replication-output-davis-v02
+
+      - name: Record provenance
+        shell: bash
+        run: |
+          {
+            echo '# Davis universe-matched v0.2 provenance'
+            echo
+            echo '- research repo commit: `'"${GITHUB_SHA}"'`'
+            echo '- upstream corpus: `mwenge/lineara.xyz`'
+            echo '- upstream commit: `43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a`'
+            echo '- frozen v0.2 research commit: `c8b2a672d6df9cc3b8ceb98eee3febc113541170`'
+            echo '- frozen/current `rank-affixes.mjs` blob SHA: `9fcd511953af31a849f5d3881fc615e82e88276d`'
+            echo '- candidate universe: `data/davis-2026-main-grid-universe.csv` (50 signs, direct Davis clarification 2026-08-18)'
+            echo '- target identities: `data/davis-2026-unblinding.csv`'
+            echo '- scoring: unchanged frozen v0.2 score; filtering occurs after scoring'
+            echo '- node: `'"$(node --version)"'`'
+            echo '- run: `'"${GITHUB_RUN_ID}"'`'
+          } > replication-output-davis-v02/PROVENANCE.md
+
+      - name: Persist matched result
+        shell: bash
+        run: |
+          rm -rf results/davis-universe-matched-v0.2
+          mkdir -p results/davis-universe-matched-v0.2
+          cp -a replication-output-davis-v02/. results/davis-universe-matched-v0.2/
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/davis-universe-matched-v0.2
+          if git diff --cached --quiet; then
+            echo 'No generated result changes to commit.'
+          else
+            git commit -m 'Record Davis universe-matched v0.2 comparison'
+            git push origin HEAD:main
+          fi
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: davis-universe-matched-v0.2
+          path: replication-output-davis-v02/
+          if-no-files-found: error
