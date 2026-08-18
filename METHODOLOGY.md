@@ -82,6 +82,28 @@ A formal pair is stronger when its contexts independently support common lexical
 
 These dimensions may eventually support a calibrated model, but they are not collapsed into one score until their statistical behavior is better understood.
 
+## Segmentation and source-coverage controls
+
+The final `JA` audit exposed two false-positive classes beyond physical fragment brackets.
+
+### Cross-face / editorial continuation
+
+A normalized token is not automatically a word. An apparent form may be only one part of a sequence explicitly continued across faces, lines, or object surfaces.
+
+Example: IO Za 12 exposes `JA-SA` in the cleaned word layer, but the inscription commentary states that the two faces divide one longer form `JA-SA-|SA-RA-ME`. Such a token cannot serve as a bare stem in an exact-pair test.
+
+**Rule:** before promotion, check whether an apparent word is explicitly continued by the edition, repeated as part of a longer formula, or segmented editorially for layout rather than lexical reasons.
+
+### Authoritative source-coverage gaps
+
+A parser can only preserve damage information present in its input source. A newer editio princeps or specialist edition may contain fragment traces absent from an exploratory HTML corpus.
+
+Example: the exploratory record allowed `PU2-RE` on PK Za 28, but the 2022 editio princeps reads `]-PU2-RE` and cites ZA Zb 34 as `]PU2-RE-JA`. The apparent exact pair is therefore invalid.
+
+**Rule:** candidate promotion requires checking the most authoritative/recent available reading, especially for items whose exploratory transcription is placeholder, incomplete, or postdates the frozen upstream dataset.
+
+These are separate from the v0.3 physical-boundary mask and should become dedicated v0.4 regression classes.
+
 ## Kober-grid protocol
 
 The current phase explicitly follows a Kober-style principle: **discover recurring internal structure before assigning language or meaning**.

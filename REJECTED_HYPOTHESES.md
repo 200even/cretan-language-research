@@ -140,6 +140,26 @@ See [`leads/SI-DA.md`](leads/SI-DA.md) and [`experiments/toponym-kober-grid.md`]
 
 See [`leads/JA.md`](leads/JA.md) and [`experiments/toponym-kober-grid.md`](experiments/toponym-kober-grid.md).
 
+## 12. `JA-SA ~ JA-SA-JA` as a clean final-`JA` paradigm
+
+**Original appearance:** damage-aware v0.3 treated both strings as complete and therefore generated a perfect `X ~ X-JA` relationship.
+
+**Audit result:** IO Za 12 explicitly continues `JA-SA-` across the object into `-SA-RA-ME`; it is not a free bare word. SAM Wa 1 belongs to the same seal/formula family. KN Zg 55 `JA-SA-JA` is plausibly an abbreviation of the larger `JA-SA-SA-RA...` family.
+
+**Status:** **rejected as a productive-suffix pair.** The failure is editorial/cross-face segmentation, not physical damage.
+
+See [`audits/JA.md`](audits/JA.md).
+
+## 13. `PU2-RE ~ PU2-RE-JA` as a secure whole-word final-`JA` pair
+
+**Original appearance:** the frozen exploratory corpus exposed complete `PU2-RE` and `PU2-RE-JA` tokens, and v0.3 found no bracket-based boundary problem.
+
+**Authoritative check:** Del Freo, Zurbach & Knappett (2022) read PK Za 28 as `]-PU2-RE` and cite ZA Zb 34 as `]PU2-RE-JA`. The relevant left boundaries are not secure.
+
+**Status:** **rejected as an exact whole-word pair.** This is a source-coverage failure: the exploratory source layer did not encode the authoritative fragment information.
+
+See [`audits/JA.md`](audits/JA.md).
+
 ---
 
 ## Principle

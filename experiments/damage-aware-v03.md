@@ -235,3 +235,21 @@ The earlier figure of 20/37 (54.1%) was corrected when v0.3 demonstrated that `K
 6. repeat the extraction from an independently encoded SigLA-derived corpus where feasible.
 
 The highest-value immediate experiment is the dedicated `JA` audit. If `JA` retains several independent, contextually credible paradigms under the same controls as Davis's six, that would constitute a specific additional morphology result rather than merely a difference in ranking methodology.
+
+## Post-v0.3 JA audit
+
+The separately completed [final `JA` audit](../audits/JA.md) deliberately leaves the frozen v0.3 output unchanged but demonstrates that `accepted_secure` in v0.3 means **physically boundary-secure in the available upstream layer**, not fully adjudicated morphology.
+
+Of the seven `JA` pairs v0.3 marked secure:
+
+- 2 remain Tier A;
+- 2 remain Tier B;
+- 1 is comparison-only;
+- 2 are rejected.
+
+The two rejections expose failure classes outside v0.3's design:
+
+1. `JA-SA ~ JA-SA-JA`: editorial/cross-face continuation and ritual abbreviation;
+2. `PU2-RE ~ PU2-RE-JA`: authoritative fragment boundaries absent from the exploratory source layer.
+
+Therefore v0.3 remains validated for its registered physical-boundary regression task, while v0.4 should extend the benchmark to **segmentation continuity** and **source-coverage provenance**.
