@@ -29,6 +29,59 @@ For a candidate `X` ~ `X-SUFFIX` pair:
 - derived analytical databases are not allowed to create a form not present in the raw transcription;
 - comparable administrative positions matter more than raw edit distance.
 
+## Damage-aware extraction protocol
+
+The v0.3 experiment established that damage state must be attached **before** exact morphology pairs are generated.
+
+The current computational protocol therefore distinguishes:
+
+1. a cleaned word/index layer used to locate candidate forms;
+2. an independent damage/boundary layer derived from inscription-oriented transcription data;
+3. a complete-form layer created only after the two are reconciled.
+
+Rules:
+
+- a cleaned spelling is not assumed complete merely because brackets are absent from the normalized field;
+- damage is tracked per **attestation**, not globally per spelling;
+- if the same spelling occurs once fragmentary and once complete, the complete occurrence remains eligible;
+- explanatory commentary must not contaminate the inscription transcription mask;
+- exact `X ~ X-A` / `X ~ A-X` relationships are generated only after boundary masking;
+- a surviving exact string relationship is still only a **formal candidate** until lexical identity, context, onomastics, and scribal factors are audited.
+
+The validated v0.3 regression gate currently removes **19/19** known damage-created/insecure relationships while retaining **6/6** secure positive controls. See [`experiments/damage-aware-v03.md`](experiments/damage-aware-v03.md).
+
+An important corollary is that the benchmark can be wrong. When a regression test contradicts a human label, the underlying inscription is rechecked. The `KU-NI ~ KU-NI-TE` case demonstrated this: direct inspection of HT 79+83 showed a complete `KU-NI` occurrence, so the negative benchmark label was corrected rather than forcing the extractor to reproduce it.
+
+## Separate morphology evidence dimensions
+
+The v0.3 audit also showed that one composite “morphology score” obscures different kinds of evidence. The project therefore reports at least these dimensions separately:
+
+### Boundary distribution
+
+How strongly is a sign concentrated at a left or right word edge relative to internal positions?
+
+A raw enrichment ratio is descriptive, not a calibrated probability. Very rare signs with zero internal attestations can rank artificially high; frequency/support should be modeled separately in later versions rather than silently folded into the frozen v0.3 statistic.
+
+### Damage-aware paradigmatic evidence
+
+How many complete `X ~ A-X` or `X ~ X-A` relationships survive boundary masking?
+
+This dimension is especially informative for `A-`, `I-`, `-TI`, and the additional candidate `-JA`.
+
+### Lexical-class concentration
+
+Does the sign occur disproportionately in likely personal names, place names, ritual formulae, administrative headings, or commodity/transaction vocabulary?
+
+This is essential for interpreting signals such as `-RE`, `-RO`, and `-TE`.
+
+### Contextual role equivalence
+
+Where a base and extended form both exist, do they occupy comparable administrative or syntactic positions?
+
+A formal pair is stronger when its contexts independently support common lexical identity.
+
+These dimensions may eventually support a calibrated model, but they are not collapsed into one score until their statistical behavior is better understood.
+
 ## Kober-grid protocol
 
 The current phase explicitly follows a Kober-style principle: **discover recurring internal structure before assigning language or meaning**.
@@ -54,7 +107,7 @@ Place names are especially valuable because a stem can sometimes be identified i
 
 A toponym may enter the primary test only if its geographic identity is supported before the target morphology is scored, for example by secure Linear B continuity or strong specialist consensus.
 
-The next experiment is pre-registered in [`experiments/toponym-kober-grid.md`](experiments/toponym-kober-grid.md). Its primary anchors are Sybrita (`SU-KI-RI-TA`) and Phaistos (`PA-I-TO`).
+The completed geographic experiment is recorded in [`experiments/toponym-kober-grid.md`](experiments/toponym-kober-grid.md). Its primary anchors include Sybrita (`SU-KI-RI-TA`) and Phaistos (`PA-I-TO`).
 
 Toponymic endings known from Linear B are controls for what a real geographic paradigm looks like; they are **not** projected onto Linear A as Greek morphology.
 
@@ -95,6 +148,7 @@ For every morphological candidate record:
 | Object type | yes |
 | Scribe | where available |
 | Raw segmented word | yes |
+| Boundary/damage state | yes |
 | Preceding word/sign group | where preserved |
 | Following word/sign group | where preserved |
 | Following numeral | yes/no/value |
@@ -140,9 +194,11 @@ Particularly dangerous operations include:
 - pooling scribes/sites without checking orthographic variation;
 - selecting only positive matches after inspecting the target;
 - counting a substring match as though it were an independently segmented word;
-- using conventional Linear-B-derived readings as if they were exact Minoan phonetic transcriptions.
+- using conventional Linear-B-derived readings as if they were exact Minoan phonetic transcriptions;
+- generating morphology pairs from cleaned words before restoring damaged boundary information;
+- globally blacklisting a spelling because one attestation of it is damaged.
 
-Where practical, tests should include negative controls, predeclared scoring rules, and a written pre-registration in `experiments/`.
+Where practical, tests should include negative controls, predeclared scoring rules, a versioned regression set, and a written pre-registration or experiment record in `experiments/`.
 
 ## Versioning
 
@@ -150,7 +206,7 @@ The initial exploration used `mwenge/lineara.xyz` at commit:
 
 `43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a`
 
-The morphology checkpoint of 2026-08-16 also used the current searchable `LinearAInscriptions.js` corpus as an exploration layer while checking individual forms against concordances/published discussions where possible.
+The frozen v0.1/v0.2 analyses remain preserved as historical results. v0.3 is a separately versioned damage-aware pipeline and does not retroactively alter the pre-registered Davis comparison score.
 
 Any later rerun should record the upstream commit and note changed readings or classifications.
 
@@ -165,5 +221,7 @@ A lead should be downgraded immediately if:
 - additional attestations violate the proposed grammatical distribution;
 - a matched null/control set produces the same signal;
 - an apparent paradigm splits into personal-name, place-name, or unrelated lexical families under contextual checking.
+
+A previous rejection should likewise be **withdrawn** if better epigraphic evidence demonstrates that the rejection was based on an incomplete or misgeneralized reading.
 
 The desired outcome is not to preserve hypotheses. It is to preserve **auditability**.
