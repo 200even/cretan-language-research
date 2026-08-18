@@ -45,10 +45,7 @@ const esc = value => {
 
 const writeCsv = (filename, headers, rows) => {
   fs.mkdirSync(outDir, { recursive: true });
-  const text = [
-    headers.join(','),
-    ...rows.map(row => headers.map(h => esc(row[h])).join(',')),
-  ].join('\n') + '\n';
+  const text = [headers.join(','), ...rows.map(row => headers.map(h => esc(row[h])).join(','))].join('\n') + '\n';
   fs.writeFileSync(path.join(outDir, filename), text);
 };
 
@@ -72,12 +69,10 @@ const universeSet = new Set(universe);
 for (const side of ['prefix', 'suffix']) {
   const rows = ranking.filter(row => row.side === side);
   if (rows.length !== 116) throw new Error(`Frozen v0.2 baseline mismatch: expected 116 ${side} rows, found ${rows.length}`);
-  const missing = universe.filter(sign => !rows.some(row => row.sign === sign));
-  if (missing.length) throw new Error(`Davis-universe signs missing from ${side} ranking: ${missing.join(', ')}`);
 }
 
-// Reproduction guard: these are the six values published from the frozen v0.2
-// artifact before Davis's 50-sign universe clarification was received.
+// Reproduction guard: values published from the frozen v0.2 artifact before
+// Davis's 50-sign universe clarification was received.
 const frozenChecks = [
   ['prefix','A',1,7.841664],
   ['prefix','I',4,4.659528],
@@ -94,43 +89,61 @@ for (const [side, sign, expectedRank, expectedScore] of frozenChecks) {
   }
 }
 
+// The frozen scorer emitted rows only for signs actually observed in its retained
+// corpus. Do not invent a post-hoc score for an eligible Davis sign that has no
+// frozen row. Report such signs separately and rank the directly comparable
+// observed members while preserving their frozen order.
+const missingRows = [];
 const matched = [];
 for (const side of ['prefix','suffix']) {
-  const filtered = ranking
-    .filter(row => row.side === side && universeSet.has(row.sign))
-    .sort((a,b) => a.rank - b.rank); // filtering frozen ordering; scores are unchanged.
-  filtered.forEach((row, i) => matched.push({ ...row, universe_rank: i + 1 }));
+  const sideRows = ranking.filter(row => row.side === side);
+  const missing = universe.filter(sign => !sideRows.some(row => row.sign === sign));
+  for (const sign of missing) missingRows.push({ side, sign, status: 'eligible_but_not_scored_in_frozen_v0_2' });
+
+  const filtered = sideRows
+    .filter(row => universeSet.has(row.sign))
+    .sort((a,b) => a.rank - b.rank);
+  filtered.forEach((row, i) => matched.push({ ...row, observed_universe_rank: i + 1 }));
 }
+
+for (const target of targets) {
+  if (!matched.some(row => row.side === target.side && row.sign === target.sign)) {
+    throw new Error(`Davis target is not directly comparable in frozen v0.2: ${target.side} ${target.sign}`);
+  }
+}
+
+const observedCounts = Object.fromEntries(['prefix','suffix'].map(side => [side, matched.filter(r => r.side === side).length]));
 
 const comparison = targets.map(target => {
   const original = ranking.find(row => row.side === target.side && row.sign === target.sign);
   const row = matched.find(r => r.side === target.side && r.sign === target.sign);
-  if (!original || !row) throw new Error(`Target missing: ${target.side} ${target.sign}`);
   const cutoff = target.side === 'prefix' ? 2 : 4;
   return {
     side: target.side,
     sign: target.sign,
     frozen_v0_2_rank_116: original.rank,
-    universe_matched_rank_50: row.universe_rank,
+    observed_universe_rank: row.observed_universe_rank,
+    eligible_universe_size: 50,
+    observed_eligible_signs: observedCounts[target.side],
     score_unchanged: original.score.toFixed(6),
     cutoff,
     in_cutoff_original_116: original.rank <= cutoff ? 'yes' : 'no',
-    in_cutoff_matched_50: row.universe_rank <= cutoff ? 'yes' : 'no',
-    rank_change: original.rank - row.universe_rank,
+    in_cutoff_universe_matched: row.observed_universe_rank <= cutoff ? 'yes' : 'no',
+    rank_change: original.rank - row.observed_universe_rank,
   };
 });
 
 const originalHits = comparison.filter(r => r.in_cutoff_original_116 === 'yes').length;
-const matchedHits = comparison.filter(r => r.in_cutoff_matched_50 === 'yes').length;
-const prefixHits = comparison.filter(r => r.side === 'prefix' && r.in_cutoff_matched_50 === 'yes').length;
-const suffixHits = comparison.filter(r => r.side === 'suffix' && r.in_cutoff_matched_50 === 'yes').length;
+const matchedHits = comparison.filter(r => r.in_cutoff_universe_matched === 'yes').length;
+const prefixHits = comparison.filter(r => r.side === 'prefix' && r.in_cutoff_universe_matched === 'yes').length;
+const suffixHits = comparison.filter(r => r.side === 'suffix' && r.in_cutoff_universe_matched === 'yes').length;
 
 writeCsv(
   'universe-ranking.csv',
-  ['side','universe_rank','sign','frozen_rank_116','score','boundary_count','internal_count','boundary_enrichment_log2','exact_extension_pairs'],
+  ['side','observed_universe_rank','sign','frozen_rank_116','score','boundary_count','internal_count','boundary_enrichment_log2','exact_extension_pairs'],
   matched.map(row => ({
     side: row.side,
-    universe_rank: row.universe_rank,
+    observed_universe_rank: row.observed_universe_rank,
     sign: row.sign,
     frozen_rank_116: row.rank,
     score: row.score.toFixed(6),
@@ -140,31 +153,36 @@ writeCsv(
     exact_extension_pairs: row.exact_extension_pairs,
   }))
 );
+writeCsv('eligible-but-unscored.csv', ['side','sign','status'], missingRows);
 writeCsv(
   'davis-six-comparison.csv',
-  ['side','sign','frozen_v0_2_rank_116','universe_matched_rank_50','score_unchanged','cutoff','in_cutoff_original_116','in_cutoff_matched_50','rank_change'],
+  ['side','sign','frozen_v0_2_rank_116','observed_universe_rank','eligible_universe_size','observed_eligible_signs','score_unchanged','cutoff','in_cutoff_original_116','in_cutoff_universe_matched','rank_change'],
   comparison
 );
 
+const missingSigns = [...new Set(missingRows.map(row => row.sign))];
 let md = '# Davis 2026 universe-matched v0.2 comparison\n\n';
 md += '**Status:** post-unblinding universe-matched reanalysis. The frozen v0.2 score is unchanged.  \n';
-md += '**Candidate universe:** the 50 Linear B main-series syllabograms with Linear A homomorphs that Davis states were eligible in his analysis.  \n';
+md += '**Eligible universe:** 50 Linear B main-series syllabograms with Linear A homomorphs, as clarified directly by Davis.  \n';
 md += '**Important:** this does not replace or redefine the original pre-registered 3/6 result.\n\n';
 md += '## Reproduction guard\n\n';
-md += 'Before filtering, the rerun reproduces 116 ranked signs per side and the previously frozen ranks/scores of all six Davis targets. No score is recalculated after filtering; ineligible signs are removed and the surviving frozen order is renumbered.\n\n';
+md += 'Before filtering, the rerun reproduces 116 ranked signs per side and the previously frozen ranks/scores of all six Davis targets. No target score is recalculated after filtering; ineligible signs are removed and the surviving frozen order is renumbered.\n\n';
+md += '## Corpus-label compatibility\n\n';
+md += `The frozen scorer contains **${observedCounts.prefix}/50** directly matching eligible labels on each side. The eligible label(s) absent from the frozen ranking are: **${missingSigns.join(', ')}**. Because the frozen scorer emitted only observed signs, no score is invented for an absent label.\n\n`;
+md += 'This repository has separately noted that some scholarship uses `QI` for material the exploratory corpus may encode with numbered sign labels such as `*21F`. **No `QI` ↔ numbered-sign mapping is imposed here.** Any such palaeographic crosswalk must be registered and justified separately.\n\n';
+md += 'All six Davis target affixes are directly present in the comparable set, so the original top-2-prefix / top-4-suffix cutoff can still be evaluated without that unresolved crosswalk.\n\n';
 md += '## Result\n\n';
-md += '| side | sign | frozen rank /116 | matched rank /50 | unchanged score | cutoff | matched? |\n';
+md += '| side | sign | frozen rank /116 | matched rank among observed eligible signs | unchanged score | cutoff | matched? |\n';
 md += '|---|---|---:|---:|---:|---:|---|\n';
 for (const row of comparison) {
-  md += `| ${row.side} | ${row.sign} | ${row.frozen_v0_2_rank_116} | **${row.universe_matched_rank_50}** | ${row.score_unchanged} | ${row.cutoff} | **${row.in_cutoff_matched_50}** |\n`;
+  md += `| ${row.side} | ${row.sign} | ${row.frozen_v0_2_rank_116} | **${row.observed_universe_rank}/${row.observed_eligible_signs}** | ${row.score_unchanged} | ${row.cutoff} | **${row.in_cutoff_universe_matched}** |\n`;
 }
 md += '\n';
-md += `Original pre-registered-universe cutoff overlap: **${originalHits}/6** (frozen primary result).\n\n`;
+md += `Original cutoff overlap: **${originalHits}/6** (frozen primary result).\n\n`;
 md += `Universe-matched cutoff overlap: **${matchedHits}/6** = prefixes **${prefixHits}/2**, suffixes **${suffixHits}/4**.\n\n`;
-md += 'Under the original descriptive categories, 4/6 still falls in the **partial conceptual replication** band. The improvement from 3/6 to 4/6 comes entirely from `I-`, because numbered/untransliterated signs ahead of it in the 116-sign prefix ranking were outside Davis\'s eligible universe.\n\n';
+md += 'Under the original descriptive categories, 4/6 remains in the **partial conceptual replication** band. The improvement from 3/6 to 4/6 comes entirely from `I-`: the two signs ahead of it in the 116-sign prefix ranking (`*86`, `*306`) were outside Davis\'s stated eligible universe.\n\n';
+md += '`TI` improves from rank 11 to rank 10 among directly observed eligible suffix labels; `RE` remains rank 7. The suffix top four remain `RO`, `JA`, `ME`, `TE`, so suffix cutoff overlap remains 2/4.\n\n';
 md += '## Interpretation\n\n';
-md += 'This is the appropriate apples-to-apples sensitivity comparison after Davis clarified his candidate universe. Because the 50-sign restriction was learned after the six target identities were already known, it is a **secondary post-unblinding analysis**, not a new preregistered score. The original 3/6 result remains the primary historical replication statistic.\n\n';
-md += 'The suffix cutoff does not change: `RO`, `JA`, `ME`, and `TE` were already the top four frozen suffixes and all four are members of Davis\'s 50-sign universe. `RE` therefore remains below the cutoff; `TI` may improve in rank if intervening ineligible signs are removed, but it does not enter the top four.\n';
+md += 'This is the cleanest direct-label candidate-universe sensitivity comparison currently available. Because the 50-sign restriction was learned after the six target identities were known, it is a **secondary post-unblinding analysis**, not a new preregistered score. The original 3/6 result remains the primary historical replication statistic.\n';
 fs.writeFileSync(path.join(outDir, 'README.md'), md);
-
 console.log(md);
