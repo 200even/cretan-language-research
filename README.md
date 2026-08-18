@@ -101,6 +101,12 @@ The audit also adds two failure modes not captured by v0.3 physical-damage maski
 Full audit: [`audits/JA.md`](audits/JA.md)  
 Summary: [`data/ja-audit-summary.csv`](data/ja-audit-summary.csv)
 
+A second-stage contextual-function test then compared the four surviving Tier-A/B families. Its registered promotion rule required the **same base→JA role change in at least two independent families**. The result is negative: **0/4 families produced a replicated role shift**. In particular, both `KU-PA/KU-PA-JA` and `A-SE/A-SE-JA` preserve essentially the same administrative recipient/designation-like slot. Simple assignments such as recipient, sender/source, roundel/receipt, sealed-document, or commodity-association marker are therefore rejected.
+
+Function test: [`experiments/ja-context-function-test.md`](experiments/ja-context-function-test.md)  
+Context matrix: [`data/ja-context-function-matrix.csv`](data/ja-context-function-matrix.csv)  
+Summary: [`data/ja-context-function-summary.csv`](data/ja-context-function-summary.csv)
+
 ### 5. Different affixes have different evidentiary profiles
 
 v0.3 deliberately separates two dimensions that the earlier composite score conflated.
@@ -163,6 +169,8 @@ No post-hoc weight change is applied to v0.3. A future version should add a sepa
 - [`data/davis-2026-unblinding.csv`](data/davis-2026-unblinding.csv)
 - [`data/davis-six-audit-summary.csv`](data/davis-six-audit-summary.csv)
 - [`data/ja-audit-summary.csv`](data/ja-audit-summary.csv)
+- [`data/ja-context-function-matrix.csv`](data/ja-context-function-matrix.csv)
+- [`data/ja-context-function-summary.csv`](data/ja-context-function-summary.csv)
 - [`data/v03-regression-set.csv`](data/v03-regression-set.csv)
 
 Negative and reclassified examples are deliberately retained.
@@ -222,18 +230,18 @@ The older frozen v0.1/v0.2 implementation remains at [`scripts/rank-affixes.mjs`
 
 ## Next work
 
-The immediate priority is now **contextual-function testing of the four surviving `JA` families**, followed by the same full audit for `ME`:
+The coarse contextual-function test is complete and negative. The immediate `JA` priority is now **micro-syntax**, not another global semantic guess:
 
-1. test whether `PA-SE/PA-SE-JA` tablet-vs-roundel distribution predicts a repeatable grammatical or documentary role;
-2. compare `KU-PA/KU-PA-JA` in ordinary commodity administration;
-3. test the possible place/designation behavior of `A-SE/A-SE-JA` without assuming a geographic gloss;
-4. isolate onomastic/personnel effects in `*306-TU/*306-TU-JA`;
-5. audit the four v0.3 `ME` pairs under the same controls;
-6. design v0.4 regression cases for cross-face continuation and missing-authoritative-reading coverage;
-7. separately develop a frequency-aware boundary-evidence statistic without altering frozen v0.3;
-8. repeat key extraction against an independently encoded specialist corpus, preferably SigLA-derived, where practical.
+1. encode immediate left/right neighbors for every secure `PA-SE`, `KU-PA`, `A-SE`, `*306-TU` and corresponding `JA` form;
+2. distinguish transaction signs from commodity logograms, numerals, and dividers;
+3. match `JA` forms to non-`JA` recipient/designation entries from the same tablets and scribes;
+4. test whether `JA` predicts a recurring neighboring-sign construction even when the broad administrative role is unchanged;
+5. keep roundels separate from tablet syntax;
+6. audit the four v0.3 `ME` pairs under the same standards;
+7. extend v0.4 regression coverage to cross-face segmentation and authoritative-source gaps;
+8. require replication across at least two independent families before assigning any grammatical function.
 
-A grammatical function for `JA` should be proposed only if the same contextual contrast is reproduced across more than one independent Tier-A/B family.
+The working search hypothesis may be described as **relational/derivational or agreement-like**, but no such function is established yet.
 
 ## Repository map
 

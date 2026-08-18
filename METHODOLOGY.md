@@ -104,6 +104,22 @@ Example: the exploratory record allowed `PU2-RE` on PK Za 28, but the 2022 editi
 
 These are separate from the v0.3 physical-boundary mask and should become dedicated v0.4 regression classes.
 
+## Functional-assignment controls
+
+Once a morphological element survives formal audit, its **function is a separate hypothesis** and must be tested across independent stems.
+
+A grammatical/semantic function should not be promoted from one visually striking pair. The current minimum standard is:
+
+1. predefine the observable contextual contrast being tested;
+2. recover the same base→extended contrast in at least **two independent Tier-A/B families**;
+3. require inscriptional/documentary evidence rather than an etymological gloss alone;
+4. test explicit counterexamples where bare and extended forms occupy the same proposed role;
+5. separate archaeological document function from linguistic word function;
+6. treat computational labels such as sender/recipient as secondary analytical evidence unless independently justified epigraphically;
+7. report a failed functional test without downgrading the underlying morphology unless the morphology itself is contradicted.
+
+The completed `JA` contextual-function experiment is the current model. It recovered no repeated coarse role change across four families and therefore rejects simple `JA` assignments such as recipient, sender/source, receipt/roundel, sealed-document, or commodity-association marker. See [`experiments/ja-context-function-test.md`](experiments/ja-context-function-test.md).
+
 ## Kober-grid protocol
 
 The current phase explicitly follows a Kober-style principle: **discover recurring internal structure before assigning language or meaning**.
