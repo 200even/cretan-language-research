@@ -239,6 +239,7 @@ No post-hoc weight change is applied to v0.3. A future version should add a sepa
 - [`data/ja-list-frame-summary.csv`](data/ja-list-frame-summary.csv)
 - [`data/me-audit-summary.csv`](data/me-audit-summary.csv)
 - [`data/ne-audit-summary.csv`](data/ne-audit-summary.csv)
+- [`data/ra-audit-summary.csv`](data/ra-audit-summary.csv)
 - [`data/suffix-audit-comparison.csv`](data/suffix-audit-comparison.csv)
 - [`data/v03-regression-set.csv`](data/v03-regression-set.csv)
 - [`data/v04-regression-set.csv`](data/v04-regression-set.csv)
@@ -302,15 +303,18 @@ The older frozen v0.1/v0.2 implementation remains at [`scripts/rank-affixes.mjs`
 
 ## Next work
 
-v0.4 is now the current candidate-generation substrate. The next research priority is **manual audit of final `RA`**, the strongest new non-Davis suffix candidate after structural/type controls.
+The hostile audit of final `RA` is complete: **0 Tier A + 1 Tier B + 1 Tier C + 1 rejected**, so productive `RA` is not established. The strongest surviving family is `MI-DA ~ MI-DA-RA`, retained only as possible onomastic/derivational morphology. The `SA-RA` family is a new string-decomposition control because HT30 itself favors `SA-RA₂ ~ SA-RA-RA` over simple `SA-RA + RA`.
 
-1. audit the three v0.4 `RA` relationships: `SA-RA ~ SA-RA-RA`, `A-DA ~ A-DA-RA`, and `MI-DA ~ MI-DA-RA`;
-2. require the same boundary, source-type, context, scribe, and lexical-identity standards used for `JA`, `ME`, and `NE`;
-3. if `RA` collapses, move to the clean two-pair candidates `QE`, `SU`, and `WI`;
-4. keep the `JA` and `NE` functional stop rules in force until genuinely new independent paradigms appear;
-5. preserve the v0.4 extraction statistic unchanged while a separately registered future experiment addresses low-frequency instability in raw boundary enrichment;
-6. continue to prefer same-tablet or same-scribe multi-stem paradigms as the strongest route toward grammatical function.
+The next research priority is a **registered comparative audit of the three tied clean two-pair v0.4 suffix candidates** rather than choosing one post hoc:
 
+1. `QE`: `KA-PA ~ KA-PA-QE`, `SA-RO ~ SA-RO-QE`;
+2. `SU`: `KU-NI ~ KU-NI-SU`, `A-RI ~ A-RI-SU`;
+3. `WI`: `JA-DI ~ JA-DI-WI`, `PA3-NI ~ PA3-NI-WI`;
+4. apply the same source, support, scribe, lexical-identity, and context standards to all six pairs before comparing survival rates;
+5. keep the `JA` and `NE` functional stop rules in force until genuinely new independent paradigms appear;
+6. preserve v0.4 extraction unchanged while manual promotion-stage audits continue.
+
+RA audit: [`audits/RA.md`](audits/RA.md).  
 Current structural ranking: [`results/structural-aware-v0.4/paradigm-ranking.csv`](results/structural-aware-v0.4/paradigm-ranking.csv).  
 Cross-suffix audited comparison: [`data/suffix-audit-comparison.csv`](data/suffix-audit-comparison.csv).
 

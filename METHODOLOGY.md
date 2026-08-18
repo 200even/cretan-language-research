@@ -78,6 +78,12 @@ The frozen v0.4 regression gate passes **26/26** structural/source negatives whi
 
 A useful consequence is that corpus preprocessing is now itself benchmarked: the extractor must reproduce known failures such as cross-face `JA-SA`, complex/logographic `MA-RU-ME`, and authoritative-boundary `PU2-RE` without being told which affix is being tested.
 
+### String-decomposition ambiguity
+
+A structurally secure exact pair can still be a false morphological decomposition. The RA audit supplies the control: automatic `SA-RA ~ SA-RA-RA` is formally valid, but HT30 itself contains `SA-RA₂` and Younger's commentary proposes `SA-RA₂` and `SA-RA-RA` may be the same form. A stronger inscription-internal alternation therefore supersedes the mechanical `base + suffix` segmentation.
+
+This is a **promotion-stage** control, not an automatic v0.4 exclusion. Competing decompositions must be adjudicated from the inscription, palaeography, editorial conventions, and context; the extractor should not guess which lexical analysis is correct.
+
 ## Separate morphology evidence dimensions
 
 The v0.3 audit also showed that one composite “morphology score” obscures different kinds of evidence. The project therefore reports at least these dimensions separately:
