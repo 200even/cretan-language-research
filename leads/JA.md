@@ -1,73 +1,95 @@
 # Lead: productive final `-JA`
 
-**Status:** strong morphological lead; geographic/semantic function remains unknown after a pre-registered toponym test.
+**Status:** strong productive-morphology result; full seven-pair audit completed; grammatical/semantic function unknown.
 
-## Claim
+## Current claim
 
-Administrative Linear A contains at least two secure bare/extended pairs in which the same final sign `JA` is added to an otherwise identical sign group:
+Linear A contains at least two Tier-A and two Tier-B formal families in which final `JA` is added to an otherwise identical sign group:
 
-| Base | Extended form | Attestation |
-|---|---|---|
-| `PA-SE` | `PA-SE-JA` | `PA-SE`: HT 18.1, HT 27b.5; `PA-SE-JA`: HT Wc 3001-3002 |
-| `KU-PA` | `KU-PA-JA` | `KU-PA`: HT 110a.2, HT We 1020a, ZA 11a.5/b.3; `KU-PA-JA`: HT 116a.1-2 |
+| Base | Extended form | Current tier | Assessment |
+|---|---|---:|---|
+| `PA-SE` | `PA-SE-JA` | A | multiple complete base and extended attestations; tablet/roundel distribution |
+| `KU-PA` | `KU-PA-JA` | A | strong administrative convergence; replicated base across sites |
+| `A-SE` | `A-SE-JA` | B | multiple complete bases plus administrative extended form; lexical function unresolved |
+| `*306-TU` | `*306-TU-JA` | B | repeated complete base and complete extended form; probable onomastic/derivational concentration |
 
-The `KU-PA` family here uses ordinary `PA` and must not be conflated with the distinct `KU-PA3-...` onomastic family tracked elsewhere in this repository.
+The conservative structural conclusion is:
 
-## Why this matters
+> **Final `JA` behaves as a productive morphological element in at least some Linear A vocabulary.**
 
-This satisfies a stronger criterion than simply finding many words ending in `JA`:
+This does not establish whether it is inflectional, derivational, clitic, onomastic, or multifunctional.
 
-1. the base forms are independently attested as complete words;
-2. the extended forms preserve the base exactly;
-3. the same extension recurs on two independent bases;
-4. all of the forms occur in ordinary administrative contexts rather than only in a fixed ritual formula.
+## Full v0.3 candidate audit
 
-The conservative conclusion is therefore:
+Damage-aware v0.3 automatically ranked `JA` #1 among suffixes by exact-paradigm count and generated seven apparently secure `X ~ X-JA` candidates. Direct audit resolves them as:
 
-> `JA` behaves as a productive final morphological element in at least some Linear A administrative vocabulary.
+| pair | result |
+|---|---|
+| `PA-SE ~ PA-SE-JA` | Tier A |
+| `KU-PA ~ KU-PA-JA` | Tier A |
+| `A-SE ~ A-SE-JA` | Tier B |
+| `*306-TU ~ *306-TU-JA` | Tier B / onomastic risk |
+| `A-MA ~ A-MA-JA` | Tier C / comparison-only |
+| `JA-SA ~ JA-SA-JA` | rejected: cross-face continuation / ritual abbreviation |
+| `PU2-RE ~ PU2-RE-JA` | rejected: authoritative fragment boundaries |
 
-That is a structural claim only. It does not yet establish whether `-JA` is inflectional, derivational, clitic, or orthographic.
+Thus **4/7** survive as credible Tier-A/B morphology candidates, while only the original two controls currently meet the strongest benchmark standard.
+
+Full audit: [`../audits/JA.md`](../audits/JA.md).  
+Machine-readable summary: [`../data/ja-audit-summary.csv`](../data/ja-audit-summary.csv).
+
+## Why the two Tier-A pairs matter
+
+### `PA-SE ~ PA-SE-JA`
+
+`PA-SE` is complete on Haghia Triada tablets HT 18 and HT 27b. `PA-SE-JA` is complete on roundels HT Wc 3001-3002, with an additional damaged tablet attestation on HT 93. The support-type difference prevents a grammatical gloss but makes simple string coincidence unlikely.
+
+### `KU-PA ~ KU-PA-JA`
+
+`KU-PA` is complete in Haghia Triada and Zakros administrative material. `KU-PA-JA` is complete on HT 116a immediately before grain notation in a commodity account. This is the best ordinary-administrative convergence in the family.
+
+The `KU-PA` family here uses ordinary `PA` and must not be conflated with the distinct `KU-PA3-...` onomastic family.
+
+## New Tier-B families
+
+### `A-SE ~ A-SE-JA`
+
+`A-SE` is complete on multiple Haghia Triada tablets and at Zakros; `A-SE-JA` is complete on HT 115a. The relationship is real at sign level, but `A-SE` is only two signs and its proposed place-name role is not independently anchored.
+
+### `*306-TU ~ *306-TU-JA`
+
+`*306-TU` recurs in Haghia Triada account/personnel-style lists; `*306-TU-JA` is complete on HT 115b. The family is strong formally but may belong to personal-name/designation morphology. No phonetic value is assigned to `*306`.
+
+## Two false positives exposed by the audit
+
+### `JA-SA ~ JA-SA-JA`
+
+IO Za 12 explicitly breaks a single longer ritual form across two faces as `JA-SA- | -SA-RA-ME`. The apparent `JA-SA` token is therefore not a secure free word. KN Zg 55 `JA-SA-JA` has also been interpreted as an abbreviation of the same `JA-SA-SA-RA...` family.
+
+This exposes a failure mode not addressed by physical-damage masking: **editorial/cross-face segmentation can create an apparent morphological base.**
+
+### `PU2-RE ~ PU2-RE-JA`
+
+The 2022 editio princeps of PK Za 28 reads the supposed base as `]-PU2-RE`, and cites ZA Zb 34 as `]PU2-RE-JA`. Both relevant left boundaries are therefore insecure for a whole-word paradigm.
+
+This exposes a second failure mode: **a parser cannot restore damage information absent from its exploratory source layer.**
 
 ## Geographic positive control: Sybrita
 
-A separately anchored geographic comparison is:
+The separately anchored comparison remains:
 
 - `SU-KI-RI-TA` on PH Wa 32;
 - `SU-KI-RI-TE-I-JA` on HT Zb 158b.
 
-Mnamon and the Heraklion Archaeological Museum treat `SU-KI-RI-TA` as Sybrita, known independently from Linear B, and the longer form as very probably an adjectival/origin derivative. The museum describes the pithos inscription as probably indicating that the vessel came from Sybrita.
+The longer form is widely treated as an adjectival/origin derivative of Sybrita, but the transformation is `-TA -> -TE-I-JA`, not simple addition of `JA`.
 
-This is important, but its morphology is:
+Therefore the Sybrita evidence does not license assigning “from/of” specifically to final `JA`.
 
-```text
-SU-KI-RI-TA
-SU-KI-RI-TE-I-JA
-```
+## Pre-registered geographic test
 
-not simply:
+The experiment in [`../experiments/toponym-kober-grid.md`](../experiments/toponym-kober-grid.md) failed the narrow geographic-function promotion criterion.
 
-```text
-X
-X-JA
-```
-
-Therefore the contextual meaning “from/of Sybrita” cannot be assigned specifically to final `JA`. It may belong to the larger `-TE-I-JA` formation or to a more complex stem-conditioned derivation.
-
-## Pre-registered toponym test result
-
-The experiment in [`experiments/toponym-kober-grid.md`](../experiments/toponym-kober-grid.md) tested the narrow hypothesis that `-JA` participates specifically in place/origin/belonging morphology.
-
-### Controls
-
-- Phaistos `PA-I-TO` is securely anchored and attested in Linear A, but no extended `PA-I-TO-...` form was found in the current corpus.
-- Linear A `SE-TO-I-JA` corresponds to a place name known in Linear B, but the current Linear A corpus has no independent base `SE-TO-I`; it therefore cannot supply the required second `X -> X-JA` geographic pair.
-- The exact `PA-SE/PA-SE-JA` and `KU-PA/KU-PA-JA` pairs remain semantically unanchored administrative controls.
-
-### Outcome
-
-The pre-registered geographic promotion criterion **failed**.
-
-We should not gloss `-JA` as:
+Do **not** gloss final `JA` as:
 
 - “from”;
 - genitive;
@@ -75,32 +97,31 @@ We should not gloss `-JA` as:
 - ethnic adjective;
 - toponymic adjective.
 
-What survives is:
-
-> **productive final morphology, semantic function unknown.**
-
-The geographic result is still useful because it narrows the hypothesis: the Sybrita derivative shows that `...JA` can participate in a geographic adjective/origin form, but it does not identify the semantic contribution of `JA` alone.
+What survives is productive final morphology, function unknown.
 
 ## Next test
 
-The next informative experiment is contextual rather than etymological:
+The next informative `JA` experiment is not another string search. It should test whether the four Tier-A/B families show a **repeatable contextual role shift** between base and extended form.
 
-1. reconstruct the complete administrative contexts of `PA-SE` and `PA-SE-JA`;
-2. reconstruct the complete administrative contexts of `KU-PA` and `KU-PA-JA`;
-3. search the corpus for every additional secure `X/X-JA` pair;
-4. classify bases and derivatives independently as person/place/commodity/recipient/origin/transaction where the context allows;
-5. ask whether `-JA` predicts a recurring role better than matched endings on comparable words.
+Priority comparisons:
+
+1. tablet/roundel behavior of `PA-SE/PA-SE-JA`;
+2. commodity/account role of `KU-PA/KU-PA-JA`;
+3. possible place/designation role of `A-SE/A-SE-JA`;
+4. probable onomastic/personnel role of `*306-TU/*306-TU-JA`.
+
+A grammatical function should be proposed only if the same contextual contrast appears across more than one independent family.
 
 ## Sources / provenance
 
-- GORILA-derived concordance as exposed through the LinA / Ancient Scripts Study sign index.
-- Michael Wengler, `mwenge/lineara.xyz`, used as the searchable exploration layer.
-- Mnamon and Heraklion Archaeological Museum for the `SU-KI-RI-TA` / `SU-KI-RI-TE-I-JA` geographic derivative.
-- Heraklion Archaeological Museum for Linear B `se-to-i-ja` as an administrative place name.
-- Brent Davis, *The Undeciphered Aegean Scripts* (2026), chapter 4, for the broader statistical result that a small number of Linear A final signs are highly likely to mark suffixal morphology.
+- GORILA-derived upstream records for Haghia Triada, Zakros, Khania, Malia, Iouktas, Samothrace, and Knossos.
+- Maurizio Del Freo, Julien Zurbach & Carl Knappett, “A Fragment of a Libation Table Inscribed in Linear A from Petsophas, Palaikastro (PK Za 28),” in *Megistos Kouros* (2022).
+- Michael Wengler, `mwenge/lineara.xyz`, pinned exploratory corpus.
+- Mnamon and Heraklion Archaeological Museum for the Sybrita geographic derivative.
+- Brent Davis, *The Undeciphered Aegean Scripts* (2026), for the broader statistical morphology framework.
 
 ## Evidence tier
 
-**Tier A for the formal `PA-SE/PA-SE-JA` and `KU-PA/KU-PA-JA` relationships.**
-
-**No semantic tier assigned. The specific geographic/ablative/genitive reading of final `JA` is not supported by the current experiment.**
+**Tier A:** `PA-SE/PA-SE-JA`, `KU-PA/KU-PA-JA`.  
+**Tier B:** `A-SE/A-SE-JA`, `*306-TU/*306-TU-JA`.  
+**No semantic tier assigned.**
