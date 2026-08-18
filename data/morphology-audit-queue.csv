@@ -67,3 +67,5 @@ AQ-PA-001,2,suffix,PA,,,"KA-KU ~ KA-KU-PA",Tier-B-candidate,"Does repeated KA-KU
 AQ-PA-002,3,suffix,PA,,,"A-RI ~ A-RI-PA",comparison-only,"Does cross-site A-RI extension have independent lexical/contextual support?",tier-c-comparison
 AQ-SA-001,2,suffix,SA,,,"QA-*118 ~ QA-*118-SA",rejected-control,"Is the extended form actually complete?",rejected-damaged-variant
 AQ-SA-002,3,suffix,SA,,,"A-JE ~ A-JE-SA",comparison-only,"Can the lost IOZa<1> reading support more than formal comparison?",tier-c-source-limited
+AQ-IDA-001,1,suffix,A,,,"I-DA ~ I-DA-A",Tier-B-candidate,"Does I-DA-A reproduce the ritual stem in a comparable formulaic environment?",validated-tier-b
+AQ-IDA-002,3,suffix,DA,,,"I-DA ~ I-DA-DA",comparison-only,"Does reel-seal I-DA-DA have independent evidence for common lexical identity?",tier-c-comparison
