@@ -1,0 +1,9 @@
+form,warning_class,rationale,source_note
+PA-RA-NE,onomastic,"treated in comparative Linear A/Linear B scholarship as a Minoan personal name; common lexical identity with PA-RA is uncertain","audits/NE.md"
+PA-JA-RE,onomastic,"probable personal name with Linear B pa-ja-ro continuity","audits/RE.md"
+TE-JA-RE,onomastic,"probable personal-name family with Linear B te-ja-ro parallels","audits/RE.md"
+SA-MA-RO,onomastic_or_designation,"occurs in a personnel/name-like administrative list; common lexical identity with SA-MA unresolved","audits/RO.md"
+*306-TU,designation_or_onomastic,"repeated administrative form may belong to a name/designation class","audits/JA.md"
+*306-TU-JA,designation_or_onomastic,"JA-extended form inherits the *306-TU lexical-class warning","audits/JA.md"
+SI-KI-RA,anthroponymic_risk,"published discussion treats the A-/zero alternation in a probable name context","audits/A.md"
+A-SI-KI-RA,anthroponymic_risk,"published discussion treats the A-/zero alternation in a probable name context","audits/A.md"
