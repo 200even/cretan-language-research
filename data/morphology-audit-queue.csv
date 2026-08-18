@@ -45,10 +45,10 @@ AQ-JA-005,7,suffix,JA,2,4.977,"A-MA ~ A-MA-JA",Tier-C-comparison,"Do cross-site/
 AQ-JA-006,7,suffix,JA,2,4.977,"JA-SA ~ JA-SA-JA",rejected-control,"Is JA-SA actually an independently segmented free word?","rejected-cross-face-continuation-formula"
 AQ-JA-007,7,suffix,JA,2,4.977,"A-RI ~ A-RI-JA",obsolete-v0.2-control,"Why did this older candidate disappear under v0.3?","v0.3-excluded-insecure-variant"
 AQ-JA-008,7,suffix,JA,2,4.977,"PU2-RE ~ PU2-RE-JA",rejected-control,"Do authoritative editions preserve complete left boundaries?","rejected-authoritative-fragment-source-coverage"
-AQ-NE-001,8,suffix,NE,5,4.735,"*21F-TU ~ *21F-TU-NE",Tier-A-positive,"Primary-edition revalidation; benchmark positive control",validated-seed
-AQ-NE-002,8,suffix,NE,5,4.735,"QE-TU ~ QE-TU-NE",new,"Secure same-lexeme relationship?",pending
-AQ-NE-003,8,suffix,NE,5,4.735,"PA-TA ~ PA-TA-NE",new,"Secure same-lexeme relationship?",pending
-AQ-NE-004,8,suffix,NE,5,4.735,"PA-RA ~ PA-RA-NE",rejected-control,"Does expanded corpus remove or preserve scribal confound?",negative-control
+AQ-NE-001,8,suffix,NE,5,4.735,"*21F-TU ~ *21F-TU-NE",Tier-A-positive,"Primary-edition revalidation; benchmark positive control","validated-tier-a-same-scribe-cross-scribe"
+AQ-NE-002,8,suffix,NE,5,4.735,"QE-TU ~ QE-TU-NE",rejected-control,"Secure same-lexeme relationship?","rejected-damaged-base"
+AQ-NE-003,8,suffix,NE,5,4.735,"PA-TA ~ PA-TA-NE",rejected-control,"Secure same-lexeme relationship?","rejected-damaged-base"
+AQ-NE-004,8,suffix,NE,5,4.735,"PA-RA ~ PA-RA-NE",reclassified-control,"Does expanded corpus remove or preserve scribal confound?","reclassified-onomastic-scribal-lexical-identity"
 AQ-NU-001,9,suffix,NU,34,2.027,"KU-PA₃ ~ KU-PA₃-NU",reclassified-control,"Confirm onomastic explanation remains best",negative-control
 AQ-NU-002,9,suffix,NU,34,2.027,"U-TI ~ U-TI-NU",rejected-control,"Confirm fragment/segmentation failure remains decisive",negative-control
 AQ-ME-001,8,suffix,ME,3,4.879,"A-RA-TU ~ A-RA-TU-ME",Tier-B-candidate,"Same lexeme across Zakros tablet and Haghia Triada roundel?","survives-formal-audit-tier-b"

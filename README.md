@@ -126,6 +126,26 @@ Audit: [`audits/ME.md`](audits/ME.md)
 Lead: [`leads/ME.md`](leads/ME.md)  
 Summary: [`data/me-audit-summary.csv`](data/me-audit-summary.csv)
 
+### Comparative audit: `NE` has one strong local paradigm
+
+The full `NE` audit produces an intermediate profile between `JA` and `ME`:
+
+| candidate family | manual result |
+|---|---|
+| `*21F-TU ~ *21F-TU-NE` | **Tier A positive** |
+| `QE-TU ~ QE-TU-NE` | rejected: base is `]QE-TU` |
+| `PA-TA ~ PA-TA-NE` | rejected: base is `]PA-TA` |
+| `PA-RA ~ PA-RA-NE` | reclassified: scribal + onomastic lexical-identity confound |
+
+The `*21F-TU` family is exceptionally strong locally: HT Scribe 9 writes both bare and extended forms, and Scribe 11 independently replicates the extended form. But **only 1/4 original candidate families survives as credible morphology**, so current exact-pair evidence does not establish productive final `NE` across independent stems.
+
+The extended `*21F-TU-NE` form occurs in both header-like and numbered recipient-like contexts, so no grammatical function is assigned.
+
+Audit: [`audits/NE.md`](audits/NE.md)  
+Lead: [`leads/NE.md`](leads/NE.md)  
+Summary: [`data/ne-audit-summary.csv`](data/ne-audit-summary.csv)  
+Cross-suffix comparison: [`data/suffix-audit-comparison.csv`](data/suffix-audit-comparison.csv)
+
 ### 5. Different affixes have different evidentiary profiles
 
 v0.3 deliberately separates two dimensions that the earlier composite score conflated.
@@ -193,6 +213,8 @@ No post-hoc weight change is applied to v0.3. A future version should add a sepa
 - [`data/ja-list-frame-matrix.csv`](data/ja-list-frame-matrix.csv)
 - [`data/ja-list-frame-summary.csv`](data/ja-list-frame-summary.csv)
 - [`data/me-audit-summary.csv`](data/me-audit-summary.csv)
+- [`data/ne-audit-summary.csv`](data/ne-audit-summary.csv)
+- [`data/suffix-audit-comparison.csv`](data/suffix-audit-comparison.csv)
 - [`data/v03-regression-set.csv`](data/v03-regression-set.csv)
 
 Negative and reclassified examples are deliberately retained.
@@ -252,16 +274,16 @@ The older frozen v0.1/v0.2 implementation remains at [`scripts/rank-affixes.mjs`
 
 ## Next work
 
-The current priority is now **comparative morphology**, not further semantic drilling on `JA`.
+The three non-Davis suffix screens now have full manual outcomes: `JA` is productive, while `ME` and `NE` are not established as productive across independent stems. The next priority is therefore **v0.4 corpus/type control**, not another semantic drill-down.
 
-1. keep the `JA` functional stop rule in force until genuinely new evidence appears;
-2. audit `NE` next, because it already contains the Tier-A `*21F-TU ~ *21F-TU-NE` control plus unresolved v0.2/v0.3 candidates;
-3. compare audited survival rates and evidence profiles across `JA`, `ME`, `NE`, and Davis's suffixes;
-4. register v0.4 extraction controls for cross-face continuation, authoritative-source gaps, and complex-logogram flattening;
-5. stratify morphology by lexical class rather than forcing one affix model across personnel, ritual, commodity, and ordinary administrative vocabulary;
-6. seek new same-tablet/same-scribe paradigms before assigning grammatical functions.
+1. keep the `JA` and `NE` functional stop rules in force until genuinely new independent paradigms appear;
+2. register permanent controls for cross-face continuation, authoritative-source gaps, damaged bases, onomastic lexical-identity confounds, and complex-logogram flattening;
+3. make v0.4 distinguish syllabic words, complex signs/logograms, headings, and editorial continuations before paradigm generation;
+4. rerun the corpus under v0.4 before choosing the next non-Davis suffix family;
+5. compare audited survival rates against Davis's suffixes and the known positive prefixes;
+6. seek same-tablet or same-scribe multi-stem paradigms as the strongest path toward grammatical function.
 
-The completed `JA` list/frame test is negative: even broader account hierarchy does not recover a general `JA` function. See [`experiments/ja-list-frame-test.md`](experiments/ja-list-frame-test.md).
+The current comparative survival table is [`data/suffix-audit-comparison.csv`](data/suffix-audit-comparison.csv).
 
 ## Repository map
 
@@ -285,6 +307,9 @@ data/
   davis-2026-unblinding.csv
   davis-six-audit-summary.csv
   ja-audit-summary.csv
+  me-audit-summary.csv
+  ne-audit-summary.csv
+  suffix-audit-comparison.csv
   v03-regression-set.csv
 
 audits/
@@ -295,6 +320,7 @@ audits/
   RE.md
   TI.md
   ME.md
+  NE.md
   JA.md
 
 results/
@@ -309,6 +335,8 @@ experiments/
 
 leads/
   JA.md
+  NE.md
+  ME.md
   SI-DA.md
   DA-KU.md
   21F-TU.md
