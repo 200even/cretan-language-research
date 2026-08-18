@@ -92,6 +92,22 @@ These do not retroactively alter the frozen v0.4 ranking. They are preregistered
 
 **Rule:** never repair a damaged boundary from normalized tokenization alone, and never join separated damaged segments into a lexical word unless the specialist edition explicitly licenses that segmentation.
 
+## Source-consistent extraction protocol (v0.5)
+
+v0.5 promotes **source representation consistency** to an explicit pre-ranking requirement while leaving v0.4 scoring unchanged. It adds three generic controls discovered by the QE/SU/WI hostile audit:
+
+1. **combined-ID reconciliation:** inscription identifiers embedded in source headings such as `HT 79 [+] 83` are normalized to corpus-style IDs such as `HT79+83`;
+2. **multi-table inscription scanning:** every table explicitly structured as inscription data is boundary-scanned, not only the first table on a commentary page;
+3. **segmented-fragment flattening:** several independently broken sign groups in one source row cannot be concatenated into a normalized lexical word.
+
+The first registered run failed one case (29/30 exclusions, 13/13 retentions) because `SA-RO-QE[` occurs in the second inscription table for HT 62 [+] 73. The parser was generalized to all explicit inscription tables; the final frozen gate passes **30/30 exclusions and 13/13 retentions**.
+
+The corpus effect is 1,285 candidate syllabic occurrences → **938 retained / 347 excluded**, with 672 unique retained forms.
+
+**Rule:** a complete normalized token cannot override a higher-fidelity source that preserves damage, object composition, or independent fragment segmentation. Source reconciliation happens before exact-pair generation.
+
+See [`experiments/source-consistent-v05.md`](experiments/source-consistent-v05.md) and [`results/source-consistent-v0.5/REGRESSION.md`](results/source-consistent-v0.5/REGRESSION.md).
+
 ### String-decomposition ambiguity
 
 A structurally secure exact pair can still be a false morphological decomposition. The RA audit supplies the control: automatic `SA-RA ~ SA-RA-RA` is formally valid, but HT30 itself contains `SA-RA₂` and Younger's commentary proposes `SA-RA₂` and `SA-RA-RA` may be the same form. A stronger inscription-internal alternation therefore supersedes the mechanical `base + suffix` segmentation.

@@ -16,27 +16,23 @@ A candidate does not become evidence for morphology until its forms, boundaries,
 
 ## Current headline results
 
-### Latest frozen discovery substrate: structural-aware v0.4 (v0.5 source-consistency revision pending)
+### Current discovery substrate: source-consistent v0.5
 
-v0.4 extends the validated damage-aware extractor with type/source controls for **editorial continuation, complex-logogram flattening, cross-script contamination, and authoritative source corrections**. Lexical/onomastic warnings are annotated separately rather than used as hidden exclusions.
+v0.5 reconciles damage-preserving commentary identifiers with normalized corpus IDs, scans all explicit inscription tables on composite objects, and rejects normalized words assembled from separately damaged fragments. It deliberately keeps the v0.4 ranking formulas unchanged so changes reflect extraction rather than rescoring.
 
-The frozen expanded regression gate passes:
+The frozen v0.5 regression gate passes:
 
-> **26/26 structural/source negatives excluded; 11/11 secure controls retained.**
+> **30/30 structural/source negatives excluded; 13/13 audited structurally complete controls retained.**
 
-That is the historical result against the **then-frozen v0.4 benchmark**. The later QE/SU/WI audit found three source-representation misses and showed that one retention control (`KU-NI`) had been mislabeled as secure. The frozen run is not rewritten; those discoveries are registered for v0.5 and mean v0.4 should no longer be treated as source-complete.
+The run begins with 1,285 candidate syllabic occurrences and retains **938**, excluding 347; **672** unique forms remain. v0.4 retained 951 occurrences and 681 forms.
 
-The run begins with 1,285 candidate syllabic occurrences and retains **951** after structural/type/source masking. The new extractor automatically reproduces several conclusions that previously required manual audit:
+The strongest structural paradigmatic signals remain stable: prefix `A` (6), prefix `I` (4), suffix `JA` (5), and suffix `TI` (3). Source reconciliation reduces weaker suffixes: `RA` 3→2, `TE` 3→2, and `QE`, `SU`, and `WI` 2→1 each.
 
-- final `JA`: 7 v0.3 apparent pairs → **5** v0.4 structural pairs; both manually rejected false pairs disappear automatically;
-- final `ME`: 4 → **1**, matching the completed manual source/type audit;
-- final `NE`: 2 structural pairs remain, but one is explicitly flagged onomastic, leaving the Tier-A `*21F-TU` family as the clean core.
+Experiment: [`experiments/source-consistent-v05.md`](experiments/source-consistent-v05.md)  
+Generated results: [`results/source-consistent-v0.5/`](results/source-consistent-v0.5/)  
+Regression: [`results/source-consistent-v0.5/REGRESSION.md`](results/source-consistent-v0.5/REGRESSION.md)
 
-Top v0.4 suffixes by structural exact paradigms are `JA` (5), `TI` (3), `RA` (3), and `TE` (3). These are candidate-generation counts, not probabilities or translations.
-
-Experiment: [`experiments/structural-aware-v04.md`](experiments/structural-aware-v04.md)  
-Generated results: [`results/structural-aware-v0.4/`](results/structural-aware-v0.4/)  
-Regression: [`results/structural-aware-v0.4/REGRESSION.md`](results/structural-aware-v0.4/REGRESSION.md)
+Frozen v0.4 remains reproducible as the preceding historical discovery run; its 26/26 + 11/11 PASS is preserved against the benchmark then registered, including the later-withdrawn `KU-NI` retention label.
 
 ### 1. Damage-aware v0.3 passes its benchmark
 
@@ -250,6 +246,8 @@ No post-hoc weight change is applied to v0.3. A future version should add a sepa
 - [`data/ra-audit-summary.csv`](data/ra-audit-summary.csv)
 - [`data/qe-su-wi-audit-summary.csv`](data/qe-su-wi-audit-summary.csv)
 - [`data/v05-regression-backlog.csv`](data/v05-regression-backlog.csv)
+- [`data/v05-regression-set.csv`](data/v05-regression-set.csv)
+- [`data/v05-source-overrides.csv`](data/v05-source-overrides.csv)
 - [`data/suffix-audit-comparison.csv`](data/suffix-audit-comparison.csv)
 - [`data/v03-regression-set.csv`](data/v03-regression-set.csv)
 - [`data/v04-regression-set.csv`](data/v04-regression-set.csv)
@@ -313,25 +311,16 @@ The older frozen v0.1/v0.2 implementation remains at [`scripts/rank-affixes.mjs`
 
 ## Next work
 
-The preregistered comparative audit of `QE`, `SU`, and `WI` is complete. None meets the two-family productivity rule:
+v0.5 is complete and source-consistent against the frozen 30/13 regression gate. The next discovery-stage priority is a **registered comparative hostile audit of the three highest unaudited two-pair suffix candidates in v0.5**, rather than choosing among them after looking at context:
 
-- `QE`: **1 Tier A + 1 rejected**; the same-tablet `KA-PA ~ KA-PA-QE` family is exceptionally strong locally.
-- `SU`: **0 Tier A/B + 1 Tier C + 1 rejected**.
-- `WI`: **1 Tier B + 1 rejected**.
+1. `MI`: `JA-RE ~ JA-RE-MI`, `I-DA ~ I-DA-MI`;
+2. `PA`: `KA-KU ~ KA-KU-PA`, `A-RI ~ A-RI-PA`;
+3. `SA`: `QA-*118 ~ QA-*118-SA`, `A-JE ~ A-JE-SA`;
+4. freeze one common promotion rule before source/context inspection;
+5. preserve the `JA` functional stop rule and do not assign translations from exact-pair survival alone.
 
-More importantly, the screen exposed three source-consistency failures in frozen v0.4: lost damage in `SA-RO-QE[`, segmented-fragment flattening in KN Zb 35, and the `KU-NI` normalized/damage-preserving source conflict. The latter also withdraws the earlier Tier-B promotion of `KU-NI ~ KU-NI-TE`; the frozen Davis replication scores themselves are unchanged.
-
-The next research priority is therefore **v0.5 source-consistency / fragment-aware extraction**, not another manual suffix hunt.
-
-1. make damage-preserving source representations authoritative over normalized tokenization for boundary security;
-2. detect separated damaged segments before word construction;
-3. add the four frozen controls in `data/v05-regression-backlog.csv`;
-4. rerun the full structural discovery corpus without retuning toward any suffix;
-5. only then select new morphology candidates from the v0.5 output.
-
-Comparative audit: [`experiments/qe-su-wi-comparative-audit.md`](experiments/qe-su-wi-comparative-audit.md).  
-Result: [`results/qe-su-wi-comparative-audit.md`](results/qe-su-wi-comparative-audit.md).  
-Backlog: [`data/v05-regression-backlog.csv`](data/v05-regression-backlog.csv).
+Current ranking: [`results/source-consistent-v0.5/paradigm-ranking.csv`](results/source-consistent-v0.5/paradigm-ranking.csv).  
+v0.5 experiment: [`experiments/source-consistent-v05.md`](experiments/source-consistent-v05.md).
 
 ## Repository map
 
