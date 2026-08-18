@@ -1,0 +1,6 @@
+family,tier,base_coarse_role,ja_coarse_role,repeatable_shift,derived_role_base,derived_role_ja,functional_interpretation
+PA-SE,A,"tablet administrative recipient/designation","roundel receipt-label context",no,"recipient","unclassified","one-family support-type contrast only; not categorical because damaged tablet ]PA-SE-JA exists"
+KU-PA,A,"administrative participant/recipient-like entry","administrative participant/recipient-like entry",no,"recipient","recipient","role preserved; rejects simple recipient and sealed-document marking"
+A-SE,B,"administrative recipient/designation-like entry","administrative recipient/designation-like entry",no,"recipient","recipient","role preserved independently of KU-PA"
+*306-TU,B,"numbered personnel/designation entry","numbered transaction participant",no,"recipient","sender","possible model-dependent shift but not replicated and raw context does not establish grammatical relation"
+TOTAL,,"4 families","4 families",0,,,"No contextual role shift replicated across >=2 independent Tier-A/B families; functional promotion criterion failed"
