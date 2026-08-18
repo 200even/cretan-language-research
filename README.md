@@ -6,30 +6,24 @@ Linear A remains undeciphered. This repository does not propose a decipherment o
 
 > **When two Linear A sign groups look morphologically related, how strong is the evidence that the relationship is real?**
 
-The project combines automated candidate discovery with inscription-level audit. Positive results, false positives, damaged readings, onomastic families, scribal confounds, and failed hypotheses are all preserved in a versioned benchmark so that proposed morphology can be reproduced and challenged rather than selected retrospectively.
+The project combines automated candidate discovery with inscription-level audit. Positive results, false positives, damaged readings, onomastic families, scribal confounds, and failed hypotheses are preserved in a versioned benchmark so that morphological claims can be reproduced and challenged rather than selected retrospectively.
 
-## Why this project exists
+## Core rule
 
-Computational work on Linear A is unusually vulnerable to false patterns. The corpus is small, heterogeneous, partly fragmentary, and rich in personal names, place names, fixed formulae, commodity notation, and regional or scribal variation.
-
-A string-level comparison can produce an apparently excellent paradigm even when a boundary is damaged, damage information has been flattened, a derived substring is mistaken for a word, a form is onomastic, or a pattern is restricted to one scribe or genre.
-
-The central rule is:
+Computational work on Linear A is unusually vulnerable to false patterns because the corpus is small, heterogeneous, partly fragmentary, and rich in personal names, place names, ritual formulae, commodity notation, and regional or scribal variation.
 
 **Discovery is computational. Promotion is epigraphic.**
 
 A candidate does not become evidence for morphology until its forms, boundaries, damage state, provenance, and context have been audited.
 
-## Current project status
-
-### Benchmark
+## Current status
 
 [`BENCHMARK.md`](BENCHMARK.md) defines the evidence model. Machine-readable adjudications live in:
 
-- [`data/morphology-benchmark.csv`](data/morphology-benchmark.csv) — accepted, candidate, rejected, and reclassified relationships;
-- [`data/morphology-audit-queue.csv`](data/morphology-audit-queue.csv) — candidates awaiting manual audit;
-- [`data/validated-leads.csv`](data/validated-leads.csv) — detailed inscription-level observations;
-- [`data/davis-2026-unblinding.csv`](data/davis-2026-unblinding.csv) — frozen rank comparison with Davis's six affix candidates.
+- [`data/morphology-benchmark.csv`](data/morphology-benchmark.csv)
+- [`data/morphology-audit-queue.csv`](data/morphology-audit-queue.csv)
+- [`data/validated-leads.csv`](data/validated-leads.csv)
+- [`data/davis-2026-unblinding.csv`](data/davis-2026-unblinding.csv)
 
 Negative examples are deliberately retained. A system that recovers attractive positives while also reproducing known damage artifacts is not considered successful.
 
@@ -37,108 +31,141 @@ Negative examples are deliberately retained. A system that recovers attractive p
 
 The first affix-ranking experiment was frozen **before** the identities of Brent Davis's six 2026 morphology candidates were known to this project.
 
-The ranking used:
+After the blind v0.1 and v0.2 outputs had been frozen, Davis supplied his six candidates directly by email:
 
-- sign position at word beginnings and endings;
-- exact apparent whole-word relationships `X ~ A-X` and `X ~ X-A`;
-- no proposed translation;
-- no external-language matching;
-- no hand-coded knowledge of Davis's candidates.
+- prefixes: **`A-`, `I-`**
+- suffixes: **`-RE`, `-RO`, `-TE`, `-TI`**
 
-After the blind v0.1 and v0.2 outputs had been frozen, Davis supplied the six identities directly by email on 2026-08-17:
+Our frozen v0.2 ranks were:
 
-- prefixes: **`A-`, `I-`**;
-- suffixes: **`-RE`, `-RO`, `-TE`, `-TI`**.
+| Davis candidate | blind rank |
+|---|---:|
+| `A-` | **1 / 116** |
+| `I-` | **4 / 116** |
+| `-RO` | **1 / 116** |
+| `-TE` | **4 / 116** |
+| `-RE` | **7 / 116** |
+| `-TI` | **11 / 116** |
 
-The frozen v0.2 ranks were:
+The pre-registered comparison of our top two prefixes and top four suffixes yields **3/6 exact cutoff overlap**, classified in advance as a **partial conceptual replication**. That remains the official replication score.
 
-| Davis candidate | side | blind rank |
-|---|---|---:|
-| `A-` | prefix | **1 / 116** |
-| `I-` | prefix | **4 / 116** |
-| `-RO` | suffix | **1 / 116** |
-| `-TE` | suffix | **4 / 116** |
-| `-RE` | suffix | **7 / 116** |
-| `-TI` | suffix | **11 / 116** |
+Separately, all six Davis candidates fall within the top 11 positions of their corresponding 116-sign rankings. This is descriptive secondary evidence, not a replacement success criterion.
 
-The pre-registered criterion compared our top 2 prefixes and top 4 suffixes with Davis's corresponding sets. That yields **3/6 exact cutoff overlap**, classified in advance as a **partial conceptual replication**.
+Protocol: [`experiments/davis-2026-affix-replication.md`](experiments/davis-2026-affix-replication.md)
 
-A separate descriptive observation is that **all six Davis candidates fall within the top 10% of their corresponding 116-sign rankings**, and five are rank 7 or better. That observation is reported separately because it was not the pre-registered success criterion.
+## What happened after unblinding
 
-Full protocol and interpretation: [`experiments/davis-2026-affix-replication.md`](experiments/davis-2026-affix-replication.md).
+We then subjected the automatic exact-pair evidence for **all six Davis candidates** to the same damage-aware audit.
 
-Implementation: [`scripts/rank-affixes.mjs`](scripts/rank-affixes.mjs).
+The result is more informative than a simple rank comparison:
 
-## Why disagreement is useful
+| element | blind rank | damage-aware pair result | current assessment |
+|---|---:|---|---|
+| `A-` | **#1 prefix** | 2 Tier A + 2 Tier B automatic survivors; independent same-tablet Tier A control | **strongest reproduced element** |
+| `I-` | **#4 prefix** | 2 Tier A + 1 Tier B survivors | strong prefix evidence despite missing prereg top-2 cutoff |
+| `-RO` | **#1 suffix** | 1 Tier B; 3 pairs fail/reclassify | very strong edge signal, weak minimal-pair support |
+| `-TE` | **#4 suffix** | no new Tier A; contextual/literature evidence survives | strong distributional signal, exact-pair support weak |
+| `-RE` | **#7 suffix** | one secure formal pair, strongly onomastic; five fail as clean pairs | likely onomastic/derivational morphology |
+| `-TI` | **#11 suffix** | 1 Tier A + 2 Tier B survivors | best exact-pair survival among Davis suffixes despite lower global rank |
 
-Our frozen top four suffixes were:
+Full synthesis: [`results/davis-six-audit-synthesis.md`](results/davis-six-audit-synthesis.md)
 
-1. `RO`
-2. `JA`
-3. `ME`
-4. `TE`
+Individual audits:
 
-Davis's four are `RE`, `RO`, `TE`, and `TI`.
+- [`audits/A.md`](audits/A.md)
+- [`audits/I.md`](audits/I.md)
+- [`audits/RO.md`](audits/RO.md)
+- [`audits/TE.md`](audits/TE.md)
+- [`audits/RE.md`](audits/RE.md)
+- [`audits/TI.md`](audits/TI.md)
 
-So `JA` and `ME` outrank Davis candidates `RE` and `TI` under our pair-sensitive score. That difference creates useful experiments rather than invalidating either method: Davis's approach and this benchmark are detecting overlapping but non-identical structural signals.
+## Strongest current result: initial `A-`
 
-## Example: `RO` and the audit layer
+`A-` now has the strongest convergence of independent evidence in the project.
 
-`RO` is particularly informative because it is both **Davis's suffix candidate** and our **#1 blind suffix candidate**.
+The blind algorithm ranked it #1. Damage-aware audit retained strong relationships including:
 
-The blind pipeline generated four apparent exact pairs:
+- `KA-RU ~ A-KA-RU` — Tier A, with unusually useful administrative-context convergence;
+- `SI-KI-RA ~ A-SI-KI-RA` — Tier A and already recognized in published scholarship;
+- `SA-RA₂ ~ A-SA-RA₂` — Tier B;
+- `PA-RA-NE ~ A-PA-RA-NE` — Tier B.
 
-```text
-KI-DA  ~ KI-DA-RO
-SA-MA  ~ SA-MA-RO
-DI-NA  ~ DI-NA-RO
-A-DA   ~ A-DA-RO
-```
+The same-tablet `TA-NA-TE ~ A-TA-NA-TE` contrast at Zakros is an additional published Tier-A replication/control.
 
-Manual epigraphic review split them:
+The supported claim remains structural:
 
-- two apparent base forms were fragmentary and had lost damage information in the computational representation;
-- one pair is better treated as a likely onomastic/lexical comparison;
-- one pair, `A-DA ~ A-DA-RO`, survives as a Tier B formal candidate.
+> **Linear A has strong evidence for an initial morphological element `A-` that alternates with unprefixed forms in at least some lexical and onomastic environments.**
 
-See [`audits/RO.md`](audits/RO.md).
+Its grammatical function is unknown. Article, case, definiteness, and semantic interpretations remain hypotheses.
 
-This does **not** contradict Davis's distributional identification of `RO`. It demonstrates that two questions must remain separate:
+## Why the suffixes matter even when their minimal pairs fail
 
-1. Is a sign strongly enriched at a word boundary?
-2. Do apparent minimal pairs provide secure epigraphic evidence for the same morphology?
+The `RO`, `TE`, and `RE` audits exposed a central methodological distinction:
 
-The benchmark is designed to measure both.
+> **boundary enrichment, exact paradigmatic alternation, and grammatical function are separate evidentiary questions.**
 
-## Current benchmark-positive morphology
+For example, `RO` is independently selected by Davis and ranks #1 in our blind suffix analysis, yet most apparent `X ~ X-RO` pairs collapse when damage or onomastics are restored. That does not make the word-final distribution unreal. It means a distributional suffix signal cannot be justified by fabricated minimal pairs.
 
-The seed benchmark is intentionally conservative:
+`RE` appears particularly concentrated in probable anthroponyms, suggesting that a real derivational or onomastic ending may be better detected by edge statistics than by ordinary bare/extended paradigms.
 
-| Relationship | Assessment | What it supports |
+`TI` shows the inverse pattern: weaker global rank but substantially better exact-pair survival.
+
+## Corpus-engineering result
+
+The six audits now provide multiple labeled cases where a cleaned computational word field silently removed an initial or final break and thereby manufactured a perfect-looking morphological pair.
+
+This is no longer an anecdotal warning. It is a benchmarked failure mode.
+
+The next large-scale extractor therefore must construct a **damage-aware word layer before generating exact pairs**. A post-hoc regex filter cannot recover boundary information that has already been discarded.
+
+## Current benchmark-positive examples
+
+The benchmark is intentionally conservative. Representative positives now include:
+
+| Relationship | Assessment | Evidence |
 |---|---|---|
+| `KA-RU ~ A-KA-RU` | Tier A | initial `A-`, administrative contextual convergence |
+| `SI-KI-RA ~ A-SI-KI-RA` | Tier A | initial `A-`, published prior recognition |
+| `TA-NA-TE ~ A-TA-NA-TE` | Tier A replication | same-tablet initial `A-` contrast |
+| `QA-*118 ~ I-QA-*118` | Tier A | complete cross-site initial `I-` contrast |
+| `DA-MA-TE ~ I-DA-MA-TE` | Tier A | repeated complete initial `I-` contrast |
 | `PA-SE ~ PA-SE-JA` | Tier A | exact final `JA` extension |
 | `KU-PA ~ KU-PA-JA` | Tier A | independent exact final `JA` extension |
-| `*21F-TU ~ *21F-TU-NE` | Tier A | same-scribe contrast with cross-scribe replication |
-| `DA-KU-SE-NE ~ DA-KU-SE-NE-TI` | Tier A | exact final `TI` extension across scribes |
-| `SI-DA-TE ~ A-SI-DA-TO-I` | Tier B | same-tablet formal relationship; function unresolved |
-| `A-DA ~ A-DA-RO` | Tier B | secure cross-site formal relationship; lexical identity unresolved |
+| `*21F-TU ~ *21F-TU-NE` | Tier A | same-scribe + cross-scribe `NE` evidence |
+| `DA-KU-SE-NE ~ DA-KU-SE-NE-TI` | Tier A with segmentation caveat | exact final `TI` extension |
 
-These are **structural observations**, not translations.
+These are **structural observations, not translations**.
 
-## Research strategy
+## What the first scoring model got wrong
 
-The project follows a grammar-first combinatorial approach:
+The frozen ranking combined:
 
-1. identify recurring formal relationships without choosing a language family;
-2. preserve inscriptional provenance and damage state;
-3. test candidates across scribes, sites, and genres;
-4. use negative controls and rejected cases to measure false-positive behavior;
-5. infer grammatical function only when a form predicts a recurring administrative or syntactic role;
-6. compare external languages only after the internal structural prediction exists.
+1. word-edge enrichment;
+2. apparent exact extension pairs;
+3. raw boundary support.
 
-Full methodology: [`METHODOLOGY.md`](METHODOLOGY.md).
+The audits show that these dimensions should not yet be collapsed into one score.
 
-## Reproduce the ranking
+The next model will separate:
+
+1. **boundary distribution** — how strongly a sign favors a word edge;
+2. **damage-aware paradigmatic evidence** — how many secure `X ~ A-X` or `X ~ X-A` relationships survive;
+3. **lexical-class concentration** — names, places, ritual formulae, administrative headings, etc.;
+4. **contextual role equivalence** — whether paired forms actually occupy comparable functions.
+
+## Next work
+
+The highest-value next phase is **v0.3**, not another external-language comparison:
+
+1. build a damage-aware word/boundary layer;
+2. rerun pure edge statistics separately from exact-pair scoring;
+3. stratify the corpus by probable onomastic/personnel, ritual, and ordinary administrative contexts;
+4. rerun the Davis-six comparison across those independent dimensions;
+5. apply the identical audit to the high-ranked non-Davis candidates **`JA`, `ME`, and `NE`**.
+
+That final comparison is especially important. `JA` already has two Tier-A exact extensions. If `JA` or `ME` survives the same controls as well as or better than the established Davis candidates, that becomes a specific result potentially worth bringing to specialist attention.
+
+## Reproduce the frozen ranking
 
 The exploratory corpus is pinned to `mwenge/lineara.xyz` commit:
 
@@ -146,7 +173,7 @@ The exploratory corpus is pinned to `mwenge/lineara.xyz` commit:
 43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a
 ```
 
-Run the original ranking with:
+Original run:
 
 ```bash
 node scripts/rank-affixes.mjs \
@@ -154,7 +181,7 @@ node scripts/rank-affixes.mjs \
   --out-dir replication-output
 ```
 
-Run the separately versioned obvious-logogram sensitivity analysis with:
+Logogram sensitivity run:
 
 ```bash
 node scripts/rank-affixes.mjs \
@@ -163,7 +190,7 @@ node scripts/rank-affixes.mjs \
   --exclude-known-logograms
 ```
 
-GitHub Actions runs the same procedure against the pinned upstream commit and records provenance.
+Implementation: [`scripts/rank-affixes.mjs`](scripts/rank-affixes.mjs)
 
 ## Data provenance
 
@@ -177,47 +204,41 @@ Evidence is prioritized roughly as:
 4. computational corpora and derived analytical layers;
 5. this project's inference.
 
-`lineara.xyz` is a productive searchable substrate, but cleaned or derived data never outrank the inscription. The `RO` audit demonstrates why.
-
 See [`UPSTREAM.md`](UPSTREAM.md) and [`SOURCES.md`](SOURCES.md).
-
-## Next work
-
-The Davis unblinding gives the audit queue a clearer priority:
-
-1. audit `RE` and `TE`, where Davis's suffix set overlaps our high-ranked candidate families;
-2. audit `I-` and `A-`, Davis's two prefixes and our ranks #4 and #1;
-3. expand the `TI` audit beyond the existing Tier A `DA-KU-SE-NE ~ DA-KU-SE-NE-TI` pair;
-4. audit `JA` and `ME` as disagreement cases;
-5. build a damage-aware corpus layer before the next large-scale exact-pair run;
-6. reproduce Davis's exact Packard refinement if the chapter/data become available;
-7. repeat against an independently encoded SigLA-derived corpus.
 
 ## Repository map
 
 ```text
-BENCHMARK.md                       benchmark definition and evidence tiers
-METHODOLOGY.md                     research protocol
-REJECTED_HYPOTHESES.md             failed and downgraded hypotheses
-SOURCES.md                         working bibliography
-UPSTREAM.md                        corpus provenance and source hierarchy
+BENCHMARK.md
+METHODOLOGY.md
+REJECTED_HYPOTHESES.md
+SOURCES.md
+UPSTREAM.md
 
 scripts/
-  rank-affixes.mjs                 reproducible candidate-ranking pipeline
+  rank-affixes.mjs
 
 data/
-  morphology-benchmark.csv         adjudicated morphology benchmark
-  morphology-audit-queue.csv       pending audit queue
-  validated-leads.csv              inscription-level observations
-  davis-2026-unblinding.csv        Davis-six frozen-rank comparison
+  morphology-benchmark.csv
+  morphology-audit-queue.csv
+  validated-leads.csv
+  davis-2026-unblinding.csv
 
 audits/
-  RO.md                            audit of first blind top-ranked suffix
+  A.md
+  I.md
+  RO.md
+  TE.md
+  RE.md
+  TI.md
+
+results/
+  davis-six-audit-synthesis.md
 
 experiments/
-  davis-2026-affix-replication.md  blind replication and unblinding
-  mitanni-indo-aryan-pilot.md      negative external-language pilot
-  toponym-kober-grid.md            pre-registered geographic test
+  davis-2026-affix-replication.md
+  mitanni-indo-aryan-pilot.md
+  toponym-kober-grid.md
 
 leads/
   JA.md
