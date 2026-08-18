@@ -1,0 +1,44 @@
+benchmark_id,expectation,rationale
+MB-RO-001,exclude_structural,known damaged base
+MB-RO-002,exclude_structural,known damaged base
+MB-TE-001,exclude_structural,known insecure boundaries
+MB-TE-003,exclude_structural,HT79 plus 83 damage-preserving source gives ]KU-NI[
+MB-TE-005,exclude_structural,known broken base boundary
+MB-TE-006,exclude_structural,known damaged base
+MB-RE-002,exclude_structural,known damaged base
+MB-RE-003,exclude_structural,known damaged base
+MB-RE-004,exclude_structural,known damaged variant
+MB-RE-005,exclude_structural,known damaged base
+MB-RE-006,exclude_structural,known damaged base
+MB-A-001,exclude_structural,known doubly fragmentary base
+MB-A-007,exclude_structural,known damaged base
+MB-A-008,exclude_structural,known damaged forms
+MB-I-002,exclude_structural,known damaged prefixed form
+MB-I-004,exclude_structural,known damaged base
+MB-I-006,exclude_structural,known damaged prefixed form
+MB-I-007,exclude_structural,known damaged prefixed form
+MB-TI-002,exclude_structural,known damaged variant
+MB-TI-005,exclude_structural,known damaged forms
+MB-JA-006,exclude_structural,cross-face continuation must not create JA-SA ~ JA-SA-JA
+MB-JA-007,exclude_structural,authoritative source correction must suppress PU2-RE false base
+MB-ME-002,exclude_structural,cross-face continuation must suppress JA-SA-SA-RA bare fragment
+MB-ME-003,exclude_structural,complex logogram flattening must suppress MA-RU ~ MA-RU-ME
+MB-ME-004,exclude_structural,cross-face continuation must suppress SA-RA-ME free-word artifact
+MB-NE-002,exclude_structural,QE-TU base is fragmentary ]QE-TU
+MB-NE-003,exclude_structural,PA-TA base is fragmentary ]PA-TA
+MB-QE-002,exclude_structural,HT73 preserves SA-RO-QE with insecure right boundary
+MB-SU-001,exclude_structural,HT79 plus 83 damage-preserving source gives ]KU-NI[
+MB-WI-001,exclude_structural,KN Zb35 contains separated damaged JA DI WI segments not one word
+MB-A-002,retain_secure,Tier A KA-RU ~ A-KA-RU
+MB-A-006,retain_secure,Tier A SI-KI-RA ~ A-SI-KI-RA
+MB-A-009,retain_secure,Tier A same-tablet TA-NA-TE ~ A-TA-NA-TE
+MB-I-005,retain_secure,Tier A QA-*118 ~ I-QA-*118
+MB-I-008,retain_secure,Tier A DA-MA-TE ~ I-DA-MA-TE
+MB-TI-001,retain_secure,Tier A DA-KU-SE-NE ~ DA-KU-SE-NE-TI
+MB-JA-001,retain_secure,Tier A PA-SE ~ PA-SE-JA
+MB-JA-002,retain_secure,Tier A KU-PA ~ KU-PA-JA
+MB-NE-001,retain_secure,Tier A *21F-TU ~ *21F-TU-NE
+MB-ME-001,retain_secure,Tier B A-RA-TU ~ A-RA-TU-ME structurally available
+MB-QE-001,retain_secure,Tier A same-tablet KA-PA ~ KA-PA-QE
+MB-SU-002,retain_secure,complete A-RI ~ A-RI-SU comparison must remain structurally available
+MB-WI-002,retain_secure,Tier B PA3-NI ~ PA3-NI-WI structurally available
