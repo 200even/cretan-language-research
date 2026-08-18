@@ -52,7 +52,7 @@ Rules:
 
 The validated v0.3 regression gate currently removes **19/19** known damage-created/insecure relationships while retaining **6/6** secure positive controls. See [`experiments/damage-aware-v03.md`](experiments/damage-aware-v03.md).
 
-An important corollary is that the benchmark can be wrong. When a regression test contradicts a human label, the underlying inscription is rechecked. The `KU-NI ~ KU-NI-TE` case demonstrated this: direct inspection of HT 79+83 showed a complete `KU-NI` occurrence, so the negative benchmark label was corrected rather than forcing the extractor to reproduce it.
+An important corollary is that the benchmark can be wrong in either direction. The `KU-NI` history demonstrates this twice: normalized HT 79+83 tokenization initially caused the project to promote `KU-NI ~ KU-NI-TE`, but a later comparison against the separate GORILA-derived damage-preserving commentary exposed `]KU-NI[`. The promotion was therefore withdrawn. Frozen experiment outputs remain historical facts; newly discovered source conflicts are registered as forward regression controls rather than silently rewriting past runs.
 
 ## Structural/type-aware extraction protocol (v0.4)
 
@@ -77,6 +77,20 @@ Rules:
 The frozen v0.4 regression gate passes **26/26** structural/source negatives while retaining **11/11** secure controls. See [`experiments/structural-aware-v04.md`](experiments/structural-aware-v04.md).
 
 A useful consequence is that corpus preprocessing is now itself benchmarked: the extractor must reproduce known failures such as cross-face `JA-SA`, complex/logographic `MA-RU-ME`, and authoritative-boundary `PU2-RE` without being told which affix is being tested.
+
+### Source-representation precedence
+
+Normalized item pages and flattened word indexes are discovery aids, not final authorities on physical word boundaries. When they conflict with an inscription-oriented transcription that preserves brackets, continuation marks, or separated fragments, the **damage-preserving representation controls boundary security**.
+
+The QE/SU/WI screen exposed three v0.4 misses:
+
+- HT 73 `SA-RO-QE[`: lost right-boundary damage;
+- KN Zb 35 `]JA[ ]DI-[ ]WI[`: separated damaged segments flattened into one word;
+- HT 79 [+] 83 `]KU-NI[`: normalized tokenization overstated a complete base.
+
+These do not retroactively alter the frozen v0.4 ranking. They are preregistered in `data/v05-regression-backlog.csv` for the next source-consistency pipeline.
+
+**Rule:** never repair a damaged boundary from normalized tokenization alone, and never join separated damaged segments into a lexical word unless the specialist edition explicitly licenses that segmentation.
 
 ### String-decomposition ambiguity
 

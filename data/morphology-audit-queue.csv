@@ -5,7 +5,7 @@ AQ-RO-003,1,suffix,RO,1,6.649,"DI-NA ~ DI-NA-RO",rejected-control,"Same lexeme w
 AQ-RO-004,1,suffix,RO,1,6.649,"A-DA ~ A-DA-RO",Tier-B-candidate,"Same lexeme with productive -RO or onomastic/lexical coincidence?","survives-formal-audit"
 AQ-TE-001,2,suffix,TE,4,4.869,"DU-RI ~ DU-RI-TE",rejected-control,"Are both word boundaries secure?","rejected-damaged-boundaries"
 AQ-TE-002,2,suffix,TE,4,4.869,"SI-RU ~ SI-RU-TE",Tier-B-comparison,"Same lexeme across administrative and ritual registers?","survives-formal-context-unresolved"
-AQ-TE-003,2,suffix,TE,4,4.869,"KU-NI ~ KU-NI-TE",Tier-B-candidate,"Same lexeme or onomastic/derivational relation?","survives-formal-audit-corrected"
+AQ-TE-003,2,suffix,TE,4,4.869,KU-NI ~ KU-NI-TE,rejected-control,Are both word boundaries secure across source layers?,rejected-source-conflicted-base
 AQ-TE-004,2,suffix,TE,4,4.869,"I-JA ~ I-JA-TE",Tier-C-comparison,"Does contextual evidence support derivation rather than coincidence?","comparison-only"
 AQ-TE-005,2,suffix,TE,4,4.869,"A-DI-KI-TE ~ A-DI-KI-TE-TE",literature-supported,"Can the exact-pair claim be separated from the published Dikte morphology argument?","reclassified-not-clean-pair"
 AQ-TE-006,2,suffix,TE,4,4.869,"A-TA-NA ~ A-TA-NA-TE",rejected-control,"Is A-TA-NA actually complete?","rejected-damaged-base"
@@ -55,3 +55,9 @@ AQ-ME-001,8,suffix,ME,3,4.879,"A-RA-TU ~ A-RA-TU-ME",Tier-B-candidate,"Same lexe
 AQ-ME-002,8,suffix,ME,3,4.879,"JA-SA-SA-RA ~ JA-SA-SA-RA-ME",rejected-control,"Is the apparent bare form an independent word?","rejected-cross-face-continuation"
 AQ-ME-003,8,suffix,ME,3,4.879,"MA-RU ~ MA-RU-ME",rejected-control,"Is the extended form an ordinary syllabic word or complex logographic notation?","rejected-logogram-flattening"
 AQ-ME-004,8,suffix,ME,3,4.879,"SA-RA ~ SA-RA-ME",rejected-control,"Is SA-RA-ME independently segmented?","rejected-cross-face-continuation"
+AQ-QE-001,5,suffix,QE,,,KA-PA ~ KA-PA-QE,Tier-A-positive,Same lexeme with final QE under same-tablet control?,completed-tier-a
+AQ-QE-002,5,suffix,QE,,,SA-RO ~ SA-RO-QE,rejected-control,Is variant right boundary secure?,rejected-damaged-variant
+AQ-SU-001,6,suffix,SU,,,KU-NI ~ KU-NI-SU,rejected-control,Is normalized KU-NI complete in damage-preserving source?,rejected-source-conflicted-base
+AQ-SU-002,6,suffix,SU,,,A-RI ~ A-RI-SU,Tier-C-comparison,Common lexeme across site/chronology/register?,completed-comparison-only
+AQ-WI-001,7,suffix,WI,,,JA-DI ~ JA-DI-WI,rejected-control,Is variant one securely segmented word?,rejected-segmented-fragments
+AQ-WI-002,7,suffix,WI,,,PA3-NI ~ PA3-NI-WI,Tier-B-candidate,Onomastic/relational morphology or lexical coincidence across admin/ritual?,completed-tier-b-reclassified

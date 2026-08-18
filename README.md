@@ -240,6 +240,8 @@ No post-hoc weight change is applied to v0.3. A future version should add a sepa
 - [`data/me-audit-summary.csv`](data/me-audit-summary.csv)
 - [`data/ne-audit-summary.csv`](data/ne-audit-summary.csv)
 - [`data/ra-audit-summary.csv`](data/ra-audit-summary.csv)
+- [`data/qe-su-wi-audit-summary.csv`](data/qe-su-wi-audit-summary.csv)
+- [`data/v05-regression-backlog.csv`](data/v05-regression-backlog.csv)
 - [`data/suffix-audit-comparison.csv`](data/suffix-audit-comparison.csv)
 - [`data/v03-regression-set.csv`](data/v03-regression-set.csv)
 - [`data/v04-regression-set.csv`](data/v04-regression-set.csv)
@@ -303,20 +305,25 @@ The older frozen v0.1/v0.2 implementation remains at [`scripts/rank-affixes.mjs`
 
 ## Next work
 
-The hostile audit of final `RA` is complete: **0 Tier A + 1 Tier B + 1 Tier C + 1 rejected**, so productive `RA` is not established. The strongest surviving family is `MI-DA ~ MI-DA-RA`, retained only as possible onomastic/derivational morphology. The `SA-RA` family is a new string-decomposition control because HT30 itself favors `SA-RA₂ ~ SA-RA-RA` over simple `SA-RA + RA`.
+The preregistered comparative audit of `QE`, `SU`, and `WI` is complete. None meets the two-family productivity rule:
 
-The next research priority is a **registered comparative audit of the three tied clean two-pair v0.4 suffix candidates** rather than choosing one post hoc:
+- `QE`: **1 Tier A + 1 rejected**; the same-tablet `KA-PA ~ KA-PA-QE` family is exceptionally strong locally.
+- `SU`: **0 Tier A/B + 1 Tier C + 1 rejected**.
+- `WI`: **1 Tier B + 1 rejected**.
 
-1. `QE`: `KA-PA ~ KA-PA-QE`, `SA-RO ~ SA-RO-QE`;
-2. `SU`: `KU-NI ~ KU-NI-SU`, `A-RI ~ A-RI-SU`;
-3. `WI`: `JA-DI ~ JA-DI-WI`, `PA3-NI ~ PA3-NI-WI`;
-4. apply the same source, support, scribe, lexical-identity, and context standards to all six pairs before comparing survival rates;
-5. keep the `JA` and `NE` functional stop rules in force until genuinely new independent paradigms appear;
-6. preserve v0.4 extraction unchanged while manual promotion-stage audits continue.
+More importantly, the screen exposed three source-consistency failures in frozen v0.4: lost damage in `SA-RO-QE[`, segmented-fragment flattening in KN Zb 35, and the `KU-NI` normalized/damage-preserving source conflict. The latter also withdraws the earlier Tier-B promotion of `KU-NI ~ KU-NI-TE`; the frozen Davis replication scores themselves are unchanged.
 
-RA audit: [`audits/RA.md`](audits/RA.md).  
-Current structural ranking: [`results/structural-aware-v0.4/paradigm-ranking.csv`](results/structural-aware-v0.4/paradigm-ranking.csv).  
-Cross-suffix audited comparison: [`data/suffix-audit-comparison.csv`](data/suffix-audit-comparison.csv).
+The next research priority is therefore **v0.5 source-consistency / fragment-aware extraction**, not another manual suffix hunt.
+
+1. make damage-preserving source representations authoritative over normalized tokenization for boundary security;
+2. detect separated damaged segments before word construction;
+3. add the four frozen controls in `data/v05-regression-backlog.csv`;
+4. rerun the full structural discovery corpus without retuning toward any suffix;
+5. only then select new morphology candidates from the v0.5 output.
+
+Comparative audit: [`experiments/qe-su-wi-comparative-audit.md`](experiments/qe-su-wi-comparative-audit.md).  
+Result: [`results/qe-su-wi-comparative-audit.md`](results/qe-su-wi-comparative-audit.md).  
+Backlog: [`data/v05-regression-backlog.csv`](data/v05-regression-backlog.csv).
 
 ## Repository map
 

@@ -1,6 +1,6 @@
 # Comparative audit: final `QE`, `SU`, and `WI`
 
-**Status:** registered before inscription-level adjudication.  
+**Status:** completed; protocol below was registered before inscription-level adjudication.  
 **Input:** the three tied clean two-pair suffix candidates from structural-aware v0.4.  
 **Purpose:** compare survival under one fixed hostile audit rather than selecting candidates sequentially after seeing results.
 
@@ -70,3 +70,12 @@ No suffix will be selected as "best" by changing thresholds after inspection.
 ## Non-claims
 
 This experiment does not decipher `QE`, `SU`, or `WI`, assign phonetic values beyond conventional sign labels, or infer grammatical case/function from string extensions alone.
+
+## Completed result
+
+- `QE`: 1/2 A/B survivors (one Tier A), productivity not established.
+- `SU`: 0/2 A/B survivors, productivity not established.
+- `WI`: 1/2 A/B survivors (one Tier B), productivity not established.
+- **No suffix passed the registered productivity rule.**
+
+The audit also exposed three new source-consistency failure controls and forced withdrawal of the earlier `KU-NI ~ KU-NI-TE` promotion. Full result: [`../results/qe-su-wi-comparative-audit.md`](../results/qe-su-wi-comparative-audit.md).
