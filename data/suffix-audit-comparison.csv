@@ -1,8 +1,8 @@
-suffix,v03_secure_exact_pairs,v04_structural_exact_pairs,v04_warned_pairs,manual_tier_a,manual_tier_b,manual_other_or_reclassified,manual_rejected,productive_morphology_status,interpretation
-JA,7,5,1,2,2,1,2,supported,"v0.4 automatically removes both manually rejected structural/source false pairs; multiple independent Tier-A/B families remain; function unknown"
-ME,4,1,0,0,1,0,3,not-established,"v0.4 automatically reproduces the manual structural audit: only A-RA-TU ~ A-RA-TU-ME survives"
-NE,2,2,1,1,0,1,2,not-established,"One exceptionally strong *21F-TU family survives; PA-RA remains structurally secure but is flagged onomastic; two other bases are damaged"
-RA,3,3,0,0,1,1,1,not-established,"SA-RA ~ SA-RA-RA superseded by stronger same-tablet SA-RA2 comparison; MI-DA remains Tier-B possible onomastic/derivational morphology"
-QE,,2,0,1,0,0,1,not-established,"KA-PA ~ KA-PA-QE is Tier A same-tablet morphology; SA-RO-QE is actually right-fragmentary"
-SU,,2,0,0,0,1,1,not-established,"KU-NI base is source-conflicted/insecure; A-RI ~ A-RI-SU remains comparison-only"
-WI,,2,0,0,1,0,1,not-established,"JA-DI-WI is segmented damaged material; PA3-NI ~ PA3-NI-WI remains Tier-B possible relational/onomastic morphology"
+suffix,v03_secure_exact_pairs,v04_structural_exact_pairs,v05_source_consistent_pairs,v04_warned_pairs,manual_tier_a,manual_tier_b,manual_other_or_reclassified,manual_rejected,productive_morphology_status,interpretation
+JA,7,5,5,1,2,2,1,2,supported,"v0.5 preserves all five v0.4 structural JA pairs; multiple independent Tier-A/B families remain; function unknown"
+ME,4,1,1,0,0,1,0,3,not-established,"v0.5 preserves only A-RA-TU ~ A-RA-TU-ME; productivity remains unestablished"
+NE,2,2,2,1,1,0,1,2,not-established,"One exceptionally strong *21F-TU family survives; PA-RA remains structurally secure but is flagged onomastic"
+RA,3,3,2,0,0,1,1,1,not-established,"v0.5 source reconciliation removes the apparent SA-RA base relationship; MI-DA remains Tier-B possible onomastic/derivational morphology"
+QE,,2,1,0,1,0,0,1,not-established,"v0.5 removes fragmentary SA-RO-QE and leaves Tier-A same-tablet KA-PA ~ KA-PA-QE"
+SU,,2,1,0,0,0,1,1,not-established,"v0.5 removes source-conflicted KU-NI base; A-RI ~ A-RI-SU remains comparison-only"
+WI,,2,1,0,0,1,0,1,not-established,"v0.5 removes flattened damaged JA-DI-WI; PA3-NI ~ PA3-NI-WI remains Tier-B possible relational/onomastic morphology"
