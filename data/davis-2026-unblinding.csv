@@ -1,0 +1,7 @@
+side,sign,davis_candidate,blind_v0_2_rank,total_ranked_signs,blind_v0_2_score,pre_registered_cutoff,in_cutoff,rank_percentile_note,provenance
+prefix,A,yes,1,116,7.841664,2,yes,"top 0.9% by rank","Direct email from Brent Davis to Scott Ferguson, 2026-08-17; frozen v0.2 artifact"
+prefix,I,yes,4,116,4.659528,2,no,"top 3.4% by rank","Direct email from Brent Davis to Scott Ferguson, 2026-08-17; frozen v0.2 artifact"
+suffix,RO,yes,1,116,6.649032,4,yes,"top 0.9% by rank","Direct email from Brent Davis to Scott Ferguson, 2026-08-17; frozen v0.2 artifact"
+suffix,TE,yes,4,116,4.869416,4,yes,"top 3.4% by rank","Direct email from Brent Davis to Scott Ferguson, 2026-08-17; frozen v0.2 artifact"
+suffix,RE,yes,7,116,4.240705,4,no,"top 6.0% by rank","Direct email from Brent Davis to Scott Ferguson, 2026-08-17; frozen v0.2 artifact"
+suffix,TI,yes,11,116,3.698981,4,no,"top 9.5% by rank","Direct email from Brent Davis to Scott Ferguson, 2026-08-17; frozen v0.2 artifact"
