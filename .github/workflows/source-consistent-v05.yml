@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/build-source-mask-v05.mjs'
+      - 'scripts/augment-multitable-boundaries-v05.mjs'
       - 'scripts/rank-affixes-v05.mjs'
       - 'scripts/evaluate-v05-regression.mjs'
       - 'data/v05-source-overrides.csv'
@@ -39,6 +40,10 @@ jobs:
             --commentary-dir upstream-lineara/commentary \
             --source-overrides data/v05-source-overrides.csv \
             --out replication-output-v0.5/source-mask.csv
+          node scripts/augment-multitable-boundaries-v05.mjs \
+            --commentary-dir upstream-lineara/commentary \
+            --mask replication-output-v0.5/source-mask.csv \
+            --out replication-output-v0.5/source-mask.csv
 
       - name: Run v0.5 rankings with unchanged v0.4 scoring
         run: |
@@ -68,7 +73,7 @@ jobs:
             echo '- research repo commit: `'"${GITHUB_SHA}"'`'
             echo '- upstream corpus: `mwenge/lineara.xyz`'
             echo '- upstream commit: `43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a`'
-            echo '- source mask: commentary/transcription tables with combined-ID reconciliation and segmented-fragment detection'
+            echo '- source mask: commentary/transcription tables with combined-ID reconciliation, multi-table boundary scanning, and segmented-fragment detection'
             echo '- source overrides: `data/v05-source-overrides.csv`'
             echo '- lexical warnings: frozen `data/v04-lexical-warnings.csv` (annotation only)'
             echo '- scoring: unchanged `scripts/rank-affixes-v04.mjs`, invoked by v0.5 wrapper'
