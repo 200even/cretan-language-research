@@ -1,0 +1,41 @@
+name: nested-stem-grid-v03
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build-nested-stem-grid-v03.mjs'
+      - 'results/source-consistent-v0.5/secure-word-occurrences.csv'
+      - 'data/morphology-benchmark.csv'
+      - 'data/v06-form-exclusions.csv'
+      - 'experiments/nested-stem-grid-v03.md'
+      - '.github/workflows/nested-stem-grid-v03.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-grid:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build nested stem-depth grids
+        run: |
+          node scripts/build-nested-stem-grid-v03.mjs \
+            --occurrences results/source-consistent-v0.5/secure-word-occurrences.csv \
+            --benchmark data/morphology-benchmark.csv \
+            --form-exclusions data/v06-form-exclusions.csv \
+            --out-dir results/nested-stem-grid-v0.3
+      - name: Persist generated nested grid
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add results/nested-stem-grid-v0.3
+          if git diff --cached --quiet; then
+            echo 'No nested grid changes.'
+          else
+            git commit -m 'Record nested stem-depth grid v0.3'
+            git push origin HEAD:main
+          fi
