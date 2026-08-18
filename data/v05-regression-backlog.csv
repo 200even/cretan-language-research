@@ -1,0 +1,5 @@
+control_id,side,sign,base,variant,expected_v05_outcome,failure_class,source_evidence,reason
+V05-001,suffix,QE,SA-RO,SA-RO-QE,exclude_structural,physical_boundary_source_mask_miss,"HT73: SA-RO-QE[","right-boundary continuation marker is present in damage-preserving commentary but lost in normalized item layer"
+V05-002,suffix,WI,JA-DI,JA-DI-WI,exclude_structural,segmented_fragment_flattening,"KN Zb35: ]JA[ ]DI-[ ]WI[","separated damaged segments were normalized into one syllabic-looking word"
+V05-003,suffix,SU,KU-NI,KU-NI-SU,exclude_structural,source_representation_conflict,"HT79[+]83 commentary: ]KU-NI[","normalized item tokenization parses KU-NI complete but damage-preserving commentary leaves both boundaries insecure"
+V05-004,suffix,TE,KU-NI,KU-NI-TE,exclude_structural,source_representation_conflict,"HT79[+]83 commentary: ]KU-NI[","same insecure base corrects the prior TE manual audit; KU-NI-TE may be complete but exact base+TE paradigm is not established"
