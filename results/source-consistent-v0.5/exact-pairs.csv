@@ -54,7 +54,7 @@ prefix,NA,DA-RE,NA-DA-RE,accepted_secure,7,7,1,1,3,2,,
 prefix,NE,MI-NA,NE-MI-NA,excluded_structural_both,1,0,1,0,0,0,,physical_boundary
 prefix,NU,RI-JA,NU-RI-JA,excluded_structural_both,1,0,1,0,0,0,,physical_boundary
 prefix,O,TE-JA,O-TE-JA,excluded_structural_base,1,0,1,1,1,0,,physical_boundary
-prefix,PA,I-KI,PA-I-KI,excluded_structural_base,1,0,1,1,1,0,,physical_boundary
+prefix,PA,I-KI,PA-I-KI,excluded_structural_both,1,0,1,0,0,0,,physical_boundary
 prefix,PA,JA-RE,PA-JA-RE,accepted_secure,1,1,4,4,3,4,onomastic,
 prefix,PA,TA-NE,PA-TA-NE,excluded_structural_base,1,0,3,3,1,1,,physical_boundary
 prefix,PI,TA-JA,PI-TA-JA,accepted_secure,1,1,1,1,1,0,,
@@ -150,7 +150,7 @@ suffix,PI,JA-WA,JA-WA-PI,excluded_structural_base,1,0,1,1,1,0,,physical_boundary
 suffix,PU2,TU-SU,TU-SU-PU2,accepted_secure,1,1,1,1,2,0,,
 suffix,QA,JA-PA,JA-PA-QA,excluded_structural_variant,1,1,1,0,1,1,,physical_boundary
 suffix,QE,KA-PA,KA-PA-QE,accepted_secure,6,5,1,1,1,4,,physical_boundary
-suffix,QE,SA-RO,SA-RO-QE,accepted_secure,4,4,1,1,1,1,,
+suffix,QE,SA-RO,SA-RO-QE,excluded_structural_variant,4,4,1,0,1,1,,physical_boundary
 suffix,RA,A-DA,A-DA-RA,accepted_secure,1,1,1,1,2,0,,
 suffix,RA,A-RU,A-RU-RA,excluded_structural_variant,2,2,1,0,1,0,,physical_boundary
 suffix,RA,I-KI,I-KI-RA,excluded_structural_both,1,0,1,0,0,0,,physical_boundary

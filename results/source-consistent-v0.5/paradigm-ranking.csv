@@ -39,26 +39,26 @@ prefix,37,SA,0,0,2,2,
 prefix,38,WA,0,0,2,2,
 suffix,1,JA,5,1,3,8,PA-SE ~ PA-SE-JA | A-SE ~ A-SE-JA | *306-TU ~ *306-TU-JA [warn] | KU-PA ~ KU-PA-JA | A-MA ~ A-MA-JA
 suffix,2,TI,3,0,2,5,DA-KU-SE-NE ~ DA-KU-SE-NE-TI | JA-KU ~ JA-KU-TI | RI-RU-MA ~ RI-RU-MA-TI
-suffix,3,QE,2,0,0,2,KA-PA ~ KA-PA-QE | SA-RO ~ SA-RO-QE
-suffix,4,MI,2,0,1,3,JA-RE ~ JA-RE-MI | I-DA ~ I-DA-MI
-suffix,5,PA,2,0,1,3,KA-KU ~ KA-KU-PA | A-RI ~ A-RI-PA
-suffix,6,SA,2,0,1,3,QA-*118 ~ QA-*118-SA | A-JE ~ A-JE-SA
-suffix,7,NE,2,1,2,4,*21F-TU ~ *21F-TU-NE | PA-RA ~ PA-RA-NE [warn]
-suffix,8,RO,2,1,2,4,SA-MA ~ SA-MA-RO [warn] | A-DA ~ A-DA-RO
-suffix,9,NA,2,0,4,6,PA3-NI ~ PA3-NI-NA | DA-KU ~ DA-KU-NA
-suffix,10,RA,2,0,4,6,A-DA ~ A-DA-RA | MI-DA ~ MI-DA-RA
-suffix,11,TE,2,0,4,6,SI-RU ~ SI-RU-TE | I-JA ~ I-JA-TE
-suffix,12,*188,1,0,0,1,SU-PU2 ~ SU-PU2-*188
-suffix,13,E,1,0,0,1,JA-SI ~ JA-SI-E
-suffix,14,NI,1,0,0,1,MI-DA ~ MI-DA-NI
-suffix,15,PU2,1,0,0,1,TU-SU ~ TU-SU-PU2
-suffix,16,ZA,1,0,0,1,A-DU ~ A-DU-ZA
-suffix,17,ZU,1,0,0,1,KU-PA ~ KU-PA-ZU
-suffix,18,A,1,0,1,2,I-DA ~ I-DA-A
-suffix,19,DA,1,0,1,2,I-DA ~ I-DA-DA
-suffix,20,DI,1,0,1,2,A-PA3 ~ A-PA3-DI
-suffix,21,MU,1,0,1,2,KU-RA ~ KU-RA-MU
-suffix,22,NU,1,0,1,2,KU-PA3 ~ KU-PA3-NU
+suffix,3,MI,2,0,1,3,JA-RE ~ JA-RE-MI | I-DA ~ I-DA-MI
+suffix,4,PA,2,0,1,3,KA-KU ~ KA-KU-PA | A-RI ~ A-RI-PA
+suffix,5,SA,2,0,1,3,QA-*118 ~ QA-*118-SA | A-JE ~ A-JE-SA
+suffix,6,NE,2,1,2,4,*21F-TU ~ *21F-TU-NE | PA-RA ~ PA-RA-NE [warn]
+suffix,7,RO,2,1,2,4,SA-MA ~ SA-MA-RO [warn] | A-DA ~ A-DA-RO
+suffix,8,NA,2,0,4,6,PA3-NI ~ PA3-NI-NA | DA-KU ~ DA-KU-NA
+suffix,9,RA,2,0,4,6,A-DA ~ A-DA-RA | MI-DA ~ MI-DA-RA
+suffix,10,TE,2,0,4,6,SI-RU ~ SI-RU-TE | I-JA ~ I-JA-TE
+suffix,11,*188,1,0,0,1,SU-PU2 ~ SU-PU2-*188
+suffix,12,E,1,0,0,1,JA-SI ~ JA-SI-E
+suffix,13,NI,1,0,0,1,MI-DA ~ MI-DA-NI
+suffix,14,PU2,1,0,0,1,TU-SU ~ TU-SU-PU2
+suffix,15,ZA,1,0,0,1,A-DU ~ A-DU-ZA
+suffix,16,ZU,1,0,0,1,KU-PA ~ KU-PA-ZU
+suffix,17,A,1,0,1,2,I-DA ~ I-DA-A
+suffix,18,DA,1,0,1,2,I-DA ~ I-DA-DA
+suffix,19,DI,1,0,1,2,A-PA3 ~ A-PA3-DI
+suffix,20,MU,1,0,1,2,KU-RA ~ KU-RA-MU
+suffix,21,NU,1,0,1,2,KU-PA3 ~ KU-PA3-NU
+suffix,22,QE,1,0,1,2,KA-PA ~ KA-PA-QE
 suffix,23,RI,1,0,1,2,KU-PA ~ KU-PA-RI
 suffix,24,SU,1,0,1,2,A-RI ~ A-RI-SU
 suffix,25,TU,1,0,1,2,SI-TE ~ SI-TE-TU

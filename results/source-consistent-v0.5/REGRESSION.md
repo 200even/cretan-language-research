@@ -1,6 +1,6 @@
 # v0.5 regression evaluation
 
-Frozen structural/source negatives excluded: **29/30**.
+Frozen structural/source negatives excluded: **30/30**.
 
 Frozen secure controls retained: **13/13**.
 
@@ -33,7 +33,7 @@ Frozen secure controls retained: **13/13**.
 | MB-ME-004 | exclude_structural | SA-RA ~ SA-RA-ME | excluded_structural_both | editorial_continuation|non_linear_a_script|physical_boundary | yes |
 | MB-NE-002 | exclude_structural | QE-TU ~ QE-TU-NE | excluded_structural_base | physical_boundary | yes |
 | MB-NE-003 | exclude_structural | PA-TA ~ PA-TA-NE | excluded_structural_base | physical_boundary | yes |
-| MB-QE-002 | exclude_structural | SA-RO ~ SA-RO-QE | accepted_secure |  | no |
+| MB-QE-002 | exclude_structural | SA-RO ~ SA-RO-QE | excluded_structural_variant | physical_boundary | yes |
 | MB-SU-001 | exclude_structural | KU-NI ~ KU-NI-SU | excluded_structural_base | physical_boundary | yes |
 | MB-WI-001 | exclude_structural | JA-DI ~ JA-DI-WI | excluded_structural_variant | segmented_fragment_flattening | yes |
 | MB-A-002 | retain_secure | KA-RU ~ A-KA-RU | accepted_secure | physical_boundary | yes |
@@ -50,4 +50,4 @@ Frozen secure controls retained: **13/13**.
 | MB-SU-002 | retain_secure | A-RI ~ A-RI-SU | accepted_secure | physical_boundary | yes |
 | MB-WI-002 | retain_secure | PA3-NI ~ PA3-NI-WI | accepted_secure |  | yes |
 
-**Regression status: FAIL (1 cases).**
+**Regression status: PASS.**
