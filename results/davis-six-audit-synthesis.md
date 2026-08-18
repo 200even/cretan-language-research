@@ -1,199 +1,156 @@
-# Davis 2026 affixes: damage-aware audit synthesis
+# Davis 2026 affixes: audit synthesis
 
-**Status:** completed first-pass audit of the automatic exact-pair evidence for all six affix candidates supplied directly by Brent Davis.  
+**Status:** completed first-pass audit and subsequent damage-aware v0.3 re-evaluation.  
 **Davis target set:** prefixes `A-`, `I-`; suffixes `-RE`, `-RO`, `-TE`, `-TI`.  
-**Blind comparison:** pre-registered conceptual replication remains **3/6 (partial replication)**. This document does not change that score.
+**Frozen blind comparison:** **3/6, partial conceptual replication.** Nothing in the later audit changes that pre-registered score.
 
-## Why this second-stage audit matters
+## Frozen v0.2 comparison
 
-The blind experiment asked whether an independently defined corpus statistic would recover Davis's boundary-enriched signs. The audit asks a different question:
+Before the six identities were known, the blind v0.2 rankings placed them at:
 
-> When the blind algorithm claims an exact whole-word relationship `X ~ affix+X` or `X ~ X+affix`, how many of those relationships remain valid after restoring damage, boundary, genre, onomastic, and contextual information?
+| element | side | v0.2 rank |
+|---|---|---:|
+| `A` | prefix | **1 / 116** |
+| `I` | prefix | **4 / 116** |
+| `RO` | suffix | **1 / 116** |
+| `TE` | suffix | **4 / 116** |
+| `RE` | suffix | **7 / 116** |
+| `TI` | suffix | **11 / 116** |
 
-These questions must not be conflated. A sign can be genuinely boundary-enriched while the apparent minimal pairs supporting it are mostly false.
+The pre-registered top-2-prefix / top-4-suffix cutoff recovered `A`, `RO`, and `TE`: **3/6**.
 
-## Comparative result
+## What the first audit added
 
-| element | Davis | blind v0.2 rank | automatic exact pairs audited | strongest damage-aware result | current interpretation |
-|---|---|---:|---:|---|---|
-| `A-` | prefix | **#1** | 8 (+ independent ZA10 control) | 2 Tier A, 2 Tier B; ZA10 same-tablet replication also Tier A | **strongest convergence; productive/optional prefix very likely, function unknown** |
-| `I-` | prefix | **#4** | 8 | 2 Tier A, 1 Tier B | **strong formal prefix evidence despite missing prereg top-2 cutoff** |
-| `-RO` | suffix | **#1** | 4 | 1 Tier B; 3 rejected/reclassified | **very strong edge signal, weak minimal-pair support; onomastic/damage effects important** |
-| `-TE` | suffix | **#4** | 6 | 1 Tier B, 1 comparison-only; separate literature-supported morphology | **strong edge/literature signal, weak mechanical minimal-pair support** |
-| `-RE` | suffix | **#7** | 6 | 1 secure formal pair, strongly onomastic; 5 fail as clean pairs | **likely real onomastic/derivational morphology; exact-pair method undercaptures it** |
-| `-TI` | suffix | **#11** | 5 | 1 Tier A, 2 Tier B | **best exact-pair survival among Davis suffixes despite lowest global rank** |
+The exact-pair audit asked a different question from the blind ranking:
 
-Detailed audits:
+> When a cleaned corpus appears to contain `X ~ A-X` or `X ~ X-A`, does that formal relationship survive direct checks for damage, lexical identity, genre, onomastics, and context?
 
-- [`../audits/A.md`](../audits/A.md)
-- [`../audits/I.md`](../audits/I.md)
-- [`../audits/RO.md`](../audits/RO.md)
-- [`../audits/TE.md`](../audits/TE.md)
-- [`../audits/RE.md`](../audits/RE.md)
-- [`../audits/TI.md`](../audits/TI.md)
+The revised first-pass accounting is:
 
-## 1. The prefixes reproduce better than the suffixes under exact-pair audit
+| element | automatic pairs | Tier A | Tier B | comparison/reclassified | damage/insecure failures | other |
+|---|---:|---:|---:|---:|---:|---:|
+| `A-` | 8 | 2 | 2 | 0 | 3 | 1 |
+| `I-` | 8 | 2 | 1 | 1 | 4 | 0 |
+| `-RO` | 4 | 0 | 1 | 1 | 2 | 0 |
+| `-TE` | 6 | 0 | 2 | 1 | 3 | 0 |
+| `-RE` | 6 | 0 | 1 | 0 | 5 | 0 |
+| `-TI` | 5 | 1 | 2 | 0 | 2 | 0 |
+| **Total** | **37** | **5** | **9** | **3** | **19** | **1** |
+
+Thus **19/37 = 51.4%** of the original apparent exact pairs fail specifically because a relevant word boundary is damaged or insecure.
+
+The earlier provisional count was 20/37. v0.3 exposed one erroneous human label: `KU-NI ~ KU-NI-TE` had been rejected because a fragmentary `KU-NI` attestation was generalized to the form as a whole. Direct inspection of HT 79+83 shows a complete `KU-NI`; the benchmark and `TE` audit were corrected.
+
+That correction is methodologically important: the benchmark itself is falsifiable.
+
+## Damage-aware v0.3
+
+v0.3 builds a boundary mask before exact-pair generation and evaluates a frozen regression set.
+
+Final regression result:
+
+> **19/19 known damage/insecure relationships excluded; 6/6 strong secure controls retained.**
+
+See [`damage-aware-v0.3/REGRESSION.md`](damage-aware-v0.3/REGRESSION.md) and [`../experiments/damage-aware-v03.md`](../experiments/damage-aware-v03.md).
+
+v0.3 also separates **boundary enrichment** from **secure exact paradigms** rather than combining them in one score.
+
+## Davis-six profiles under v0.3
 
 ### `A-`
 
-`A-` is the clearest result in the project so far.
+`A-` is the strongest convergent result.
 
-The blind method ranked it #1 without knowledge of Davis's target set. Damage-aware audit then retained:
+v0.3 ranks it **#1 among prefixes by secure exact paradigms**, with six complete `X ~ A-X` relationships surviving the automatic damage layer. The manually strongest examples remain:
 
-- `KA-RU ~ A-KA-RU` — Tier A formal relationship with unusually strong administrative-function continuity;
-- `SI-KI-RA ~ A-SI-KI-RA` — Tier A formal relationship already cited in published scholarship;
-- `SA-RA₂ ~ A-SA-RA₂` — Tier B;
-- `PA-RA-NE ~ A-PA-RA-NE` — Tier B.
+- `KA-RU ~ A-KA-RU` — Tier A, useful administrative-context continuity;
+- `SI-KI-RA ~ A-SI-KI-RA` — Tier A, recognized in published scholarship;
+- `TA-NA-TE ~ A-TA-NA-TE` — same-tablet Tier-A replication/control.
 
-An independent same-tablet published control, `TA-NA-TE ~ A-TA-NA-TE` on ZA 10, further strengthens the structural result.
-
-The surviving claim should remain narrow:
-
-> Linear A has strong evidence for an initial morphological element `A-` that can alternate with unprefixed forms in at least some lexical/onomastic environments.
-
-No article, case, definiteness, or semantic function is established.
+The narrow conclusion is that Linear A has strong evidence for an initial morphological element `A-`. Its function is unknown.
 
 ### `I-`
 
-`I-` missed the pre-registered top-two prefix cutoff by ranking #4, but the local evidence survives much better than that rank might imply:
+`I-` ranks **#3 among prefixes by secure exact paradigms**, with four surviving formal pairs. Strong examples include:
 
-- `QA-*118 ~ I-QA-*118` — Tier A, complete cross-site administrative contrast;
-- `DA-MA-TE ~ I-DA-MA-TE` — Tier A, complete repeated votive contrast and already recognized in morphology discussions;
-- `RU-JA ~ I-RU-JA` — Tier B, complete forms but differing support/context.
+- `QA-*118 ~ I-QA-*118` — Tier A;
+- `DA-MA-TE ~ I-DA-MA-TE` — Tier A;
+- `RU-JA ~ I-RU-JA` — Tier B.
 
-This is a useful example of why a global rank should not be treated as the final morphology judgment.
+Its raw boundary-enrichment rank is much weaker, demonstrating that corpus-wide positional frequency and paradigmatic evidence need not move together.
 
-## 2. `RO` demonstrates the difference between distribution and paradigms
+### `-RO`
 
-`RO` ranked #1 among all suffixes, exactly agreeing with Davis's identification of it as a likely suffix. Yet three of the four automatic exact pairs fail or reclassify after audit:
+`RO` remains **#1 among suffixes by raw boundary enrichment**, but ranks only #14 by secure exact paradigms, with two complete string pairs surviving v0.3.
 
-- two were manufactured by flattened damage;
-- one is likely onomastic;
-- only `A-DA ~ A-DA-RO` survives as Tier B.
+This does not make Davis's `RO` signal spurious. It shows that strong edge concentration can exist without many clean bare/extended paradigms, perhaps because of lexical-class or onomastic concentration.
 
-Therefore the correct conclusion is **not** that `RO` is spurious. It is that word-final enrichment and clean stem alternation are independent lines of evidence.
+### `-TE`
 
-A future analysis should explicitly test whether `RO` is concentrated in anthroponyms, toponyms, or another lexical class.
+After correcting the `KU-NI` benchmark error, v0.3 retains three complete formal comparisons:
 
-## 3. `TE` has structural support that the exact-pair detector misses
+- `SI-RU ~ SI-RU-TE`;
+- `KU-NI ~ KU-NI-TE`;
+- `I-JA ~ I-JA-TE`.
 
-The six mechanical `TE` pairs produce no new Tier-A minimal pair. Several disappear when damage is restored. Nevertheless:
+None is yet a Tier-A grammatical paradigm because lexical identity/context remains unresolved, but the formal support is stronger than the first audit reported.
 
-- `TE` remains strongly boundary-enriched (#4);
-- Davis independently identifies it;
-- published work has argued for `TE` morphology in ritual expressions;
-- additional comparisons such as `AU-RE ~ AU-RE-TE` lie outside the six pairs generated by our detector.
+### `-RE`
 
-This means the benchmark cannot equate “no clean minimal pair in this extraction” with “not morphological.”
+`RE` remains weak in ordinary exact-pair evidence: v0.3 retains one secure `X ~ X-RE` pair from the six generated candidates. Its distribution in probable personal names remains consistent with a derivational/onomastic interpretation, which could be real morphology that an ordinary bare/extended-pair method undercaptures.
 
-## 4. `RE` appears especially onomastic
+### `-TI`
 
-The `RE` audit explains why Davis's method may see a stronger signal than our exact-pair-enhanced rank (#7).
+`TI` shows the inverse profile from `RO`: comparatively weak raw edge enrichment, but good exact-paradigm survival.
 
-The only clean automatic pair, `PA-JA ~ PA-JA-RE`, involves a full form strongly treated as a personal name. Other `-RE` forms such as `TE-JA-RE`, `A-RA-NA-RE`, `JA-MI-DA-RE`, and `MI-RU-TA-RA-RE` cluster in probable anthroponymic material and sometimes have Linear B name continuities.
+v0.3 retains three pairs:
 
-A testable working hypothesis is therefore:
-
-> final `RE` is a real derivational/onomastic morphological element whose distribution is better detected by edge statistics than by ordinary bare/extended lexical paradigms.
-
-This is deliberately not a case or semantic gloss.
-
-## 5. `TI` shows the inverse pattern
-
-`TI` ranks only #11 globally, the weakest rank among Davis's six, but its exact-pair audit is comparatively strong:
-
-- `DA-KU-SE-NE ~ DA-KU-SE-NE-TI` — Tier A, with a documented historical segmentation caveat;
+- `DA-KU-SE-NE ~ DA-KU-SE-NE-TI` — Tier A, with explicit segmentation caveat;
 - `JA-KU ~ JA-KU-TI` — Tier B;
 - `RI-RU-MA ~ RI-RU-MA-TI` — Tier B.
 
-Current SigLA encoding of HT 104 treats the tablet as five words, supporting the conventional segmentation of `DA-KU-SE-NE-TI`, `I-DU-TI`, and `PA-DA-SU-TI` as words; John Younger records an alternative possibility that `TI` could function ideographically there, which remains a caveat.
+## Main methodological conclusion
 
-This suggests that `TI` may be more **restricted but paradigmatically visible** than a high-frequency general suffix.
+The six Davis elements do not behave like one homogeneous class under independent testing.
 
-## 6. The main methodological discovery: the composite score conflates distinct signals
+At least four distinct evidence dimensions should remain separate:
 
-The first ranking used one composite score combining:
+1. **boundary distribution**;
+2. **damage-aware exact paradigms**;
+3. **lexical-class concentration**;
+4. **contextual role equivalence**.
 
-1. edge enrichment;
-2. exact extension pairs;
-3. raw edge support.
+The earlier composite score obscured these differences.
 
-The audits show that these should be separated in v0.3.
+A second result from v0.3 is that raw enrichment alone is also insufficient: rare signs with zero internal attestations can dominate that ranking despite very low support. A future version should add a separately registered support/significance measure rather than retune v0.3 after the fact.
 
-The next model should report at least four independent dimensions:
+## Additional candidate exposed by the same controls
 
-### A. Boundary distribution
+The strongest non-Davis result is final `JA`.
 
-How strongly is a sign enriched at the left or right word edge?
+In the validated v0.3 paradigm ranking:
 
-This captures phenomena like `RO` and `RE` even where minimal pairs are sparse.
+- `JA`: **#1 suffix, 7 secure exact pairs**;
+- `ME`: #2, 4 pairs;
+- Davis `TI`: #3, 3 pairs;
+- Davis `TE`: #5, 3 pairs;
+- Davis `RO`: #14, 2 pairs;
+- Davis `RE`: #33, 1 pair.
 
-### B. Damage-aware paradigmatic evidence
+Two `JA` relationships were already Tier-A positives before v0.3 (`PA-SE ~ PA-SE-JA`, `KU-PA ~ KU-PA-JA`). The remaining five complete-form relationships still require context and lexical-class audit.
 
-How many complete, securely bounded `X ~ A-X` or `X ~ X-A` relationships survive direct epigraphic audit?
+Therefore the current statement is deliberately limited:
 
-This strongly favors `A`, `I`, and `TI` relative to their purely statistical ranks.
+> **Final `JA` is the strongest additional candidate generated by the validated damage-aware paradigmatic screen.**
 
-### C. Lexical-class concentration
+It is not yet assigned a grammatical function.
 
-Is the sign disproportionately associated with:
+## Next work
 
-- probable personal names;
-- place names;
-- ritual formulae;
-- administrative headings;
-- commodity/transaction vocabulary?
+The immediate priority is a dedicated audit of all seven surviving `JA` pairs using the same standards applied to Davis's six. `ME` follows. `NE` remains useful as a mixed positive/negative control.
 
-This is essential for interpreting `RE`, `RO`, and `TE`.
-
-### D. Contextual role equivalence
-
-When both forms exist, do they occupy comparable administrative or syntactic roles?
-
-`KA-RU ~ A-KA-RU` is especially valuable here because the contextual evidence goes beyond string identity.
-
-A future “morphology score” should not collapse these into one number until their behavior is independently understood.
-
-## 7. Corpus damage is now a quantified benchmark problem
-
-Across the Davis-six audits, a substantial number of the automatic exact pairs disappear because the upstream cleaned word field omitted an initial or final break preserved by a damage-aware concordance.
-
-This is no longer an anecdotal warning. The benchmark now contains many labeled examples of this failure mode across `RO`, `TE`, `RE`, `A`, `I`, and `TI`.
-
-Therefore the next computational pipeline must construct a **damage-aware word layer before generating any exact pairs**.
-
-A post-hoc regex filter is not sufficient because the information has already been lost in the cleaned field.
-
-## 8. What the Davis replication now tells us
-
-The official pre-registered score remains:
-
-> **3/6 — partial conceptual replication.**
-
-That outcome should never be rewritten based on the audit.
-
-The subsequent audit adds a more nuanced result:
-
-- all six Davis candidates show some independent structural reason for attention;
-- the two prefixes are especially strong under complete-form audit;
-- the four suffixes appear to represent **different morphological distributions rather than one homogeneous suffix class**;
-- our exact-pair-enhanced scoring scheme over-rewards damage-flattened pairs and under-rewards restricted or onomastic morphology.
-
-This is a successful methodological result even where individual minimal pairs fail.
-
-## Next registered work
-
-The highest-value sequence is now:
-
-1. build a damage-aware v0.3 extraction layer;
-2. rerun pure boundary statistics without an exact-pair bonus;
-3. score paradigmatic evidence separately;
-4. stratify by probable onomastic/personnel, ritual, and ordinary administrative contexts;
-5. rerun the Davis-six comparison under those independent dimensions;
-6. apply exactly the same audit to the high-ranked **non-Davis** candidates `JA`, `ME`, and `NE`.
-
-The final item is where a genuinely new contribution may emerge. `JA` already has two Tier-A exact extensions. If `JA` or `ME` survives the same controls as well as, or better than, the established Davis candidates, that becomes a specific result worth bringing to specialist attention.
+The full v0.3 method, development failures, benchmark correction, and rankings are documented in [`../experiments/damage-aware-v03.md`](../experiments/damage-aware-v03.md).
 
 ## Non-claim
 
-None of this identifies the Minoan language or translates an affix. The result is a more precise empirical map of **where the morphology signal is strong, what kind of evidence supports it, and where computational corpus artifacts imitate it**.
+Nothing here identifies the Minoan language or translates an affix. The contribution is a more precise empirical map of **where morphology-like structure is supported, what kind of evidence supports it, and where normalized corpus data can imitate it**.
