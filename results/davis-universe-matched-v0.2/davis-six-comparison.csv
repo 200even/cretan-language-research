@@ -1,0 +1,7 @@
+side,sign,frozen_v0_2_rank_116,observed_universe_rank,eligible_universe_size,observed_eligible_signs,score_unchanged,cutoff,in_cutoff_original_116,in_cutoff_universe_matched,rank_change
+prefix,A,1,1,50,49,7.841664,2,yes,yes,0
+prefix,I,4,2,50,49,4.659528,2,no,yes,2
+suffix,RO,1,1,50,49,6.649032,4,yes,yes,0
+suffix,TE,4,4,50,49,4.869416,4,yes,yes,0
+suffix,RE,7,7,50,49,4.240705,4,no,no,0
+suffix,TI,11,10,50,49,3.698981,4,no,no,1
