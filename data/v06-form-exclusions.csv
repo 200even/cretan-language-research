@@ -1,0 +1,3 @@
+form,source_control,failure_class,reason
+JA-RE,V06-001,normalized_sign_reading_and_boundary_divergence,"Normalized ARKH1b form conflicts with damage-preserving ]PA-RE; exclude the normalized bare form from sibling-family generation"
+QA-*118-SA,V06-002,lost_left_boundary,"HT70 preserves ]QA-*118-SA; exclude the normalized extended form from sibling-family generation"
