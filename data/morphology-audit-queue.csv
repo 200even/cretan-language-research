@@ -5,7 +5,7 @@ AQ-RO-003,1,suffix,RO,1,6.649,"DI-NA ~ DI-NA-RO",rejected-control,"Same lexeme w
 AQ-RO-004,1,suffix,RO,1,6.649,"A-DA ~ A-DA-RO",Tier-B-candidate,"Same lexeme with productive -RO or onomastic/lexical coincidence?","survives-formal-audit"
 AQ-TE-001,2,suffix,TE,4,4.869,"DU-RI ~ DU-RI-TE",rejected-control,"Are both word boundaries secure?","rejected-damaged-boundaries"
 AQ-TE-002,2,suffix,TE,4,4.869,"SI-RU ~ SI-RU-TE",Tier-B-comparison,"Same lexeme across administrative and ritual registers?","survives-formal-context-unresolved"
-AQ-TE-003,2,suffix,TE,4,4.869,"KU-NI ~ KU-NI-TE",rejected-control,"Is the base a complete word?","rejected-damaged-base"
+AQ-TE-003,2,suffix,TE,4,4.869,"KU-NI ~ KU-NI-TE",Tier-B-candidate,"Same lexeme or onomastic/derivational relation?","survives-formal-audit-corrected"
 AQ-TE-004,2,suffix,TE,4,4.869,"I-JA ~ I-JA-TE",Tier-C-comparison,"Does contextual evidence support derivation rather than coincidence?","comparison-only"
 AQ-TE-005,2,suffix,TE,4,4.869,"A-DI-KI-TE ~ A-DI-KI-TE-TE",literature-supported,"Can the exact-pair claim be separated from the published Dikte morphology argument?","reclassified-not-clean-pair"
 AQ-TE-006,2,suffix,TE,4,4.869,"A-TA-NA ~ A-TA-NA-TE",rejected-control,"Is A-TA-NA actually complete?","rejected-damaged-base"
