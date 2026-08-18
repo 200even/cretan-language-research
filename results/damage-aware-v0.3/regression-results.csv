@@ -1,0 +1,27 @@
+benchmark_id,expectation,side,sign,base,variant,observed_status,pass,rationale
+MB-RO-001,exclude_damage,suffix,RO,KI-DA,KI-DA-RO,excluded_insecure_base,yes,known damaged base
+MB-RO-002,exclude_damage,suffix,RO,DI-NA,DI-NA-RO,accepted_secure,no,known damaged base
+MB-TE-001,exclude_damage,suffix,TE,DU-RI,DU-RI-TE,accepted_secure,no,known insecure boundaries
+MB-TE-003,exclude_damage,suffix,TE,KU-NI,KU-NI-TE,accepted_secure,no,known damaged base
+MB-TE-005,exclude_damage,suffix,TE,A-DI-KI-TE,A-DI-KI-TE-TE,excluded_insecure_both,yes,known broken base boundary
+MB-TE-006,exclude_damage,suffix,TE,A-TA-NA,A-TA-NA-TE,excluded_insecure_base,yes,known damaged base
+MB-RE-002,exclude_damage,suffix,RE,KI-*310,KI-*310-RE,excluded_insecure_base,yes,known damaged base
+MB-RE-003,exclude_damage,suffix,RE,TE-JA,TE-JA-RE,excluded_insecure_base,yes,known damaged base
+MB-RE-004,exclude_damage,suffix,RE,A-DU,A-DU-RE,excluded_insecure_variant,yes,known damaged variant
+MB-RE-005,exclude_damage,suffix,RE,DU-RA,DU-RA-RE,excluded_insecure_base,yes,known damaged base
+MB-RE-006,exclude_damage,suffix,RE,A-TA,A-TA-RE,excluded_insecure_base,yes,known damaged base
+MB-A-001,exclude_damage,prefix,A,RA-NA-RE,A-RA-NA-RE,excluded_insecure_base,yes,known doubly fragmentary base
+MB-A-007,exclude_damage,prefix,A,DA-RA,A-DA-RA,excluded_insecure_base,yes,known damaged base
+MB-A-008,exclude_damage,prefix,A,RI-JA,A-RI-JA,excluded_insecure_both,yes,known damaged forms
+MB-I-002,exclude_damage,prefix,I,KI-RA,I-KI-RA,excluded_insecure_variant,yes,known damaged prefixed form
+MB-I-004,exclude_damage,prefix,I,KU-TA,I-KU-TA,excluded_insecure_base,yes,known damaged base
+MB-I-006,exclude_damage,prefix,I,JA-PA,I-JA-PA,excluded_insecure_variant,yes,known damaged prefixed form
+MB-I-007,exclude_damage,prefix,I,KU-PI,I-KU-PI,excluded_insecure_variant,yes,known damaged prefixed form
+MB-TI-002,exclude_damage,suffix,TI,SA-MA,SA-MA-TI,excluded_insecure_variant,yes,known damaged variant
+MB-TI-005,exclude_damage,suffix,TI,QA-KI,QA-KI-TI,excluded_insecure_base,yes,known damaged forms
+MB-A-002,retain_secure,prefix,A,KA-RU,A-KA-RU,excluded_insecure_base,no,Tier A KA-RU ~ A-KA-RU
+MB-A-006,retain_secure,prefix,A,SI-KI-RA,A-SI-KI-RA,accepted_secure,yes,Tier A SI-KI-RA ~ A-SI-KI-RA
+MB-A-009,retain_secure,prefix,A,TA-NA-TE,A-TA-NA-TE,accepted_secure,yes,Tier A same-tablet TA-NA-TE ~ A-TA-NA-TE
+MB-I-005,retain_secure,prefix,I,QA-*118,I-QA-*118,accepted_secure,yes,Tier A QA-*118 ~ I-QA-*118
+MB-I-008,retain_secure,prefix,I,DA-MA-TE,I-DA-MA-TE,accepted_secure,yes,Tier A DA-MA-TE ~ I-DA-MA-TE
+MB-TI-001,retain_secure,suffix,TI,DA-KU-SE-NE,DA-KU-SE-NE-TI,excluded_insecure_base,no,Tier A DA-KU-SE-NE ~ DA-KU-SE-NE-TI
