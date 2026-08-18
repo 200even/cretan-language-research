@@ -61,3 +61,9 @@ AQ-SU-001,6,suffix,SU,,,KU-NI ~ KU-NI-SU,rejected-control,Is normalized KU-NI co
 AQ-SU-002,6,suffix,SU,,,A-RI ~ A-RI-SU,Tier-C-comparison,Common lexeme across site/chronology/register?,completed-comparison-only
 AQ-WI-001,7,suffix,WI,,,JA-DI ~ JA-DI-WI,rejected-control,Is variant one securely segmented word?,rejected-segmented-fragments
 AQ-WI-002,7,suffix,WI,,,PA3-NI ~ PA3-NI-WI,Tier-B-candidate,Onomastic/relational morphology or lexical coincidence across admin/ritual?,completed-tier-b-reclassified
+AQ-MI-001,2,suffix,MI,,,"JA-RE ~ JA-RE-MI",rejected-control,"Does normalized JA-RE survive damage-preserving source comparison?",rejected-source-reading-conflict
+AQ-MI-002,1,suffix,MI,,,"I-DA ~ I-DA-MI",Tier-A-positive,"Does MI survive in the same libation-formula slot across sites?",validated-tier-a
+AQ-PA-001,2,suffix,PA,,,"KA-KU ~ KA-KU-PA",Tier-B-candidate,"Does repeated KA-KU-PA reflect common-stem derivation or a distinct administrative designation?",validated-tier-b
+AQ-PA-002,3,suffix,PA,,,"A-RI ~ A-RI-PA",comparison-only,"Does cross-site A-RI extension have independent lexical/contextual support?",tier-c-comparison
+AQ-SA-001,2,suffix,SA,,,"QA-*118 ~ QA-*118-SA",rejected-control,"Is the extended form actually complete?",rejected-damaged-variant
+AQ-SA-002,3,suffix,SA,,,"A-JE ~ A-JE-SA",comparison-only,"Can the lost IOZa<1> reading support more than formal comparison?",tier-c-source-limited

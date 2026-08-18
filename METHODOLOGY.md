@@ -108,6 +108,15 @@ The corpus effect is 1,285 candidate syllabic occurrences → **938 retained / 3
 
 See [`experiments/source-consistent-v05.md`](experiments/source-consistent-v05.md) and [`results/source-consistent-v0.5/REGRESSION.md`](results/source-consistent-v0.5/REGRESSION.md).
 
+### Post-v0.5 hostile-audit source controls
+
+The MI/PA/SA comparative audit exposed two further cases where normalized retained tokens disagree with the damage-preserving source:
+
+- ARKH1b normalized `JA-RE` versus ARKH 1 commentary `]PA-RE`;
+- HT70 normalized `QA-*118-SA` versus commentary `]QA-*118-SA`.
+
+The first is stronger than a lost bracket: the normalized representation changes the first sign as well as the boundary state. These cases are registered in `data/v06-regression-backlog.csv`. Frozen v0.5 output remains historical; future extraction must treat source-level sign-reading divergence and fragment state as jointly authoritative over normalized word tokens.
+
 ### String-decomposition ambiguity
 
 A structurally secure exact pair can still be a false morphological decomposition. The RA audit supplies the control: automatic `SA-RA ~ SA-RA-RA` is formally valid, but HT30 itself contains `SA-RA₂` and Younger's commentary proposes `SA-RA₂` and `SA-RA-RA` may be the same form. A stronger inscription-internal alternation therefore supersedes the mechanical `base + suffix` segmentation.

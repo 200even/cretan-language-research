@@ -92,3 +92,7 @@ Thus the revised source layer increases the separation between the strongest pro
 A v0.5 retained exact pair is still only a structural candidate. Lexical identity, onomastics, scribe/context, and grammatical function remain promotion-stage questions.
 
 Frozen v0.3 and v0.4 outputs remain historical and are not rewritten.
+
+## Post-v0.5 hostile-audit erratum
+
+A later preregistered MI/PA/SA audit found two additional source-representation misses outside the frozen v0.5 gate: ARKH1b normalized `JA-RE` conflicts with damage-preserving `]PA-RE`, and HT70 preserves `]QA-*118-SA`. The v0.5 PASS remains the historical result against its frozen regression set. The new failures are frozen forward in `data/v06-regression-backlog.csv`; v0.5 is not claimed to be a source-complete edition.

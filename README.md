@@ -16,7 +16,7 @@ A candidate does not become evidence for morphology until its forms, boundaries,
 
 ## Current headline results
 
-### Current discovery substrate: source-consistent v0.5
+### Latest frozen discovery substrate: source-consistent v0.5 (post-v0.5 audit errata registered)
 
 v0.5 reconciles damage-preserving commentary identifiers with normalized corpus IDs, scans all explicit inscription tables on composite objects, and rejects normalized words assembled from separately damaged fragments. It deliberately keeps the v0.4 ranking formulas unchanged so changes reflect extraction rather than rescoring.
 
@@ -27,6 +27,8 @@ The frozen v0.5 regression gate passes:
 The run begins with 1,285 candidate syllabic occurrences and retains **938**, excluding 347; **672** unique forms remain. v0.4 retained 951 occurrences and 681 forms.
 
 The strongest structural paradigmatic signals remain stable: prefix `A` (6), prefix `I` (4), suffix `JA` (5), and suffix `TI` (3). Source reconciliation reduces weaker suffixes: `RA` 3→2, `TE` 3→2, and `QE`, `SU`, and `WI` 2→1 each.
+
+The later MI/PA/SA hostile audit exposed two additional source-representation misses in retained v0.5 candidates: normalized ARKH1b `JA-RE` conflicts with damage-preserving `]PA-RE`, and HT70 preserves `]QA-*118-SA`. These do not rewrite the frozen v0.5 run; they are registered in `data/v06-regression-backlog.csv` and mean v0.5 remains a discovery substrate rather than a source-complete edition.
 
 Experiment: [`experiments/source-consistent-v05.md`](experiments/source-consistent-v05.md)  
 Generated results: [`results/source-consistent-v0.5/`](results/source-consistent-v0.5/)  
@@ -311,16 +313,24 @@ The older frozen v0.1/v0.2 implementation remains at [`scripts/rank-affixes.mjs`
 
 ## Next work
 
-v0.5 is complete and source-consistent against the frozen 30/13 regression gate. The next discovery-stage priority is a **registered comparative hostile audit of the three highest unaudited two-pair suffix candidates in v0.5**, rather than choosing among them after looking at context:
+The preregistered comparative audit of `MI`, `PA`, and `SA` is complete. **None meets the two-family productivity rule.**
 
-1. `MI`: `JA-RE ~ JA-RE-MI`, `I-DA ~ I-DA-MI`;
-2. `PA`: `KA-KU ~ KA-KU-PA`, `A-RI ~ A-RI-PA`;
-3. `SA`: `QA-*118 ~ QA-*118-SA`, `A-JE ~ A-JE-SA`;
-4. freeze one common promotion rule before source/context inspection;
-5. preserve the `JA` functional stop rule and do not assign translations from exact-pair survival alone.
+- `MI`: **1 Tier A + 1 rejected**. `I-DA ~ I-DA-MI` is a strong cross-site libation-formula relationship; the apparent `JA-RE` base collapses against damage-preserving `]PA-RE`.
+- `PA`: **1 Tier B + 1 Tier C**. `KA-KU ~ KA-KU-PA` survives as a credible administrative formal family.
+- `SA`: **1 Tier C + 1 rejected**. `QA-*118-SA` is actually left-fragmentary; `A-JE ~ A-JE-SA` remains source-limited.
 
-Current ranking: [`results/source-consistent-v0.5/paradigm-ranking.csv`](results/source-consistent-v0.5/paradigm-ranking.csv).  
-v0.5 experiment: [`experiments/source-consistent-v05.md`](experiments/source-consistent-v05.md).
+The project now stops descending the suffix ranking and moves to **multi-ending stem grids**. The first preregistered anchor is `I-DA`, because the completed MI audit establishes `I-DA-MI` at Tier A while frozen v0.5 also contains `I-DA-A` and `I-DA-DA`.
+
+Immediate sequence:
+
+1. hostile-audit the `I-DA-A` and `I-DA-DA` cells;
+2. build a corpus-wide stem × final-ending matrix from v0.5 exact pairs, masking known source conflicts and preserving manual tiers;
+3. search for a second independent stem sharing at least two endings before calling anything a paradigm grid;
+4. only after a formal grid survives, test contextual/grammatical function.
+
+Registered grid protocol: [`experiments/multi-ending-grid-v01.md`](experiments/multi-ending-grid-v01.md).  
+Comparative audit: [`results/mi-pa-sa-comparative-audit.md`](results/mi-pa-sa-comparative-audit.md).  
+Forward source controls: [`data/v06-regression-backlog.csv`](data/v06-regression-backlog.csv).
 
 ## Repository map
 
