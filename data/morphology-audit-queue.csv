@@ -39,12 +39,12 @@ AQ-TI-004,6,suffix,TI,11,3.699,"RI-RU-MA ~ RI-RU-MA-TI",Tier-B-candidate,"Same l
 AQ-TI-005,6,suffix,TI,11,3.699,"QA-KI ~ QA-KI-TI",rejected-control,"Are both forms complete?","rejected-damaged-boundaries"
 AQ-JA-001,7,suffix,JA,2,4.977,"PA-SE ~ PA-SE-JA",Tier-A-positive,"Revalidate context and attach primary-edition references",validated-seed
 AQ-JA-002,7,suffix,JA,2,4.977,"KU-PA ~ KU-PA-JA",Tier-A-positive,"Revalidate context and attach primary-edition references",validated-seed
-AQ-JA-003,7,suffix,JA,2,4.977,"A-SE ~ A-SE-JA",new,"Secure boundaries; comparable contexts; same lexical identity?",pending
-AQ-JA-004,7,suffix,JA,2,4.977,"*306-TU ~ *306-TU-JA",new,"Is *306 phonographic here and are both forms securely segmented?",pending
-AQ-JA-005,7,suffix,JA,2,4.977,"A-MA ~ A-MA-JA",new,"Same lexical identity or short-form coincidence?",pending
-AQ-JA-006,7,suffix,JA,2,4.977,"JA-SA ~ JA-SA-JA",new,"Same lexical identity; formula/name confound?",pending
-AQ-JA-007,7,suffix,JA,2,4.977,"A-RI ~ A-RI-JA",new,"Same lexical identity; site/scribe distribution?",pending
-AQ-JA-008,7,suffix,JA,2,4.977,"PU₂-RE ~ PU₂-RE-JA",new,"Secure sign value/boundary and contextual equivalence?",pending
+AQ-JA-003,7,suffix,JA,2,4.977,"A-SE ~ A-SE-JA",Tier-B-candidate,"Does the multiple-base administrative evidence establish common lexical identity?","survives-formal-audit-tier-b"
+AQ-JA-004,7,suffix,JA,2,4.977,"*306-TU ~ *306-TU-JA",Tier-B-reclassified,"Generic suffix or onomastic/derivational formation?","survives-formal-audit-onomastic-risk"
+AQ-JA-005,7,suffix,JA,2,4.977,"A-MA ~ A-MA-JA",Tier-C-comparison,"Do cross-site/support attestations establish one lexeme?","comparison-only-lexical-identity-unproved"
+AQ-JA-006,7,suffix,JA,2,4.977,"JA-SA ~ JA-SA-JA",rejected-control,"Is JA-SA actually an independently segmented free word?","rejected-cross-face-continuation-formula"
+AQ-JA-007,7,suffix,JA,2,4.977,"A-RI ~ A-RI-JA",obsolete-v0.2-control,"Why did this older candidate disappear under v0.3?","v0.3-excluded-insecure-variant"
+AQ-JA-008,7,suffix,JA,2,4.977,"PU2-RE ~ PU2-RE-JA",rejected-control,"Do authoritative editions preserve complete left boundaries?","rejected-authoritative-fragment-source-coverage"
 AQ-NE-001,8,suffix,NE,5,4.735,"*21F-TU ~ *21F-TU-NE",Tier-A-positive,"Primary-edition revalidation; benchmark positive control",validated-seed
 AQ-NE-002,8,suffix,NE,5,4.735,"QE-TU ~ QE-TU-NE",new,"Secure same-lexeme relationship?",pending
 AQ-NE-003,8,suffix,NE,5,4.735,"PA-TA ~ PA-TA-NE",new,"Secure same-lexeme relationship?",pending
