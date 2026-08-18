@@ -74,8 +74,12 @@ The frozen v0.2 ranks were:
 
 The pre-registered top-2-prefix / top-4-suffix comparison yields **3/6 exact cutoff overlap**, classified in advance as a **partial conceptual replication**. That score remains frozen; v0.3 does not rewrite it.
 
+**Post-unblinding universe-matched sensitivity analysis.** On 2026-08-18 Davis clarified that his analysis considered only 50 Linear B main-series syllabograms with Linear A homomorphs and excluded untransliterated signs. Restricting the unchanged frozen v0.2 scores to the directly comparable members of that universe moves `I-` from rank 4 to **rank 2**, because `*86` and `*306` were never eligible in Davis's analysis. The matched cutoff overlap is therefore **4/6 = 2/2 prefixes + 2/4 suffixes**, still in the original "partial" band. This is a secondary post-unblinding result and does not replace the primary 3/6 score. One eligible label, `QI`, has no direct frozen v0.2 row and is not silently remapped to a numbered sign.
+
 Protocol: [`experiments/davis-2026-affix-replication.md`](experiments/davis-2026-affix-replication.md)  
-Second-stage audit: [`results/davis-six-audit-synthesis.md`](results/davis-six-audit-synthesis.md)
+Second-stage audit: [`results/davis-six-audit-synthesis.md`](results/davis-six-audit-synthesis.md)  
+Universe-matched analysis: [`experiments/davis-2026-universe-matched-v02.md`](experiments/davis-2026-universe-matched-v02.md)  
+Universe-matched results: [`results/davis-universe-matched-v0.2/`](results/davis-universe-matched-v0.2/)
 
 ### 3. `A-` and `I-` are strong under damage-aware paradigmatic evidence
 
@@ -226,6 +230,7 @@ No post-hoc weight change is applied to v0.3. A future version should add a sepa
 - [`data/morphology-audit-queue.csv`](data/morphology-audit-queue.csv)
 - [`data/validated-leads.csv`](data/validated-leads.csv)
 - [`data/davis-2026-unblinding.csv`](data/davis-2026-unblinding.csv)
+- [`data/davis-2026-main-grid-universe.csv`](data/davis-2026-main-grid-universe.csv)
 - [`data/davis-six-audit-summary.csv`](data/davis-six-audit-summary.csv)
 - [`data/ja-audit-summary.csv`](data/ja-audit-summary.csv)
 - [`data/ja-context-function-matrix.csv`](data/ja-context-function-matrix.csv)

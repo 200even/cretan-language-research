@@ -106,6 +106,27 @@ Total exact cutoff overlap: **3/6**.
 
 Under the categories fixed before unblinding, this is a **partial conceptual replication**.
 
+## Later candidate-universe clarification (2026-08-18)
+
+After the primary result was frozen and unblinded, Davis clarified directly that his statistical analysis admitted only **50 Linear B main-series syllabograms with Linear A homomorphs** and did not admit untransliterated signs. The original project ranking had admitted 116 observed signs per edge.
+
+A separately registered post-unblinding sensitivity analysis therefore filters the **unchanged v0.2 scores** to Davis's stated candidate universe. It finds:
+
+- `A-`: rank 1 → **1**;
+- `I-`: rank 4 → **2**;
+- `RO`: rank 1 → **1**;
+- `TE`: rank 4 → **4**;
+- `RE`: rank 7 → **7**;
+- `TI`: rank 11 → **10**.
+
+The corresponding cutoff overlap is **4/6 = 2/2 prefixes + 2/4 suffixes**. Under the categories registered for this experiment, 4/6 remains a **partial conceptual replication**.
+
+This secondary result does **not** replace the primary 3/6 score because the candidate-universe restriction was learned after target unblinding. It does show that the original miss on `I-` was partly caused by candidate-universe mismatch: the signs ranked #2 and #3 ahead of it (`*86`, `*306`) were ineligible under Davis's stated method.
+
+The frozen v0.2 corpus directly contains 49 of Davis's 50 labels; `QI` has no ranking row. No post-hoc `QI` ↔ numbered-sign crosswalk is imposed.
+
+Full protocol and outputs: [`davis-2026-universe-matched-v02.md`](davis-2026-universe-matched-v02.md) and [`../results/davis-universe-matched-v0.2/`](../results/davis-universe-matched-v0.2/).
+
 ## A stronger descriptive pattern, reported separately
 
 The cutoff score is the primary result and is not changed after seeing Davis's targets.
