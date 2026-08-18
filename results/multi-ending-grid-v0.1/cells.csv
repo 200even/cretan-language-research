@@ -14,8 +14,8 @@ A-RI,SU,A-RI-SU,accepted_secure,no,,C,comparison-only,Complete strings but site/
 A-SE,JA,A-SE-JA,accepted_secure,no,,B,candidate,Multiple complete base attestations plus complete administrative JA form; short base and lexical function prevent Tier-A promotion,,2,3
 DA-KU,NA,DA-KU-NA,accepted_secure,no,,B,candidate,Shows formal extension but bare form is on a bronze double axe while extended form is administrative,,2,1
 DA-KU-SE-NE,TI,DA-KU-SE-NE-TI,accepted_secure,no,,A,positive,Exact final TI extension across scribes survives; retain explicit segmentation caveat,,1,2
-I-DA,A,I-DA-A,accepted_secure,no,,,,,,3,1
-I-DA,DA,I-DA-DA,accepted_secure,no,,,,,,3,1
+I-DA,A,I-DA-A,accepted_secure,no,,B,candidate,"Complete I-DA-A occurs in the libation formula on KOZa1; common stem identity with complete ritual I-DA is plausible, but ending function and exact slot equivalence remain unresolved",,3,1
+I-DA,DA,I-DA-DA,accepted_secure,no,,C,comparison-only,"I-DA-DA is securely read on CRZg4, but support and documentary context do not independently establish the same lexical item",,3,1
 I-DA,MI,I-DA-MI,accepted_secure,no,,A,positive,PKZa18 and SYZa1 place complete I-DA / I-DA-MI between dividers in closely comparable ritual formula positions before JA- material,,3,1
 I-JA,TE,I-JA-TE,accepted_secure,no,,C,comparison-only,Secure sign-level resemblance but no contextual evidence establishes I-JA-TE as a TE-derivative of I-JA,,2,0
 JA-KU,TI,JA-KU-TI,accepted_secure,no,,B,candidate,Secure exact final extension; lexical identity and grammatical role unresolved,,2,0

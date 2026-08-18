@@ -8,7 +8,7 @@ Active source-consistent suffix cells after forward masking: **43**. Multi-endin
 
 | stem | endings | count | A/B audited cells | reviewed | cells |
 |---|---|---:|---:|---:|---|
-| I-DA | A|DA|MI | 3 | 1 | 1 | A:I-DA-A / DA:I-DA-DA / MI:I-DA-MI[A] |
+| I-DA | A|DA|MI | 3 | 2 | 3 | A:I-DA-A[B] / DA:I-DA-DA[C] / MI:I-DA-MI[A] |
 | KU-PA | JA|RI|ZU | 3 | 1 | 1 | JA:KU-PA-JA[A] / RI:KU-PA-RI / ZU:KU-PA-ZU |
 | A-DA | RA|RO | 2 | 1 | 2 | RA:A-DA-RA[C] / RO:A-DA-RO[B] |
 | MI-DA | NI|RA | 2 | 1 | 1 | NI:MI-DA-NI / RA:MI-DA-RA[B] |

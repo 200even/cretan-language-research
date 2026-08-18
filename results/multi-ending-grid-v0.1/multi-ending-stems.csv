@@ -1,5 +1,5 @@
 base,ending_count,endings,manually_strong_cells,manually_reviewed_cells,manual_nonpositive_cells,cells
-I-DA,3,A|DA|MI,1,1,0,A:I-DA-A | DA:I-DA-DA | MI:I-DA-MI[A]
+I-DA,3,A|DA|MI,2,3,0,A:I-DA-A[B] | DA:I-DA-DA[C] | MI:I-DA-MI[A]
 KU-PA,3,JA|RI|ZU,1,1,0,JA:KU-PA-JA[A] | RI:KU-PA-RI | ZU:KU-PA-ZU
 A-DA,2,RA|RO,1,2,0,RA:A-DA-RA[C] | RO:A-DA-RO[B]
 MI-DA,2,NI|RA,1,1,0,NI:MI-DA-NI | RA:MI-DA-RA[B]
