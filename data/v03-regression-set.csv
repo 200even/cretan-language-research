@@ -2,7 +2,6 @@ benchmark_id,expectation,rationale
 MB-RO-001,exclude_damage,known damaged base
 MB-RO-002,exclude_damage,known damaged base
 MB-TE-001,exclude_damage,known insecure boundaries
-MB-TE-003,exclude_damage,known damaged base
 MB-TE-005,exclude_damage,known broken base boundary
 MB-TE-006,exclude_damage,known damaged base
 MB-RE-002,exclude_damage,known damaged base
