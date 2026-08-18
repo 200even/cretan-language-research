@@ -44,31 +44,38 @@ const htmlToText = html => {
   return canonical(decodeEntities(text));
 };
 
-// A deliberately syntax-only definition. It captures transliterated sign groups
-// of at least two components; no phonetic or lexical interpretation is used.
+// Prefer the first inscription table. This deliberately excludes explanatory
+// prose such as "cf. KA-RU[ on HT 75", which previously contaminated the mask
+// for a secure KA-RU attestation on HT 97. Non-tabular inscriptions fall back
+// to the whole file and remain a separately auditable limitation.
+const transcriptionRegion = html => {
+  const table = String(html).match(/<table\b[^>]*>[\s\S]*?<\/table>/i);
+  return table ? table[0] : String(html);
+};
+
 const SIGN = String.raw`(?:\*[0-9]+[A-Z]?|[A-Z]+[0-9]*)`;
 const WORD = String.raw`${SIGN}(?:-${SIGN})+`;
-const leftFragment = new RegExp(String.raw`]\s*(${WORD})`, 'g');
-const rightFragment = new RegExp(String.raw`(${WORD})(?:-)?\s*\[`, 'g');
+const wordPattern = new RegExp(WORD, 'g');
 
 const rows = new Map();
-const add = ({ commentaryId, form, side, sourceFile, evidence }) => {
+const getRow = (commentaryId, form, sourceFile) => {
   const normalized = canonical(form);
   const key = `${commentaryId}\t${normalized}`;
   if (!rows.has(key)) {
     rows.set(key, {
       commentary_id: commentaryId,
       form: normalized,
-      left_insecure: false,
-      right_insecure: false,
+      table_occurrences: 0,
+      left_insecure_occurrences: 0,
+      right_insecure_occurrences: 0,
+      any_insecure_occurrences: 0,
       source_files: new Set(),
       evidence: new Set(),
     });
   }
   const row = rows.get(key);
-  row[side === 'left' ? 'left_insecure' : 'right_insecure'] = true;
   row.source_files.add(sourceFile);
-  if (evidence) row.evidence.add(evidence.slice(0, 160));
+  return row;
 };
 
 const files = fs.readdirSync(commentaryDir)
@@ -78,26 +85,29 @@ const files = fs.readdirSync(commentaryDir)
 for (const file of files) {
   const fullPath = path.join(commentaryDir, file);
   const commentaryId = path.basename(file, path.extname(file));
-  const text = htmlToText(fs.readFileSync(fullPath, 'utf8'));
+  const rawHtml = fs.readFileSync(fullPath, 'utf8');
+  const text = htmlToText(transcriptionRegion(rawHtml));
 
-  for (const match of text.matchAll(leftFragment)) {
-    add({
-      commentaryId,
-      form: match[1],
-      side: 'left',
-      sourceFile: file,
-      evidence: text.slice(Math.max(0, match.index - 20), match.index + match[0].length + 20),
-    });
-  }
+  for (const match of text.matchAll(wordPattern)) {
+    const form = match[0];
+    const start = match.index;
+    const end = start + match[0].length;
+    const before = text.slice(Math.max(0, start - 6), start);
+    const after = text.slice(end, Math.min(text.length, end + 6));
 
-  for (const match of text.matchAll(rightFragment)) {
-    add({
-      commentaryId,
-      form: match[1],
-      side: 'right',
-      sourceFile: file,
-      evidence: text.slice(Math.max(0, match.index - 20), match.index + match[0].length + 20),
-    });
+    // GORILA-derived fragment notation may appear as ]-DI-NA as well as ]DI-NA.
+    const leftInsecure = /]\s*-?\s*$/.test(before) || /\[\[\s*$/.test(before);
+    // Right fragments appear as KU-TA[, QI-TU-[•], etc.
+    const rightInsecure = /^\s*-?\s*\[/.test(after) || /^\s*]]/.test(after);
+
+    const row = getRow(commentaryId, form, file);
+    row.table_occurrences++;
+    if (leftInsecure) row.left_insecure_occurrences++;
+    if (rightInsecure) row.right_insecure_occurrences++;
+    if (leftInsecure || rightInsecure) {
+      row.any_insecure_occurrences++;
+      row.evidence.add(text.slice(Math.max(0, start - 20), Math.min(text.length, end + 20)));
+    }
   }
 }
 
@@ -106,15 +116,17 @@ const escapeCsv = value => {
   return /[",\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
 };
 
-const outputRows = [...rows.values()].sort((a, b) =>
-  a.commentary_id.localeCompare(b.commentary_id) || a.form.localeCompare(b.form)
-);
+const outputRows = [...rows.values()]
+  .filter(row => row.any_insecure_occurrences > 0)
+  .sort((a, b) => a.commentary_id.localeCompare(b.commentary_id) || a.form.localeCompare(b.form));
 
 const headers = [
   'commentary_id',
   'form',
-  'left_insecure',
-  'right_insecure',
+  'table_occurrences',
+  'left_insecure_occurrences',
+  'right_insecure_occurrences',
+  'any_insecure_occurrences',
   'source_files',
   'evidence',
 ];
@@ -124,8 +136,10 @@ const csv = [
   ...outputRows.map(row => [
     row.commentary_id,
     row.form,
-    row.left_insecure ? 'yes' : 'no',
-    row.right_insecure ? 'yes' : 'no',
+    row.table_occurrences,
+    row.left_insecure_occurrences,
+    row.right_insecure_occurrences,
+    row.any_insecure_occurrences,
     [...row.source_files].join(' | '),
     [...row.evidence].slice(0, 3).join(' || '),
   ].map(escapeCsv).join(',')),
@@ -134,7 +148,6 @@ const csv = [
 fs.mkdirSync(path.dirname(outPath), { recursive: true });
 fs.writeFileSync(outPath, csv);
 
-const leftCount = outputRows.filter(row => row.left_insecure).length;
-const rightCount = outputRows.filter(row => row.right_insecure).length;
-console.log(`Boundary mask: ${outputRows.length} inscription/form rows; ${leftCount} left-insecure; ${rightCount} right-insecure.`);
+const insecureOccurrences = outputRows.reduce((sum, row) => sum + row.any_insecure_occurrences, 0);
+console.log(`Boundary mask: ${outputRows.length} inscription/form rows; ${insecureOccurrences} damaged/insecure table occurrences.`);
 console.log(`Wrote ${outPath}`);
