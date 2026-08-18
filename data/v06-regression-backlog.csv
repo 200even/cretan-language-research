@@ -1,0 +1,3 @@
+control_id,side,sign,base,variant,expected_outcome,failure_class,source_evidence,reason
+V06-001,suffix,MI,JA-RE,JA-RE-MI,exclude_structural,normalized_sign_reading_and_boundary_divergence,"ARKH1 commentary: ]PA-RE; normalized ARKH1b item: JA-RE","normalized token changes PA to JA and drops the insecure left boundary, manufacturing a base for JA-RE-MI"
+V06-002,suffix,SA,QA-*118,QA-*118-SA,exclude_structural,lost_left_boundary,"HT70 commentary: ]QA-*118-SA","normalized tokenization suppresses the insecure left boundary of the proposed SA variant"
