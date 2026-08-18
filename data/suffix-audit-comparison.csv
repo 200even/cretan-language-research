@@ -1,4 +1,4 @@
-suffix,v03_secure_exact_pairs,manual_tier_a,manual_tier_b,manual_other_or_reclassified,manual_rejected,productive_morphology_status,interpretation
-JA,7,2,2,1,2,supported,"Multiple independent Tier-A/B families survive; function unknown"
-ME,4,0,1,0,3,not-established,"Only A-RA-TU ~ A-RA-TU-ME survives; source/type artifacts dominate"
-NE,2,1,0,1,2,not-established,"One exceptionally strong *21F-TU family survives; PA-RA pair reclassified and two v0.2 bases are damaged"
+suffix,v03_secure_exact_pairs,v04_structural_exact_pairs,v04_warned_pairs,manual_tier_a,manual_tier_b,manual_other_or_reclassified,manual_rejected,productive_morphology_status,interpretation
+JA,7,5,1,2,2,1,2,supported,"v0.4 automatically removes both manually rejected structural/source false pairs; multiple independent Tier-A/B families remain; function unknown"
+ME,4,1,0,0,1,0,3,not-established,"v0.4 automatically reproduces the manual structural audit: only A-RA-TU ~ A-RA-TU-ME survives"
+NE,2,2,1,1,0,1,2,not-established,"One exceptionally strong *21F-TU family survives; PA-RA remains structurally secure but is flagged onomastic; two other bases are damaged"
