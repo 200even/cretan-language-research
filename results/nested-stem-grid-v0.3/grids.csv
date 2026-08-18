@@ -1,0 +1,2 @@
+depth,stem_1,stem_2,shared_terminal_count,shared_terminals,core_cell_count,site_count,scribe_count,manual_ab_cells,containment_flagged_cells,core_forms
+1,TI-TI,KU-RU,2,KU|MA,4,3,2,0,1,KU-RU+KU=KU-RU-KU | KU-RU+MA=KU-RU-MA | TI-TI+KU=TI-TI-KU[nested] | TI-TI+MA=TI-TI-MA
