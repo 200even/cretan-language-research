@@ -1,0 +1,86 @@
+side,rank,sign,secure_exact_pairs,warned_secure_pairs,structural_excluded_pairs,total_apparent_pairs,secure_examples
+prefix,1,A,6,2,5,11,KA-RU ~ A-KA-RU | SA-RA2 ~ A-SA-RA2 | PA-RA-NE ~ A-PA-RA-NE [warn] | SI-KI-RA ~ A-SI-KI-RA [warn] | TA-NA-TE ~ A-TA-NA-TE | KI-RO ~ A-KI-RO
+prefix,2,SI,4,1,2,6,KI-RA ~ SI-KI-RA [warn] | DA-RE ~ SI-DA-RE | *805-MI ~ SI-*805-MI | TE-TU ~ SI-TE-TU
+prefix,3,I,4,0,5,9,RU-JA ~ I-RU-JA | TA-JA ~ I-TA-JA | QA-*118 ~ I-QA-*118 | DA-MA-TE ~ I-DA-MA-TE
+prefix,4,PI,3,0,0,3,TA-JA ~ PI-TA-JA | TA-RA ~ PI-TA-RA | TE-RI ~ PI-TE-RI
+prefix,5,KA,3,0,2,5,SA-RU ~ KA-SA-RU | KU-PA ~ KA-KU-PA | RE-RO ~ KA-RE-RO
+prefix,6,KE,2,0,0,2,KI-RU ~ KE-KI-RU | SI-TE ~ KE-SI-TE
+prefix,7,NA,2,0,0,2,DA-RE ~ NA-DA-RE | A-PA3 ~ NA-A-PA3
+prefix,8,TU,2,0,0,2,SU-PU2 ~ TU-SU-PU2 | RU-SA ~ TU-RU-SA
+prefix,9,DA,2,0,1,3,TA-RA ~ DA-TA-RA | U-*49 ~ DA-U-*49
+prefix,10,KI,2,0,2,4,RE-TA2 ~ KI-RE-TA2 | RE-ZA ~ KI-RE-ZA
+prefix,11,JA,1,0,0,1,SA-SA-RA-ME ~ JA-SA-SA-RA-ME
+prefix,12,RE,1,0,0,1,A-JA ~ RE-A-JA
+prefix,13,TA,1,0,0,1,NA-TI ~ TA-NA-TI
+prefix,14,TE,1,1,0,1,JA-RE ~ TE-JA-RE [warn]
+prefix,15,U,1,0,0,1,QE-TI ~ U-QE-TI
+prefix,16,QA,1,0,1,2,QA-RU ~ QA-QA-RU
+prefix,17,QE,1,0,1,2,SI-TE ~ QE-SI-TE
+prefix,18,TI,1,0,1,2,TI-MA ~ TI-TI-MA
+prefix,19,KU,1,0,2,3,PA-JA ~ KU-PA-JA
+prefix,20,MI,1,0,2,3,NU-TE ~ MI-NU-TE
+prefix,21,PA,1,1,2,3,JA-RE ~ PA-JA-RE [warn]
+prefix,22,*118,0,0,1,1,
+prefix,23,*312,0,0,1,1,
+prefix,24,*86,0,0,1,1,
+prefix,25,E,0,0,1,1,
+prefix,26,MA,0,0,1,1,
+prefix,27,NE,0,0,1,1,
+prefix,28,NU,0,0,1,1,
+prefix,29,O,0,0,1,1,
+prefix,30,PU2,0,0,1,1,
+prefix,31,RA,0,0,1,1,
+prefix,32,RI,0,0,1,1,
+prefix,33,RO,0,0,1,1,
+prefix,34,WI,0,0,1,1,
+prefix,35,DI,0,0,2,2,
+prefix,36,DU,0,0,2,2,
+prefix,37,SA,0,0,2,2,
+prefix,38,WA,0,0,2,2,
+suffix,1,JA,5,1,3,8,PA-SE ~ PA-SE-JA | A-SE ~ A-SE-JA | *306-TU ~ *306-TU-JA [warn] | KU-PA ~ KU-PA-JA | A-MA ~ A-MA-JA
+suffix,2,TI,3,0,2,5,DA-KU-SE-NE ~ DA-KU-SE-NE-TI | JA-KU ~ JA-KU-TI | RI-RU-MA ~ RI-RU-MA-TI
+suffix,3,QE,2,0,0,2,KA-PA ~ KA-PA-QE | SA-RO ~ SA-RO-QE
+suffix,4,MI,2,0,1,3,JA-RE ~ JA-RE-MI | I-DA ~ I-DA-MI
+suffix,5,PA,2,0,1,3,KA-KU ~ KA-KU-PA | A-RI ~ A-RI-PA
+suffix,6,SA,2,0,1,3,QA-*118 ~ QA-*118-SA | A-JE ~ A-JE-SA
+suffix,7,NE,2,1,2,4,*21F-TU ~ *21F-TU-NE | PA-RA ~ PA-RA-NE [warn]
+suffix,8,RO,2,1,2,4,SA-MA ~ SA-MA-RO [warn] | A-DA ~ A-DA-RO
+suffix,9,NA,2,0,4,6,PA3-NI ~ PA3-NI-NA | DA-KU ~ DA-KU-NA
+suffix,10,RA,2,0,4,6,A-DA ~ A-DA-RA | MI-DA ~ MI-DA-RA
+suffix,11,TE,2,0,4,6,SI-RU ~ SI-RU-TE | I-JA ~ I-JA-TE
+suffix,12,*188,1,0,0,1,SU-PU2 ~ SU-PU2-*188
+suffix,13,E,1,0,0,1,JA-SI ~ JA-SI-E
+suffix,14,NI,1,0,0,1,MI-DA ~ MI-DA-NI
+suffix,15,PU2,1,0,0,1,TU-SU ~ TU-SU-PU2
+suffix,16,ZA,1,0,0,1,A-DU ~ A-DU-ZA
+suffix,17,ZU,1,0,0,1,KU-PA ~ KU-PA-ZU
+suffix,18,A,1,0,1,2,I-DA ~ I-DA-A
+suffix,19,DA,1,0,1,2,I-DA ~ I-DA-DA
+suffix,20,DI,1,0,1,2,A-PA3 ~ A-PA3-DI
+suffix,21,MU,1,0,1,2,KU-RA ~ KU-RA-MU
+suffix,22,NU,1,0,1,2,KU-PA3 ~ KU-PA3-NU
+suffix,23,RI,1,0,1,2,KU-PA ~ KU-PA-RI
+suffix,24,SU,1,0,1,2,A-RI ~ A-RI-SU
+suffix,25,TU,1,0,1,2,SI-TE ~ SI-TE-TU
+suffix,26,WI,1,0,1,2,PA3-NI ~ PA3-NI-WI
+suffix,27,PA3,1,0,2,3,KU-PA3 ~ KU-PA3-PA3
+suffix,28,SE,1,0,4,5,RU-MA-TA ~ RU-MA-TA-SE
+suffix,29,TA,1,0,4,5,A-MI ~ A-MI-TA
+suffix,30,ME,1,0,5,6,A-RA-TU ~ A-RA-TU-ME
+suffix,31,RE,1,1,5,6,PA-JA ~ PA-JA-RE [warn]
+suffix,32,*118,0,0,1,1,
+suffix,33,*350,0,0,1,1,
+suffix,34,DU,0,0,1,1,
+suffix,35,JE,0,0,1,1,
+suffix,36,KI,0,0,1,1,
+suffix,37,KU,0,0,1,1,
+suffix,38,MA,0,0,1,1,
+suffix,39,PI,0,0,1,1,
+suffix,40,QA,0,0,1,1,
+suffix,41,SI,0,0,1,1,
+suffix,42,U,0,0,1,1,
+suffix,43,WA,0,0,1,1,
+suffix,44,DE,0,0,2,2,
+suffix,45,I,0,0,2,2,
+suffix,46,JU,0,0,2,2,
+suffix,47,RU,0,0,2,2,

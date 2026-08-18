@@ -1,0 +1,852 @@
+commentary_id,form,exclude_count,boundary_insecure_count,continuation_fragment_count,segmented_fragment_count,complex_logogram_count,cross_script_count,source_override_count,reason_classes,evidence_text
+16,SI-SE,1,0,0,0,1,0,0,complex_logogram,SI+SE {*529}
+2,CAPM-KU,3,0,0,0,3,0,0,complex_logogram,CAPM + KU || CAPM+KU {*513}
+2,DU-RI,1,1,0,0,0,0,0,physical_boundary,B.1 OVISF 1 [ B.2 ]-DU-RI CAPM 1 B.2 TU-[ B.3
+2,OVISM-SI-AU-RE,1,0,0,0,1,0,0,complex_logogram,OVISM SI+AU[-RE
+2,PA-TA-DA,1,1,0,0,0,0,0,physical_boundary,NU SI+AU-RE 1 A.3-4 PA-TA-DA[ ] 1 A.4 KU-RO CAPM
+2,SI-AU-RE,1,0,0,0,1,0,0,complex_logogram,SI+AU-RE
+APZA2,I-KU-PA,2,2,0,0,0,0,0,physical_boundary,-MA [ • • • • • • ] I-KU-PA 3-NA-TU-NA-TE [ .2: || : GORILA PERHAPS: ] I-KU-PA 3-NA-TU-NA-TE[. CF.
+APZA2,I-NA-JA-RE-TA,3,3,0,0,0,0,0,physical_boundary,.2: ]PI-MI-NA-TE • I-NA-JA-RE-TA [ • • • ]-QA • .1: || 2. I-]PI-MI-NA-TE • I-NA-JA-RE-TA [ ]QA • : 1. INVOCA || 2. I-]PI-MI-NA-TE • I-NA-JA-RE-TA [ ]QA • COMMENTARY
+APZA2,I-PI-NA-MA,1,1,0,0,0,0,0,physical_boundary,LM I]) .1: ]NA-SI • I-PI-NA-MA [ • • • • • • ] I-K
+APZA2,NA-SI,3,3,0,0,0,0,0,physical_boundary,[MM III-LM I]) .1: ]NA-SI • I-PI-NA-MA [ • • || A-SA-RA U-NA-RU-KA-]NA-SI • : 2. I-]PI-MI-NA-
+APZA2,NA-TU-NA-TE,4,4,0,0,0,0,0,physical_boundary,• • • • ] I-KU-PA 3-NA-TU-NA-TE [ .2: ]PI-MI-NA-TE || ERHAPS: ] I-KU-PA 3-NA-TU-NA-TE[. CF. KU-PA3-NA-TU || PLACENAME]• KU-PA 3-NA-TU-NA-TE[ JA-SA-SA-RA U-NA-R
+APZA2,PI-MI,1,1,0,0,0,0,0,physical_boundary,-2; HT 119.3). .2: ]PI-MI OVER [[ ]]. JGY: IF
+APZA2,PI-MI-NA-TE,3,3,0,0,0,0,0,physical_boundary,-NA-TU-NA-TE [ .2: ]PI-MI-NA-TE • I-NA-JA-RE-TA [ • || KA-]NA-SI • : 2. I-]PI-MI-NA-TE • I-NA-JA-RE-TA [ ]
+ARKH1,A-PA,1,1,0,0,0,0,0,physical_boundary,8 [ A.5 ]NE 2 J A.5 A-PA-[ A.6 ]MI-KI-SA-NE[
+ARKH1,A-RA,1,1,0,0,0,0,0,physical_boundary,.1 ]KI[ A.2 ] • A.2 A-RA[ A.3 DEEST A.4 ]A-S
+ARKH1,A-SU-MI,1,1,0,0,0,0,0,physical_boundary,-RA[ A.3 DEEST A.4 ]A-SU-MI-* 118 [ A.5 ]NE 2 J
+ARKH1,MI-KI-SA-NE,1,1,0,0,0,0,0,physical_boundary,2 J A.5 A-PA-[ A.6 ]MI-KI-SA-NE[ SUPRA MUTILA SEPAR
+ARKH1,PA-RE,1,1,0,0,0,0,0,physical_boundary,MUTILA B.1 A[ B.1 ] PA-RE 3 [ B.2 ]PA 3 [ B.3
+ARKH1,TA-PI,1,1,0,0,0,0,0,physical_boundary,UMBER FRACTION A.1 ]TA-PI • A.1 QA [ A.1 ]KI[
+ARKH3,JA-PI,1,1,0,0,0,0,0,physical_boundary,2 [ A.6 ]KU 3 B.1 ]-JA-PI GRA 6 [ B.2 ]PI-PU
+ARKH3,KA-NE,1,1,0,0,0,0,0,physical_boundary,"ER ""FRACTION"" A.1 ]-KA-NE GRA[ A.2 ]D A.2 OLI"
+ARKH3,KI-NU,1,1,0,0,0,0,0,physical_boundary,.3 [[*317 2 ]] A.4 ]KI-NU GRA 13[ A.5 ] TE 2
+ARKH3,PI-PU,1,1,0,0,0,0,0,physical_boundary,-JA-PI GRA 6 [ B.2 ]PI-PU 3 GRA 1 [ ] B.2 OLE
+ARKH4,*47-TE,1,1,0,0,0,0,0,physical_boundary,U 4 A.3-4 DE-SU-[•]-*47-TE 5 A.4-5 PI-TI-NE-A-
+ARKH4,DE-MI,1,1,0,0,0,0,0,physical_boundary,-RE 10 B.2 U [ B.3 ]DE-MI 10 B.3 I-*47[ ] 9 B
+ARKH4,DE-SU,1,1,0,0,0,0,0,physical_boundary,A-[•]-•-JU 4 A.3-4 DE-SU-[•]-*47-TE 5 A.4-5
+ARKH4,I-*47,1,1,0,0,0,0,0,physical_boundary,[ B.3 ]DE-MI 10 B.3 I-*47[ ] 9 B.4 A-KI-RO 3
+ARKH4,NI-TA,1,1,0,0,0,0,0,physical_boundary,SUPRA MUTILA A.1 ]-NI-TA [ A.2 ]TA• RE 5 A.2
+ARKH4,PI-TI-NE-A,1,0,1,0,0,0,0,editorial_continuation,PI-TI-NE-A-•[
+ARKH4,ZA-SI-ZU,1,1,0,0,0,0,0,physical_boundary,9 B.4 A-KI-RO 3 B.5 ZA-SI-ZU [ ] 3 INFRA MUTILA
+ARKH6,TE-RI,1,1,0,0,0,0,0,physical_boundary,NA-TU • .1 KU[ .2 ] TE-RI [ INFRA MUTILA
+ARZF2,I-DA-MA-TE,1,1,0,0,0,0,0,physical_boundary,LVER AX AR SCRIBE 2 I-DA-MA-TE[ ARKHANES I ONCE LI
+AS40+5093,NA-MA,1,1,0,0,0,0,0,physical_boundary,-KA-NA-[SI C: I-PI]-NA-MA SI-RU-[TE OWENS 199
+AS40+5093,SI-RU,1,1,0,0,0,0,0,physical_boundary,-[SI C: I-PI]-NA-MA SI-RU-[TE OWENS 1994: 26
+AS40+5093,U-NA-KA-NA,1,1,0,0,0,0,0,physical_boundary,B: JA-SA-SA-RA-ME • U-NA-KA-NA-[SI C: I-PI]-NA-MA
+GO2,SE-SI,1,1,0,0,0,0,0,physical_boundary,V02. RE 1 [ ] V02. SE-SI[ V03. VEST. INF. MU
+HM1367+1371,KA-NA,3,3,0,0,0,0,0,physical_boundary,U-PA-DI-DA J L2 B.4 KA-NA [ B.4-5 ]SI-DU A B.
+HM1367+1371,KI-RO,3,3,0,0,0,0,0,physical_boundary,OLIV 16 *308 4 A [ ]KI-RO J E A.6-7 DA-TU OLI
+HM1367+1371,KU-RO,3,3,0,0,0,0,0,physical_boundary,3 J *308[[•]] A.8-9 KU-RO [ ] 2 5 H KI-RO 6 [
+HM1367+1371,SI-DU,3,3,0,0,0,0,0,physical_boundary,B.4 KA-NA [ B.4-5 ]SI-DU A B.5 DU-MA-I-NA E
+HM1373+1375,A-DU,1,1,0,0,0,0,0,physical_boundary,_______________ A.3 A-DU-[••] OLE+KI {*618}
+HM1373+1375,A-KU-TU-*361,1,1,0,0,0,0,0,physical_boundary,_______________ A.7 A-KU-TU-*361[ A.7 ]KI+[ ] 5 A.7
+HM1373+1375,KO-A-DU-WA,1,1,0,0,0,0,0,physical_boundary,MI {*622} 2 [ A.6 ]KO-A-DU-WA OLE+[ ] 7 D _______
+HM1373+1375,NE-KI,1,0,0,0,1,0,0,complex_logogram,NE KI+[ ]
+HM1373+1375,OLE-KI,3,0,0,0,3,0,0,complex_logogram,OLE+KI {*618}
+HM1373+1375,OLE-KI-ME,1,0,0,0,1,0,0,complex_logogram,OLE+KI+ME {*620}
+HM1373+1375,OLE-KI-U,1,0,0,0,1,0,0,complex_logogram,OLE+KI+U {*619}
+HM1373+1375,OLE-MI,4,0,0,0,4,0,0,complex_logogram,OLE+MI[ {*622} || OLE+ MI {*622} || OLE+MI {*622}
+HM1373+1375,OLE-NE,1,0,0,0,1,0,0,complex_logogram,]OLE+ NE {*612}
+HM1373+1375,OLE-OVISF,2,0,0,0,2,0,0,complex_logogram,OLE+OVISF {*611}
+HM1373+1375,OLE-TU,1,0,0,0,1,0,0,complex_logogram,OLE+TU {*621}
+HM1373+1375,OLE-U,3,0,0,0,3,0,0,complex_logogram,OLE+U {*610} || OLE+ U
+HM1373+1375,PA-OLE-MI,1,0,0,0,1,0,0,complex_logogram,PA OLE +MI[
+HM1373+1375,ZA-*321,1,1,0,0,0,0,0,physical_boundary,"ER ""FRACTION"" A.1 ] ZA-*321 OLE+KI {*618} 15 E"
+HM1508+1521,DA-RA,1,1,0,0,0,0,0,physical_boundary,B.1 ] TA 1 L [ B.2 ]DA-RA L [ B.3 ] VINC L E
+HM1508+1521,DI-PA-JA,1,1,0,0,0,0,0,physical_boundary,N SUPRA MUTILA A.1 ]DI-PA-JA[ A.2 ]U-DI-RI-KI[ A
+HM1508+1521,JA-RU-MA-NE,1,1,0,0,0,0,0,physical_boundary,2 ]U-DI-RI-KI[ A.3 ]JA-RU-MA-NE[ A.4 ]JA-SI-DA-RA [
+HM1508+1521,JA-SI-DA-RA,1,1,0,0,0,0,0,physical_boundary,]JA-RU-MA-NE[ A.4 ]JA-SI-DA-RA [ B.1 ] TA 1 L [ B.
+HM1508+1521,U-DI-RI-KI,1,1,0,0,0,0,0,physical_boundary,A.1 ]DI-PA-JA[ A.2 ]U-DI-RI-KI[ A.3 ]JA-RU-MA-NE[
+HM1617+1628,*34-JU-TE-MI,1,1,0,0,0,0,0,physical_boundary,WA-NA *171 19 A.1-2 *34-JU-TE-MI[ A.2 ] 1 80 A.3 I-S
+HM1617+1628,GRA-PA,3,0,0,0,3,0,0,complex_logogram,GRA+PA {*574}[ || GRA+PA {*574}
+HM1617+1628,I-MA,1,1,0,0,0,0,0,physical_boundary,__ B.4 PA-ZA-[ B.5 ]I-MA[ B.6-8 VACANT
+HM1617+1628,I-SE,2,2,0,0,0,0,0,physical_boundary,-MI[ A.2 ] 1 80 A.3 I-SE [ A.3-4 ]OLIV 15 A. || 4 [ A.9 ] 20 A.9-10 I-SE-[• B.1 I-KU-JU-TI-I
+HM1617+1628,PA-ZA,1,1,0,0,0,0,0,physical_boundary,_______________ B.4 PA-ZA-[ B.5 ]I-MA[ B.6-8
+HM1617+1628,VINA-KA,1,0,0,0,1,0,0,complex_logogram,VINA +KA {*596}
+HM1617+1628,VINA-RA,1,0,0,0,1,0,0,complex_logogram,VINA+RA {*594}
+HM1631+1634,DA-RE-KU,1,1,0,0,0,0,0,physical_boundary,"MBER ""FRACTION"" A.1 DA-RE-KU[ ] VEST. • A.1 KU-*"
+HM1631+1634,GRA-PA,1,0,0,0,1,0,0,complex_logogram,GRA+PA {*574}
+HM1631+1634,OLE-KI,1,0,0,0,1,0,0,complex_logogram,OLE+KI {*618}
+HM1637+1640,I-DA,1,1,0,0,0,0,0,physical_boundary,]* 118-MI[ ] 2 B.1 I-DA[ B.2 ]KI[ B.3 ] 2 B
+HM1637+1640,PI-MU,1,1,0,0,0,0,0,physical_boundary,CTION A.1 ]ME[ A.2 ]PI-MU 40 [ A.3 ] VEST. [
+HM1637+1640,SA-RI,1,1,0,0,0,0,0,physical_boundary,.2 ]KI[ B.3 ] 2 B.3 SA-RI [ B.4 ] VEST. [ B.5
+HM1637+1640,TA-KE,1,1,0,0,0,0,0,physical_boundary,]MA[ A.4 ] TE 2 A.4 TA-KE [ A.5 ] VEST. [ A.6
+HM1637+1640,TA-MA-PI,1,1,0,0,0,0,0,physical_boundary,[ A.6 ]PA+[?] 5 A.6 TA-MA-PI [ A.7 ] 3 A.7 A [ A
+HM1641+11,DU-JU,1,1,0,0,0,0,0,physical_boundary,RA-[•] OVISF 1 [ .4 DU-JU [ 7 [ .5 OVISF 100
+HM1668+1669,A-PA,1,1,0,0,0,0,0,physical_boundary,8 [ A.5 ]NE 2 J A.5 A-PA-[ A.6 ]MI-KI-SA-NE[
+HM1668+1669,A-RA,1,1,0,0,0,0,0,physical_boundary,.1 ]KI[ A.2 ] • A.2 A-RA[ A.3 DEEST A.4 ]A-S
+HM1668+1669,A-SU-MI,1,1,0,0,0,0,0,physical_boundary,-RA[ A.3 DEEST A.4 ]A-SU-MI-* 118 [ A.5 ]NE 2 J
+HM1668+1669,MI-KI-SA-NE,1,1,0,0,0,0,0,physical_boundary,2 J A.5 A-PA-[ A.6 ]MI-KI-SA-NE[ SUPRA MUTILA SEPAR
+HM1668+1669,PA-RE,1,1,0,0,0,0,0,physical_boundary,MUTILA B.1 A[ B.1 ] PA-RE 3 [ B.2 ]PA 3 [ B.3
+HM1668+1669,TA-PI,1,1,0,0,0,0,0,physical_boundary,UMBER FRACTION A.1 ]TA-PI • A.1 QA [ A.1 ]KI[
+HM2479+2480,I-KU-PA,4,4,0,0,0,0,0,physical_boundary,-MA [ • • • • • • ] I-KU-PA 3-NA-TU-NA-TE [ .2: || : GORILA PERHAPS: ] I-KU-PA 3-NA-TU-NA-TE[. CF.
+HM2479+2480,I-NA-JA-RE-TA,5,5,0,0,0,0,0,physical_boundary,.2: ]PI-MI-NA-TE • I-NA-JA-RE-TA [ • • • ]-QA • .1: || 2. I-]PI-MI-NA-TE • I-NA-JA-RE-TA [ ]QA • : 1. INVOCA || 2. I-]PI-MI-NA-TE • I-NA-JA-RE-TA [ ]QA • COMMENTARY
+HM2479+2480,I-PI-NA-MA,2,2,0,0,0,0,0,physical_boundary,LM I]) .1: ]NA-SI • I-PI-NA-MA [ • • • • • • ] I-K
+HM2479+2480,NA-SI,5,5,0,0,0,0,0,physical_boundary,[MM III-LM I]) .1: ]NA-SI • I-PI-NA-MA [ • • || A-SA-RA U-NA-RU-KA-]NA-SI • : 2. I-]PI-MI-NA-
+HM2479+2480,NA-TU-NA-TE,7,7,0,0,0,0,0,physical_boundary,• • • • ] I-KU-PA 3-NA-TU-NA-TE [ .2: ]PI-MI-NA-TE || ERHAPS: ] I-KU-PA 3-NA-TU-NA-TE[. CF. KU-PA3-NA-TU || PLACENAME]• KU-PA 3-NA-TU-NA-TE[ JA-SA-SA-RA U-NA-R
+HM2479+2480,PI-MI,2,2,0,0,0,0,0,physical_boundary,-2; HT 119.3). .2: ]PI-MI OVER [[ ]]. JGY: IF
+HM2479+2480,PI-MI-NA-TE,5,5,0,0,0,0,0,physical_boundary,-NA-TU-NA-TE [ .2: ]PI-MI-NA-TE • I-NA-JA-RE-TA [ • || KA-]NA-SI • : 2. I-]PI-MI-NA-TE • I-NA-JA-RE-TA [ ]
+HM36+53,I-MI-SA-RA,1,1,0,0,0,0,0,physical_boundary,6 51 A.2 RE 20 A.3 ]I-MI-SA-RA 4 3 A.4 ]QE 21 A.4
+HM36+53,KI-*310,1,1,0,0,0,0,0,physical_boundary,A.4 KI-DA-[ A.4-5 ]KI-*310 • KU-* 305 [ A.5 ]S
+HM36+53,KI-DA,1,1,0,0,0,0,0,physical_boundary,4 3 A.4 ]QE 21 A.4 KI-DA-[ A.4-5 ]KI-*310 •
+HM36+53,SA-RA-DI,1,1,0,0,0,0,0,physical_boundary,0 • KU-* 305 [ A.5 ]SA-RA-DI 5 A.6 VIR 42 A.7 KU
+HM3825+3833,I-*301-WA-JA,1,1,0,0,0,0,0,physical_boundary,THE INTERIOR. A-TA-]I-*301-WA-JA • JA-JA[-•-]•-•[ CO
+HM3825+3833,JA-JA,1,1,0,0,0,0,0,physical_boundary,-TA-]I-*301-WA-JA • JA-JA[-•-]•-•[ COMMENTARY
+HM46+42,RE-TU,3,3,0,0,0,0,0,physical_boundary,2 .5 SU-DU[ .6-7 ]-RE-TU OLE+KI[ {*618} ]J E
+HM46+42,SI-SE,3,0,0,0,3,0,0,complex_logogram,• SI+SE {*529} • TE •
+HM46+42,SU-DU,3,3,0,0,0,0,0,physical_boundary,OLE+MI {*622} 2 .5 SU-DU[ .6-7 ]-RE-TU OLE+K
+HM54+53,WI-JA-SU-MA-TI-TI-*319,1,1,0,0,0,0,0,physical_boundary,134-135+132-133) • WI-JA-SU-MA-TI-TI-*319 [ ] NE 1 NE 1 J *31
+HT100,*304-PA,1,0,0,0,1,0,0,complex_logogram,*304+PA {*629}[
+HT100,OLE-MI,1,0,0,0,1,0,0,complex_logogram,OLE+MI {*622}
+HT100,OLE-NE,1,0,0,0,1,0,0,complex_logogram,OLE+NE {*612}
+HT100,OLE-U,1,0,0,0,1,0,0,complex_logogram,OLE+U {*610}
+HT100,TI-A,1,0,0,0,1,0,0,complex_logogram,TI+A {*523}
+HT100,VIR-*313A,1,0,0,0,1,0,0,complex_logogram,VIR+*313A {*570}
+HT100,VIR-KA,1,0,0,0,1,0,0,complex_logogram,]VIR+KA {*568}
+HT101,DI-QE,1,0,0,0,1,0,0,complex_logogram,DI +QE {506}
+HT101,GRA-QE,1,0,0,0,1,0,0,complex_logogram,GRA+QE {*578}
+HT101,OLE-KI,2,0,0,0,2,0,0,complex_logogram,OLE+KI {* 618 } || OLE+KI {*618}
+HT101,OLE-MI,1,0,0,0,1,0,0,complex_logogram,OLE+MI {*622}
+HT101,OLE-U,2,0,0,0,2,0,0,complex_logogram,OLE+U {*610} || ] OLE +U {*610}
+HT101,OLIV-TU,1,0,0,0,1,0,0,complex_logogram,OLIV+TU {*587}
+HT102,GRA-PA,1,0,0,0,1,0,0,complex_logogram,GRA+PA {*574}
+HT102,VIR-GRA-PA,1,0,0,0,1,0,0,complex_logogram,]VIR GRA+PA {*574}
+HT103,DA-KU-SE-NE,1,1,0,0,0,0,0,physical_boundary,• FIC 40 .2 PA 3 .2 DA-KU-SE-NE[ ] 6 J .3 *188 13 .
+HT104,TE-RO,1,0,0,0,1,0,0,complex_logogram,• TE+RO {*505} •
+HT105,KA-PA,1,1,0,0,0,0,0,physical_boundary,NUMBER FRACTION .1 KA-PA[ .1 ] VEST. [ .2 ]V
+HT108,GRA-H,1,0,0,0,1,0,0,complex_logogram,GRA+H {*583}
+HT11,A-RU-RA,1,1,0,0,0,0,0,physical_boundary,MBER FRACTION A.1-2 A-RU-RA-[•] ]3 A.2 KA-RO-NA
+HT11,DE-NU,1,1,0,0,0,0,0,physical_boundary,3 A.5 TA 2 15 B.1 ] DE-NU B.1 RU-RA 2 B.2 * 8
+HT110,*303-E,1,0,0,0,1,0,0,complex_logogram,*303+ E {*626}
+HT110,*400V-AS-RI,1,0,0,0,1,0,0,complex_logogram,*400VAS+ RI {*648}
+HT111,QA-QA-RU,1,1,0,0,0,0,0,physical_boundary,8 A.2 QA-SA-[ A.3 ] QA-QA-RU 8 A.3 DI 1 4 [ A.4
+HT111,QA-SA,1,1,0,0,0,0,0,physical_boundary,[ A.2 ]QE-KA 8 A.2 QA-SA-[ A.3 ] QA-QA-RU 8
+HT111,QE-KA,1,1,0,0,0,0,0,physical_boundary,A.1 ] VEST. [ A.2 ]QE-KA 8 A.2 QA-SA-[ A.3 ]
+HT112,TU-PA,1,1,0,0,0,0,0,physical_boundary,N A.1 OVIS F [ A.2 ]TU-PA-[ A.3 ] VEST. [ INF
+HT113,RA-RI-DE,1,1,0,0,0,0,0,physical_boundary,NUMBER FRACTION .1 RA-RI-DE[ .2-3 ]WI-SA • [ ]
+HT113,WI-SA,1,1,0,0,0,0,0,physical_boundary,.1 RA-RI-DE[ .2-3 ]WI-SA • [ ] 2 [ ] .3 O 2
+HT114,SA-VINA,1,0,0,0,1,0,0,complex_logogram,SA VINA {*522}
+HT115,*301-U-RA,1,1,0,0,0,0,0,physical_boundary,A-MA-NU-WI 2 A.2 [[ *301-U-RA]] A.2-3 NA-QI F-NE-
+HT115,A-I,1,1,0,0,0,0,0,physical_boundary,.3 *306-TU-JA 1 B.4 A-I-[••] 1 B.4 *634 {*
+HT115,GRA-*22M,1,0,0,0,1,0,0,complex_logogram,• I • GRA+*22M {*576}
+HT115,KU-TA,1,1,0,0,0,0,0,physical_boundary,4 {* 306 +MI} 1 B.4 KU-TA[ B.5-8 VACANT
+HT115,RI-SU-MA,1,1,0,0,0,0,0,physical_boundary,.5 KA-PO-RU 1 A.6 [[RI-SU-MA [ VEST. ]] A.7 [[ S
+HT12,*303-E,1,0,0,0,1,0,0,complex_logogram,*303+E {*626}
+HT12,MA-RU,1,0,0,0,1,0,0,complex_logogram,MA+RU {*559} • *118 {TALENT}
+HT12,OLE-DI,1,0,0,0,1,0,0,complex_logogram,OLE+DI {*608}
+HT12,QA-PU,1,0,0,0,1,0,0,complex_logogram,QA +[?]+PU {*510}
+HT12,QA-PU-RE,1,0,0,0,1,0,0,complex_logogram,QA +[?]+PU+RE {*511}
+HT120,GRA-B,1,0,0,0,1,0,0,complex_logogram,GRA+B {*580}
+HT120,GRA-K-L2,1,0,0,0,1,0,0,complex_logogram,GRA+K+L2 {*584}
+HT120,GRA-PA,2,0,0,0,2,0,0,complex_logogram,GRA+PA {*574}
+HT120,I-GRA-PA,1,0,0,0,1,0,0,complex_logogram,• I GRA+PA {*574}
+HT121,OLE-QE-DI,1,0,0,0,1,0,0,complex_logogram,OLE+QE+DI {*623}
+HT122,*306-KI-TA,1,1,0,0,0,0,0,physical_boundary,• *346 • VIR[ B.2 ]*306-KI-TA 2 7 [ B.3 ]A-RA-JU-
+HT122,A-RA-JU-U-DE-ZA,1,1,0,0,0,0,0,physical_boundary,06-KI-TA 2 7 [ B.3 ]A-RA-JU-U-DE-ZA 2 B.3-4 QA-QA-RU 2
+HT122,RA-RI,1,1,0,0,0,0,0,physical_boundary,UMBER FRACTION A.1 ]RA-RI • U-DE-ZA 2 [ A.2 ]
+HT123,KA-NA,1,1,0,0,0,0,0,physical_boundary,U-PA-DI-DA J L2 B.4 KA-NA [ B.4-5 ]SI-DU A B.
+HT123,KI-RO,1,1,0,0,0,0,0,physical_boundary,OLIV 16 *308 4 A [ ]KI-RO J E A.6-7 DA-TU OLI
+HT123,KU-RO,1,1,0,0,0,0,0,physical_boundary,3 J *308[[•]] A.8-9 KU-RO [ ] 2 5 H KI-RO 6 [
+HT123,SI-DU,1,1,0,0,0,0,0,physical_boundary,B.4 KA-NA [ B.4-5 ]SI-DU A B.5 DU-MA-I-NA E
+HT123+124,KA-NA,3,3,0,0,0,0,0,physical_boundary,U-PA-DI-DA J L2 B.4 KA-NA [ B.4-5 ]SI-DU A B.
+HT123+124,KI-RO,3,3,0,0,0,0,0,physical_boundary,OLIV 16 *308 4 A [ ]KI-RO J E A.6-7 DA-TU OLI
+HT123+124,KU-RO,4,4,0,0,0,0,0,physical_boundary,3 J *308[[•]] A.8-9 KU-RO [ ] 2 5 H KI-RO 6 [ || A-TA • GRA[] 134 .3 KU-RO [ .4 ]KU[ INFRA MUT
+HT123+124,SI-DU,3,3,0,0,0,0,0,physical_boundary,B.4 KA-NA [ B.4-5 ]SI-DU A B.5 DU-MA-I-NA E
+HT124,KA-NA,1,1,0,0,0,0,0,physical_boundary,U-PA-DI-DA J L2 B.4 KA-NA [ B.4-5 ]SI-DU A B.
+HT124,KI-RO,1,1,0,0,0,0,0,physical_boundary,OLIV 16 *308 4 A [ ]KI-RO J E A.6-7 DA-TU OLI
+HT124,KU-RO,1,1,0,0,0,0,0,physical_boundary,3 J *308[[•]] A.8-9 KU-RO [ ] 2 5 H KI-RO 6 [
+HT124,SI-DU,1,1,0,0,0,0,0,physical_boundary,B.4 KA-NA [ B.4-5 ]SI-DU A B.5 DU-MA-I-NA E
+HT125,GRA-F,1,0,0,0,1,0,0,complex_logogram,GRA+F {*582}
+HT125,GRA-PA,1,0,0,0,1,0,0,complex_logogram,GRA+PA {*574}
+HT125,OLE-KI,1,0,0,0,1,0,0,complex_logogram,]OLE+KI {*618}
+HT125,OLE-MI,1,0,0,0,1,0,0,complex_logogram,]OLE+MI {*622}
+HT125,OLE-U,1,0,0,0,1,0,0,complex_logogram,OLE+ U {*610}[
+HT125,RE-TA,1,1,0,0,0,0,0,physical_boundary,T. [ B.2 ] 20 B.3 ] RE-TA 2 GRA+PA {*574} 20
+HT125,SA-RA,1,1,0,0,0,0,0,physical_boundary,MI {*622} 1 J[ A.4 ]SA-RA 2 GRA 2 A.4 OLE[ ]
+HT126,A-NA,1,1,0,0,0,0,0,physical_boundary,A-SI • *318 • [ A.2 A-NA-[•] 1 A.2 U [ A.3 ]
+HT127,*629-DA-*47-KU,1,1,0,0,0,0,0,physical_boundary,*304+PA-DA-*47-KU[ {*629-DA-*47-KU[} 1 B.1 ] VEST. [ B
+HT127,DU-NE-MI,1,1,0,0,0,0,0,physical_boundary,A.1 ] VEST. [ A.2 ]DU-NE-MI 1 [ A.3 ]*304+PA-DA
+HT127,KI-ME,2,0,0,0,2,0,0,complex_logogram,KI+ME {*545} || [[ KI+ME {*545}
+HT127,PA-DA-*47-KU,1,1,0,0,0,0,0,physical_boundary,NE-MI 1 [ A.3 ]*304+PA-DA-*47-KU[ {*629-DA-*47-KU[}
+HT127,PA-DA-*47-KU-*629-DA-*47-KU,1,0,0,1,0,0,0,segmented_fragment_flattening,]*304+PA-DA-*47-KU[ {*629-DA-*47-KU[}
+HT127,VIR-*313C,1,0,0,0,1,0,0,complex_logogram,VIR+*313C {*572}
+HT128,GRA-KU,6,0,0,0,6,0,0,complex_logogram,GRA+KU {*579} || GRA + KU {*579} || GRA +KU {*579}
+HT128,GRA-PA,1,0,0,0,1,0,0,complex_logogram,GRA+PA {*574}
+HT128,MA-RI,1,1,0,0,0,0,0,physical_boundary,GRA+KU {*579} 4 A.4 MA-RI [ INFRA MUTILA B.1
+HT128,MI-TA,1,1,0,0,0,0,0,physical_boundary,KU {*579} 12 [ A.3 ]MI-TA GRA+PA {*574} J[ ]
+HT129,OLE-DI,1,0,0,0,1,0,0,complex_logogram,OLE+DI {*608}
+HT129,OLE-KI,1,0,0,0,1,0,0,complex_logogram,]OLE+KI {*618}
+HT130,KU-RO,1,1,0,0,0,0,0,physical_boundary,[ .3 ] RA 2 [ .4 ] KU-RO [ _________________
+HT131,PO-TO-KU-RO,1,1,0,0,0,0,0,physical_boundary,_______________ B.4 PO-TO-KU-RO [ ] 452 J[
+HT131,VINA-SA,1,0,0,0,1,0,0,complex_logogram,VINA+SA {*589}[
+HT133,TE-GRA-DA,1,0,0,0,1,0,0,complex_logogram,TE GRA+DA {*573}
+HT135,F-NE,1,1,0,0,0,0,0,physical_boundary,[ A.3 ] 1 A.3 NA-QI F-NE[ A.4 ] MI 2 B.1 ][•
+HT135,MI-KA,1,1,0,0,0,0,0,physical_boundary,[ A.2 ]-MI-TU • A.2 MI-KA[ A.3 ] 1 A.3 NA-QI
+HT135,MI-TU,1,1,0,0,0,0,0,physical_boundary,NE-MI-NA 10 [ A.2 ]-MI-TU • A.2 MI-KA[ A.3 ]
+HT135,NE-MI-NA,1,1,0,0,0,0,0,physical_boundary,SUPRA MUTILA A.1 ] NE-MI-NA 10 [ A.2 ]-MI-TU •
+HT135,TA-NE,1,1,0,0,0,0,0,physical_boundary,.4 ] MI 2 B.1 ][••]-TA-NE[ B.2 2 B.3-4 VACANT
+HT137,OLE-MI,1,0,0,0,1,0,0,complex_logogram,OLE + MI {*622}
+HT139,KA-RA,1,1,0,0,0,0,0,physical_boundary,[ ] 1 .2 OLE J .3 ]KA-RA 2 [ INFRA MUTILA
+HT139,PU-MA-KU,1,1,0,0,0,0,0,physical_boundary,UMBER FRACTION .1 ]-PU-MA-KU[ .2 ] GRA [ ] 1 .2
+HT140,OLE-KI,2,0,0,0,2,0,0,complex_logogram,• OLE+KI {*618}
+HT140,OLE-U,8,0,0,0,8,0,0,complex_logogram,OLE+ U {*610} || OLE+U {*610} || ]OLE+U {*610}
+HT140,U-*34-SI,1,1,0,0,0,0,0,physical_boundary,{*618} 1 J .2 • .2 U-*34-SI [•] .2 * 86-SI-*118
+HT141,A-RI,1,1,0,0,0,0,0,physical_boundary,RA MUTILA .1 ] 1 .1 A-RI-[ .2 ]RU-DI-[ INFRA
+HT141,RU-DI,1,1,0,0,0,0,0,physical_boundary,1 ] 1 .1 A-RI-[ .2 ]RU-DI-[ INFRA MUTILA
+HT15,GRA-L3-L3,1,0,0,0,1,0,0,complex_logogram,GRA+L3L3 {*586}
+HT154A,TU-ME-PA-JA,1,1,0,0,0,0,0,physical_boundary,UMBER FRACTION .1 ] TU-ME-PA-JA [ .2 ] OLIV [ .2 ]G
+HT154J,NU-TE,1,1,0,0,0,0,0,physical_boundary,A.1 ] VEST. [ A.2 ] NU-TE [ INFRA MUTILA SUPR
+HT16,*188-KU,1,0,0,0,1,0,0,complex_logogram,*188+KU {*684}
+HT18,GRA-QE,1,0,0,0,1,0,0,complex_logogram,GRA+QE {*578}
+HT18,OLE-KI,1,0,0,0,1,0,0,complex_logogram,OLE+KI {*618}
+HT2,KI-RE-TA-NA,1,1,0,0,0,0,0,physical_boundary,LE+E {*613} 3 [ .3 ]KI-RE-TA-NA OLE+U {*610} 5 4 [
+HT2,OLE-A,2,0,0,0,2,0,0,complex_logogram,]OLE+A {*609}
+HT2,OLE-E,1,0,0,0,1,0,0,complex_logogram,OLE+E {*613}
+HT2,OLE-U,2,0,0,0,2,0,0,complex_logogram,OLE+U {*610}
+HT20,*188-KU,1,0,0,0,1,0,0,complex_logogram,*188+KU {*684}
+HT21,OLE-E,1,0,0,0,1,0,0,complex_logogram,OLE+E {*613}
+HT21,OLE-U,1,0,0,0,1,0,0,complex_logogram,OLE+U {*610}
+HT22,GRA-L2,1,0,0,0,1,0,0,complex_logogram,GRA+L2 {*585}
+HT23,MI-JA-RU,2,0,0,0,2,0,0,complex_logogram,MI + JA +RU {*550} || MI + JA +RU {*550}[
+HT23,OLE-NE,1,0,0,0,1,0,0,complex_logogram,OLE+NE {*612}
+HT23,OLE-RI,1,0,0,0,1,0,0,complex_logogram,OLE+RI {*614}
+HT23,OLE-TU,1,0,0,0,1,0,0,complex_logogram,OLE+TU {*621}
+HT23,QA-PU,2,0,0,0,2,0,0,complex_logogram,QA +[?]+ PU {*508} || QA +[?]+PU {*510}[
+HT23,QA-RE,2,0,0,0,2,0,0,complex_logogram,QA +[?]+ RE {*509} || QA +[?]+ RE {*508}
+HT23,SI-ME,1,0,0,0,1,0,0,complex_logogram,SI+ME {*530}
+HT24,JA-KA-*118,1,0,0,0,1,0,0,complex_logogram,JA+KA {*539} *118
+HT24,KI-MA-RU,1,0,0,0,1,0,0,complex_logogram,KI MA+RU[ {*546}
+HT24,MA-RU,1,0,0,0,1,0,0,complex_logogram,MA+RU {*560}[
+HT24,MA-RU-ME,3,0,0,0,3,0,0,complex_logogram,MA+RU ME {*561} || MA+RU ME {*561}[
+HT24,SI-ME-KI-*118,1,0,0,0,1,0,0,complex_logogram,SI+ME KI {*531} *118
+HT25,DI-NA-U,1,1,0,0,0,0,0,physical_boundary,MUTILA A.1 ] 1 A.1 DI-NA-U [ A.2 ]RU-NI 1 A.2
+HT25,DU-RU-WI,1,1,0,0,0,0,0,physical_boundary,] ZU-JU-PU 2 1 A.4 DU-RU-WI[ A.5 ] I-KI-RA 1 A.
+HT25,I-KI-RA,1,1,0,0,0,0,0,physical_boundary,A.4 DU-RU-WI[ A.5 ] I-KI-RA 1 A.5 PA 1 SUPRA MU
+HT25,RU-NI,1,1,0,0,0,0,0,physical_boundary,A.1 DI-NA-U [ A.2 ]RU-NI 1 A.2 U-RE-WI 1 A.2
+HT25,TU-QE-NU,1,1,0,0,0,0,0,physical_boundary,.3 A-RI-NI-TA 1 A.3 TU-QE-NU[ A.4 ] ZU-JU-PU 2 1
+HT25,ZU-JU-PU,1,1,0,0,0,0,0,physical_boundary,A.3 TU-QE-NU[ A.4 ] ZU-JU-PU 2 1 A.4 DU-RU-WI[ A
+HT26,*406V-AS-KE,1,0,0,0,1,0,0,complex_logogram,• *406VAS+KE {*656} • VIR
+HT26,KI-ME,1,0,0,0,1,0,0,complex_logogram,KI+ME {*545}
+HT26,RO-NI,1,1,0,0,0,0,0,physical_boundary,*656} • VIR 9 B.2 ]-RO-NI 3 B.2-3 KA-U-ZU-NI
+HT26,VAS-KE,1,0,0,0,1,0,0,complex_logogram,406VAS+KE {*656} •
+HT27,I-MI-SA-RA,1,1,0,0,0,0,0,physical_boundary,6 51 A.2 RE 20 A.3 ]I-MI-SA-RA 4 3 A.4 ]QE 21 A.4
+HT27,KI-*310,1,1,0,0,0,0,0,physical_boundary,A.4 KI-DA-[ A.4-5 ]KI-*310 • KU-* 305 [ A.5 ]S
+HT27,KI-DA,1,1,0,0,0,0,0,physical_boundary,4 3 A.4 ]QE 21 A.4 KI-DA-[ A.4-5 ]KI-*310 •
+HT27,SA-RA-DI,1,1,0,0,0,0,0,physical_boundary,0 • KU-* 305 [ A.5 ]SA-RA-DI 5 A.6 VIR 42 A.7 KU
+HT28,GRA-QE-*578,1,0,0,0,1,0,0,complex_logogram,GRA+QE {*578)
+HT28,OLE-DI,5,0,0,0,5,0,0,complex_logogram,OLE+DI {*608} || OLE +DI
+HT28,OLE-KI,1,0,0,0,1,0,0,complex_logogram,OLE+KI {*618}
+HT28,OLE-MI,1,0,0,0,1,0,0,complex_logogram,OLE+MI {*622}
+HT28,OLE-TU,1,0,0,0,1,0,0,complex_logogram,OLE + TU {*621}
+HT28,OLE-U,1,0,0,0,1,0,0,complex_logogram,OLE+U {*610}
+HT28,VIR-KA-VINA,1,0,0,0,1,0,0,complex_logogram,VIR+KA {*568} VINA
+HT29,DI-JA-I,1,1,0,0,0,0,0,physical_boundary,.2 PA-JA-RE 2 [ .3 ]DI-JA-I 2 .4 SA-* 323-MI 1
+HT29,KI-TA,1,1,0,0,0,0,0,physical_boundary,* 323-MI 1 .4-5 [•]-KI-TA 2 .5 A-RE-DA-I 2 .6
+HT3,DI-NA,1,1,0,0,0,0,0,physical_boundary,A .1 ] MA-DI 2 .1 ] DI-NA-[ .2 QE-RA 2-JA[ .3
+HT3,KU-PA,1,1,0,0,0,0,0,physical_boundary,2-RE 5 .5 DI [ .6 ]KU-PA 3-NU 3 [ .7 MA-DI 2
+HT3,MA-DI,1,1,0,0,0,0,0,physical_boundary,N SUPRA MUTILA .1 ] MA-DI 2 .1 ] DI-NA-[ .2 Q
+HT3,SI-TU-RA,1,1,0,0,0,0,0,physical_boundary,MU-RU 1 .4 RU[ .5 ]SI-TU-RA 2-RE 5 .5 DI [ .6 ]
+HT30,OLE-TA,2,0,0,0,2,0,0,complex_logogram,OLE+TA {*615}
+HT30,QA-PU,1,0,0,0,1,0,0,complex_logogram,QA +[?]+PU {*510}
+HT31,*402V-AS-PA-TA-QE,1,0,0,0,1,0,0,complex_logogram,*402VAS+ PA-TA-QE
+HT31,*402V-AS-QA-PA,1,0,0,0,1,0,0,complex_logogram,*402VAS+ QA-PA 3
+HT31,*402V-AS-SU-PA-RA,1,0,0,0,1,0,0,complex_logogram,*402VAS+ SU-PA 3-RA
+HT31,*415V-AS-SU-PU,1,0,0,0,1,0,0,complex_logogram,*415VAS+ SU-PU
+HT31,*416V-AS-KA-RO-PA,1,0,0,0,1,0,0,complex_logogram,] *416VAS+ KA-RO-PA 3
+HT31,TI-SA,1,1,0,0,0,0,0,physical_boundary,OGRAM NUMBER .1 [•]-TI-SA • PU-KO • *410VAS [
+HT31,VEST-*402V-AS,1,0,0,0,1,0,0,complex_logogram,VEST . *402VAS+ [ ]
+HT32,MI-JA-RU,1,0,0,0,1,0,0,complex_logogram,MI + JA +RU {*550}
+HT32,OLE-NE,2,0,0,0,2,0,0,complex_logogram,OLE+NE {*612} || OLE+NE[ {*612}
+HT32,QA-PU,1,0,0,0,1,0,0,complex_logogram,QA +[?]+PU {*510}
+HT32,QA-RE,1,0,0,0,1,0,0,complex_logogram,QA +[?]+ RE {*508}
+HT33,*341-PI,1,0,0,0,1,0,0,complex_logogram,*341+PI {*646}
+HT33,*401V-AS-*304,1,0,0,0,1,0,0,complex_logogram,*401VAS+*304 {*653}
+HT33,E-KA,1,0,0,0,1,0,0,complex_logogram,E+KA {*526}
+HT33,MI-JA-KA,1,0,0,0,1,0,0,complex_logogram,MI + JA +KA {*552}
+HT33,PA-QE,1,0,0,0,1,0,0,complex_logogram,PA 3 +QE {*537}
+HT33,QA-RE,1,0,0,0,1,0,0,complex_logogram,QA +[?]+ RE {*508}
+HT33,QA-RE-PU,1,0,0,0,1,0,0,complex_logogram,] QA +[?]+ RE +PU {*509}
+HT34,E-KA,1,0,0,0,1,0,0,complex_logogram,E+KA {*526}
+HT34,MI-JA-KA,1,0,0,0,1,0,0,complex_logogram,MI + JA +KA {*552}[
+HT34,MI-JA-RU,1,0,0,0,1,0,0,complex_logogram,MI-JA-RU {*550}
+HT34,QA-PU,1,0,0,0,1,0,0,complex_logogram,QA +[?]+PU {*510}
+HT34,QA-RE,1,0,0,0,1,0,0,complex_logogram,QA +[?]+ RE {*508}
+HT34,SA-MU-KU,1,0,0,0,1,0,0,complex_logogram,SA-MU-KU {*521}
+HT34,SI-I,1,0,0,0,1,0,0,complex_logogram,SI[ ]I+[?] {*516} •
+HT35,MI-JA-RU,1,0,0,0,1,0,0,complex_logogram,MI + JA +RU {*550}
+HT35,OLE-RI,1,0,0,0,1,0,0,complex_logogram,OLE+RI {*614}
+HT35,OLE-TA,1,0,0,0,1,0,0,complex_logogram,OLE+TA {*615}[
+HT35,QA-PU,1,0,0,0,1,0,0,complex_logogram,QA +[?]+PU {*510}
+HT36,*307-*307-GRA-QE,1,0,0,0,1,0,0,complex_logogram,*307+*307 {*638} GRA+QE {*578}
+HT37,MI-JA-I,1,0,0,0,1,0,0,complex_logogram,MI + JA +I {*551} •
+HT37,RE-SU,1,1,0,0,0,0,0,physical_boundary,.1 KA-KI • SU[ .2 ]RE-SU[ .2 ] VEST. [ .3 ]
+HT38,KA-A-*118,1,0,0,0,1,0,0,complex_logogram,KA+A {*554} *118
+HT38,TELA-*312-TELA-KU,1,0,0,0,1,0,0,complex_logogram,TELA+*312 {TELA+KU; *536}
+HT38,TELA-KU,1,0,0,0,1,0,0,complex_logogram,TELA+KU {*535}
+HT39,*407V-AS-A,1,0,0,0,1,0,0,complex_logogram,*407VAS+A {*657}
+HT39,KU-RE,1,1,0,0,0,0,0,physical_boundary,.3 ]SA-MA-TI 10 .3 KU-RE [ .4 VACAT [ .5 ]KU
+HT39,KU-RE-JU,1,1,0,0,0,0,0,physical_boundary,TA-I-*123 10 [ .2 ]KU-RE-JU 8 .2 KU[ .3 ]SA-MA-
+HT39,KU-RO,1,1,0,0,0,0,0,physical_boundary,RE [ .4 VACAT [ .5 ]KU-RO *407VAS+A {*657} 10
+HT39,SA-MA-TI,1,1,0,0,0,0,0,physical_boundary,-RE-JU 8 .2 KU[ .3 ]SA-MA-TI 10 .3 KU-RE [ .4 VA
+HT4,*306-TI-KA-A-RE,1,1,0,0,0,0,0,physical_boundary,N SUPRA MUTILA .1 ]-*306-TI-KA-A-RE [ .2 ]-DU-RI-TE 2 .
+HT4,DU-RI-TE,1,1,0,0,0,0,0,physical_boundary,6-TI-KA-A-RE [ .2 ]-DU-RI-TE 2 .3 PA-RE[ .4 ]TA-
+HT4,PA-RE,1,1,0,0,0,0,0,physical_boundary,.2 ]-DU-RI-TE 2 .3 PA-RE[ .4 ]TA-PI-SI-DI 2
+HT4,TA-PI-SI-DI,1,1,0,0,0,0,0,physical_boundary,-TE 2 .3 PA-RE[ .4 ]TA-PI-SI-DI 2
+HT40,KU-RO,1,1,0,0,0,0,0,physical_boundary,A-TA • GRA[] 134 .3 KU-RO [ .4 ]KU[ INFRA MUT
+HT41,QE-TU,1,1,0,0,0,0,0,physical_boundary,A.1 ] VEST. [ A.2 ]QE-TU 10 A.3 *305 • *304
+HT42,RE-TU,1,1,0,0,0,0,0,physical_boundary,2 .5 SU-DU[ .6-7 ]-RE-TU OLE+KI[ {*618} ]J E
+HT42,SI-SE,1,0,0,0,1,0,0,complex_logogram,• SI+SE {*529} • TE •
+HT42,SU-DU,1,1,0,0,0,0,0,physical_boundary,OLE+MI {*622} 2 .5 SU-DU[ .6-7 ]-RE-TU OLE+K
+HT42+59,RE-TU,3,3,0,0,0,0,0,physical_boundary,2 .5 SU-DU[ .6-7 ]-RE-TU OLE+KI[ {*618} ]J E
+HT42+59,SI-SE,3,0,0,0,3,0,0,complex_logogram,• SI+SE {*529} • TE •
+HT42+59,SU-DU,3,3,0,0,0,0,0,physical_boundary,OLE+MI {*622} 2 .5 SU-DU[ .6-7 ]-RE-TU OLE+K
+HT43,GRA-PA,1,0,0,0,1,0,0,complex_logogram,• I • GRA+PA {*574}
+HT44,OLE-KI,1,0,0,0,1,0,0,complex_logogram,]OLE+KI {*617}
+HT44,OLE-RA,1,0,0,0,1,0,0,complex_logogram,OLE+RA {*616}
+HT44,OLE-U,1,0,0,0,1,0,0,complex_logogram,OLE+U {*610}
+HT44,TE-GRA-F,1,0,0,0,1,0,0,complex_logogram,• TE GRA+F {*582} [
+HT45,QA-RE-PU,2,0,0,0,2,0,0,complex_logogram,QA +[?]+ RE +PU {*509}
+HT46,KU-RO,1,1,0,0,0,0,0,physical_boundary,A.1 ]MU-RU 1 [ A.2 ]KU-RO 43 J B.1 ] VEST. [
+HT46,MU-RU,1,1,0,0,0,0,0,physical_boundary,""" SUPRA MUTILA A.1 ]MU-RU 1 [ A.2 ]KU-RO 43 J"
+HT47,KI-DA-RO,1,1,0,0,0,0,0,physical_boundary,[ A.3-4 ] PI 10 A.4 KI-DA-RO [ ] VEST. [ A.5 ] 5
+HT47,MI-NU-MI,1,1,0,0,0,0,0,physical_boundary,ST. [ A.5 ] 5 A.6 ]-MI-NU-MI B.1 ]RA-NA-RE[ B.2-
+HT47,RA-NA-RE,1,1,0,0,0,0,0,physical_boundary,A.6 ]-MI-NU-MI B.1 ]RA-NA-RE[ B.2-6 DESUNT
+HT47,TU-RO,1,0,0,0,1,0,0,complex_logogram,]TU+RO {*547} •
+HT49,I-KI,1,1,0,0,0,0,0,physical_boundary,TILA B.1 ]KU[ B.2 ] I-KI [ B.2 ]TA[ [[ _____
+HT49,SI-RA,1,1,0,0,0,0,0,physical_boundary,A.5 ] VEST. [ A.5 ] SI-RA 1 A.6 A-RU 1 A.6 [•
+HT49,TA-NA-TI,1,1,0,0,0,0,0,physical_boundary,[•]-RA 2-DU [ A.2 ] TA-NA-TI • 1 [ A.3 ] VEST. [
+HT5,MA-SI,1,1,0,0,0,0,0,physical_boundary,TILA .1 ]*307[ .2 ] MA-SI 30 [ .3 ]-WI-DU 10
+HT5,WI-DU,1,1,0,0,0,0,0,physical_boundary,2 ] MA-SI 30 [ .3 ]-WI-DU 10 [ .4 ]VEST.[ INF
+HT50,OLE-DI,1,0,0,0,1,0,0,complex_logogram,]OLE+DI[ {*608}
+HT50,OLE-E,1,0,0,0,1,0,0,complex_logogram,OLE+E {*613}
+HT50,OLE-KI,2,0,0,0,2,0,0,complex_logogram,OLE+KI {*618} || ]OLE+KI[ {*618}
+HT50,OLE-MI,1,0,0,0,1,0,0,complex_logogram,OLE+MI {*622}
+HT50,OLIV-TU,1,0,0,0,1,0,0,complex_logogram,OLIV+TU {*587}
+HT51,KU-ME-TA,1,1,0,0,0,0,0,physical_boundary,[ INFRA MUTILA B.1 ]KU-ME-TA 1 2 [ B.2 ] ZU-DU J
+HT51,TI-NI,1,1,0,0,0,0,0,physical_boundary,A [ A.2 ] SE 64 A.2 TI-NI[ A.3 ] RE [ INFRA M
+HT51,ZU-DU,1,1,0,0,0,0,0,physical_boundary,U-ME-TA 1 2 [ B.2 ] ZU-DU J F B.2 SI[ B.2 ] V
+HT52,DI-KA-KI,1,1,0,0,0,0,0,physical_boundary,TE • [ A.2 ] 4 A.2 DI-KA-KI [ A.3 ] VEST. [ INF
+HT53,KU-RE,1,1,0,0,0,0,0,physical_boundary,B.3 ] VEST. [ B.4 ] KU-RE [ INFRA MUTILA
+HT53,SA-NE,1,1,0,0,0,0,0,physical_boundary,SUPRA MUTILA A.1 ] SA-NE [ A.2 ] VEST. [ A.3
+HT54,KI-MI-RA,1,1,0,0,0,0,0,physical_boundary,]KU-MI-NA-QE[ A.3 ] KI-MI-RA 2 [ INFRA MUTILA B.
+HT54,KU-MI-NA-QE,1,1,0,0,0,0,0,physical_boundary,A.1 ] VEST. [ A.2 ]KU-MI-NA-QE[ A.3 ] KI-MI-RA 2 [
+HT55,KI-RO,1,1,0,0,0,0,0,physical_boundary,MBER FRACTION A.1 ] KI-RO • A.1 MA-RE 1 [ A.2
+HT55,RI-JA,1,1,0,0,0,0,0,physical_boundary,-TE 1 B.1 QE [ B.2 ]RI-JA 1 B.2 I-[ B.3 ] VES
+HT56,OLE-KI,1,0,0,0,1,0,0,complex_logogram,]OLE+KI {*618}
+HT57,DA-QE-RA,1,1,0,0,0,0,0,physical_boundary,NUMBER FRACTION A.1 DA-QE-RA[ A.1 ] 1 A.2 A[ A.3
+HT58,OLE-E,1,0,0,0,1,0,0,complex_logogram,]OLE+E {*613}
+HT58,OLE-MI,1,0,0,0,1,0,0,complex_logogram,OLE+MI[ {*622}
+HT58,OLE-U,1,0,0,0,1,0,0,complex_logogram,OLE+U {*610}
+HT58,U-KI,1,1,0,0,0,0,0,physical_boundary,} 3 .3 OLIV 4 1 .4 ]U-KI [ INFRA MUTILA
+HT59,RE-TU,1,1,0,0,0,0,0,physical_boundary,2 .5 SU-DU[ .6-7 ]-RE-TU OLE+KI[ {*618} ]J E
+HT59,SI-SE,1,0,0,0,1,0,0,complex_logogram,• SI+SE {*529} • TE •
+HT59,SU-DU,1,1,0,0,0,0,0,physical_boundary,OLE+MI {*622} 2 .5 SU-DU[ .6-7 ]-RE-TU OLE+K
+HT6,JA-RU,1,0,0,0,1,0,0,complex_logogram,JA+RU {*538}
+HT6,MA-RI,1,1,0,0,0,0,0,physical_boundary,.2 RA-TI-SE 1 B.2-3 MA-RI-[•]-I 3 B.4 DU-DA-M
+HT60,MI-JA,1,0,0,0,1,0,0,complex_logogram,MI + JA +[•] {*549}
+HT60,OLE-RI,1,0,0,0,1,0,0,complex_logogram,]OLE+RI {*614}
+HT60,QA-PU,1,0,0,0,1,0,0,complex_logogram,] QA +[?]+PU {*510}
+HT60,QA-RE,1,0,0,0,1,0,0,complex_logogram,QA +[?]+ RE {*508}[
+HT61,GRA-KU,1,0,0,0,1,0,0,complex_logogram,GRA+KU {*579}
+HT61,MI-TI,1,1,0,0,0,0,0,physical_boundary,N SUPRA MUTILA .1 ] MI-TI • GRA+KU {*579} 6 [
+HT62,IB-TI,1,1,0,0,0,0,0,physical_boundary,-KU 4 [ .3 ] 1 8 .3 IB-TI-[•] 6 .3 DI[ .4 ] 4
+HT62,SA-RA,1,1,0,0,0,0,0,physical_boundary,ER FRACTION .1 [•-•]SA-RA • TE • VINA [ .2 ][
+HT62+73,IB-TI,3,3,0,0,0,0,0,physical_boundary,-KU 4 [ .3 ] 1 8 .3 IB-TI-[•] 6 .3 DI[ .4 ] 4
+HT62+73,SA-RA,3,3,0,0,0,0,0,physical_boundary,ER FRACTION .1 [•-•]SA-RA • TE • VINA [ .2 ][
+HT64,KU-ZU-NA,1,1,0,0,0,0,0,physical_boundary,NUMBER FRACTION .1 ]KU-ZU-NA[ .2 ]NA 2 .2 RU-MA[
+HT64,RU-MA,1,1,0,0,0,0,0,physical_boundary,-ZU-NA[ .2 ]NA 2 .2 RU-MA[ .3 VACAT .4 ] 3 .4
+HT65,*330-SA,1,0,0,0,1,0,0,complex_logogram,*330+SA {*644}
+HT66,TA-MI,1,1,0,0,0,0,0,physical_boundary,2 ]DI 2 .2 TA-[ .3 ]TA-MI[ .4 ]RE 1 INFRA MUT
+HT67,KU-RO,1,1,0,0,0,0,0,physical_boundary,LA .1 ] VEST. [ .2 ]KU-RO 4 2 0 [ .3 ] FIC •
+HT69,MA-DI,1,1,0,0,0,0,0,physical_boundary,1 ] 5 .1 DI 8 [ .2 ]MA-DI 4 [ .3 ]DI 12 [ INF
+HT72,SI-VIR,1,1,0,0,0,0,0,physical_boundary,NUMBER FRACTION .1 SI-VIR-[•][ .2 ] VEST. [ I
+HT73,IB-TI,1,1,0,0,0,0,0,physical_boundary,-KU 4 [ .3 ] 1 8 .3 IB-TI-[•] 6 .3 DI[ .4 ] 4
+HT73,SA-RA,1,1,0,0,0,0,0,physical_boundary,ER FRACTION .1 [•-•]SA-RA • TE • VINA [ .2 ][
+HT74,KU-RO,1,1,0,0,0,0,0,physical_boundary,LA .1 ] VEST. [ .2 ]KU-RO 20 [ INFRA MUTILA
+HT75,KA-RU,1,1,0,0,0,0,0,physical_boundary,NUMBER FRACTION 1. KA-RU[ __________________
+HT79,KU-NI,1,1,0,0,0,0,0,physical_boundary,[ .2 ]TU-[•] 3 .3 ]KU-NI[ .3 ] ZU 3 INFRA MU
+HT79,TU-PA-RI,1,1,0,0,0,0,0,physical_boundary,• .1 DA-PA 3 [ .2 ]TU-PA-RI 1 [ .2 ]TU-[•] 3 .3
+HT79+83,KU-NI,3,3,0,0,0,0,0,physical_boundary,[ .2 ]TU-[•] 3 .3 ]KU-NI[ .3 ] ZU 3 INFRA MU
+HT79+83,TU-PA-RI,3,3,0,0,0,0,0,physical_boundary,• .1 DA-PA 3 [ .2 ]TU-PA-RI 1 [ .2 ]TU-[•] 3 .3
+HT8,*86-*188,1,0,0,0,1,0,0,complex_logogram,*86+*188 {*565}
+HT8,OLE-KI,2,0,0,0,2,0,0,complex_logogram,OLE+KI {*618}
+HT80,JU-RA,1,1,0,0,0,0,0,physical_boundary,ON SUPRA MUTILA .1 ]JU-RA[ .2 ] VACAT INFRA M
+HT81,MI-JA-RU,1,0,0,0,1,0,0,complex_logogram,• MI + JA +RU {*550} •
+HT81,RI-SU-MA,1,1,0,0,0,0,0,physical_boundary,RU {*550} • H [ .2 ]RI-SU-MA L4 .2 KI[ INFRA MUT
+HT82,*400-VAS-*304,1,0,0,0,1,0,0,complex_logogram,*400 VAS+*304 {* 653 }
+HT83,KU-NI,1,1,0,0,0,0,0,physical_boundary,[ .2 ]TU-[•] 3 .3 ]KU-NI[ .3 ] ZU 3 INFRA MU
+HT83,TU-PA-RI,1,1,0,0,0,0,0,physical_boundary,• .1 DA-PA 3 [ .2 ]TU-PA-RI 1 [ .2 ]TU-[•] 3 .3
+HT84,F-JA-DU,1,1,0,0,0,0,0,physical_boundary,MBER FRACTION .1 QI F-JA-DU [ .2 ]NU-TI • VIR[
+HT84,NU-TI,1,1,0,0,0,0,0,physical_boundary,.1 QI F-JA-DU [ .2 ]NU-TI • VIR[ .3 ] VEST. [
+HT85,*307-*307,1,0,0,0,1,0,0,complex_logogram,• *307+*307 {*638} • VIR •
+HT85,KU-RO,1,1,0,0,0,0,0,physical_boundary,E 3 A.5 DA-RE 4 A.6 KU-RO[ ] 66 B.1 KI-KI-RA-
+HT85,TE-TU,1,1,0,0,0,0,0,physical_boundary,KA 1 B.2 PA 1 B.2-3 TE-TU[ ] 1 B.3 KA 1 B.3 D
+HT86,A-KA-RU,1,1,0,0,0,0,0,physical_boundary,20 A.6 VACAT B.1 [[A-KA-RU • ]] B.1-2 [[KU-NI-
+HT86,DI-DE,1,1,0,0,0,0,0,physical_boundary,[[SA-RU 20 ]] B.3 [[DI-DE]] .1 [[ VACANT ]]
+HT86,GRA-B,1,0,0,0,1,0,0,complex_logogram,GRA+B {*580}
+HT86,GRA-K-L2,2,0,0,0,2,0,0,complex_logogram,GRA+K+L2 {*584}
+HT86,KU-NI-SU,1,1,0,0,0,0,0,physical_boundary,-KA-RU • ]] B.1-2 [[KU-NI-SU GRA+K+L2 {*584} 20
+HT86,SA-RU,1,1,0,0,0,0,0,physical_boundary,{*584} 20 ]] B.2 [[SA-RU 20 ]] B.3 [[DI-DE]]
+HT87,A-RA,1,1,0,0,0,0,0,physical_boundary,1 .4 KU-RU-KU 1 .5 A-RA-[•]-A-TU 1
+HT87,A-TU,1,1,0,0,0,0,0,physical_boundary,RU-KU 1 .5 A-RA-[•]-A-TU 1
+HT88,VIR-KA,1,0,0,0,1,0,0,complex_logogram,VIR+KA {*568}
+HT89,JU-*317-QE,1,0,0,0,1,0,0,complex_logogram,JU +*317-QE {*542}
+HT89,VIR-*313A,1,0,0,0,1,0,0,complex_logogram,VIR+*313A {*570}
+HT9,WA-JA-PI,1,1,0,0,0,0,0,physical_boundary,J E B.1 PA 3 • B.1 WA-JA-PI-[ ] _______________
+HT90,OLE-DI,1,0,0,0,1,0,0,complex_logogram,OLE+DI {*608}
+HT90,OLE-MI,1,0,0,0,1,0,0,complex_logogram,OLE+MI {*622}
+HT91,OLE-KI,1,0,0,0,1,0,0,complex_logogram,• OLE+KI {*618}
+HT91,OLE-MI,2,0,0,0,2,0,0,complex_logogram,OLE+MI {*622}
+HT91,OLE-U,1,0,0,0,1,0,0,complex_logogram,OLE+U {*610}
+HT93,DA-RE-SE,1,0,0,0,1,0,0,complex_logogram,DA+RE+SE {*502}
+HT93,I-GRA-PA,2,0,0,0,2,0,0,complex_logogram,• I GRA+PA {*574}
+HT93,KI-RO,1,1,0,0,0,0,0,physical_boundary,4 B.1 ] 1 65 H B.1 KI-RO[ B.2 ] VACAT B.3-9
+HT93,NI-NA,1,1,0,0,0,0,0,physical_boundary,A.7 *343 2 A.8 PA 3-NI-NA[ A.8 ] PA-SE-JA 20
+HT93,O-TI,1,1,0,0,0,0,0,physical_boundary,DE-JU-KU 1 J A.6-7 O-TI-[•] 3 A.7 DA-RI-DA
+HT93,PA-SE-JA,1,1,0,0,0,0,0,physical_boundary,8 PA 3-NI-NA[ A.8 ] PA-SE-JA 20 A.9 VIR 10 F[ A.
+HT93,RE-SE,1,0,0,0,1,0,0,complex_logogram,• GRA PA 3 • RE+SE {*515}
+HT94,DE-ME-TE,1,1,0,0,0,0,0,physical_boundary,.4 *86 • B.4 RA-[•]-DE-ME-TE 1 B.5 QI F-TU-[•] 1
+HT94,F-TU,1,1,0,0,0,0,0,physical_boundary,]-DE-ME-TE 1 B.5 QI F-TU-[•] 1 B.6 VACAT
+HT94,KU2-QE-RO3,1,0,1,0,0,0,0,editorial_continuation,"FOR KE-KI-RU, COMPARE CHIC #186: 028-047-049-061 KU2-QE-RO3-"
+HT94,TI-A,1,0,0,0,1,0,0,complex_logogram,TI+A {*523}
+HT94,VIR-*313B,1,0,0,0,1,0,0,complex_logogram,VIR+*313B {*571}
+HT96,KU-MA-RO,1,1,0,0,0,0,0,physical_boundary,______________ A.5 ]KU-MA-RO • • TE FIC 20 A.6 ]
+HT96,OLE-U,1,0,0,0,1,0,0,complex_logogram,OLE+U {*610}
+HT97,*307-*307,1,0,0,0,1,0,0,complex_logogram,• *307+*307 {*638} • VIR+KA {*568}
+HT97,VIR-KA,1,0,0,0,1,0,0,complex_logogram,• *307+*307 {*638} • VIR+KA {*568}
+HT99,GRA-QE,1,0,0,0,1,0,0,complex_logogram,GRA+QE[ {*578}
+HT99,SI-SE-FIC,1,0,0,0,1,0,0,complex_logogram,SI+SE {*529} FIC
+HTWA1074,WINGS-TAIL,1,1,0,0,0,0,0,physical_boundary,NO. 105: DISPLAYED WINGS-TAIL [ZAKROS MASTER]) CO
+HTWA1074-1078,WINGS-TAIL,1,1,0,0,0,0,0,physical_boundary,NO. 105: DISPLAYED WINGS-TAIL [ZAKROS MASTER]) CO
+HTWA1075,WINGS-TAIL,1,1,0,0,0,0,0,physical_boundary,NO. 105: DISPLAYED WINGS-TAIL [ZAKROS MASTER]) CO
+HTWA1076,WINGS-TAIL,1,1,0,0,0,0,0,physical_boundary,NO. 105: DISPLAYED WINGS-TAIL [ZAKROS MASTER]) CO
+HTWA1077,WINGS-TAIL,1,1,0,0,0,0,0,physical_boundary,NO. 105: DISPLAYED WINGS-TAIL [ZAKROS MASTER]) CO
+HTWA1078,WINGS-TAIL,1,1,0,0,0,0,0,physical_boundary,NO. 105: DISPLAYED WINGS-TAIL [ZAKROS MASTER]) CO
+HTWA1079,WINGS-TAIL,1,1,0,0,0,0,0,physical_boundary,NO. 105: DISPLAYED WINGS-TAIL [ZAKROS MASTER]) CO
+HTWA1079-1085,WINGS-TAIL,1,1,0,0,0,0,0,physical_boundary,NO. 105: DISPLAYED WINGS-TAIL [ZAKROS MASTER]) CO
+HTWA1080,WINGS-TAIL,1,1,0,0,0,0,0,physical_boundary,NO. 105: DISPLAYED WINGS-TAIL [ZAKROS MASTER]) CO
+HTWA1081,WINGS-TAIL,1,1,0,0,0,0,0,physical_boundary,NO. 105: DISPLAYED WINGS-TAIL [ZAKROS MASTER]) CO
+HTWA1082,WINGS-TAIL,1,1,0,0,0,0,0,physical_boundary,NO. 105: DISPLAYED WINGS-TAIL [ZAKROS MASTER]) CO
+HTWA1083,WINGS-TAIL,1,1,0,0,0,0,0,physical_boundary,NO. 105: DISPLAYED WINGS-TAIL [ZAKROS MASTER]) CO
+HTWA1084,WINGS-TAIL,1,1,0,0,0,0,0,physical_boundary,NO. 105: DISPLAYED WINGS-TAIL [ZAKROS MASTER]) CO
+HTWA1085,WINGS-TAIL,1,1,0,0,0,0,0,physical_boundary,NO. 105: DISPLAYED WINGS-TAIL [ZAKROS MASTER]) CO
+HTWC<3018>,B-*303-D,1,0,0,0,1,0,0,complex_logogram,B: *303+D {*624}
+HTWC3016,B-*304-PA-*303-D,1,0,0,0,1,0,0,complex_logogram,B: *304+PA {*629} *303+D {*624}
+HTWC3017,B-*625-*303-D-*304-PA,1,0,0,0,1,0,0,complex_logogram,B: *625 [*303+D {*624} *304+PA {*629}]
+HTWEWC3020,B-*304-PA-*303-D,1,0,0,0,1,0,0,complex_logogram,B: *304+PA {*629} *303+D {*624}
+HTZB158,TU-SE-SU-KI,1,1,0,0,0,0,0,physical_boundary,MAGAZINE 5) A: ][•]-TU-SE-SU-KI B: SU-KI-RI-TE-I-JA
+HTZB159,A-NA-NU-SI-JA-SE,1,1,0,0,0,0,0,physical_boundary,"66), PITHOS (VILLA) A-NA-NU-SI-JA-SE[ COMMENTARY © JOHN"
+HTZB161,SI-PU,1,1,0,0,0,0,0,physical_boundary,(VILLA MAGAZINE 5) ]SI-PU [ COMMENTARY © JOHN
+HTZD155,TA-JA,1,1,0,0,0,0,0,physical_boundary,2 E *319 3 E F *319 TA-JA [= 5 ] K [ A-JU • N
+HTZD157+156,WI-JA-SU-MA-TI-TI-*319,1,1,0,0,0,0,0,physical_boundary,134-135+132-133) • WI-JA-SU-MA-TI-TI-*319 [ ] NE 1 NE 1 J *31
+IOZA10,A-SA-SA-RA-ME,1,1,0,0,0,0,0,physical_boundary,III-LM I CONTEXT) ]A-SA-SA-RA-ME ON ANALOGY WITH PO
+IOZA11,DA-DA,1,1,0,0,0,0,0,physical_boundary,PER LINE): ]-NA-[•]-DA-DA-[• • •][ ] .B (LOWE
+IOZA11,I-NA-I-DA,1,0,1,0,0,0,0,editorial_continuation,".B (LOWER LINE, RETROGRADE): ] U-TI-NU • I-NA-I-DA-•["
+IOZA11,U-TI-NU,1,1,0,0,0,0,0,physical_boundary,"INE, RETROGRADE): ] U-TI-NU • I-NA-I-DA-•[ BOTH"
+IOZA12,I-TI,1,1,0,0,0,0,0,physical_boundary,A-SA-.B:-SA-RA-ME • I-TI-[ THE TWO SIDES BRE
+IOZA12,JA-SA,1,0,1,0,0,0,0,editorial_continuation,.A: ][• •] • JA-SA-
+IOZA12,SA-RA-ME,1,0,1,0,0,0,0,editorial_continuation,.B:-SA-RA-ME • I-TI-[
+IOZA13,MA-I,1,1,0,0,0,0,0,physical_boundary,OD.-OL. 1985). ][•]-MA-I-[ COMMENTARY © JOHN
+IOZA14,I-DI,1,1,0,0,0,0,0,physical_boundary,1987). SI-]RU-TE • I-DI-[ COMMENTARY © JOHN
+IOZA14,RU-TE,1,1,0,0,0,0,0,physical_boundary,43; KAR. 1987). SI-]RU-TE • I-DI-[ COMMENTARY
+IOZA15,I-PI-NA-MA,1,1,0,0,0,0,0,physical_boundary,4744; KAR. 1987). ]I-PI-NA-MA • SI-RU-[TE COMMENT
+IOZA15,SI-RU,1,1,0,0,0,0,0,physical_boundary,987). ]I-PI-NA-MA • SI-RU-[TE COMMENTARY © JO
+IOZA16,JA-SA-SA-RA,1,0,1,0,0,0,0,editorial_continuation,.A: ] *123 • JA-SA-SA-RA-
+IOZA16,U-NA-RU-KA,2,2,0,0,0,0,0,physical_boundary,A-SA-SA-RA-.B:-ME • U-NA-RU-KA[-NA-SI .A-.B: ] ARO || • JA-SA-SA-RA-ME • U-NA-RU-KA[-NA-SI KAMILARI COM
+IOZA2,I-PI-NA-MA,1,1,0,0,0,0,0,physical_boundary,U-NA-KA-NA-]SI [•] I-PI-NA-MA • .2: SI-RU-TE • TA
+IOZA2,JA-SA-SA-RA,1,1,0,0,0,0,0,physical_boundary,-JA • JA-DI-KI-TU • JA-SA-SA-RA[-ME • U-NA-KA-NA-]S
+IOZA4,*301-WA,2,2,0,0,0,0,0,physical_boundary,"TABLE, SERPENTINE ]*301-WA [ A-TA-I-]*301-WA [ || ]*301-WA [ A-TA-I-]*301-WA [-JA. COMMENTARY ©"
+IOZA5,I-JA-PA,1,1,0,0,0,0,0,physical_boundary,TE ]I-JA-RE-DI-JA • I-JA-PA[ COMMENTARY © JOHN
+IOZA5,I-JA-RE-DI-JA,1,1,0,0,0,0,0,physical_boundary,"RAGEMNT, CHRLORITE ]I-JA-RE-DI-JA • I-JA-PA[ COMMENTA"
+IOZA7,JA-TI-*321,1,1,0,0,0,0,0,physical_boundary,A-TA-I-*301-WA-JA • JA-TI-*321 [ • OVER [[ ]]. COM
+IOZA8,A-NA-TI-*301-WA-JA,1,1,0,0,0,0,0,physical_boundary,III-LM I CONTEXT) ] A-NA-TI-*301-WA-JA [ COMMENTARY © JOHN
+IOZA9,JA-SA-SA,1,1,0,0,0,0,0,physical_boundary,R. .A (RETROGRADE): JA-SA-SA[-RA-ME .B: • U-NA-K
+IOZA9,U-NA-KA,1,1,0,0,0,0,0,physical_boundary,-SA-SA[-RA-ME .B: • U-NA-KA[-NA-SI COMMENTARY ©
+IOZB10,A-SA-SA-RA-ME,1,1,0,0,0,0,0,physical_boundary,III-LM I CONTEXT) ]A-SA-SA-RA-ME ON ANALOGY WITH PO
+KE1,KA-SA,1,1,0,0,0,0,0,physical_boundary,NUMBER FRACTION .1 KA-SA [ .2 ] VEST. [ INFR
+KEZB4,A-NA-NU-SI-JA-SE,1,1,0,0,0,0,0,physical_boundary,"3 TIMES: HT ZB 159 (A-NA-NU-SI-JA-SE[), HT 28A.1 & B.1-2"
+KH1,GRA-F,1,0,0,0,1,0,0,complex_logogram,GRA+F {*582}
+KH11,*303-E,2,0,0,0,2,0,0,complex_logogram,*303+E {*626}
+KH11,A-DU,1,1,0,0,0,0,0,physical_boundary,NUMBER FRACTION .1 A-DU-[•]-ZA *303 K .2 SU
+KH12,*401V-AS-*304,1,0,0,0,1,0,0,complex_logogram,*401VAS+*304 {*653}
+KH12,*401V-AS-RU,2,0,0,0,2,0,0,complex_logogram,*401VAS+RU {*651}
+KH12,MI-JA-RU,1,0,0,0,1,0,0,complex_logogram,MI + JA +RU {*550}
+KH13,A-SE-RE-ZA,1,1,0,0,0,0,0,physical_boundary,UTILA .1 ] 2 J[ .2 ]A-SE-RE-ZA[ .3 ] E L2 .3 *304[
+KH13,DA-I,1,1,0,0,0,0,0,physical_boundary,B[ .4 ] VEST. [ .4 ]DA-I[ .5 ] 3 INFRA MUTIL
+KH14,VIR-*307,1,0,0,0,1,0,0,complex_logogram,VIR+*307 {*569}
+KH16,*303-D,1,0,0,0,1,0,0,complex_logogram,*303+D {*624} [
+KH16,U-TA-I-SI,1,1,0,0,0,0,0,physical_boundary,2 .1 *303 K L2[ .2 ]U-TA-I-SI *303+D {*624} [ .3
+KH18,*401V-AS,1,0,0,0,1,0,0,complex_logogram,]*401VAS+[ ][ {*649}
+KH18,I-KU-PI,1,1,0,0,0,0,0,physical_boundary,][ {*649} .2 ] 5 .2 I-KU-PI[ .3 ] VINC 1 .3 KU
+KH18,RO-RO,1,0,0,0,1,0,0,complex_logogram,RO+RO {*504}[
+KH19,*306-VIR,1,0,0,0,1,0,0,complex_logogram,]*306 VIR+* 307 {*569}
+KH19,OLE-TA,1,0,0,0,1,0,0,complex_logogram,OLE+TA {*615}
+KH2,*306-*303-E,1,0,0,0,1,0,0,complex_logogram,*306 *303+E[ {*626}
+KH20,*303-E,2,0,0,0,2,0,0,complex_logogram,*303 +E {*626}[ || *303+E {*626}
+KH20,DU-RE-ZA,1,1,0,0,0,0,0,physical_boundary,ACAT [ ] VACAT .4 ] DU-RE-ZA • *303+E {*626} J .
+KH21,*306-QE-DU,1,1,0,0,0,0,0,physical_boundary,.2 ]D .2 FIC 2[ .3 *306-QE-DU [
+KH22,*303-E,1,0,0,0,1,0,0,complex_logogram,*303+E [ {*626}
+KH23,A-DU,1,1,0,0,0,0,0,physical_boundary,NUMBER FRACTION .1 A-DU[ .2 ]*303+[ ][ INFR
+KH27,GRA-PA,1,0,0,0,1,0,0,complex_logogram,]GRA+PA {*574}
+KH28,GRA-F,1,0,0,0,1,0,0,complex_logogram,]SE • GRA+F {*582}[
+KH29,KU-PA,1,1,0,0,0,0,0,physical_boundary,• TA 2 [ .2 ] 1 .2 KU-PA [ .3 ] 2 .3 *303 J
+KH31,*401V-AS-RA,1,0,0,0,1,0,0,complex_logogram,*401VAS+RA {*652}[
+KH33,*303-D,1,0,0,0,1,0,0,complex_logogram,] *303 +D {*624}[
+KH34,*303-E,1,0,0,0,1,0,0,complex_logogram,]*303+ E {*626}
+KH36,MI-JA-RU,1,0,0,0,1,0,0,complex_logogram,]KA • MI + JA +RU {*550}
+KH38,*303-D,1,0,0,0,1,0,0,complex_logogram,*303+D {*624}
+KH39,A-TA,1,1,0,0,0,0,0,physical_boundary,NUMBER FRACTION .1 A-TA-[ .2 ] OLE+TA {*615
+KH39,OLE-TA,1,0,0,0,1,0,0,complex_logogram,] OLE+TA {*615}[
+KH4,A-DU-RE,1,1,0,0,0,0,0,physical_boundary,NUMBER FRACTION .1 A-DU-RE[ .2 ]*306 4 .2 *303
+KH40,SI-NA,1,1,0,0,0,0,0,physical_boundary,TION SUPRA MUTILA ] SI-NA-[ INFRA MUTILA
+KH41,KA-TA-RE,1,1,0,0,0,0,0,physical_boundary,RACTION .1 ] 3 .2 ] KA-TA-RE[ INFRA MUTILA
+KH42,*307-*301,1,0,0,0,1,0,0,complex_logogram,]*307+*301 {*637}[
+KH43,MA-RU-RE,1,0,0,0,1,0,0,complex_logogram,] MA +RU-RE {*562}
+KH43,WI-ZE,1,0,0,0,1,0,0,complex_logogram,WI+ ZE {*527}[
+KH47,QA-NE,1,1,0,0,0,0,0,physical_boundary,N SUPRA MUTILA .1 ] QA-NE [ .2 ] 6 .2 SI[ .3
+KH5,*303-E,1,0,0,0,1,0,0,complex_logogram,*303+E {*626}
+KH5,VINB-WI,1,0,0,0,1,0,0,complex_logogram,VINB+WI {*598}
+KH51,SI-I-SI,1,1,0,0,0,0,0,physical_boundary,UMBER FRACTION .1 ] SI-I-SI 3 .2 ] 4 .2 TU[ INF
+KH52,TA-U,1,1,0,0,0,0,0,physical_boundary,LA .1 ] VEST. [ .2 ]TA-U-[ INFRA MUTILA
+KH53,A-ME-*123,1,1,0,0,0,0,0,physical_boundary,UMBER FRACTION .1 ] A-ME-*123 • .1 NE[ INFRA MUTI
+KH54,*303-E,1,0,0,0,1,0,0,complex_logogram,]*303+E {*626}
+KH55,OLE-TA,1,0,0,0,1,0,0,complex_logogram,OLE+TA {*615}
+KH58,*303-E,2,0,0,0,2,0,0,complex_logogram,]*303+E {*626} || ] *303+E {*626}
+KH58,A-*301,1,1,0,0,0,0,0,physical_boundary,.5 ] *303 +[ ] J .5 A-*301[
+KH59,DI-NA,1,1,0,0,0,0,0,physical_boundary,1 ] 1 .2 ]-I 5 .3 ]-DI-NA 5 INFRA MUTILA
+KH6,*303-D,6,0,0,0,6,0,0,complex_logogram,]*303+D {*624} || *303 + D {*624} || *303+D {*624}[ || *303+D {*624}
+KH6,DI-SI,1,1,0,0,0,0,0,physical_boundary,]*303+D {*624} J .1 DI-SI-[ .2 ]-TE-NU-RE[ .3
+KH6,KI-SA-NE,1,1,0,0,0,0,0,physical_boundary,.2 ]-TE-NU-RE[ .3 ]KI-SA-NE *303 + D {*624} J .
+KH6,PI-SA,1,1,0,0,0,0,0,physical_boundary,303+D {*624} J .6-7 PI-SA[ ]*303+D {*624} J .
+KH6,TE-NU-RE,1,1,0,0,0,0,0,physical_boundary,} J .1 DI-SI-[ .2 ]-TE-NU-RE[ .3 ]KI-SA-NE *303
+KH60,MI-JA-RU,1,0,0,0,1,0,0,complex_logogram,MI + JA +RU {*550}
+KH60,RA-KI-TA-NA-SI,1,1,0,0,0,0,0,physical_boundary,"MBER ""FRACTION"" .1 ]RA-KI-TA-NA-SI[ .2 ]*131C W .2 TA"
+KH61,OLE-TA,1,0,0,0,1,0,0,complex_logogram,OLE+TA {*615}
+KH63,*401V-AS-RU,1,0,0,0,1,0,0,complex_logogram,]*401VAS+RU {*651}
+KH7,*303-D,6,0,0,0,6,0,0,complex_logogram,*303+D {*624}
+KH7,*303-E,1,0,0,0,1,0,0,complex_logogram,*303+E {*626}
+KH7,*303-K,1,0,0,0,1,0,0,complex_logogram,*303+K {*627}
+KH7,*304-PA,1,0,0,0,1,0,0,complex_logogram,*304+PA {*629}
+KH7,KO-E,1,1,0,0,0,0,0,physical_boundary,*305 • A.4-5 KU-[•]-KO-E VIR+*313B {*571} [
+KH7,PA-NA-TU,1,1,0,0,0,0,0,physical_boundary,D {*624} J[ B.2-3 ] PA-NA-TU *303+D {*624} J B.3
+KH7,VIR-*313B,3,0,0,0,3,0,0,complex_logogram,VIR+*313B {*571}
+KH73,*304-PA,1,0,0,0,1,0,0,complex_logogram,*304+PA {*629}
+KH74,JA-DA-SU,1,1,0,0,0,0,0,physical_boundary,FRACTION .1 ]-SI • JA-DA-SU[ .2 ] SI-*301-MI {*
+KH74,SI-*301-MI,1,1,0,0,0,0,0,physical_boundary,SI • JA-DA-SU[ .2 ] SI-*301-MI {*605} INFRA MUTILA
+KH79+89,A-RA,1,1,0,0,0,0,0,physical_boundary,]MI-NA[ .2 ]PA-TA • A-RA-[ .3 ]-PA-DA-NI .4
+KH79+89,MI-NA,1,1,0,0,0,0,0,physical_boundary,.LINE STATEMENT .1 ]MI-NA[ .2 ]PA-TA • A-RA-[
+KH79+89,PA-DA-NI,1,1,0,0,0,0,0,physical_boundary,PA-TA • A-RA-[ .3 ]-PA-DA-NI .4 VACAT INFRA MUTI
+KH79+89,PA-TA,1,1,0,0,0,0,0,physical_boundary,MENT .1 ]MI-NA[ .2 ]PA-TA • A-RA-[ .3 ]-PA-DA
+KH8,*303-D,1,0,0,0,1,0,0,complex_logogram,*303+D {*624}
+KH81,MI-JA-I,1,0,0,0,1,0,0,complex_logogram,MI + JA +I {*551}
+KH82,OLE-RI,1,0,0,0,1,0,0,complex_logogram,]OLE+RI {*614}
+KH83,A-DI-NE,1,1,0,0,0,0,0,physical_boundary,FRACTION .1 ] • .1 A-DI-NE[ .2 ]* 401 VAS+ A {
+KH83,VAS-A,1,0,0,0,1,0,0,complex_logogram,]* 401 VAS+ A {*650}
+KH83,VAS-RU,1,0,0,0,1,0,0,complex_logogram,* 401 VAS+ RU {*651}[
+KH84,VAS-RU,1,0,0,0,1,0,0,complex_logogram,* 401 VAS+ RU {*651}[
+KH85,*401V-AS-RU,1,0,0,0,1,0,0,complex_logogram,] *401VAS+RU {*651}
+KH85,OLE-TA,1,0,0,0,1,0,0,complex_logogram,] OLE + TA {*615}
+KH86,PI-NU,1,1,0,0,0,0,0,physical_boundary,]*303+[ ] A B B .2 PI-NU-[ .3 ] 3 [ .3 *303+
+KH86,RE-ZA,1,1,0,0,0,0,0,physical_boundary,UMBER FRACTION .1 ] RE-ZA *303[ .2 ]*303+[ ]
+KH9,*303-D,1,0,0,0,1,0,0,complex_logogram,*303+D {*624}
+KH9,I-SI,1,1,0,0,0,0,0,physical_boundary,FIC E B .2 MI[ .3 ]I-SI • *303+D {*624} J[
+KH9,SI-TA-*304,1,0,0,0,1,0,0,complex_logogram,SI+TA 2 {*532} *304
+KH90,MA-TA-RI-TA,1,1,0,0,0,0,0,physical_boundary,LA .1 ][•]-JA[ .2 ] MA-TA-RI-TA [ .3 ] VEST. [ INFR
+KH91,*401V-AS-RA,1,0,0,0,1,0,0,complex_logogram,*401VAS+ RA {*652}[
+KH91,*401V-AS-RU,1,0,0,0,1,0,0,complex_logogram,*401VAS+RU {*651}
+KH92,NA-KI,1,1,0,0,0,0,0,physical_boundary,1 KU-NI-TE 10 [ .2 ]NA-KI 1 VEST. [ INFRA MUT
+KH94,QA-PU,1,0,0,0,1,0,0,complex_logogram,] QA +[ ]+PU
+KH97,A-JA,1,1,0,0,0,0,0,physical_boundary,ER FRACTION .A1 ]RE A-JA [ .A2 ] NA [ INFRA
+KH97,SE-I,1,1,0,0,0,0,0,physical_boundary,INFRA MUTILA .B1 ]-SE-I[ .B2 ] VESTIGIA [ I
+KH99,A-SI-*118,1,1,0,0,0,0,0,physical_boundary,.1 ]PA-RI-DE • .2 ]A-SI-*118 .3 ]KU-KA-[
+KH99,KU-KA,1,1,0,0,0,0,0,physical_boundary,• .2 ]A-SI-*118 .3 ]KU-KA-[
+KH99,PA-RI-DE,1,1,0,0,0,0,0,physical_boundary,NUMBER FRACTION .1 ]PA-RI-DE • .2 ]A-SI-*118 .3
+"KHWC2029,2030",VIR-KA,1,0,0,0,1,0,0,complex_logogram,VIR+KA {*568}
+KHWC2031,VIR-KA,1,0,0,0,1,0,0,complex_logogram,VIR+KA {*568}
+KHWC2032,VIR-KA,1,0,0,0,1,0,0,complex_logogram,VIR+KA {*568}
+KHWC2046,*301-*311,1,0,0,0,1,0,0,complex_logogram,*301+*311 {*606}
+KHWC2047,*301-*311,1,0,0,0,1,0,0,complex_logogram,*301+*311 {*606}
+KHWC2048,*301-*311,1,0,0,0,1,0,0,complex_logogram,*301+*311 {*606}
+KHWC2049,*301-*311,1,0,0,0,1,0,0,complex_logogram,*301+*311 {*606}
+KHWC2050,*301-*311,1,0,0,0,1,0,0,complex_logogram,*301+*311 {*606}
+KHWC2051,*301-*311,1,0,0,0,1,0,0,complex_logogram,*301+*311 {*606}
+KHWC2052,*301-*311,1,0,0,0,1,0,0,complex_logogram,*301+*311 {*606}
+KHWC2053,*301-*311,1,0,0,0,1,0,0,complex_logogram,*301+*311 {*606}
+KHWC2054,MI-*605,1,0,0,0,1,0,0,complex_logogram,* 301 + MI {*605; CF. *553}
+KHWC2055,MI-*605,1,0,0,0,1,0,0,complex_logogram,* 301 + MI {*605; CF. *553}
+KHWC2057,*337-*188,1,0,0,0,1,0,0,complex_logogram,*337+*188 {*645}
+KHWC2058,*86-*188,1,0,0,0,1,0,0,complex_logogram,*86+*188 {*566}
+KHWC2059+2091+2092,*86-*188,1,0,0,0,1,0,0,complex_logogram,*86+*188 {*566}
+KHWC2062,*86-*188,1,0,0,0,1,0,0,complex_logogram,*86+*188 {*566}
+KHWC2064,MI-*301,1,0,0,0,1,0,0,complex_logogram,MI+*301 {*553}
+KHWC2065,*301-*351,1,0,0,0,1,0,0,complex_logogram,*301+*351 {*607}
+KHWC2099,MI-*301-*553,1,0,0,0,1,0,0,complex_logogram,MI+*301 {*553; CF. *605}
+KHWC2109,*86-*188,1,0,0,0,1,0,0,complex_logogram,*86+*188 {*566}
+KHWC2113,*301-*311,1,0,0,0,1,0,0,complex_logogram,*301+*311 {*606}
+KHWC2117,B-*86,1,0,0,0,1,0,0,complex_logogram,B:*86+* 188 {*565}
+KN2,RU-NA,1,1,0,0,0,0,0,physical_boundary,NUMBER FRACTION .1 ]RU-NA 2 .2 *118 3 .2 I +*
+KN22,KA-JE,1,1,0,0,0,0,0,physical_boundary,U-TA [ ] 20 [ A.2 ] KA-JE-[ B ] PO-DI-PA 3 1
+KN22,MA-SU-MI,1,1,0,0,0,0,0,physical_boundary,-DI-PA 3 1 10 C.1 ] MA-SU-MI • [•]-NA[ C.2 ] VES
+KN22,PO-DI-PA,1,1,0,0,0,0,0,physical_boundary,[ A.2 ] KA-JE-[ B ] PO-DI-PA 3 1 10 C.1 ] MA-SU-
+KN22,SU-JU-TA,1,1,0,0,0,0,0,physical_boundary,ATEMENT NUMBER A.1 ]SU-JU-TA [ ] 20 [ A.2 ] KA-J
+KN28,SU-MI,1,0,0,0,1,0,0,complex_logogram,SU+ MI {*540}
+KN32,A-KA-TA,1,1,0,0,0,0,0,physical_boundary,LA A.1 ] A-PA-[ A.2 A-KA-TA[ INFRA MUTILA SUPRA
+KN32,A-PA,1,1,0,0,0,0,0,physical_boundary,SUPRA MUTILA A.1 ] A-PA-[ A.2 A-KA-TA[ INFR
+KN32,JA-SU,1,1,0,0,0,0,0,physical_boundary,SA-PU B.2 PA[ B.3 ]-JA-SU INFRA MUTILA
+KN32,SA-PU,1,1,0,0,0,0,0,physical_boundary,TILA B.1 ]TE[ B.2 ]-SA-PU B.2 PA[ B.3 ]-JA-SU
+KN54,PU-RA,1,1,0,0,0,0,0,physical_boundary,UMBER FRACTION .1 ] PU-RA-[ .2 ] VINC K [
+KNWB33,NU-SE,1,1,0,0,0,0,0,physical_boundary,IIIB) A: QA-KI [ B: NU-SE-[ G: SEAL IMPRESSIO
+KNWB33,QA-KI,1,1,0,0,0,0,0,physical_boundary,HOUSE; MM IIIB) A: QA-KI [ B: NU-SE-[ G: SEA
+KNWC23,WE-WE,1,0,0,0,1,0,0,complex_logogram,WE+WE
+KNWC3,KA-I-KA,1,1,0,0,0,0,0,physical_boundary,"RESSIONS, CMS II 8 ]KA-I-KA [ 2 IMPRESSIONS: NO"
+KNWC30,JA-RA,1,1,0,0,0,0,0,physical_boundary,"RESSIONS, CMS II 8 ]JA-RA 2 IMPRESSONS (DISC)"
+KNZA10,DA-WA,2,2,0,0,0,0,0,physical_boundary,A-SA-RA-MA-.B:-NA • DA-WA-[•]-DU-WA-TO • I-JA || JA-SA-SA-RA-MA-NA • DA-WA-[•]-DU-WA-TO • I-JA
+KNZA10,DU-WA-TO,2,2,0,0,0,0,0,physical_boundary,-.B:-NA • DA-WA-[•]-DU-WA-TO • I-JA[ .A-.B: ]-TA || A-MA-NA • DA-WA-[•]-DU-WA-TO • I-JA[; THE LAST W
+KNZA10,I-JA,3,3,0,0,0,0,0,physical_boundary,A-WA-[•]-DU-WA-TO • I-JA[ .A-.B: ]-TA-NU-MU- || A-WA-[•]-DU-WA-TO • I-JA[; THE LAST WORD MAY || WORD MAY HAVE BEEN I-JA[-PA-QE (CF. I-NA-JA
+KNZA10,JA-SA-SA-RA-MA,1,0,1,0,0,0,0,editorial_continuation,.A: ]-TA-NU-MU-TI • JA-SA-SA-RA-MA-
+KNZA10,TA-NU-MU-TI,2,2,0,0,0,0,0,physical_boundary,AS SUSPENDED. .A: ]-TA-NU-MU-TI • JA-SA-SA-RA-MA-.B || TO • I-JA[ .A-.B: ]-TA-NU-MU-TI • JA-SA-SA-RA-MA-NA
+KNZA17,JA-QE,1,1,0,0,0,0,0,physical_boundary,TINE (LOWER TOWN) ]-JA-QE • COMMENTARY © JOHN
+KNZA18,JA-WA,1,1,0,0,0,0,0,physical_boundary,]-JA • [• • •]-JA • JA-WA-[ ] [•][ COMMENTARY
+KNZA19,*118-MI-NA,1,1,0,0,0,0,0,physical_boundary,_ .2 (RETROGRADE): ]*118-MI-NA PALAIMA 1988: 313-1
+KNZA19,KE-JU-MI,1,1,0,0,0,0,0,physical_boundary,OF THE PALACE .1: ]-KE-JU-MI[ ][•][ ____________
+KNZB20,NA-A-PA,1,1,0,0,0,0,0,physical_boundary,"L, LM IA CONTEXT) ] NA-A-PA 3 COMMENTARY © JOHN"
+KNZB35,DI-WI,1,0,0,1,0,0,0,segmented_fragment_flattening,]JA[ ]DI-[ ]WI[
+KNZB35,JA-DI,1,0,0,1,0,0,0,segmented_fragment_flattening,]JA[ ]DI-[ ]WI[
+KNZB35,JA-DI-WI,1,0,0,1,0,0,0,segmented_fragment_flattening,]JA[ ]DI-[ ]WI[
+KNZC6,I-ZU,1,1,0,0,0,0,0,physical_boundary,-NA-PA-KU-NU-U [-•]-I-ZU • GORILA DRAWS BUT
+KNZC6,JU-KU-NA-PA-KU-NU-U,1,1,0,0,0,0,0,physical_boundary,-PA-KU • NI-JA-NU • JU-KU-NA-PA-KU-NU-U [-•]-I-ZU • GORILA
+KNZC7,SIGN-GROUP,1,1,0,0,0,0,0,physical_boundary,"A-NA-NE • WI-PI-[•] SIGN-GROUP 3, GORILA READS ZU"
+KNZC7,WI-PI,1,1,1,0,0,0,0,editorial_continuation|physical_boundary,"JA-SA-RA-A-NA-NE • WI-PI-[•] SIGN-GROUP 3, G || JGY: A-KA-NU-ZA-TI RESEMBLES A MUDDLED U-NA-RU-KA-NA-TI, DU-RA-RE A MUDDLED DU-PU2-RE, AND JA-SA-RA-A-NA-NE A MUDDLED JA-SA-SA-RA; WI-PI-• MAY THEN BE A MUDDLED I-PI-NA-MA. IF ALL THIS IS SO, THE TWO CUPS WOULD CARRY DELIBERATELY GARBLED RELIGIOUS EXPRESSIONS SEEN IN CLEARER FORM IN THE LIBATION FORMULA."
+KNZF31,SI-ZA-NE-*310,1,1,0,0,0,0,0,physical_boundary,1972 PL. 2. ]SI[ ] SI-ZA-NE-*310 • DA-DU-MI-NE • QA-
+MA10,*404V-AS,1,0,0,0,1,0,0,complex_logogram,*404VAS [+?][
+MA10,*404V-AS-A,1,0,0,0,1,0,0,complex_logogram,*404VAS+A {*654}
+MA10,*404V-AS-TI,1,0,0,0,1,0,0,complex_logogram,*404VAS+TI {*524}
+MA10,*405V-AS-*655,1,0,0,0,1,0,0,complex_logogram,*405VAS+Ω {*655; Ω= *713}
+MA10,*412V-AS-E,3,0,0,0,3,0,0,complex_logogram,*412VAS+E {*658} || ] *412VAS+E {*658}
+MA10,*412V-AS-F,2,0,0,0,2,0,0,complex_logogram,*412VAS+F {*659}
+MA10,*413V-AS-SU,1,0,0,0,1,0,0,complex_logogram,*413VAS+SU {*660}
+MA10,*414V-AS,1,0,0,0,1,0,0,complex_logogram,*414VAS+[•] [
+MA10,*414V-AS-F,1,0,0,0,1,0,0,complex_logogram,][ *414VAS ]+F {*662}
+MA10,DU-PI-TE-WA,1,1,0,0,0,0,0,physical_boundary,S+F {*659} 4[ B.1 ] DU-PI-TE-WA • *405VAS+Ω {*655;
+MA2,DU-RA,1,1,0,0,0,0,0,physical_boundary,ATEMENT NUMBER A.1 ]DU-RA 5 A.2 VACAT B.1 ]-R
+MA2,JA-MA-U-TI,1,1,0,0,0,0,0,physical_boundary,.1 ]-U-NA-NA 3 C.1 ]JA-MA-U-TI 6
+MA2,RE-TI,1,1,0,0,0,0,0,physical_boundary,A 5 A.2 VACAT B.1 ]-RE-TI 4 B.2 ]TI 1 B.2 JA-
+MA2,U-NA-NA,1,1,0,0,0,0,0,physical_boundary,KU 2 B.2 TI [ C.1 ]-U-NA-NA 3 C.1 ]JA-MA-U-TI 6
+MA4,*180-SA-B,1,0,0,0,1,0,0,complex_logogram,*180+SA+B {*600}
+MA4,*180-SA-L,1,0,0,0,1,0,0,complex_logogram,*180+SA+ L {*601}
+MA6,*180-B,1,0,0,0,1,0,0,complex_logogram,*180+B {*602}
+MAWC<5>,B-GRA-E,1,0,0,0,1,0,0,complex_logogram,B: GRA+E {*581} 4
+MAZB8,JA-DA,1,1,0,0,0,0,0,physical_boundary,IA CONTEXT) JA-SA[ JA-DA [ IS NOT EXCLUDED .
+MAZB8,JA-SA,1,1,0,0,0,0,0,physical_boundary,III-LM IA CONTEXT) JA-SA[ JA-DA [ IS NOT EXC
+MI2,*401V-AS-RA,1,0,0,0,1,0,0,complex_logogram,*401VAS+ RA {*652}[
+MI2,DU-KA,1,1,0,0,0,0,0,physical_boundary,______________ .2 ] DU-KA[ .3 ][••] *401VAS+
+MI6+1,SI-SE,1,0,0,0,1,0,0,complex_logogram,SI+SE {*529}
+NEZA1,I-DA,1,1,0,0,0,0,0,physical_boundary,ZA 1 (GODART 1989) ]I-DA [ PALAIKASTRO COMME
+PE1,E-KA,1,1,0,0,0,0,0,physical_boundary,PA {*574} 26 J .3-4 E-KA[ VIR 72 .4-5 GRA+PA
+PE1,GRA-PA,2,0,0,0,2,0,0,complex_logogram,GRA+PA {*574}
+PE2,*305-MI,1,1,0,0,0,0,0,physical_boundary,.2 3 B .2 RU-PI[ ]-*305-MI 1 F .3 A-*325-ZA E
+PE2,RU-PI,1,1,0,0,0,0,0,physical_boundary,] VEST. [ .2 3 B .2 RU-PI[ ]-*305-MI 1 F .3 A
+PEZB,A-NU,1,1,0,0,0,0,0,physical_boundary,PE ZB (HM) (SHERD) ]A-NU[ COMMENTARY © JOHN
+PEZC4,A-JA,1,1,0,0,0,0,0,physical_boundary,E (LM IB CONTEXT) ] A-JA[ OR ]JA-SI [ ? COMM
+PEZC4,JA-SI,1,1,0,0,0,0,0,physical_boundary,ONTEXT) ] A-JA[ OR ]JA-SI [ ? COMMENTARY © JO
+PEZG6,I-NA,1,1,0,0,0,0,0,physical_boundary,"M CULT ACTIVITIES."" I-NA-[•]-TE ____________"
+PH(?)31,CAPM-KU,2,0,0,0,2,0,0,complex_logogram,CAPM+KU {*513}
+PH(?)31,DU-RI,1,1,0,0,0,0,0,physical_boundary,B.1 OVISF 1 [ B.2 ]-DU-RI CAPM 1 B.2 TU-[ B.3
+PH(?)31,PA-TA-DA,1,1,0,0,0,0,0,physical_boundary,U SUS+SI+RE 1 A.3-4 PA-TA-DA[ ] 1 A.4 KU-RO CAPM
+PH(?)31,SUS-SI,1,0,0,0,1,0,0,complex_logogram,SUS+SI[
+PH(?)31,SUS-SI-RE,1,0,0,0,1,0,0,complex_logogram,SUS+SI+RE
+PH1,DI-RA-DI-NA,1,1,0,0,0,0,0,physical_boundary,UMBER FRACTION A.1 ]DI-RA-DI-NA *316 [•] L2 [ A.2 ]
+PH14,A-MI,1,1,0,0,0,0,0,physical_boundary,", READ RETROGRADE]) A-MI-[ A (REVERSE? [READ"
+PH14,JA-*304,1,1,0,0,0,0,0,physical_boundary,+ COMMODITY FIC]) ]JA-*304 FIC
+PH15,MA-TE-RE,1,1,0,0,0,0,0,physical_boundary,CTION A (OBVERSE?) ]MA-TE-RE *339 11 [ B (REVERS
+PH16,*358-NI,1,1,0,0,0,0,0,physical_boundary,______________ A.2 ]*358-NI[ B.1 ]-JA-SA[ _____
+PH16,JA-SA,1,1,0,0,0,0,0,physical_boundary,A.2 ]*358-NI[ B.1 ]-JA-SA[ __________________
+PH16,TI-NA,1,1,0,0,0,0,0,physical_boundary,MBER FRACTION A.1 ] TI-NA-[ _________________
+PH18,WI-JA,1,1,0,0,0,0,0,physical_boundary,UMBER FRACTION A.1 ]WI-JA[ INFRA MUTILA B.1.
+PH19,PI-O,1,1,0,0,0,0,0,physical_boundary,NUMBER FRACTION A.1 PI-O [ INFRA MUTILA
+PH28,A-PA,1,1,0,0,0,0,0,physical_boundary,SUPRA MUTILA A.1 ] A-PA 3-[ ] • A.2 JA-KI-P
+PH28,A-RI-JA,1,1,0,0,0,0,0,physical_boundary,A-KI-PA 3 [ ] • A.3 A-RI-JA[ SUPRA MUTILA B.1 ]
+PH3,MA-A,1,0,0,0,1,0,0,complex_logogram,] MA +A {*557}
+PH3,MA-MA,1,0,0,0,1,0,0,complex_logogram,MA +MA {*563}
+PH3,MA-RU,1,0,0,0,1,0,0,complex_logogram,] MA +RU {*558}
+PH3,MI-JA,1,0,0,0,1,0,0,complex_logogram,MI + JA {*548}
+PH30,MA-RE-RI-MI-DE,1,1,0,0,0,0,0,physical_boundary,ILA .1 ]-TI E [ .2 ]MA-RE-RI-MI-DE [
+PH7,DA-RA,1,1,0,0,0,0,0,physical_boundary,B.1 ] TA 1 L [ B.2 ]DA-RA L [ B.3 ] VINC L E
+PH7,DI-PA-JA,1,1,0,0,0,0,0,physical_boundary,N SUPRA MUTILA A.1 ]DI-PA-JA[ A.2 ]U-DI-RI-KI[ A
+PH7,JA-RU-MA-NE,1,1,0,0,0,0,0,physical_boundary,2 ]U-DI-RI-KI[ A.3 ]JA-RU-MA-NE[ A.4 ]JA-SI-DA-RA [
+PH7,JA-SI-DA-RA,1,1,0,0,0,0,0,physical_boundary,]JA-RU-MA-NE[ A.4 ]JA-SI-DA-RA [ B.1 ] TA 1 L [ B.
+PH7,U-DI-RI-KI,1,1,0,0,0,0,0,physical_boundary,A.1 ]DI-PA-JA[ A.2 ]U-DI-RI-KI[ A.3 ]JA-RU-MA-NE[
+PH8,*417V-AS-L2,1,0,0,0,1,0,0,complex_logogram,]*417VAS+L2 {*663}
+PH8,*418V-AS-L2,1,0,0,0,1,0,0,complex_logogram,*418VAS+L2 {*664}
+PK1,I-IS,1,0,1,0,0,0,0,editorial_continuation,.3-4:-I-IS CLEAR AND-NA-HAS ITS TOP HORIZONTAL STROKE JUST UNDER THE TA2 OF THE PRECEDING LINE
+PK1,NE-TI,1,1,0,0,0,0,0,physical_boundary,NT NUMBER .1 SI-[•]-NE-TI 1 .1 KA-QA 2-------
+PKZA10,SI-RU,1,1,0,0,0,0,0,physical_boundary,-PI-NA-MI-NA • SI-[ SI-RU [ POSSIBLE. COMMENT
+PKZA11,A-DI-KI-TE-TE,1,1,0,0,0,0,0,physical_boundary,A-TA-I-*301-WA-E • A-DI-KI-TE-TE-[• B: •]-RE • PI-TE
+PKZA11,I-PI-NA-MI-NA,1,1,0,0,0,0,0,physical_boundary,NA-RU-KA-NA-TI • D: I-PI-NA-MI-NA [ ] SI-RU-[•] • I-N
+PKZA11,SI-RU,1,1,0,0,0,0,0,physical_boundary,: I-PI-NA-MI-NA [ ] SI-RU-[•] • I-NA-JA-PA-QA
+PKZA12,A-DI-KI-TE,1,1,0,0,0,0,0,physical_boundary,A-TA-I-*301-WA-JA • A-DI-KI-TE-[ A2:-QA B: 2? 3? ]
+PKZA12,A-NE,1,1,0,0,0,0,0,physical_boundary,POSSIBLE. C: ]A-[ ] A-NE • U-NA-RU-KA-NA-JA-
+PKZA12,A-PA-DU-PA,1,1,0,0,0,0,0,physical_boundary,KA[ 1? ]JA-SI • D1: A-PA-DU-PA-[ 3? ]JA[ 2? ]JA-D2
+PKZA12,JA-D2,1,1,0,0,0,0,0,physical_boundary,DU-PA-[ 3? ]JA[ 2? ]JA-D2:-PA-B: ]SI-RU [ POS
+PKZA12,JA-PA-QA,1,1,0,0,0,0,0,physical_boundary,-D2-A2: LAST WORD: ]JA-PA-QA IS READ JA AT END O
+PKZA12,JA-SI,1,1,0,0,0,0,0,physical_boundary,E • U-NA-RU-KA[ 1? ]JA-SI • D1: A-PA-DU-PA-[
+PKZA12,RA-ME,1,1,0,0,0,0,0,physical_boundary,2? 3? ]SI-[ 4? 5? ]RA-ME[ C: ]A-[ 2? ]-NE •
+PKZA12,SI-RU,1,1,0,0,0,0,0,physical_boundary,[ 2? ]JA-D2:-PA-B: ]SI-RU [ POSSIBLE. C: ]A-[
+PKZA12,U-NA-RU-KA,1,1,0,0,0,0,0,physical_boundary,[ C: ]A-[ 2? ]-NE • U-NA-RU-KA[ 1? ]JA-SI • D1: A-
+PKZA14,JA-SA-SA,1,1,0,0,0,0,0,physical_boundary,) A: ]-TU-ME-B:-I • JA-SA-SA-[ A-B: ]TU-ME-I COM
+PKZA14,TU-ME,1,0,1,0,0,0,0,editorial_continuation,A: ]-TU-ME-
+PKZA14,TU-ME-B,1,1,0,0,0,0,0,physical_boundary,NE (PETSOPHAS) A: ]-TU-ME-B:-I • JA-SA-SA-[ A-B
+PKZA14,TU-ME-I,1,1,0,0,0,0,0,physical_boundary,• JA-SA-SA-[ A-B: ]TU-ME-I COMMENTARY © JOHN Y
+PKZA16,RE-JA,2,2,1,0,0,0,0,editorial_continuation|physical_boundary,]-TO-SA • PU 2-.B:-RE-JA [ ] VEST. [ THE TWO || HER: ]-TO-SA • PU 2-RE-JA [; CF. ]PU 2-RE-JA || .B:-RE-JA [ ] VEST. [
+PKZA16,TO-SA,2,2,0,0,0,0,0,physical_boundary,E (PETSOPHAS) .A: ]-TO-SA • PU 2-.B:-RE-JA [ || BLY RUN TOGETHER: ]-TO-SA • PU 2-RE-JA [; CF.
+PKZA17,I-DA,1,1,0,0,0,0,0,physical_boundary,ENTINE (PETSOPHAS) ]I-DA • [•][ COMMENTARY ©
+PKZA18,JA-JA,1,1,0,0,0,0,0,physical_boundary,20). ]-TE • I-DA • JA-JA-[ COMMENTARY © JOHN
+PKZA20,U-NA-KA,1,1,0,0,0,0,0,physical_boundary,"ZA 2, PK ZA 18). ] U-NA-KA-[ COMMENTARY © JOHN"
+PKZA28,PU2-RE,1,0,0,0,0,0,1,authoritative_source_boundary,2022 EDITIO PRINCEPS PRESERVES AN INSECURE LEFT BOUNDARY: ]-PU2-RE
+PKZA4,A-SA-SA-RA,1,1,0,0,0,0,0,physical_boundary,(HOUSE EPSILON 33) A-SA-SA-RA[ COMMENTARY © JOHN
+PKZA8,I-PI,1,1,0,0,0,0,0,physical_boundary,U-NA-KA-NA-SI[ ] C: I-PI-[ [GORILA IV 24-27]
+PKZA8,JA-SA,1,1,0,0,0,0,0,physical_boundary,U 2-RE • TU-ME-I B: JA-SA-[ ] U-NA-KA-NA-SI[
+PKZA8,U-NA-KA-NA-SI,1,1,0,0,0,0,0,physical_boundary,U-ME-I B: JA-SA-[ ] U-NA-KA-NA-SI[ ] C: I-PI-[ [GORIL
+PKZA9,JA-U-PA-MA-I-DA,2,2,0,0,0,0,0,physical_boundary,.1: ] VEST. [ .2: ] JA-U-PA-MA-I-DA-[•]-DI[ .2 PERHAPS: || ]-DI[ .2 PERHAPS: ] JA-U-PA-MA-I-DA-* 301-DI[. COMMENTA
+PKZB?,A-DI-PA,1,1,0,0,0,0,0,physical_boundary,(=LAT.SUP. TO A): ] A-DI-PA 3 ; ARKH 1A.5: A-PA
+PKZB?,A-PA,2,2,0,0,0,0,0,physical_boundary,-DI[ CF. PH 28A.1: ]A-PA 3 [; KN 22B(=LAT.SU || I-PA 3 ; ARKH 1A.5: A-PA-[ PK ZB ? (HOOD 196
+PKZB19,SE-SI-TA,1,1,0,0,0,0,0,physical_boundary,"BSA 82, 1987, 153) SE-SI-TA [ THE LAST SIGN COU"
+PKZC13,NU-RI-JA,1,1,0,0,0,0,0,physical_boundary,A STYLISTIC DATE) ]-NU-RI-JA[ COMMENTARY © JOHN
+PROBLEM:SUS+SI[(B.4)ANDSUS+SI+RE(A.3),A-MI,1,1,0,0,0,0,0,physical_boundary,A 10A.3; CF. PH 14B A-MI-[
+PROBLEM:SUS+SI[(B.4)ANDSUS+SI+RE(A.3),CAPM-KU,2,0,0,0,2,0,0,complex_logogram,CAPM+KU {*513}
+PROBLEM:SUS+SI[(B.4)ANDSUS+SI+RE(A.3),DU-RI,1,1,0,0,0,0,0,physical_boundary,RE: HT ZB 160 B.1 ]-DU-RI CF. ]-DU-RI-TE: HT
+PROBLEM:SUS+SI[(B.4)ANDSUS+SI+RE(A.3),DU-RI-TE,1,1,0,0,0,0,0,physical_boundary,0 B.1 ]-DU-RI CF. ]-DU-RI-TE: HT 4.2 B.2 TU-[ CF
+PROBLEM:SUS+SI[(B.4)ANDSUS+SI+RE(A.3),KU-PA3,1,1,0,0,0,0,0,physical_boundary,HT 122A.6 & 7; CF. KU-PA3-[: HT 101.4; KU-PA3
+PROBLEM:SUS+SI[(B.4)ANDSUS+SI+RE(A.3),OVISM-SI-AU-RE,1,0,0,0,1,0,0,complex_logogram,OVISM SI+AU+ [ RE
+PROBLEM:SUS+SI[(B.4)ANDSUS+SI+RE(A.3),PA-TA-DA,1,1,0,0,0,0,0,physical_boundary,.1-2 & HT 119.3 A.4 PA-TA-DA[-DU-PU2-RE PA-TA-DA
+PROBLEM:SUS+SI[(B.4)ANDSUS+SI+RE(A.3),SI-AU-RE,1,0,0,0,1,0,0,complex_logogram,SI+AU+RE
+PRZA1,TA-NA-SU-TE,1,1,0,0,0,0,0,physical_boundary,B-LM IA CONTEXT) A: TA-NA-SU-TE [ ]-KE B: SE-TO-I-J
+PSIZA1,*188-A-I,1,1,0,0,0,0,0,physical_boundary,"WHICH 2 ARE LIKELY:*188-A-I [, *188-WA-I . *188"
+PSIZA1,*188-DU-SE,1,1,0,0,0,0,0,physical_boundary,RTH (LM IB CONTEXT) *188-DU-SE [ FLOYD SUGGESTS SE
+PSIZA1,SE-PU-*188,1,1,0,0,0,0,0,physical_boundary,THISWORD COULD BE ] SE-PU-*188; CF. SU-PU 2-*188 (
+PSZA2,JA-TI,1,1,0,0,0,0,0,physical_boundary,-I-*301-TI • [ 6? ]-JA-TI •JA-SA-SA-RA-ME •
+PSZA2,RE-I-KE,1,1,0,0,0,0,0,physical_boundary,GMENTS B+C): 24?? ]-RE-I-KE .2 (BEGINNING ON TH
+PYR1,*316-RO-VINA,1,0,0,0,1,0,0,complex_logogram,*316+RO {*639} VINA
+PYRWC4,I-SI,1,1,0,0,0,0,0,physical_boundary,S NO. A.1-2: TI-[•]-I-SI B: LOGOGRAM UNKNOWN
+PYRZB5,TE-JA,1,1,0,0,0,0,0,physical_boundary,GLYPHIC: 025-056) ] TE-JA[ THOUGH THE SHERD I
+SAMWA1,JA-SA,1,0,0,0,0,1,0,non_linear_a_script,H: JA-SA <-SA-RA >
+SAMWA1,SA-RA,1,0,0,0,0,1,0,non_linear_a_script,H: JA-SA <-SA-RA >
+SIZG1,DA-*118,1,1,0,0,0,0,0,physical_boundary,"T IS 3405 GR. A-[•]-DA-*118 THE SECOND SIGN, AC"
+SKOZC1,A-NA-TI-*301-WA-JA,1,1,0,0,0,0,0,physical_boundary,"8 (LIBATION TABLE, ]A-NA-TI-*301-WA-JA[), AND (EVEN BETTER"
+SKOZC1,KU-PA,1,1,0,0,0,0,0,physical_boundary,"A 2.1 (STONE JAR, ]-KU-PA 3-NA-TU-NA-TE-[) WH"
+SKOZC1,NA-TU-NA-TE,1,1,0,0,0,0,0,physical_boundary,"TONE JAR, ]-KU-PA 3-NA-TU-NA-TE-[) WHERE THE KU-PA"
+SKZB1,A-MA-RA-NE,1,1,0,0,0,0,0,physical_boundary,PITHOS RIM FRAGMENT A-MA-RA-NE[ SITIA COMMENTARY ©
+SYZA1,A-TA-I-*301-WA-JA,1,1,0,0,0,0,0,physical_boundary,", D. CA. 14.5 CM) ] A-TA-I-*301-WA-JA • I-DA-MI • JA-•-["
+SYZA11,RO-QA,1,1,0,0,0,0,0,physical_boundary,ST BELOW THE RIM. • RO-QA [ COMMENTARY © JOHN
+SYZA3,SE-KA-NA-SI,1,1,0,0,0,0,0,physical_boundary,----CA. 8----]•-•-• SE-KA-NA-SI [•] TE [----CA. 10-
+SYZA3,SI-RU-TE,1,1,0,0,0,0,0,physical_boundary,TE [----CA. 10----]SI-RU-TE SE AND THE FOLLOWIN
+SYZA5,MI-JA,1,1,0,0,0,0,0,physical_boundary,TO THE INTERIOR. ]-MI-JA • JA-WA-PA 3-[ ABOU
+SYZA8,I-*301-WA-JA,1,1,0,0,0,0,0,physical_boundary,THE INTERIOR. A-TA-]I-*301-WA-JA • JA-JA[-•-]•-•[ CO
+SYZA8,JA-JA,1,1,0,0,0,0,0,physical_boundary,-TA-]I-*301-WA-JA • JA-JA[-•-]•-•[ COMMENTARY
+SYZB7,RA-KI,1,0,1,0,0,0,0,editorial_continuation,•-RA-KI-•-NI-SE
+THETABLET5,TE-ME-DA-I,1,1,0,0,0,0,0,physical_boundary,BER FRACTION A.1 ]• TE-ME-DA-I[
+THETABLET6,TELA-SE,1,0,0,0,1,0,0,complex_logogram,]TELA+SE
+THEZB1,SI-NI,1,1,0,0,0,0,0,physical_boundary,PRIOR TO FIRING) ] SI-NI-[ SI-NI-KU [ POSSIB
+THEZB1,SI-NI-KU,1,1,0,0,0,0,0,physical_boundary,O FIRING) ] SI-NI-[ SI-NI-KU [ POSSIBLE. COMMENT
+THEZB3,A-NE,1,1,0,0,0,0,0,physical_boundary,DE PRIOR TO FIRING) A-NE[[ ]] COMMENTARY © J
+THEZB4,A-RE,1,1,0,0,0,0,0,physical_boundary,ADE AFTER FIRING) ] A-RE [ A-SA [ POSSIBLE.
+THEZB4,A-SA,1,1,0,0,0,0,0,physical_boundary,ER FIRING) ] A-RE [ A-SA [ POSSIBLE. COMMENT
+TLZA1,NA-MA,1,1,0,0,0,0,0,physical_boundary,-KA-NA-[SI C: I-PI]-NA-MA SI-RU-[TE OWENS 199
+TLZA1,SI-RU,1,1,0,0,0,0,0,physical_boundary,-[SI C: I-PI]-NA-MA SI-RU-[TE OWENS 1994: 26
+TLZA1,U-NA-KA-NA,1,1,0,0,0,0,0,physical_boundary,B: JA-SA-SA-RA-ME • U-NA-KA-NA-[SI C: I-PI]-NA-MA
+TRAZB1,RE-JA,1,1,0,0,0,0,0,physical_boundary,"LA IV: 107), SHERD ]RE-JA-[ ]RE-JA-MA [ POSSI"
+TRAZB1,RE-JA-MA,1,1,0,0,0,0,0,physical_boundary,"7), SHERD ]RE-JA-[ ]RE-JA-MA [ POSSIBLE. TROULLO"
+TRYZB1,MI-NE,1,1,0,0,0,0,0,physical_boundary,RNER ] NE-MI [ OR ] MI-NE [ TYLISSOS COMMENTA
+TRYZB1,NE-MI,1,1,0,0,0,0,0,physical_boundary,"3), LARNAX CORNER ] NE-MI [ OR ] MI-NE [ TYLI"
+TY2,*309A-DA-PU,1,0,0,0,1,0,0,complex_logogram,*309A+DA+PU[ ]
+TY2,*309A-JU-KI,1,0,0,0,1,0,0,complex_logogram,*309A+ JU-KI
+TY2,*309A-RI-JU,1,0,0,0,1,0,0,complex_logogram,*309A+ RI-JU [
+TY2,*309A-RI-WA-JU,1,0,0,0,1,0,0,complex_logogram,*309A+RI+[ ]-WA-JU
+TY2,*309B-PU-PI,1,0,0,0,1,0,0,complex_logogram,*309B+[ ]-34-PU-PI
+TY2,*309B-RI-JU,1,0,0,0,1,0,0,complex_logogram,[ ]*309B+RI-JU
+TY2,*309C-DA,1,0,0,0,1,0,0,complex_logogram,*309C+DA-[•]-JU
+TY2,*309C-RU-KA,1,0,0,0,1,0,0,complex_logogram,*309C+[ ]-RU-KA
+TY2,KI-PU,1,0,0,0,1,0,0,complex_logogram,*309B+[•]+KI+ PU
+TY2,RI-JU,1,1,0,0,0,0,0,physical_boundary,JU-KI 100 .3 *309A+ RI-JU [ .3 *309A+[ ] [ ]
+TY2,RU-KA,1,1,0,0,0,0,0,physical_boundary,17 [ ] .5 *309C+[ ]-RU-KA 30 .5 *309A+RI+[ ]-
+TY2,WA-JU,1,1,0,0,0,0,0,physical_boundary,30 .5 *309A+RI+[ ]-WA-JU 160 .6 [ ]*309B+RI-
+TY3,A-DU,1,1,0,0,0,0,0,physical_boundary,_______________ A.3 A-DU-[••] OLE+KI {*618}
+TY3,A-KU-TU-*361,1,1,0,0,0,0,0,physical_boundary,_______________ A.7 A-KU-TU-*361[ A.7 ]KI+[ ] 5 A.7
+TY3,KO-A-DU-WA,1,1,0,0,0,0,0,physical_boundary,MI {*622} 2 [ A.6 ]KO-A-DU-WA OLE+[ ] 7 D _______
+TY3,NE-KI,1,0,0,0,1,0,0,complex_logogram,NE KI+[ ]
+TY3,OLE-KI,3,0,0,0,3,0,0,complex_logogram,OLE+KI {*618}
+TY3,OLE-KI-ME,1,0,0,0,1,0,0,complex_logogram,OLE+KI+ME {*620}
+TY3,OLE-KI-U,1,0,0,0,1,0,0,complex_logogram,OLE+KI+U {*619}
+TY3,OLE-MI,4,0,0,0,4,0,0,complex_logogram,OLE+MI[ {*622} || OLE+ MI {*622} || OLE+MI {*622}
+TY3,OLE-NE,1,0,0,0,1,0,0,complex_logogram,]OLE+ NE {*612}
+TY3,OLE-OVISF,2,0,0,0,2,0,0,complex_logogram,OLE+OVISF {*611}
+TY3,OLE-TU,1,0,0,0,1,0,0,complex_logogram,OLE+TU {*621}
+TY3,OLE-U,3,0,0,0,3,0,0,complex_logogram,OLE+U {*610} || OLE+ U
+TY3,PA-OLE-MI,1,0,0,0,1,0,0,complex_logogram,PA OLE +MI[
+TY3,ZA-*321,1,1,0,0,0,0,0,physical_boundary,"ER ""FRACTION"" A.1 ] ZA-*321 OLE+KI {*618} 15 E"
+TYPESOFSUPPORTS,I-KU-PA,2,2,0,0,0,0,0,physical_boundary,-MA [ • • • • • • ] I-KU-PA 3-NA-TU-NA-TE [ .2: || : GORILA PERHAPS: ] I-KU-PA 3-NA-TU-NA-TE[. CF.
+TYPESOFSUPPORTS,I-NA-JA-RE-TA,2,2,0,0,0,0,0,physical_boundary,.2: ]PI-MI-NA-TE • I-NA-JA-RE-TA [ • • • ]-QA • .1: || 2. I-]PI-MI-NA-TE • I-NA-JA-RE-TA [ ]QA • COMMENTARY
+TYPESOFSUPPORTS,I-PI-NA-MA,1,1,0,0,0,0,0,physical_boundary,LM I]) .1: ]NA-SI • I-PI-NA-MA [ • • • • • • ] I-K
+TYPESOFSUPPORTS,NA-SI,2,2,0,0,0,0,0,physical_boundary,[MM III-LM I]) .1: ]NA-SI • I-PI-NA-MA [ • • || A-SA-RA U-NA-RU-KA-]NA-SI • : 2. I-]PI-MI-NA-
+TYPESOFSUPPORTS,NA-TU-NA-TE,3,3,0,0,0,0,0,physical_boundary,• • • • ] I-KU-PA 3-NA-TU-NA-TE [ .2: ]PI-MI-NA-TE || ERHAPS: ] I-KU-PA 3-NA-TU-NA-TE[. CF. KU-PA3-NA-TU || PLACENAME]• KU-PA 3-NA-TU-NA-TE[ JA-SA-SA-RA U-NA-R
+TYPESOFSUPPORTS,PI-MI,1,1,0,0,0,0,0,physical_boundary,-2; HT 119.3). .2: ]PI-MI OVER [[ ]]. JGY: IF
+TYPESOFSUPPORTS,PI-MI-NA-TE,2,2,0,0,0,0,0,physical_boundary,-NA-TU-NA-TE [ .2: ]PI-MI-NA-TE • I-NA-JA-RE-TA [ • || KA-]NA-SI • : 2. I-]PI-MI-NA-TE • I-NA-JA-RE-TA [ ]
+TYZB4,KI-TA-A,1,1,0,0,0,0,0,physical_boundary,MAGAZINE 9) A-* 301-KI-TA-A [[ ]] BETWEEN A AND
+TYZG1,MA-RU-A,1,1,0,0,0,0,0,physical_boundary,"NG, LM I CONTEXT) ] MA-RU-A VRYSINAS COMMENTARY"
+VIN1+9,SA-VINA,1,0,0,0,1,0,0,complex_logogram,SA VINA {*522}
+VRYZA1,I-PI-NA-MA,1,1,0,0,0,0,0,physical_boundary,UPSIDE DOWN). A: ] I-PI-NA-MA B: SI-RU-TE • [ ZAK
+WC2059+2091,*86-*188,1,0,0,0,1,0,0,complex_logogram,*86+*188 {*566}
+ZA1,E-MI,1,1,0,0,0,0,0,physical_boundary,NT INFRA MUTILA B.1 E-MI [ B.1-2 ] RO GRA 4
+ZA11,DI-DI-KO-RA-ME,1,1,0,0,0,0,0,physical_boundary,NUMBER FRACTION A.1 DI-DI-KO-RA-ME[-]TA 2 • I+[?] {*51
+ZA11,E-KU-RU,1,1,0,0,0,0,0,physical_boundary,-SI VINA J [ A.3-4 ]E-KU-RU 2 E A.4 JU L L2 A.4
+ZA11,GRA-PA,4,0,0,0,4,0,0,complex_logogram,GRA+PA[ {*574} || GRA + PA {*574} || GRA+PA {*574}
+ZA11,I-DE,1,1,0,0,0,0,0,physical_boundary,2A I OLIV 1 [ B.2B ]I-DE[ B.3 ]RA 2 B.3 KU-P
+ZA11,PI-*310-A,1,1,0,0,0,0,0,physical_boundary,+ PA {*574} 1 [ A.5 PI-*310-A[ A.6 ]OLIV 2 INFRA
+ZA11,QE-GRA-PA,1,0,0,0,1,0,0,complex_logogram,QE+GRA+PA {QE+*574}
+ZA11,RA-MA-SI,1,1,0,0,0,0,0,physical_boundary,+PA[ {*574} A.2-3 ]-RA-MA-SI VINA J [ A.3-4 ]E-K
+ZA13,SU-PA,1,1,0,0,0,0,0,physical_boundary,N SUPRA MUTILA .1 ]-SU-PA-[ .2 ] VEST. [ .3-5
+ZA14,JA-WI,1,1,0,0,0,0,0,physical_boundary,[ .4 PA-NU-QE 2 .4 JA-WI[ .5 ] VEST. [ .6 VA
+ZA15,ME-VINA,1,0,0,0,1,0,0,complex_logogram,ME VINA {*507}
+ZA15,SA-VINA,1,0,0,0,1,0,0,complex_logogram,SA VINA {*522}
+ZA15,VINA-RA,1,0,0,0,1,0,0,complex_logogram,VINA+RA {*594}
+ZA18,DA-RE-KU,1,1,0,0,0,0,0,physical_boundary,"MBER ""FRACTION"" A.1 DA-RE-KU[ ] VEST. • A.1 KU-*"
+ZA18,GRA-PA,1,0,0,0,1,0,0,complex_logogram,GRA+PA {*574}
+ZA18,OLE-KI,1,0,0,0,1,0,0,complex_logogram,OLE+KI {*618}
+ZA19,RA-TE,1,1,0,0,0,0,0,physical_boundary,CTION SUPRA MUTILA ]RA-TE-[ INFRA MUTILA
+ZA20,DU-RE-ZA-SE,1,1,0,0,0,0,0,physical_boundary,SUPRA MUTILA .1-2 ]DU-RE-ZA-SE-[ ]MI[ .2 ]• 4 .2 S
+ZA21,I-DA,1,1,0,0,0,0,0,physical_boundary,]* 118-MI[ ] 2 B.1 I-DA[ B.2 ]KI[ B.3 ] 2 B
+ZA21,PI-MU,1,1,0,0,0,0,0,physical_boundary,CTION A.1 ]ME[ A.2 ]PI-MU 40 [ A.3 ] VEST. [
+ZA21,SA-RI,1,1,0,0,0,0,0,physical_boundary,.2 ]KI[ B.3 ] 2 B.3 SA-RI [ B.4 ] VEST. [ B.5
+ZA21,TA-KE,1,1,0,0,0,0,0,physical_boundary,]MA[ A.4 ] TE 2 A.4 TA-KE [ A.5 ] VEST. [ A.6
+ZA21,TA-MA-PI,1,1,0,0,0,0,0,physical_boundary,[ A.6 ]PA+[?] 5 A.6 TA-MA-PI [ A.7 ] 3 A.7 A [ A
+ZA22,DU-JU,1,1,0,0,0,0,0,physical_boundary,RA-[•] OVISF 1 [ .4 DU-JU [ 7 [ .5 OVISF 100
+ZA23,MI-RE,1,1,0,0,0,0,0,physical_boundary,___ .1 ]TE-TE-[ .2 ]MI-RE[ .3 VACAT
+ZA23,TE-TE,1,1,0,0,0,0,0,physical_boundary,_______________ .1 ]TE-TE-[ .2 ]MI-RE[ .3 VAC
+ZA26,DI-DI,1,1,0,0,0,0,0,physical_boundary,RACTION A.1 SI-TE • DI-DI-[ A.2 ]OVISF 13 A.2
+ZA26,JA-KI,1,1,0,0,0,0,0,physical_boundary,[ A.2 ]OVISF 13 A.2 JA-KI[ A.3 ] KI [ INFRA M
+ZA27,DI-KI,1,1,0,0,0,0,0,physical_boundary,LA .1 ] VEST. [ .2 ]DI-KI 2 .2 O-MI[
+ZA27,O-MI,1,1,0,0,0,0,0,physical_boundary,T. [ .2 ]DI-KI 2 .2 O-MI[
+ZA28,GRA-PA,1,0,0,0,1,0,0,complex_logogram,] GRA+PA {*574}
+ZA4,JA-TO-JA,1,1,0,0,0,0,0,physical_boundary,-[•]-SE [ ] 5 A.2-3 JA-TO-JA[ ] 3 [ A.3 A-TI-RU
+ZA4,TU-ME-SE,1,1,0,0,0,0,0,physical_boundary,4 JA-PA 1 [ A.4 [•]-TU-ME-SE 18 A.5 QE-SI-ZU-E 4
+ZA5,SA-MI-DA-E,1,1,0,0,0,0,0,physical_boundary,O-TA-NI-ZA-SE 6 A.3 SA-MI-DA-E[ A.4 ] VEST. [ A.5-
+ZA5,VINA-SU,1,0,0,0,1,0,0,complex_logogram,VINA+SU {*593}
+ZA6,*34-JU-TE-MI,1,1,0,0,0,0,0,physical_boundary,WA-NA *171 19 A.1-2 *34-JU-TE-MI[ A.2 ] 1 80 A.3 I-S
+ZA6,GRA-PA,3,0,0,0,3,0,0,complex_logogram,GRA+PA {*574}[ || GRA+PA {*574}
+ZA6,I-MA,1,1,0,0,0,0,0,physical_boundary,__ B.4 PA-ZA-[ B.5 ]I-MA[ B.6-8 VACANT
+ZA6,I-SE,2,2,0,0,0,0,0,physical_boundary,-MI[ A.2 ] 1 80 A.3 I-SE [ A.3-4 ]OLIV 15 A. || 4 [ A.9 ] 20 A.9-10 I-SE-[• B.1 I-KU-JU-TI-I
+ZA6,PA-ZA,1,1,0,0,0,0,0,physical_boundary,_______________ B.4 PA-ZA-[ B.5 ]I-MA[ B.6-8
+ZA6,VINA-KA,1,0,0,0,1,0,0,complex_logogram,VINA +KA {*596}
+ZA6,VINA-RA,1,0,0,0,1,0,0,complex_logogram,VINA+RA {*594}
+ZA7,A-MA,1,1,0,0,0,0,0,physical_boundary,. [ A.8. VACANT B.1 A-MA[ B.2-7 DESUNT B.8 ]
+ZA7,A-RE-TU-MI,1,1,0,0,0,0,0,physical_boundary,1-2 A-RA-TU 4 A.2-3 A-RE-TU-MI[ A.4-6 DESUNT A.7.
+ZA9,A-TA-NA,1,1,0,0,0,0,0,physical_boundary,S +SI {*512} 4 .4-5 A-TA-NA-[•] OVIS+SI {*512}
+ZA9,MA-JU,1,1,0,0,0,0,0,physical_boundary,+SI {*512} 2 .5 [•]-MA-JU OVISF 2 .6 WI-RA-RE
+ZA9,NU-TI,1,1,0,0,0,0,0,physical_boundary,UMBER FRACTION .1 ]-NU-TI • .1 ZA-[ .2 ]-RA O
+ZA9,OVIS-SI,3,0,0,0,3,0,0,complex_logogram,OVIS+SI {*512} || OVIS +SI {*512}
+ZA9,RO-SI-RA,1,1,0,0,0,0,0,physical_boundary,.2 ] VEST. [ .3-4 ] RO-SI-RA[ ] OVIS +SI {*512}
+ZAWC2,A-DU-KO,1,1,0,0,0,0,0,physical_boundary,"NO. .A1-2: A-TI-KA A-DU-KO-[[MI]] 2 II 7, NO."
+ZAZB34,PU2-RE-JA,1,0,0,0,0,0,1,authoritative_source_boundary,AUTHORITATIVE READING PRESERVES AN INSECURE LEFT BOUNDARY: ]PU2-RE-JA
+ZAZG35,ME-MI-JA-RU,1,1,0,0,0,0,0,physical_boundary,NTEXT (ANTE QUEM) ] ME-MI-JA-RU • SE-WA-AU-DE KOPAK
+ZD157+156,WI-JA-SU-MA-TI-TI-*319,1,1,0,0,0,0,0,physical_boundary,134-135+132-133) • WI-JA-SU-MA-TI-TI-*319 [ ] NE 1 NE 1 J *31
