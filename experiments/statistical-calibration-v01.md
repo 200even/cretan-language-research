@@ -16,9 +16,11 @@ These counts are structural candidate counts, not translations and not probabili
 
 The input is frozen v0.5 `secure-word-occurrences.csv`, with the two explicit post-v0.5 normalized-form source failures in `data/v06-form-exclusions.csv` removed before calibration. v0.3-v0.5 rankings and audits are not rewritten.
 
+To match the frozen v0.4/v0.5 exact-pair generator, candidate extended forms must contain **at least three signs**, leaving a residual/base of at least two signs.
+
 ## Null N1: length-stratified type-level edge permutation
 
-For each unique retained word type of length >= 2:
+For each unique retained word type of length >= 3:
 
 - prefix test: hold the residual string after the first sign fixed and permute first signs among word types of the same word length;
 - suffix test: hold the residual string before the final sign fixed and permute final signs among word types of the same word length.
@@ -27,7 +29,7 @@ The observed retained lexicon is held fixed as the base-form lexicon. After each
 
 This preserves:
 
-- the number and lengths of retained word types;
+- the number and lengths of retained candidate word types;
 - the set of candidate residual stems;
 - the edge-sign frequency distribution within each word length;
 - the observed base lexicon used to determine exact extensions.
@@ -36,7 +38,7 @@ It destroys the association between a particular residual stem and a particular 
 
 ## Null N2: site-stratified sensitivity model
 
-A second permutation uses unique `(site, word form)` records. Edge signs are permuted within `(site, word length)` strata while residual strings remain fixed. Exact pairs are deduplicated globally after permutation and checked against the same observed retained base lexicon.
+A second permutation uses unique `(site, word form)` records for forms of length >= 3. Edge signs are permuted within `(site, word length)` strata while residual strings remain fixed. Exact pairs are deduplicated globally after permutation and checked against the same observed retained base lexicon.
 
 N2 is a sensitivity analysis intended to preserve coarse geographic/documentary clustering. Sparse strata reduce randomization freedom, so it is reported separately from N1 rather than replacing it.
 
