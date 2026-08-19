@@ -1,0 +1,26 @@
+{
+  "sha256": "9a5e4783146144fc5ac54c5dc2b372b39cc0e0ea40ca15207243f8c539f03dd8",
+  "documents": 802,
+  "token_status_counts": {
+    "CERTAIN": 2296,
+    "UNCLEAR": 201,
+    "LOST": 119
+  },
+  "eligible_word_tokens": 932,
+  "unique_forms": 680,
+  "ranked_signs": 101,
+  "davis_main_grid_present": 49,
+  "davis_main_grid_missing": [
+    "ZU"
+  ],
+  "primary_hits": 2,
+  "primary_prefix_hits": 1,
+  "primary_suffix_hits": 1,
+  "primary_total_hits_p": 0.012797480839213442,
+  "primary_side_pattern_p": 0.005965385303937547,
+  "main_grid_hits": 3,
+  "main_grid_prefix_hits": 1,
+  "main_grid_suffix_hits": 2,
+  "main_grid_total_hits_p": 0.0033468266575636656,
+  "main_grid_side_pattern_p": 0.002333763793043884
+}
