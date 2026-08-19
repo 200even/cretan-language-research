@@ -6,4 +6,4 @@
 - script: `scripts/statistical-calibration-v01.mjs`
 - seed: 20260818
 - iterations: 50000 per side/model
-- generated: 2026-08-19T00:15:04.713Z
+- generated: 2026-08-19T00:16:29.656Z
