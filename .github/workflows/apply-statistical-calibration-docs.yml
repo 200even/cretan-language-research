@@ -1,0 +1,35 @@
+name: apply-statistical-calibration-docs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/apply-statistical-calibration-docs.mjs'
+      - '.github/workflows/apply-statistical-calibration-docs.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Apply documentation migration
+        run: node scripts/apply-statistical-calibration-docs.mjs
+      - name: Commit documentation
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md METHODOLOGY.md
+          if git diff --cached --quiet; then
+            echo 'No documentation changes.'
+          else
+            git commit -m 'Document statistical calibration and independent-replication frontier'
+            git push origin HEAD:main
+          fi
