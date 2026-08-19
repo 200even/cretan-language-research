@@ -1,0 +1,7 @@
+side,sign,full_rank,full_hit,grid_rank,grid_hit,score,exact_extension_pairs
+prefix,A,1,True,1,True,8.80450284053108,10
+prefix,I,5,False,4,False,4.081585044625674,6
+suffix,RE,6,False,4,True,3.6792247147641968,4
+suffix,RO,1,True,1,True,5.803216364972002,4
+suffix,TE,10,False,7,False,3.381832798403309,2
+suffix,TI,8,False,6,False,3.5227167541159825,5
