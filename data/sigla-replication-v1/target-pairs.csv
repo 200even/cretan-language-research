@@ -1,0 +1,27 @@
+side,sign,base,variant,base_documents,variant_documents
+prefix,A,KA-RU,A-KA-RU,HT 75; HT 97a,HT 2; HT 86a; HT 86b
+prefix,A,KI-RO,A-KI-RO,HT 1; HT 117a; HT 123a; HT 123a; HT 123b; HT 15; HT 30; HT 34; HT 37; HT 55a; HT 88; HT 93b; HT 94b,ARKH 4b
+prefix,A,KU-MI-NA,A-KU-MI-NA,HT Wc 3014a,ZA 10a
+prefix,A,MI-TA,A-MI-TA,HT 128a,ZA 10b
+prefix,A,PA-RA-NE,A-PA-RA-NE,HT 115a; HT 115b,HT 96a; HT 96b
+prefix,A,RA-NA-RE,A-RA-NA-RE,HT 47b,HT 1
+prefix,A,RI-JA,A-RI-JA,HT 55b,PH 28a
+prefix,A,SA-RA₂,A-SA-RA₂,HT 100; HT 101; HT 102; HT 114a; HT 121; HT 130; HT 18; HT 28b; HT 30; HT 32; HT 33; HT 34; HT 90; HT 93a; HT 94a; HT 97b; HT 99a,HT 89
+prefix,A,SI-KI-RA,A-SI-KI-RA,HT 8a,KH 20
+prefix,A,TA-NA-TE,A-TA-NA-TE,ZA 10a,ZA 10a
+prefix,I,KI-RA,I-KI-RA,HT 103; ZA 8,HT 25a
+prefix,I,KU-PI,I-KU-PI,ZA 14,KH 18
+prefix,I,KU-TA,I-KU-TA,HT 115b,HT 35
+prefix,I,QA-*118,I-QA-*118,KH 10,HT 131a; HT 44a
+prefix,I,RU-JA,I-RU-JA,KN Wc 26a,HT 7a
+prefix,I,TA-JA,I-TA-JA,HT Zd 156,HT 28a
+suffix,JA,*306-TU,*306-TU-JA,HT 119; HT 122a; HT 9a; HT 9b,HT 115b
+suffix,JA,A-MA,A-MA-JA,HS Zg 1; MA 1b; ZA 7b,KH 14
+suffix,JA,A-RI,A-RI-JA,PH 6; PH 6,PH 28a
+suffix,JA,KU-PA,KU-PA-JA,HT 110a; HT Wa 1020α; KH 29; ZA 11a; ZA 11b,HT 116a
+suffix,JA,PA-SE,PA-SE-JA,HT 18; HT 27b,HT 93a; HT Wc 3001; HT Wc 3002
+suffix,TI,DA-KU-SE-NE,DA-KU-SE-NE-TI,HT 103,HT 104
+suffix,TI,JA-KU,JA-KU-TI,MA 2b,KN 1a
+suffix,TI,RI-RU-MA,RI-RU-MA-TI,HT 118,PH 31b
+suffix,TI,SA-MA,SA-MA-TI,HT 10a; HT 52a; HT 6b; ZA 10b,HT 39
+suffix,TI,TA-NA,TA-NA-TI,HT 8a,HT 10b; HT 49a; HT 7a; HT 98a
