@@ -81,6 +81,24 @@ Second-stage audit: [`results/davis-six-audit-synthesis.md`](results/davis-six-a
 Universe-matched analysis: [`experiments/davis-2026-universe-matched-v02.md`](experiments/davis-2026-universe-matched-v02.md)  
 Universe-matched results: [`results/davis-universe-matched-v0.2/`](results/davis-universe-matched-v0.2/)
 
+### Statistical calibration: internal discovery versus external replication
+
+A preregistered statistical calibration now separates internally discovered exact-pair counts from the independently supplied Davis target set. Two 50,000-permutation nulls preserve candidate residual stems, word lengths, edge-sign frequencies, and, in the sensitivity model, site structure. The results are intentionally conservative:
+
+| structural target | observed pairs | target-specific p range | max-sign-adjusted p range |
+|---|---:|---:|---:|
+| `A-` | 6 | 0.162–0.233 | 0.211–0.259 |
+| `I-` | 4 | 0.092–0.170 | 0.858–0.892 |
+| `-JA` | 5 | **0.058–0.080** | 0.328–0.518 |
+| `-TI` | 3 | 0.146–0.215 | 0.997–0.999 |
+
+Thus none of the four internal structural counts is statistically exceptional after calibrating against the maximum count attained by any sign in the discovery search. This does **not** erase manual morphology evidence: `JA` still has four independent Tier-A/B families after hostile epigraphic audit. It means pair count alone is insufficient to carry that conclusion.
+
+The independently supplied Davis set behaves very differently under a simple uniform external-target-placement null. The frozen primary 116-sign experiment's **3/6** cutoff overlap has exact `p = 0.0002606` for at least three total hits; the post-unblinding 49-sign universe-matched **4/6** sensitivity result has `p = 0.0000972`. The latter remains secondary and does not replace the primary score.
+
+Experiment: [`experiments/statistical-calibration-v01.md`](experiments/statistical-calibration-v01.md)  
+Generated results: [`results/statistical-calibration-v0.1/`](results/statistical-calibration-v0.1/)
+
 ### 3. `A-` and `I-` are strong under damage-aware paradigmatic evidence
 
 v0.3 ranks the Davis prefixes:
@@ -313,24 +331,25 @@ The older frozen v0.1/v0.2 implementation remains at [`scripts/rank-affixes.mjs`
 
 ## Next work
 
-The suffix sweep and first combinatorial grid phase are now complete. No new suffix after `JA` met the registered two-family productivity rule, and three increasingly permissive grid searches did **not** recover a promotable Kober-style paradigm.
+The suffix sweep, three combinatorial grid searches, and the first statistical calibration are complete. The project now has a justified stop rule against further segmentation freedom merely to force a paradigm.
 
-Current grid results:
+Current evidence hierarchy:
 
-- **v0.1 bare-stem matrix:** 7 multi-ending stems, **0** two-stem overlaps. `I-DA` is the strongest local family: `I-DA-MI` Tier A, `I-DA-A` Tier B, `I-DA-DA` Tier C.
-- **v0.2 sibling endings:** 33 sibling families and exactly **1** formal 2×2 rectangle (`TI-TI` / `KU-RU` × `KU` / `MA`), but hostile audit rejects promotion.
-- **v0.3 nested depths:** 679 candidate cells, 48 multi-terminal families, still only the same rectangle; no depth-2 grid. `I-TI-TI-KU-NI` supplies an explicit competing stem-depth warning.
+1. **Independent Davis replication:** frozen 3/6 primary cutoff overlap, statistically unusual under the registered external-target-placement null (`p ≈ 2.61×10^-4`).
+2. **Epigraphically promoted morphology:** `A-`, `I-`, and especially final `JA` have strong inscription-level relationships; `JA` remains the strongest non-Davis productive suffix candidate, with function unknown.
+3. **Internal structural counts:** useful for discovery, but none of `A`, `I`, `JA`, or `TI` is exceptional after max-sign permutation calibration. Pair count must therefore remain subordinate to source audit and independent replication.
+4. **Paradigm grids:** v0.1–v0.3 recover local multi-ending families but no promotable Kober-style two-stem paradigm. The grid stop rule remains active.
 
-A grid stop rule is now in force: **do not increase segmentation freedom merely to force a paradigm.**
+The next major milestone is **independent-corpus replication**, not another morphology search.
 
-The next research milestones are:
+1. identify an independently encoded Linear A corpus or export, preferably SigLA-derived where access/licensing permits;
+2. define an explicit sign/transliteration crosswalk without silently merging uncertain sign identities;
+3. rerun only frozen claims first: Davis ranks/cutoffs, `A-`, `I-`, `JA`, `TI`, and the main negative/source controls;
+4. compare which relationships survive independent segmentation and source representation;
+5. only after that replication should a new statistical model, grammatical-function search, or external language-family test be promoted.
 
-1. **statistical calibration / null models** for the morphology signals already recovered, preserving source security, word lengths, sign frequencies, and site/scribe structure where feasible;
-2. quantify how surprising the strongest results are, especially productive `JA`, the Davis-affix rankings, and high-quality local families such as `I-DA ~ I-DA-MI`;
-3. then replicate the extraction and structural tests against an **independently encoded corpus** (SigLA-derived or equivalent where feasible);
-4. only after statistical and independent-corpus replication should external language-family predictions be given substantial weight.
-
-Grid protocols/results: [`experiments/multi-ending-grid-v01.md`](experiments/multi-ending-grid-v01.md), [`experiments/sibling-ending-grid-v02.md`](experiments/sibling-ending-grid-v02.md), [`experiments/nested-stem-grid-v03.md`](experiments/nested-stem-grid-v03.md).
+Statistical calibration: [`experiments/statistical-calibration-v01.md`](experiments/statistical-calibration-v01.md).  
+Grid stop rule: [`experiments/nested-stem-grid-v03.md`](experiments/nested-stem-grid-v03.md).
 
 ## Repository map
 

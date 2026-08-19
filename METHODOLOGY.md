@@ -123,6 +123,23 @@ A structurally secure exact pair can still be a false morphological decompositio
 
 This is a **promotion-stage** control, not an automatic v0.4 exclusion. Competing decompositions must be adjudicated from the inscription, palaeography, editorial conventions, and context; the extractor should not guess which lexical analysis is correct.
 
+## Statistical calibration after discovery
+
+Statistical support is treated as a **separate evidence dimension**, not folded retroactively into frozen discovery scores. Statistical calibration v0.1 uses two edge-label permutation nulls after source masking and explicit forward exclusions:
+
+- **N1:** type-level edge signs are permuted within word length while residual stems and the observed base lexicon remain fixed;
+- **N2:** unique site/form records are permuted within site + word-length strata, again fixing residual stems and the observed base lexicon.
+
+For each target the project reports both a target-specific empirical tail probability and a conservative **max-sign** probability based on the largest exact-pair count achieved by any sign in each permutation. This directly addresses the multiple-search problem inherent in computational discovery.
+
+The first run finds no max-sign-significant internal target among `A-`, `I-`, `-JA`, and `-TI`. Consequently, internal pair counts are discovery evidence, not stand-alone confirmation. Manual epigraphic survival and independent replication remain distinct.
+
+A separate exact combinatorial null is used for the Davis experiment because Davis's six targets were supplied independently after the project's v0.2 ranking was frozen. Under uniform target placement, the primary 3/6 cutoff overlap has `p ≈ 0.0002606`. The later universe-matched result remains explicitly post-unblinding.
+
+**Rule:** never use an internally optimized null, target set, cutoff, or segmentation chosen after seeing the outcome as confirmatory evidence. Preserve preregistered and post-unblinding analyses as separate classes.
+
+See [`experiments/statistical-calibration-v01.md`](experiments/statistical-calibration-v01.md) and [`results/statistical-calibration-v0.1/`](results/statistical-calibration-v0.1/).
+
 ## Separate morphology evidence dimensions
 
 The v0.3 audit also showed that one composite “morphology score” obscures different kinds of evidence. The project therefore reports at least these dimensions separately:
