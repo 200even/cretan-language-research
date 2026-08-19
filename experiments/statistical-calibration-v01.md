@@ -1,6 +1,6 @@
 # Statistical calibration v0.1
 
-**Status:** preregistered before the first permutation run.  
+**Status:** completed; frozen permutation and exact external-target nulls executed without retuning.  
 **Purpose:** quantify how surprising the strongest source-audited structural morphology signals are under null models that preserve important corpus marginals, without changing any discovery score or manual audit tier.
 
 ## Targets frozen before simulation
@@ -61,9 +61,20 @@ The max-sign value is deliberately conservative and addresses the fact that morp
 - no adaptive stopping;
 - no retuning after seeing results.
 
+## Results
+
+| target | observed | N1 p | N1 max-sign p | N2 p | N2 max-sign p |
+|---|---:|---:|---:|---:|---:|
+| `A-` | 6 | 0.233315 | 0.259135 | 0.161937 | 0.211356 |
+| `I-` | 4 | 0.091918 | 0.857883 | 0.170137 | 0.891902 |
+| `-JA` | 5 | 0.080098 | 0.328313 | 0.057959 | 0.518390 |
+| `-TI` | 3 | 0.214556 | 0.996800 | 0.145517 | 0.999020 |
+
+No internal target reaches conventional significance under either max-sign calibration. `JA` is the strongest target-specific internal signal but remains non-significant after accounting for the many-sign discovery search. This does **not** reverse the manual finding that `JA` is the strongest productive morphology candidate; it says raw structural pair count alone is not statistically exceptional enough under these nulls to carry that conclusion independently of epigraphic audit.
+
 ## Davis external-target calibration
 
-Separately from the corpus permutations, calculate an exact combinatorial null for the frozen Davis cutoff experiment.
+Separately from the corpus permutations, an exact combinatorial null was calculated for the frozen Davis cutoff experiment.
 
 Under a uniform external-target-placement null:
 
@@ -71,19 +82,26 @@ Under a uniform external-target-placement null:
 - four suffix targets are drawn without replacement from the suffix candidate universe;
 - success is the number landing inside the preregistered top-2 prefix and top-4 suffix cutoffs.
 
-Report:
+Results:
 
-- primary frozen 116-sign experiment: observed **3/6** cutoff hits;
-- post-unblinding universe-matched 49-observed-sign sensitivity: observed **4/6** cutoff hits.
+| comparison | observed | exact p(total hits >= observed) | exact p(side-pattern >= observed) |
+|---|---:|---:|---:|
+| primary frozen 116-sign v0.2 | 3/6 | **0.00026062810** | **0.00018098442** |
+| post-unblinding 49-sign universe-matched sensitivity | 4/6 | **0.000097188151** | **0.000024565935** |
 
-The second result remains explicitly post-unblinding and cannot replace the primary replication score.
+The primary 116-sign result is the confirmatory comparison that was frozen before Davis's six identities were known. The 49-sign result remains explicitly post-unblinding and cannot replace the primary 3/6 replication score.
+
+The Davis result is therefore much more statistically unusual under its stated null than any one internally discovered exact-pair count. That distinction should remain central: **independent external replication and internal candidate discovery are different evidence classes.**
 
 ## Interpretation boundaries
 
 A small permutation p-value means the structural exact-pair concentration is difficult to obtain by randomized edge assignment under the stated null. It does **not** establish grammatical function, translation, language family, or independence from every possible corpus/editorial process.
 
-If N1 and N2 disagree materially, report the disagreement rather than selecting the more favorable model.
+The Davis external-target p-value likewise calibrates ranking agreement under a uniform-placement null; it does not imply that the six affixes are semantically understood or that Linear A is deciphered.
 
 ## Reproducibility
 
-The implementation will live in `scripts/statistical-calibration-v01.mjs`; generated output will be written to `results/statistical-calibration-v0.1/`.
+Implementation: `scripts/statistical-calibration-v01.mjs`  
+Generated results: `results/statistical-calibration-v0.1/`  
+Seed: `20260818`  
+Iterations: 50,000 per side/model.
