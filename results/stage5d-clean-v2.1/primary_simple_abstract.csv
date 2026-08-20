@@ -1,0 +1,17 @@
+added_sign,n_base_stems,n_primitive_edges,n_extended_documents,n_all_support_documents,n_sites,factorization_auto_clear,stem_robustness_pass,dual_independence_pass,computational_promotion_gate_pass,epigraphy_status,promotion_status,bases,extended_docs,sites
+JA,4,4,5,15,4,1,1,1,1,REVIEW_REQUIRED,CANDIDATE_PENDING_EPIGRAPHY,*306-TU;A-MA;KU-PA;PA-SE,HT 115b;HT 116a;HT Wc 3001;HT Wc 3002;KH 14,Haghia Triada;Khania;Mallia;Zakros
+TI,3,3,3,6,4,0,1,1,0,NOT_REACHED,LEVEL_1_EXPLORATORY,DA-KU-SE-NE;JA-KU;RI-RU-MA,HT 104;KN 1a;PH 31b,Haghia Triada;Knossos;Mallia;Phaistos
+PA,2,2,4,6,3,0,1,1,0,NOT_REACHED,LEVEL_1_EXPLORATORY,A-RI;KA-KU,HT 16;HT Wc 3015a;HT Wc 3016a;PE 2,Haghia Triada;Petras;Phaistos
+RO,2,2,2,7,4,0,1,1,0,NOT_REACHED,LEVEL_1_EXPLORATORY,A-DA;SA-MA,ARKH 5;HT 88,Arkhanes;Haghia Triada;Tylissos;Zakros
+RE,1,1,4,5,2,0,1,0,0,NOT_REACHED,LEVEL_1_EXPLORATORY,PA-JA,HT 29;HT 88;HT 8b;ZA 10b,Haghia Triada;Zakros
+NE,1,1,2,4,2,0,1,0,0,NOT_REACHED,LEVEL_1_EXPLORATORY,PA-RA,HT 115a;HT 115b,Haghia Triada;Phaistos
+RU,1,1,2,3,1,0,1,0,0,NOT_REACHED,LEVEL_1_EXPLORATORY,DI-DE,HT 86a;HT 95b,Haghia Triada
+MU,1,1,1,2,2,0,1,0,0,NOT_REACHED,LEVEL_1_EXPLORATORY,KU-RA,HT 117a,Haghia Triada;Zakros
+PU₂,1,1,1,2,2,0,1,0,0,NOT_REACHED,LEVEL_1_EXPLORATORY,TU-SU,HT 49a,Haghia Triada;Palaiokastro
+QE,1,1,1,5,1,0,1,0,0,NOT_REACHED,LEVEL_1_EXPLORATORY,KA-PA,HT 6a,Haghia Triada
+RI,1,1,1,4,3,0,1,0,0,NOT_REACHED,LEVEL_1_EXPLORATORY,KU-PA,PE 1,Haghia Triada;Petras;Zakros
+SE,1,1,1,3,2,0,1,0,0,NOT_REACHED,LEVEL_1_EXPLORATORY,RU-MA-TA,ZA 20,Haghia Triada;Zakros
+SU,1,1,1,2,2,0,1,0,0,NOT_REACHED,LEVEL_1_EXPLORATORY,A-RI,HT 118,Haghia Triada;Phaistos
+TA,1,1,1,2,2,0,1,0,0,NOT_REACHED,LEVEL_1_EXPLORATORY,A-MI,ZA 10b,Khania;Zakros
+TU,1,1,1,2,1,0,1,0,0,NOT_REACHED,LEVEL_1_EXPLORATORY,SI-TE,ZA 20,Zakros
+ZA,1,1,1,8,2,0,1,0,0,NOT_REACHED,LEVEL_1_EXPLORATORY,A-DU,PK 1a,Haghia Triada;Palaiokastro
