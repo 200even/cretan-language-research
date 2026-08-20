@@ -1,0 +1,30 @@
+{
+  "stage": "Stage 5D blind-generation lock",
+  "date": "2026-08-20",
+  "preregistration_sha256": "93ed22b16c9d16d75e29e52013ac52abb7687dd9169f21e27df882803aa74a4c",
+  "script_sha256": "b54a917510bdb1369df33a59080fa522a0cc46d0584d397c4cd948d177f85e63",
+  "clean_v2_1_sha256": "83298a8c5b8f852edaf8d0f25bcc7affb07a71aa27561169f5152ad5bf28b3c9",
+  "diplomatic_census_sha256": "7f116db2b32eeaf1c639e0c54f0c4755c6b4144e4ddf03c17af51e9121f0c8f5",
+  "blind_summary_sha256": "e341ffd35b92045f7150d52b350e449e93f9f2828733540b58b3e39f91c5048f",
+  "blind_salt_sha256": "d39ec24f067ee0e3ad2f3d43bb76f322cff25ad460ac6f33b5e78c4585baf8d8",
+  "unblind_key_file_sha256": "2d688832f5e9e416bc70f97a177044d25df5d2d0d2983b56f81d7a4f880d19a1",
+  "aggregate_summary": {
+    "method": "Stage 5D blind lexical-state morphotactic network",
+    "clean_sha256": "83298a8c5b8f852edaf8d0f25bcc7affb07a71aa27561169f5152ad5bf28b3c9",
+    "diplomatic_sha256": "7f116db2b32eeaf1c639e0c54f0c4755c6b4144e4ddf03c17af51e9121f0c8f5",
+    "promotion_interpretation": "computational gate only; epigraphy review mandatory before validation",
+    "strata": {
+      "primary": {"tokens":554,"documents":211,"types":374,"primitive_edges":23,"distinct_extension_signs":16,"simple_dual_independence_pass":4,"simple_factorization_auto_clear":1,"simple_computational_promotion_gate_pass":1,"complete_three_state_ladders":0,"distinct_stage2_transitions":0,"stage2_two_complete_ladders_pass":0,"stage2_computational_promotion_gate_pass":0,"sibling_parent_motifs":2},
+      "nonprimary": {"tokens":26,"documents":23,"types":26,"primitive_edges":1,"distinct_extension_signs":1,"simple_dual_independence_pass":0,"simple_factorization_auto_clear":1,"simple_computational_promotion_gate_pass":0,"complete_three_state_ladders":0,"distinct_stage2_transitions":0,"stage2_two_complete_ladders_pass":0,"stage2_computational_promotion_gate_pass":0,"sibling_parent_motifs":0},
+      "full": {"tokens":580,"documents":233,"types":399,"primitive_edges":24,"distinct_extension_signs":17,"simple_dual_independence_pass":4,"simple_factorization_auto_clear":2,"simple_computational_promotion_gate_pass":1,"complete_three_state_ladders":0,"distinct_stage2_transitions":0,"stage2_two_complete_ladders_pass":0,"stage2_computational_promotion_gate_pass":0,"sibling_parent_motifs":2}
+    }
+  },
+  "pre_unblinding_observation": {
+    "primary_complete_three_state_ladders": 0,
+    "nonprimary_complete_three_state_ladders": 0,
+    "full_complete_three_state_ladders": 0,
+    "primary_simple_dual_independence_pass": 4,
+    "primary_simple_computational_promotion_gate_pass": 1,
+    "historical_candidate_identities_inspected": false
+  }
+}
