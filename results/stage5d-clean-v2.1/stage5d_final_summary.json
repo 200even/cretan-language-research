@@ -1,0 +1,38 @@
+{
+  "date": "2026-08-20",
+  "stage": "Stage 5D clean-v2.1 morphotactic network",
+  "status": "COMPLETE",
+  "preregistration_sha256": "93ed22b16c9d16d75e29e52013ac52abb7687dd9169f21e27df882803aa74a4c",
+  "script_sha256": "b54a917510bdb1369df33a59080fa522a0cc46d0584d397c4cd948d177f85e63",
+  "blind_lock_sha256": "da7d5ca6fde2964251bf2508d45a62ae4206c35960a670865768f129fbb03557",
+  "primary": {
+    "tokens": 554,
+    "documents": 211,
+    "types": 374,
+    "primitive_edges": 23,
+    "distinct_extension_signs": 16,
+    "simple_dual_independence_pass": 4,
+    "simple_factorization_auto_clear": 1,
+    "simple_computational_promotion_gate_pass": 1,
+    "complete_three_state_ladders": 0,
+    "distinct_stage2_transitions": 0,
+    "stage2_two_complete_ladders_pass": 0,
+    "stage2_computational_promotion_gate_pass": 0,
+    "sibling_parent_motifs": 2
+  },
+  "final_simple_edges": [
+    {"sign":"JA","status":"PROMOTED_LOCAL_MORPHOTACTIC_EDGE","base_stems":4,"extended_documents":5},
+    {"sign":"TI","status":"PROMOTED_LOCAL_MORPHOTACTIC_EDGE_WITH_CAVEATS","base_stems":3,"extended_documents":3},
+    {"sign":"PA","status":"PROMOTED_LOCAL_MORPHOTACTIC_EDGE_RULE_LIMITED","base_stems":2,"extended_documents":4},
+    {"sign":"RO","status":"LEVEL_1_EXPLORATORY_SUPERSEDING_ONOMASTIC","base_stems":2,"extended_documents":2}
+  ],
+  "multi_stage": {"complete_ladders":0,"abstract_stage2_transitions":0,"validated_chains":0},
+  "sibling_motifs": ["A-RI -> {PA, SU}", "KU-PA -> {JA, RI}"],
+  "historical": {
+    "U->TI->NU":"DIED_AS_STAGE5D_CHAIN",
+    "WA->JA/E":"NOT_RECOVERED_AS_LEXICAL_EDGE",
+    "U->JA":"NOT_RECOVERED",
+    "KU-PA3":"NOT_REPRESENTED_IN_CLEAN_V2_1"
+  },
+  "interpretation_ceiling": "formal local morphotactics only; no grammatical function; Phase 6 closed"
+}
