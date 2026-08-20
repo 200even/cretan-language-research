@@ -1,0 +1,79 @@
+{
+  "version": "v0.7b",
+  "status": "PROVISIONAL - global edge-productivity results reproduced under locked model; final interpretation blocked by word-edge damage metadata defect in Step 2 clean corpus",
+  "source_sha256": "cc624f148fd84c94fd2910b0adf92ecace25f52f9175664122bdf8384a8f1b9d",
+  "primary_register": {
+    "supports": [
+      "Tablet",
+      "Nodule",
+      "Roundel"
+    ],
+    "length_range": [
+      2,
+      8
+    ],
+    "tokens": 821,
+    "documents": 310,
+    "distinct_types": 589,
+    "effective_token_weight": 696.0
+  },
+  "model": {
+    "cv": "leave-one-document-out",
+    "null_predictors": [
+      "previous_sign",
+      "position_from_word_start"
+    ],
+    "alternative_addition": "candidate_sign_indicator",
+    "classifier": "L2 logistic regression",
+    "solver": "liblinear",
+    "C": 1.0,
+    "max_iter": 100,
+    "bootstrap": "document-level, 1500 resamples",
+    "criterion": "99% bootstrap CI lower bound for held-out ΔLL > 0"
+  },
+  "candidates": {
+    "TI": {
+      "sign_occurrences": 48,
+      "terminal_occurrences": 25,
+      "terminal_fraction": 0.5208333333333334,
+      "delta_ll": -0.7927560834030155,
+      "bootstrap_seed": 91001,
+      "ci99": [
+        -2.945266539194919,
+        0.8440604265303973
+      ],
+      "global_edge_productivity": "NO CONFIRMATORY EVIDENCE UNDER CURRENT INPUT CORPUS"
+    },
+    "JA": {
+      "sign_occurrences": 61,
+      "terminal_occurrences": 28,
+      "terminal_fraction": 0.45901639344262296,
+      "delta_ll": 1.735067444656529,
+      "bootstrap_seed": 91002,
+      "ci99": [
+        -2.6856298425920904,
+        6.472686061900831
+      ],
+      "global_edge_productivity": "NO CONFIRMATORY EVIDENCE UNDER CURRENT INPUT CORPUS"
+    }
+  },
+  "data_quality_blocker": {
+    "description": "Post-unblinding exact-pair audit revealed that Step 2 preserved sign-level uncertainty but lost some word-edge damage metadata. At least two forms in the primary administrative stratum are incorrectly labeled clean.",
+    "known_examples": [
+      {
+        "document": "PH 28a",
+        "extracted": "A-RI-JA",
+        "diplomatic_audit": "A-RI-JA[",
+        "candidate": "JA"
+      },
+      {
+        "document": "HT 39",
+        "extracted": "SA-MA-TI",
+        "diplomatic_audit": "]SA-MA-TI",
+        "candidate": "TI"
+      }
+    ],
+    "consequence": "The numerical run is reproducible but is not publication-grade evidence for or against TI/JA until the edge-damage mask is repaired and the locked model is rerun on the corrected corpus.",
+    "analysis_policy": "Do not tune model parameters. Repair only the candidate-blind epigraphic inclusion mask, document the changed token set, then rerun the same locked detector."
+  }
+}

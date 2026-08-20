@@ -1,0 +1,169 @@
+{
+  "preregistration": "v0.7b calibration lock",
+  "status": "candidate-blind; no TI/JA/KU-PA3/PA-SE outcome inspected",
+  "source_sha256": "cc624f148fd84c94fd2910b0adf92ecace25f52f9175664122bdf8384a8f1b9d",
+  "primary_register": {
+    "support_typologies": [
+      "Tablet",
+      "Nodule",
+      "Roundel"
+    ],
+    "clean_word_length_min": 2,
+    "clean_word_length_max": 8,
+    "observed_max_length_in_primary_stratum": 6,
+    "eligible_tokens": 821,
+    "documents": 310,
+    "distinct_word_types": 589,
+    "sign_positions_before_injection": 2274,
+    "policy": "All other support classes are excluded from the primary edge-productivity test and reserved for independent replication strata. They are never pooled into the primary confirmatory p-value."
+  },
+  "dependence_weighting": {
+    "rule": "Within each normalized-site + original-word-form group, total effective weight is capped at 2.",
+    "implementation": "each row weight = min(1, 2/n_group)",
+    "weights_frozen_before_synthetic_injection": true,
+    "effective_primary_token_weight": 696.0
+  },
+  "edge_detector": {
+    "cross_validation": "leave-one-document-out",
+    "null_predictors": [
+      "previous_sign",
+      "position_from_word_start"
+    ],
+    "alternative_addition": "candidate_sign_indicator",
+    "model": "L2-regularized logistic regression",
+    "solver": "liblinear",
+    "C": 1.0,
+    "max_iter": 100,
+    "categorical_encoding": "one-hot with unknown categories ignored",
+    "statistic": "sum of held-out, weighted log-likelihood improvement ΔLL by document",
+    "recovery_rule": "99% document-bootstrap confidence interval lower bound for ΔLL > 0",
+    "document_bootstrap_replicates": 1500
+  },
+  "synthetic_suffix_control": {
+    "method": "Independently select eligible words at each injection probability and append a new DUMMY sign as a terminal suffix. Original dependence weights remain frozen.",
+    "rates": [
+      0.02,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "replicates_per_rate": 20,
+    "seeds": {
+      "0.02": "40000-40019",
+      "0.05": "50000-50019",
+      "0.10": "30000-30019",
+      "0.20": "60000-60019"
+    },
+    "results": [
+      {
+        "injection_rate": 0.02,
+        "recovered": 20,
+        "replicates": 20,
+        "power_estimate": 1.0,
+        "power_ci95_lower": 0.8315665290169146,
+        "power_ci95_upper": 1.0,
+        "mean_injected_tokens": 16.0,
+        "min_injected_tokens": 10,
+        "max_injected_tokens": 21,
+        "mean_delta_ll": 3.102975320280131,
+        "min_delta_ll": 1.439661345046272,
+        "max_delta_ll": 5.7599333950227525,
+        "mean_ci99_lower_delta_ll": 0.8868579980188128,
+        "min_ci99_lower_delta_ll": 0.07155756456322898
+      },
+      {
+        "injection_rate": 0.05,
+        "recovered": 20,
+        "replicates": 20,
+        "power_estimate": 1.0,
+        "power_ci95_lower": 0.8315665290169146,
+        "power_ci95_upper": 1.0,
+        "mean_injected_tokens": 39.3,
+        "min_injected_tokens": 26,
+        "max_injected_tokens": 49,
+        "mean_delta_ll": 9.507811,
+        "min_delta_ll": 6.389431,
+        "max_delta_ll": 14.424764,
+        "mean_ci99_lower_delta_ll": 4.429957,
+        "min_ci99_lower_delta_ll": 2.129679
+      },
+      {
+        "injection_rate": 0.1,
+        "recovered": 20,
+        "replicates": 20,
+        "power_estimate": 1.0,
+        "power_ci95_lower": 0.8315665290169146,
+        "power_ci95_upper": 1.0,
+        "mean_injected_tokens": 83.9,
+        "min_injected_tokens": 67,
+        "max_injected_tokens": 103,
+        "mean_delta_ll": 26.13334,
+        "min_delta_ll": 21.039369,
+        "max_delta_ll": 34.561308,
+        "mean_ci99_lower_delta_ll": 15.75432,
+        "min_ci99_lower_delta_ll": 12.028981
+      },
+      {
+        "injection_rate": 0.2,
+        "recovered": 20,
+        "replicates": 20,
+        "power_estimate": 1.0,
+        "power_ci95_lower": 0.8315665290169146,
+        "power_ci95_upper": 1.0,
+        "mean_injected_tokens": 162.75,
+        "min_injected_tokens": 144,
+        "max_injected_tokens": 194,
+        "mean_delta_ll": 58.223526,
+        "min_delta_ll": 48.716444,
+        "max_delta_ll": 78.325693,
+        "mean_ci99_lower_delta_ll": 39.361145,
+        "min_ci99_lower_delta_ll": 32.346027
+      }
+    ],
+    "hard_stop": ">=80% recovery probability at 10% injection",
+    "hard_stop_result": "PASS",
+    "ten_percent_exact_binomial_ci95": [
+      0.8315665290169146,
+      1.0
+    ],
+    "interpretation_limit": "This calibrates recovery of a perfectly terminal synthetic affix. It does not guarantee equivalent power for a real sign that also occurs internally."
+  },
+  "negative_edge_control": {
+    "method": "Assign the synthetic candidate indicator independently of boundaries to 3.5% of actual sign positions, without changing strings or boundaries.",
+    "replicates": 20,
+    "false_positive_recoveries": 0,
+    "observed_false_positive_rate": 0.0,
+    "exact_binomial_ci95": [
+      0.0,
+      0.1684334709830853
+    ],
+    "interpretation": "No gross false-positive tendency was observed, but 20 null replicates are not enough to estimate a nominal ~1% false-positive rate precisely."
+  },
+  "structural_classifier_synthetic_control": {
+    "classes": {
+      "FACTORIZATION": "short form is HEADER_PARENT or SECTION_PARENT of longer family member(s)",
+      "TRUNCATION": "full form followed by short repeat at same hierarchical level",
+      "MIXED": "both factorization and truncation signatures occur",
+      "INDETERMINATE": "no diagnostic structural relation"
+    },
+    "synthetic_cases_per_class": 1000,
+    "accuracy": {
+      "FACTORIZATION": 1.0,
+      "TRUNCATION": 1.0,
+      "MIXED": 1.0,
+      "INDETERMINATE": 1.0
+    },
+    "important_limit": "This validates classification logic only. Real-data power remains severely limited because only 2/98 exact X/X-Y relations co-occur on the same document."
+  },
+  "software_environment_used_for_calibration": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit_learn": "1.8.0"
+  },
+  "locked_calibration_script": {
+    "filename": "04_run_blind_calibration.py",
+    "sha256": "f19a24af71afd25091734638377f99570a3d370ef3022f1261850dc6a660e6be"
+  }
+}
