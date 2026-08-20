@@ -1,0 +1,5 @@
+historical_hypothesis,stage5d_status,clean_v2_1_observation,interpretation
+U→TI→NU,DIED_AS_STAGE5D_CHAIN,"Zero complete three-state ladders in all strata; U-TI-NU has 0 clean-v2.1 occurrences; standalone U-TI survives once on HT 10b","The old ritual/internal sequence is not a complete lexical-state morphotactic chain under the referee rule"
+WA→JA/E,NOT_RECOVERED_AS_LEXICAL_EDGE,"No exact clean-v2.1 lexical-state extension with a base ending WA; WA-JA occurs only internally once in A-TA-I-*301-WA-JA on SY Za 4; WA-E has 0 occurrences","Retain only as an internal/formulaic observation outside the promoted Stage5D network"
+U→JA,NOT_RECOVERED,"No U-JA adjacency in clean-v2.1 and no exact lexical-state edge encoding it","Historical weak path receives no Stage5D support"
+KU-PA3 extension family,NOT_REPRESENTED_IN_CLEAN_V2_1,"No clean-v2.1 token contains KU-PA3/KU-PA₃ in the frozen normalized token layer","Do not infer linguistic absence; the family simply cannot support this clean-v2.1 network"
