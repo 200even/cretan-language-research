@@ -10,7 +10,7 @@ Phase A terminates at the preregistered power gate **before any real candidate-e
 
 The frozen lineara.xyz source at commit `43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a` contains 12 Syme inscriptions in the local inventory, of which 11 are stone vessels and one (`SYZb7`) is a clay vessel. The broadest defensible matched stone-vessel Phase A frame therefore has at most **11 Syme observations**.
 
-An independently published 2026 computational index of the cross-site stone-vessel/formula corpus contains 31 objects across 14 sites, including two Syme objects and **29 non-Syme controls**. This index is used here only to establish a realistic matched-control count for the power calculation; no candidate identities or frequencies are used.
+An independently published 2026 computational index of the cross-site ritual/formula comparison corpus contains 31 objects across 14 sites, including two Syme objects and **29 non-Syme objects**. The index contains heterogeneous support classes, so 29 is used here only as an **optimistic upper-bound control count** for the power calculation; a strictly support-matched control set can only be smaller. No candidate identities or frequencies are used.
 
 ## Exact optimistic upper-bound calculation
 
@@ -39,7 +39,7 @@ Therefore this calculation is an optimistic upper bound on actual confirmatory p
 | 11 | 50 | 0.526245 | FAIL |
 | 11 | 100 | 0.533504 | FAIL |
 
-The realistic 29-control frame peaks at only **48.9% uncorrected power**. Adding substantially more controls does not repair the principal bottleneck because the Syme side remains capped at 11 inscriptions.
+The optimistic 29-control frame peaks at only **48.9% uncorrected power**. Adding substantially more controls does not repair the principal bottleneck because the Syme side remains capped at 11 inscriptions.
 
 ## Consequence
 
@@ -64,6 +64,6 @@ The preregistered activation condition for `experiments/pan-cretan-rare-ritual-r
 - code: `scripts/kato-syme/power_gate.py`
 - output: `results/kato-syme-site-enrichment-v01/power-gate-output.csv`
 - Syme inventory: `data/kato-syme/syme-inventory-v01.csv`
-- external control index: `data/kato-syme/formula-control-index-v01.csv`
+- external comparison index: `data/kato-syme/formula-control-index-v01.csv`
 
 No semantic or Ephoran information entered the calculation.
