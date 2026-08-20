@@ -1,0 +1,17 @@
+{
+  "stage": "Phase 1B diplomatic boundary reconstruction",
+  "sigla_source_sha256_expected": "cc624f148fd84c94fd2910b0adf92ecace25f52f9175664122bdf8384a8f1b9d",
+  "diplomatic_source_commit": "43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a",
+  "policy": "positive diplomatic coverage + unique monotonic exact alignment; fail closed on unmatched/ambiguous; candidate-blind",
+  "rerun_calibration_rule": "UNCONDITIONAL after Phase-1B rebuild: any change in primary eligible membership triggers recalibration",
+  "n_sigla_rows_input": 1401,
+  "n_positive_boundary_coverage": 899,
+  "n_unknown_boundary": 502,
+  "n_edge_secure_v2": 580,
+  "n_clean_v2": 580,
+  "primary_2_8_rows": 1047,
+  "primary_2_8_clean_v2": 554,
+  "documents_audited": 488,
+  "documents_with_ambiguous_alignment": 0,
+  "documents_without_diplomatic_doc": 33
+}

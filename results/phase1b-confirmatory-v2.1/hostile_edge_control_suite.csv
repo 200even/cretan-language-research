@@ -1,0 +1,7 @@
+control,doc_key,token,expected_left,expected_right,found,n_matches,glyph_word,observed_left,observed_right,support,primary,eligible_proxy,pass
+PH 28 A-RI-JA[,PH28a,A-RI-JA,False,True,True,1,𐘇𐘭𐘱𐝫,False,True,Tablet,True,True,True
+HT 39 ]SA-MA-TI,HT39,SA-MA-TI,True,False,True,1,𐝫𐘞𐙁𐘠,True,False,Tablet,True,True,True
+ZA 19 ]RA-TE-[,ZA19,RA-TE,True,True,True,1,𐝫𐘴𐘃𐝫,True,True,Tablet,True,True,True
+HT 55b ]RI-JA,HT55b,RI-JA,True,False,True,1,𐝫𐘭𐘱,True,False,Tablet,True,True,True
+KN Wb33 QA-KI[,KNWb33,QA-KI,False,True,True,1,𐘌𐘸𐝫,False,True,Sealing,False,False,True
+IO Za11 ]U-TI-NU,IOZa11,U-TI-NU,True,False,True,1,𐝫𐘉𐘠𐘯,True,False,Stone vessel,False,False,True

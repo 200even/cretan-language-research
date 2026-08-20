@@ -1,0 +1,33 @@
+{
+  "clean_tokens_full": 580,
+  "relations_total": 24,
+  "relations_by_extension": {
+    "JA": 4,
+    "TI": 3,
+    "RO": 2,
+    "PA": 2,
+    "E": 1,
+    "PU₂": 1,
+    "QE": 1,
+    "MU": 1,
+    "NE": 1,
+    "RI": 1,
+    "RE": 1,
+    "SE": 1,
+    "RU": 1,
+    "SU": 1,
+    "TA": 1,
+    "TU": 1,
+    "ZA": 1
+  },
+  "same_document_relations": 1,
+  "target_relations": [
+    {"candidate":"JA","base":"*306-TU","extended":"*306-TU-JA","base_occurrences":4,"extended_occurrences":1,"base_documents":"HT 119;HT 122a;HT 9a;HT 9b","extended_documents":"HT 115b","same_document":false,"same_documents":""},
+    {"candidate":"JA","base":"A-MA","extended":"A-MA-JA","base_occurrences":2,"extended_occurrences":1,"base_documents":"HS Zg 1;MA 1b","extended_documents":"KH 14","same_document":false,"same_documents":""},
+    {"candidate":"JA","base":"KU-PA","extended":"KU-PA-JA","base_occurrences":3,"extended_occurrences":1,"base_documents":"HT 110a;ZA 11a;ZA 11b","extended_documents":"HT 116a","same_document":false,"same_documents":""},
+    {"candidate":"JA","base":"PA-SE","extended":"PA-SE-JA","base_occurrences":2,"extended_occurrences":2,"base_documents":"HT 18;HT 27b","extended_documents":"HT Wc 3001;HT Wc 3002","same_document":false,"same_documents":""},
+    {"candidate":"TI","base":"DA-KU-SE-NE","extended":"DA-KU-SE-NE-TI","base_occurrences":1,"extended_occurrences":1,"base_documents":"HT 103","extended_documents":"HT 104","same_document":false,"same_documents":""},
+    {"candidate":"TI","base":"JA-KU","extended":"JA-KU-TI","base_occurrences":1,"extended_occurrences":1,"base_documents":"MA 2b","extended_documents":"KN 1a","same_document":false,"same_documents":""},
+    {"candidate":"TI","base":"RI-RU-MA","extended":"RI-RU-MA-TI","base_occurrences":1,"extended_occurrences":1,"base_documents":"HT 118","extended_documents":"PH 31b","same_document":false,"same_documents":""}
+  ]
+}

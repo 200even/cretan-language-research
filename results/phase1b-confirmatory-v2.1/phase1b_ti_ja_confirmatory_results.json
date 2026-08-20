@@ -1,0 +1,56 @@
+{
+  "analysis": "Phase 1B clean-v2.1 TI/JA confirmatory Test 2B",
+  "candidate_wrapper_seed_policy": "first 64 bits SHA256(frozen_sigla_sha256 | clean_v2_sha256 | candidate), frozen before clean-v2 TI/JA outcomes were computed; historical wrapper RNG seed was not recoverable",
+  "frozen_sigla_sha256": "cc624f148fd84c94fd2910b0adf92ecace25f52f9175664122bdf8384a8f1b9d",
+  "clean_v2_sha256": "83298a8c5b8f852edaf8d0f25bcc7affb07a71aa27561169f5152ad5bf28b3c9",
+  "locked_calibration_script_sha256": "f19a24af71afd25091734638377f99570a3d370ef3022f1261850dc6a660e6be",
+  "bootstrap_replicates": 1500,
+  "ci_quantiles": [
+    0.005,
+    0.995
+  ],
+  "results": [
+    {
+      "candidate": "TI",
+      "eligible_tokens": 554,
+      "documents": 211,
+      "distinct_types": 374,
+      "effective_token_weight": 457.0,
+      "candidate_total_occurrences": 38,
+      "candidate_terminal_occurrences": 20,
+      "candidate_internal_occurrences": 18,
+      "candidate_documents": 27,
+      "delta_ll": -0.569710002306872,
+      "bootstrap_seed": 1658152892276090999,
+      "ci99_lo": -3.6314667141572063,
+      "ci99_hi": 2.019441547321657,
+      "confirmatory_recovered": false,
+      "robustness_100_seed_ci99_lo_min": -3.8753530213574723,
+      "robustness_100_seed_ci99_lo_max": -3.0971334073072097,
+      "robustness_100_seed_ci99_hi_min": 1.7106852434461444,
+      "robustness_100_seed_ci99_hi_max": 2.217729438994784,
+      "robustness_all_100_same_significance": true
+    },
+    {
+      "candidate": "JA",
+      "eligible_tokens": 554,
+      "documents": 211,
+      "distinct_types": 374,
+      "effective_token_weight": 457.0,
+      "candidate_total_occurrences": 37,
+      "candidate_terminal_occurrences": 19,
+      "candidate_internal_occurrences": 18,
+      "candidate_documents": 33,
+      "delta_ll": 0.9006954427946179,
+      "bootstrap_seed": 12343059748333133810,
+      "ci99_lo": -3.0356564523887886,
+      "ci99_hi": 4.820957920424381,
+      "confirmatory_recovered": false,
+      "robustness_100_seed_ci99_lo_min": -3.5069318223986143,
+      "robustness_100_seed_ci99_lo_max": -2.630762184087403,
+      "robustness_100_seed_ci99_hi_min": 4.213185780089921,
+      "robustness_100_seed_ci99_hi_max": 5.212870991087129,
+      "robustness_all_100_same_significance": true
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+candidate,base,extended,base_occurrences,extended_occurrences,base_documents,extended_documents,same_document,same_documents
+JA,*306-TU,*306-TU-JA,4,1,HT 119;HT 122a;HT 9a;HT 9b,HT 115b,False,
+JA,A-MA,A-MA-JA,2,1,HS Zg 1;MA 1b,KH 14,False,
+JA,KU-PA,KU-PA-JA,3,1,HT 110a;ZA 11a;ZA 11b,HT 116a,False,
+JA,PA-SE,PA-SE-JA,2,2,HT 18;HT 27b,HT Wc 3001;HT Wc 3002,False,
+TI,DA-KU-SE-NE,DA-KU-SE-NE-TI,1,1,HT 103,HT 104,False,
+TI,JA-KU,JA-KU-TI,1,1,MA 2b,KN 1a,False,
+TI,RI-RU-MA,RI-RU-MA-TI,1,1,HT 118,PH 31b,False,

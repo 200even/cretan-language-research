@@ -6,107 +6,130 @@ Linear A remains undeciphered. This repository does not propose a decipherment o
 
 > **When two Linear A sign groups look morphologically related, how strong is the evidence that the relationship is real?**
 
-The project combines automated candidate discovery with inscription-level audit. Positive results, false positives, damaged readings, onomastic families, scribal confounds, and failed hypotheses are preserved so that morphology claims can be reproduced and challenged rather than selected retrospectively.
+The project combines candidate-blind computation with inscription-level audit. Positive results, false positives, damaged readings, onomastic families, scribal confounds, alternative segmentations, and failed hypotheses are preserved so that claims can be reproduced and challenged rather than selected retrospectively.
 
 ## Core rule
 
 **Discovery is computational. Promotion is epigraphic.**
 
-A candidate does not become evidence for morphology until its forms, boundaries, damage state, provenance, lexical identity, and context have been audited.
+A candidate does not become evidence for morphology until its forms, boundaries, damage state, provenance, lexical identity, and context have been audited. Direct diplomatic evidence overrides normalized convenience data. Failure of a global productivity test does not erase a valid local formal relation, and an exact string relation does not by itself establish suffixhood or grammatical function.
 
-## Current headline results
+## Current status: Phase 1B complete
 
-### Latest frozen discovery substrate: source-consistent v0.5 (post-v0.5 audit errata registered)
+The authoritative current state is [`CURRENT_STATUS.md`](CURRENT_STATUS.md). Older discovery reports and manual audits remain in the repository as historical records, but stronger wording in them is superseded where it conflicts with the clean-v2.1 confirmatory result.
 
-v0.5 reconciles damage-preserving commentary identifiers with normalized corpus IDs, scans all explicit inscription tables on composite objects, and rejects normalized words assembled from separately damaged fragments. It deliberately keeps the v0.4 ranking formulas unchanged so changes reflect extraction rather than rescoring.
+### Candidate-blind diplomatic repair
 
-The frozen v0.5 regression gate passes:
+The frozen SigLA source is pinned by SHA-256:
 
-> **30/30 structural/source negatives excluded; 13/13 audited structurally complete controls retained.**
+```text
+cc624f148fd84c94fd2910b0adf92ecace25f52f9175664122bdf8384a8f1b9d
+```
 
-The run begins with 1,285 candidate syllabic occurrences and retains **938**, excluding 347; **672** unique forms remain. v0.4 retained 951 occurrences and 681 forms.
+The original Step-2 population was reconstructed against its frozen multidimensional fingerprint:
 
-The strongest structural paradigmatic signals remain stable: prefix `A` (6), prefix `I` (4), suffix `JA` (5), and suffix `TI` (3). Source reconciliation reduces weaker suffixes: `RA` 3→2, `TE` 3→2, and `QE`, `SU`, and `WI` 2→1 each.
+- **1,401** total SigLA word tokens
+- **1,036** Step-2 clean
+- original primary administrative stratum: **821 tokens / 310 documents / 589 types / effective weight 696**
 
-The later MI/PA/SA hostile audit exposed two additional source-representation misses in retained v0.5 candidates: normalized ARKH1b `JA-RE` conflicts with damage-preserving `]PA-RE`, and HT70 preserves `]QA-*118-SA`. These do not rewrite the frozen v0.5 run; they are registered in `data/v06-regression-backlog.csv` and mean v0.5 remains a discovery substrate rather than a source-complete edition.
+A candidate-blind diplomatic overlay from `mwenge/lineara.xyz` commit
+`43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a` restores open-left, open-right, and interior-damage status from the glyph layer. The hostile control suite passes **6/6**.
 
-Experiment: [`experiments/source-consistent-v05.md`](experiments/source-consistent-v05.md)  
-Generated results: [`results/source-consistent-v0.5/`](results/source-consistent-v0.5/)  
-Regression: [`results/source-consistent-v0.5/REGRESSION.md`](results/source-consistent-v0.5/REGRESSION.md)
+The publication-grade clean-v2.1 primary stratum contains:
 
-Frozen v0.4 remains reproducible as the preceding historical discovery run; its 26/26 + 11/11 PASS is preserved against the benchmark then registered, including the later-withdrawn `KU-NI` retention label.
+- **554** Tablet/Nodule/Roundel words of length 2–8
+- **211** documents
+- **374** distinct word types
+- effective token weight **457**
 
-### 1. Damage-aware v0.3 passes its benchmark
+Full report: [`results/phase1b-confirmatory-v2.1/PHASE1B_FINAL_CONFIRMATORY_REPORT.md`](results/phase1b-confirmatory-v2.1/PHASE1B_FINAL_CONFIRMATORY_REPORT.md)
 
-The first large-scale exact-pair method was contaminated by normalized words whose damaged boundaries had disappeared. The Davis-six audit initially found that more than half of its apparent exact pairs were affected.
+### Locked Test 2B calibration
 
-v0.3 restores an independent boundary mask **before** pair generation and keeps boundary-distribution evidence separate from exact-paradigm evidence.
+The exact preregistered detector is preserved at [`scripts/phase1b/04_run_blind_calibration.py`](scripts/phase1b/04_run_blind_calibration.py), SHA-256:
 
-Its frozen regression gate now passes:
+```text
+f19a24af71afd25091734638377f99570a3d370ef3022f1261850dc6a660e6be
+```
 
-> **19/19 known damage-created or insecure relationships removed; 6/6 strong secure controls retained.**
+On clean-v2.1, the preregistered 10% synthetic-suffix gate passes **20/20**, with exact 95% lower power bound **0.8316** and weakest 99% ΔLL lower bound **+4.6245**. The boundary-independent negative control gives **0/20** false-positive recoveries.
 
-The validated run starts with 1,285 candidate syllabic occurrences and retains 970 complete occurrences after boundary masking.
+### TI and JA: final global edge-productivity result
 
-Experiment: [`experiments/damage-aware-v03.md`](experiments/damage-aware-v03.md)  
-Generated results: [`results/damage-aware-v0.3/`](results/damage-aware-v0.3/)  
-Regression: [`results/damage-aware-v0.3/REGRESSION.md`](results/damage-aware-v0.3/REGRESSION.md)
+| Candidate | Occurrences | Terminal | Internal | Docs | Held-out ΔLL | 99% document-bootstrap CI | Result |
+|---|---:|---:|---:|---:|---:|---:|---|
+| `TI` | 38 | 20 | 18 | 27 | **-0.5697** | **[-3.6315, +2.0194]** | no global edge-productivity evidence |
+| `JA` | 37 | 19 | 18 | 33 | **+0.9007** | **[-3.0357, +4.8210]** | no global edge-productivity evidence |
 
-### 2. Independent partial replication of Davis 2026
+Neither candidate clears the locked 99% lower-bound > 0 criterion. The decision is stable across 100 independently hash-derived bootstrap seeds per candidate.
 
-The first affix-ranking experiment was frozen **before** the identities of Brent Davis's six 2026 morphology candidates were known to this project.
+Therefore:
 
-Davis subsequently supplied the target set directly:
+> **The repaired administrative corpus does not provide confirmatory evidence that TI or JA is a globally productive terminal suffix.**
 
-- prefixes: **`A-`, `I-`**
-- suffixes: **`-RE`, `-RO`, `-TE`, `-TI`**
+This is a global-productivity result, not a claim that every local TI/JA relation is accidental.
 
-The frozen v0.2 ranks were:
+### Local exact-pair evidence that survives
 
-| Davis candidate | blind rank |
-|---|---:|
-| `A-` | **1 / 116** |
-| `I-` | **4 / 116** |
-| `-RO` | **1 / 116** |
-| `-TE` | **4 / 116** |
-| `-RE` | **7 / 116** |
-| `-TI` | **11 / 116** |
+Across all **580** clean-v2.1 words, there are **24** exact one-sign `X ~ X-Y` extensions. Only one of all 24 has short/long co-occurrence on the same document: `KA-PA ~ KA-PA-QE` on HT 6a.
 
-The pre-registered top-2-prefix / top-4-suffix comparison yields **3/6 exact cutoff overlap**, classified in advance as a **partial conceptual replication**. That score remains frozen; v0.3 does not rewrite it.
+`JA` retains four exact extensions:
 
-**Post-unblinding universe-matched sensitivity analysis.** On 2026-08-18 Davis clarified that his analysis considered only 50 Linear B main-series syllabograms with Linear A homomorphs and excluded untransliterated signs. Restricting the unchanged frozen v0.2 scores to the directly comparable members of that universe moves `I-` from rank 4 to **rank 2**, because `*86` and `*306` were never eligible in Davis's analysis. The matched cutoff overlap is therefore **4/6 = 2/2 prefixes + 2/4 suffixes**, still in the original "partial" band. This is a secondary post-unblinding result and does not replace the primary 3/6 score. One eligible label, `QI`, has no direct frozen v0.2 row and is not silently remapped to a numbered sign.
+- `*306-TU ~ *306-TU-JA`
+- `A-MA ~ A-MA-JA`
+- `KU-PA ~ KU-PA-JA`
+- `PA-SE ~ PA-SE-JA`
+
+`TI` retains three:
+
+- `DA-KU-SE-NE ~ DA-KU-SE-NE-TI`
+- `JA-KU ~ JA-KU-TI`
+- `RI-RU-MA ~ RI-RU-MA-TI`
+
+The former `SA-MA ~ SA-MA-TI` relation is eliminated because HT 39 is diplomatically `]SA-MA-TI`.
+
+No TI or JA short/long pair co-occurs on the same document. Under the frozen sparsity rule, suffixing versus truncation/factorization therefore remains **INDETERMINATE** for every TI/JA pair.
+
+Current grades:
+
+- **TI: C+/B−, Level 2A local candidate.** Global Test 2B negative; surviving exact relations retain strong alternative-segmentation/source caveats.
+- **JA: B, replicated Level 2A structural candidate.** Global Test 2B negative; four exact cross-stem relations survive, but suffixhood and grammatical function are not established.
+
+Candidate addenda:
+
+- [`audits/JA-phase1b-v2.1-addendum.md`](audits/JA-phase1b-v2.1-addendum.md)
+- [`audits/TI-phase1b-v2.1-addendum.md`](audits/TI-phase1b-v2.1-addendum.md)
+
+## Earlier discovery and replication results
+
+Historical discovery runs remain reproducible and useful as discovery substrates, not as substitutes for the final Phase 1B boundary repair.
+
+### Davis 2026 blind replication
+
+The first affix-ranking experiment was frozen before the identities of Brent Davis's six 2026 candidates were known to the project. The frozen v0.2 top-2-prefix/top-4-suffix comparison recovered **3/6** at the preregistered cutoff. A post-unblinding universe-matched sensitivity analysis, restricted to the directly comparable 50-sign Linear B main-series homomorph universe, yields **4/6 = 2/2 prefixes + 2/4 suffixes**. The latter is secondary and does not replace the frozen primary result.
+
+The primary 3/6 cutoff overlap has exact `p = 0.0002606` under the registered external-target-placement null; the secondary universe-matched 4/6 result has `p = 0.0000972`.
 
 Protocol: [`experiments/davis-2026-affix-replication.md`](experiments/davis-2026-affix-replication.md)  
-Second-stage audit: [`results/davis-six-audit-synthesis.md`](results/davis-six-audit-synthesis.md)  
-Universe-matched analysis: [`experiments/davis-2026-universe-matched-v02.md`](experiments/davis-2026-universe-matched-v02.md)  
-Universe-matched results: [`results/davis-universe-matched-v0.2/`](results/davis-universe-matched-v0.2/)
+Audit synthesis: [`results/davis-six-audit-synthesis.md`](results/davis-six-audit-synthesis.md)
 
-### Statistical calibration: internal discovery versus external replication
+### Damage-aware / source-consistent discovery
 
-A preregistered statistical calibration now separates internally discovered exact-pair counts from the independently supplied Davis target set. Two 50,000-permutation nulls preserve candidate residual stems, word lengths, edge-sign frequencies, and, in the sensitivity model, site structure. The results are intentionally conservative:
+The v0.3 damage-aware regression gate removed **19/19** registered damage-created or insecure relationships while retaining **6/6** strong controls. Later source audits showed that even this was not a complete diplomatic solution, motivating Phase 1B.
 
-| structural target | observed pairs | target-specific p range | max-sign-adjusted p range |
-|---|---:|---:|---:|
-| `A-` | 6 | 0.162–0.233 | 0.211–0.259 |
-| `I-` | 4 | 0.092–0.170 | 0.858–0.892 |
-| `-JA` | 5 | **0.058–0.080** | 0.328–0.518 |
-| `-TI` | 3 | 0.146–0.215 | 0.997–0.999 |
+The v0.5 source-consistent discovery substrate passes **30/30** structural/source negatives and retains **13/13** audited structurally complete controls. It remains a discovery substrate rather than a source-complete edition.
 
-Thus none of the four internal structural counts is statistically exceptional after calibrating against the maximum count attained by any sign in the discovery search. This does **not** erase manual morphology evidence: `JA` still has four independent Tier-A/B families after hostile epigraphic audit. It means pair count alone is insufficient to carry that conclusion.
+Experiments:
 
-The independently supplied Davis set behaves very differently under a simple uniform external-target-placement null. The frozen primary 116-sign experiment's **3/6** cutoff overlap has exact `p = 0.0002606` for at least three total hits; the post-unblinding 49-sign universe-matched **4/6** sensitivity result has `p = 0.0000972`. The latter remains secondary and does not replace the primary score.
+- [`experiments/damage-aware-v03.md`](experiments/damage-aware-v03.md)
+- [`experiments/source-consistent-v05.md`](experiments/source-consistent-v05.md)
+- historical provisional global test: [`results/edge-productivity-v0.7b/`](results/edge-productivity-v0.7b/)
 
-Experiment: [`experiments/statistical-calibration-v01.md`](experiments/statistical-calibration-v01.md)  
-Generated results: [`results/statistical-calibration-v0.1/`](results/statistical-calibration-v0.1/)
+The v0.7b unblinding is now explicitly **superseded** by clean-v2.1.
 
-### 3. `A-` and `I-` are strong under damage-aware paradigmatic evidence
+### Prefixes A- and I-
 
-v0.3 ranks the Davis prefixes:
-
-- `A-`: **#1** prefix by secure exact paradigms, with 6 surviving pairs;
-- `I-`: **#3**, with 4 surviving pairs.
-
-Representative high-confidence relationships include:
+Damage-aware discovery continues to support strong inscription-level formal relationships for initial `A-` and `I-`, including:
 
 - `KA-RU ~ A-KA-RU`
 - `SI-KI-RA ~ A-SI-KI-RA`
@@ -114,185 +137,21 @@ Representative high-confidence relationships include:
 - `QA-*118 ~ I-QA-*118`
 - `DA-MA-TE ~ I-DA-MA-TE`
 
-The supported claim remains structural. The grammatical functions of `A-` and `I-` are unknown.
-
-### 4. Final `JA` survives full audit as productive morphology
-
-The most important non-Davis result from v0.3 remains final `JA`, but the manual audit substantially refines the automatic count.
-
-v0.3 ranked `JA` **#1 among suffixes by damage-aware exact paradigms** and generated seven apparently secure relationships. The completed inscription/context audit resolves those seven as:
-
-| pair | audit result |
-|---|---|
-| `PA-SE ~ PA-SE-JA` | **Tier A** |
-| `KU-PA ~ KU-PA-JA` | **Tier A** |
-| `A-SE ~ A-SE-JA` | **Tier B** |
-| `*306-TU ~ *306-TU-JA` | **Tier B / onomastic risk** |
-| `A-MA ~ A-MA-JA` | Tier C / comparison-only |
-| `JA-SA ~ JA-SA-JA` | rejected: cross-face continuation / ritual abbreviation |
-| `PU2-RE ~ PU2-RE-JA` | rejected: authoritative fragment boundaries absent from exploratory source layer |
-
-So **4/7** survive as credible Tier-A/B morphology candidates; only the two original controls currently satisfy the strongest benchmark standard.
-
-The important structural conclusion survives:
-
-> **Final `JA` behaves as a productive morphological element in at least some Linear A vocabulary. Its grammatical function remains unknown.**
-
-The audit also adds two failure modes not captured by v0.3 physical-damage masking: **editorial/cross-face segmentation** and **authoritative source-coverage gaps**.
-
-Full audit: [`audits/JA.md`](audits/JA.md)  
-Summary: [`data/ja-audit-summary.csv`](data/ja-audit-summary.csv)
-
-A second-stage contextual-function test then compared the four surviving Tier-A/B families. Its registered promotion rule required the **same base→JA role change in at least two independent families**. The result is negative: **0/4 families produced a replicated role shift**. In particular, both `KU-PA/KU-PA-JA` and `A-SE/A-SE-JA` preserve essentially the same administrative recipient/designation-like slot. Simple assignments such as recipient, sender/source, roundel/receipt, sealed-document, or commodity-association marker are therefore rejected.
-
-Function test: [`experiments/ja-context-function-test.md`](experiments/ja-context-function-test.md)  
-Context matrix: [`data/ja-context-function-matrix.csv`](data/ja-context-function-matrix.csv)  
-Summary: [`data/ja-context-function-summary.csv`](data/ja-context-function-summary.csv)
-
-### Comparative audit: `ME` collapses under source/type controls
-
-The same v0.3 screen that elevated `JA` ranked final `ME` #2 by accepted exact paradigms. A full audit produces a sharply different outcome:
-
-| v0.3 `ME` pair | manual result |
-|---|---|
-| `A-RA-TU ~ A-RA-TU-ME` | **Tier B candidate** |
-| `JA-SA-SA-RA ~ ...-ME` | rejected: cross-face continuation |
-| `MA-RU ~ MA-RU-ME` | rejected: complex/logographic `*561` notation flattened as syllabic text |
-| `SA-RA ~ SA-RA-ME` | rejected: cross-face continuation |
-
-So only **1/4** damage-secure automatic pairs survives as a credible morphology candidate. The current benchmark therefore does **not** establish productive final `ME` morphology. This is an important contrast with `JA`, where four independent Tier-A/B families survived equivalent scrutiny.
-
-The `ME` audit adds a new corpus failure mode: **complex-sign/logogram flattening can manufacture a syllabic-looking affix paradigm**.
-
-Audit: [`audits/ME.md`](audits/ME.md)  
-Lead: [`leads/ME.md`](leads/ME.md)  
-Summary: [`data/me-audit-summary.csv`](data/me-audit-summary.csv)
-
-### Comparative audit: `NE` has one strong local paradigm
-
-The full `NE` audit produces an intermediate profile between `JA` and `ME`:
-
-| candidate family | manual result |
-|---|---|
-| `*21F-TU ~ *21F-TU-NE` | **Tier A positive** |
-| `QE-TU ~ QE-TU-NE` | rejected: base is `]QE-TU` |
-| `PA-TA ~ PA-TA-NE` | rejected: base is `]PA-TA` |
-| `PA-RA ~ PA-RA-NE` | reclassified: scribal + onomastic lexical-identity confound |
-
-The `*21F-TU` family is exceptionally strong locally: HT Scribe 9 writes both bare and extended forms, and Scribe 11 independently replicates the extended form. But **only 1/4 original candidate families survives as credible morphology**, so current exact-pair evidence does not establish productive final `NE` across independent stems.
-
-The extended `*21F-TU-NE` form occurs in both header-like and numbered recipient-like contexts, so no grammatical function is assigned.
-
-Audit: [`audits/NE.md`](audits/NE.md)  
-Lead: [`leads/NE.md`](leads/NE.md)  
-Summary: [`data/ne-audit-summary.csv`](data/ne-audit-summary.csv)  
-Cross-suffix comparison: [`data/suffix-audit-comparison.csv`](data/suffix-audit-comparison.csv)
-
-### 5. Different affixes have different evidentiary profiles
-
-v0.3 deliberately separates two dimensions that the earlier composite score conflated.
-
-#### Boundary enrichment
-
-`RO` remains the clearest example: it ranks **#1** among suffixes for raw word-final enrichment, yet only two complete `X ~ X-RO` strings survive the damage layer and both still require lexical/contextual caution.
-
-`ME` ranks **#4** on boundary enrichment, while `JA` ranks only #37 despite leading the exact-paradigm table.
-
-#### Secure exact paradigms
-
-The top damage-aware suffix results are:
-
-| rank | final sign | secure exact pairs | damage-excluded pairs |
-|---:|---|---:|---:|
-| **1** | `JA` | **7** | 1 |
-| **2** | `ME` | **4** | 2 |
-| **3** | `TI` | **3** | 2 |
-| 4 | `RA` | 3 | 3 |
-| **5** | `TE` | **3** | 3 |
-| 13 | `NE` | 2 | 2 |
-| 14 | `RO` | 2 | 2 |
-| **33** | `RE` | **1** | 5 |
-
-This is not a probability ranking of “true suffixes.” It demonstrates that edge concentration, exact stem alternation, lexical class, and grammatical function are distinct empirical questions.
-
-## A benchmark correction, followed by a correction of the correction
-
-The `KU-NI` case is now an explicit example of why source hierarchy matters.
-
-During v0.3 development, the benchmark treated `KU-NI ~ KU-NI-TE` as damage-created. The normalized HT 79+83 item page then appeared to show a complete `KU-NI`, so the project withdrew that negative label and reported 19/37 Davis-six pairs as damage/insecure failures.
-
-The later QE/SU/WI comparative audit checked the same token against the separate GORILA-derived **damage-preserving** commentary for HT 79 [+] 83. That source gives:
-
-```text
-]KU-NI[
-```
-
-The Tier-B promotion of `KU-NI ~ KU-NI-TE` has therefore been withdrawn. This does **not** change the frozen v0.3 regression PASS, because `KU-NI` was not among its six retained-positive controls. It does change the later manual Davis-six audit accounting.
-
-The current targeted Davis-six source/damage count is:
-
-> **20/37 = 54.1%** of the original apparent exact pairs fail because a relevant boundary is damaged, insecure, or contradicted by a higher-fidelity source representation.
-
-The sequence of corrections is deliberately preserved. A benchmark that can reverse its own prior promotion when better source evidence appears is behaving as a falsifiable benchmark should.
-
-## Why raw boundary rank is not enough
-
-v0.3 also exposed a limitation in a deliberately pure enrichment statistic. Rare numbered signs with only a few edge occurrences and zero internal occurrences can outrank common, independently supported candidates.
-
-For example:
-
-- `A` has 110 left-edge and 12 internal occurrences but ranks #6 on raw log-enrichment;
-- `I` has 48 left-edge and 42 internal occurrences and ranks #48, despite four secure exact prefix paradigms.
-
-No post-hoc weight change is applied to v0.3. A future version should add a separately registered support/significance measure rather than quietly retuning the frozen result.
+These remain structural observations. Their grammatical functions are unknown and are not upgraded by the TI/JA Phase 1B result.
 
 ## Evidence model
 
-[`BENCHMARK.md`](BENCHMARK.md) defines the evidence tiers. Machine-readable data include:
+[`BENCHMARK.md`](BENCHMARK.md) defines the evidence tiers. The working hierarchy is:
 
-- [`data/morphology-benchmark.csv`](data/morphology-benchmark.csv)
-- [`data/morphology-audit-queue.csv`](data/morphology-audit-queue.csv)
-- [`data/validated-leads.csv`](data/validated-leads.csv)
-- [`data/davis-2026-unblinding.csv`](data/davis-2026-unblinding.csv)
-- [`data/davis-2026-main-grid-universe.csv`](data/davis-2026-main-grid-universe.csv)
-- [`data/davis-six-audit-summary.csv`](data/davis-six-audit-summary.csv)
-- [`data/ja-audit-summary.csv`](data/ja-audit-summary.csv)
-- [`data/ja-context-function-matrix.csv`](data/ja-context-function-matrix.csv)
-- [`data/ja-context-function-summary.csv`](data/ja-context-function-summary.csv)
-- [`data/ja-list-frame-matrix.csv`](data/ja-list-frame-matrix.csv)
-- [`data/ja-list-frame-summary.csv`](data/ja-list-frame-summary.csv)
-- [`data/me-audit-summary.csv`](data/me-audit-summary.csv)
-- [`data/ne-audit-summary.csv`](data/ne-audit-summary.csv)
-- [`data/ra-audit-summary.csv`](data/ra-audit-summary.csv)
-- [`data/qe-su-wi-audit-summary.csv`](data/qe-su-wi-audit-summary.csv)
-- [`data/v05-regression-backlog.csv`](data/v05-regression-backlog.csv)
-- [`data/v05-regression-set.csv`](data/v05-regression-set.csv)
-- [`data/v05-source-overrides.csv`](data/v05-source-overrides.csv)
-- [`data/suffix-audit-comparison.csv`](data/suffix-audit-comparison.csv)
-- [`data/v03-regression-set.csv`](data/v03-regression-set.csv)
-- [`data/v04-regression-set.csv`](data/v04-regression-set.csv)
-- [`data/v04-source-overrides.csv`](data/v04-source-overrides.csv)
-- [`data/v04-lexical-warnings.csv`](data/v04-lexical-warnings.csv)
+1. **direct epigraphic/source evidence** for sign reading, damage, and word boundary;
+2. **independently replicated formal relationships** under frozen procedures;
+3. **candidate-blind statistical confirmation** after power calibration;
+4. **local exact paradigms** after hostile audit;
+5. structural/contextual covariation;
+6. grammatical labels only after a form predicts an independent recurring structural role across multiple stems;
+7. lexical anchoring and external language-family comparison only after internal structure is established.
 
-Negative and reclassified examples are deliberately retained.
-
-## Current benchmark-positive examples
-
-Representative strong formal relationships include:
-
-| Relationship | Assessment | Evidence |
-|---|---|---|
-| `KA-RU ~ A-KA-RU` | Tier A | initial `A-`, administrative contextual convergence |
-| `SI-KI-RA ~ A-SI-KI-RA` | Tier A | initial `A-`, published prior recognition |
-| `TA-NA-TE ~ A-TA-NA-TE` | Tier A replication | same-tablet initial `A-` contrast |
-| `QA-*118 ~ I-QA-*118` | Tier A | complete cross-site initial `I-` contrast |
-| `DA-MA-TE ~ I-DA-MA-TE` | Tier A | repeated complete initial `I-` contrast |
-| `PA-SE ~ PA-SE-JA` | Tier A | exact final `JA` extension |
-| `KU-PA ~ KU-PA-JA` | Tier A | independent exact final `JA` extension |
-| `*21F-TU ~ *21F-TU-NE` | Tier A | same-scribe + cross-scribe `NE` evidence |
-| `DA-KU-SE-NE ~ DA-KU-SE-NE-TI` | Tier A with segmentation caveat | exact final `TI` extension |
-
-These are **structural observations, not translations**.
+Negative and reclassified examples are deliberately retained in [`REJECTED_HYPOTHESES.md`](REJECTED_HYPOTHESES.md) and the audit files.
 
 ## Research strategy
 
@@ -302,142 +161,67 @@ The project follows a grammar-first combinatorial approach:
 2. restore damage and boundary state before generating paradigms;
 3. test candidates across scribes, sites, genres, and lexical classes;
 4. preserve rejected cases as controls;
-5. infer grammatical function only when a form predicts a recurring administrative or syntactic role;
-6. compare external languages only after an internal structural prediction exists.
+5. separate global productivity from local morphology;
+6. distinguish suffixing from truncation, factorization, abbreviation, cliticization, and segmentation alternatives where the documents permit it;
+7. infer grammatical function only when morphology correlates with independent structural context across multiple stems;
+8. compare external languages only after an internal structural prediction exists.
 
 Full protocol: [`METHODOLOGY.md`](METHODOLOGY.md)
 
-## Reproduce v0.3
-
-The exploratory corpus is pinned to `mwenge/lineara.xyz` commit:
-
-```text
-43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a
-```
-
-The GitHub Actions workflow runs the complete v0.3 pipeline:
-
-[`.github/workflows/damage-aware-v03.yml`](.github/workflows/damage-aware-v03.yml)
-
-Core scripts:
-
-```text
-scripts/build-boundary-mask.mjs
-scripts/rank-affixes-v03.mjs
-scripts/evaluate-v03-regression.mjs
-```
-
-The older frozen v0.1/v0.2 implementation remains at [`scripts/rank-affixes.mjs`](scripts/rank-affixes.mjs) for reproducibility.
-
 ## Next work
 
-The suffix sweep, three combinatorial grid searches, and the first statistical calibration are complete. The project now has a justified stop rule against further segmentation freedom merely to force a paradigm.
+The Phase 1B blocker and Stage 5C global TI/JA test are now closed.
 
-Current evidence hierarchy:
+The next justified milestone is **Stage 5D: rebuild the suffix-transition network from scratch on clean-v2.1**. The old network cannot be carried forward unchanged because its corpus membership predates the diplomatic repair.
 
-1. **Independent Davis replication:** frozen 3/6 primary cutoff overlap, statistically unusual under the registered external-target-placement null (`p ≈ 2.61×10^-4`).
-2. **Epigraphically promoted morphology:** `A-`, `I-`, and especially final `JA` have strong inscription-level relationships; `JA` remains the strongest non-Davis productive suffix candidate, with function unknown.
-3. **Internal structural counts:** useful for discovery, but none of `A`, `I`, `JA`, or `TI` is exceptional after max-sign permutation calibration. Pair count must therefore remain subordinate to source audit and independent replication.
-4. **Paradigm grids:** v0.1–v0.3 recover local multi-ending families but no promotable Kober-style two-stem paradigm. The grid stop rule remains active.
+After that:
 
-The next major milestone is **independent-corpus replication**, not another morphology search.
+1. audit the rebuilt transition edges inscription by inscription;
+2. re-run the truncation/factorization classifier on surviving relations;
+3. seek independent structural contexts for any morphologically promoted contrast;
+4. keep **Phase 6 grammatical inference closed** until the registered multi-stem structural gate is satisfied;
+5. postpone lexical-family and language-family arguments until the internal grammar supports them.
 
-1. identify an independently encoded Linear A corpus or export, preferably SigLA-derived where access/licensing permits;
-2. define an explicit sign/transliteration crosswalk without silently merging uncertain sign identities;
-3. rerun only frozen claims first: Davis ranks/cutoffs, `A-`, `I-`, `JA`, `TI`, and the main negative/source controls;
-4. compare which relationships survive independent segmentation and source representation;
-5. only after that replication should a new statistical model, grammatical-function search, or external language-family test be promoted.
+## Reproducibility
 
-Statistical calibration: [`experiments/statistical-calibration-v01.md`](experiments/statistical-calibration-v01.md).  
-Grid stop rule: [`experiments/nested-stem-grid-v03.md`](experiments/nested-stem-grid-v03.md).
+Phase 1B scripts are in [`scripts/phase1b/`](scripts/phase1b/). The final machine-readable outputs, control summaries, calibration curve, exact-pair reassessment, and hash manifest are in [`results/phase1b-confirmatory-v2.1/`](results/phase1b-confirmatory-v2.1/).
+
+The raw SigLA payload and full source-derived token/boundary tables are **not redistributed in this repository**. Their hashes and upstream provenance are recorded so the analysis can be reproduced from the licensed/published sources without turning this repository into another transcription authority.
+
+See [`UPSTREAM.md`](UPSTREAM.md) and [`SOURCES.md`](SOURCES.md).
 
 ## Repository map
 
 ```text
-BENCHMARK.md
-METHODOLOGY.md
-REJECTED_HYPOTHESES.md
-SOURCES.md
-UPSTREAM.md
-
-scripts/
-  rank-affixes.mjs
-  build-boundary-mask.mjs
-  rank-affixes-v03.mjs
-  evaluate-v03-regression.mjs
-  build-structural-mask-v04.mjs
-  rank-affixes-v04.mjs
-  evaluate-v04-regression.mjs
-
-data/
-  morphology-benchmark.csv
-  morphology-audit-queue.csv
-  validated-leads.csv
-  davis-2026-unblinding.csv
-  davis-six-audit-summary.csv
-  ja-audit-summary.csv
-  me-audit-summary.csv
-  ne-audit-summary.csv
-  suffix-audit-comparison.csv
-  v03-regression-set.csv
-  v04-regression-set.csv
-  v04-source-overrides.csv
-  v04-lexical-warnings.csv
+CURRENT_STATUS.md              authoritative present conclusions
+BENCHMARK.md                   evidence tiers
+METHODOLOGY.md                 research protocol
+REJECTED_HYPOTHESES.md         falsified/reclassified claims
+UPSTREAM.md                    upstream-data policy
 
 audits/
-  A.md
-  I.md
-  RO.md
-  TE.md
-  RE.md
-  TI.md
-  ME.md
-  NE.md
-  JA.md
+  JA.md                        historical manual JA audit
+  JA-phase1b-v2.1-addendum.md  current JA confirmatory addendum
+  TI-phase1b-v2.1-addendum.md  current TI confirmatory addendum
+  ...
+
+scripts/phase1b/
+  reconstruct_sigla_step2_work.py
+  extract_lineara_diplomatic_edges.js
+  build_sigla_tokens_clean_v2.py
+  build_sigla_tokens_clean_v2_1.py
+  04_run_blind_calibration.py
+  run_phase1b_ti_ja_confirmatory.py
+  reassess_phase1b_exact_pairs.py
+  test_phase1b_builder.py
+  test_phase1b_builder_v2_1.py
 
 results/
-  davis-six-audit-synthesis.md
-  damage-aware-v0.3/
-  structural-aware-v0.4/
-
-experiments/
-  davis-2026-affix-replication.md
-  damage-aware-v03.md
-  structural-aware-v04.md
-  mitanni-indo-aryan-pilot.md
-  toponym-kober-grid.md
-
-leads/
-  JA.md
-  NE.md
-  ME.md
-  SI-DA.md
-  DA-KU.md
-  21F-TU.md
-  KU-PA3.md
+  phase1b-confirmatory-v2.1/   publication-grade current TI/JA record
+  edge-productivity-v0.7b/    superseded provisional run
+  damage-aware-v0.3/          historical discovery run
+  source-consistent-v0.5/     historical discovery substrate
 ```
-
-## Data provenance
-
-This repository is **not** an authoritative edition of Linear A.
-
-Evidence is prioritized roughly as:
-
-1. published inscription/facsimile editions, especially GORILA;
-2. specialist transcription and palaeographic resources such as SigLA;
-3. published linguistic/contextual scholarship;
-4. computational corpora and derived analytical layers;
-5. this project's inference.
-
-See [`UPSTREAM.md`](UPSTREAM.md) and [`SOURCES.md`](SOURCES.md).
-
-## Contributing and specialist review
-
-Corrections are welcome, especially concerning sign readings, damage, word boundaries, scribal attribution, administrative syntax, and prior scholarship.
-
-See [`CONTRIBUTING.md`](CONTRIBUTING.md).
-
-If a result here is already established in the literature, it should be credited and reclassified as a **replication**, not presented as a new discovery.
 
 ## Scope and non-claims
 

@@ -1,0 +1,12 @@
+{
+  "source_commit": "43fe7cf1abc8e6bb1ea3228c3a1bd5938709620a",
+  "source_file": "LinearAInscriptions_43fe7cf.js",
+  "inscription_records": 1721,
+  "lexical_rows": 3607,
+  "edge_damaged_rows": 934,
+  "primary_rows": 3173,
+  "primary_edge_damaged_rows": 767,
+  "eligible_rows": 1024,
+  "eligible_edge_damaged_rows": 277,
+  "eligible_interior_damage_rows": 6
+}

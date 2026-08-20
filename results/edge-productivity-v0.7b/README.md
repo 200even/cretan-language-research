@@ -1,6 +1,8 @@
 # Edge Productivity v0.7b
 
-**Status: PROVISIONAL / DATA-QUALITY BLOCKED**
+> **SUPERSEDED 2026-08-20.** Phase 1B is complete. The candidate-blind clean-v2.1 repair and unchanged-detector rerun are now the confirmatory record: [`../phase1b-confirmatory-v2.1/`](../phase1b-confirmatory-v2.1/). Both TI and JA fail the global edge-productivity criterion on the repaired corpus. Everything below is retained as the historical provisional run and blocker discovery.
+
+**Historical status: PROVISIONAL / DATA-QUALITY BLOCKED**
 
 This directory records the frozen v0.7b calibration and the first authorized
 unblinding of **TI** and **JA**. The statistical detector was locked before
@@ -10,9 +12,8 @@ damage markers were lost**, causing damaged forms to enter the nominally clean
 administrative corpus.
 
 Accordingly, the numerical TI/JA results below are reproducible, but they are
-**not yet publication-grade evidence for or against morphology**. The next
-allowed change is a candidate-blind repair of the edge-damage mask followed by
-a rerun of the unchanged detector.
+**not publication-grade evidence for or against morphology**. The completed
+candidate-blind repair and rerun are published in `../phase1b-confirmatory-v2.1/`.
 
 ## Frozen source and calibration
 
@@ -71,7 +72,7 @@ edge-productivity in the current extracted corpus. TI slightly worsens
 out-of-document boundary prediction; JA improves it modestly, but the 99%
 interval crosses zero.
 
-**This is not yet a final morphological verdict.** Global edge productivity and
+**This is not a final morphological verdict.** Global edge productivity and
 exact paradigm segmentation are separate evidential claims.
 
 ## Epigraphic blocker discovered after unblinding
@@ -89,25 +90,22 @@ not reliably preserve all word-edge damage metadata.
 
 ### Consequence
 
-The v0.7b unblinding run must be treated as **provisional**. We do not change
-the statistical model. Instead:
+The v0.7b unblinding run is now a **superseded provisional record**. The completed repair:
 
-1. construct a candidate-blind word-edge damage mask from diplomatic sources;
-2. enumerate every token whose eligibility changes;
-3. freeze and hash the corrected corpus;
-4. rerun the exact same TI/JA detector;
-5. separately reassess exact-pair evidence.
+1. constructed a candidate-blind word-edge damage mask from diplomatic sources;
+2. enumerated every token whose eligibility changed;
+3. froze and hashed the corrected corpus;
+4. reran the exact same TI/JA detector;
+5. separately reassessed exact-pair evidence.
 
-This preserves the preregistration while correcting an upstream epigraphic
-inclusion error.
+See [`../phase1b-confirmatory-v2.1/PHASE1B_FINAL_CONFIRMATORY_REPORT.md`](../phase1b-confirmatory-v2.1/PHASE1B_FINAL_CONFIRMATORY_REPORT.md).
 
 ## Files
 
 - `preregistration_v07b_addendum.md` — frozen methodological addendum.
-- `calibration_report.json` — machine-readable calibration summary.
-- `power_curve_results.csv` — candidate-blind power curve.
-- `unblinding_provisional_v07b.json` — machine-readable TI/JA result and blocker.
-- `run_edge_productivity_v07b.py` — locked candidate runner.
+- `calibration_report.json` — machine-readable historical calibration summary.
+- `power_curve_results.csv` — historical candidate-blind power curve.
+- `unblinding_provisional_v07b.json` — machine-readable provisional TI/JA result and blocker.
 
 ## Data licensing
 
