@@ -117,20 +117,32 @@ Extractor: [`scripts/stage5e0/extract_structural_roles.py`](scripts/stage5e0/ext
 
 **Current Stage 5E0 status:** architecture/source/role grammar frozen; corpus extraction and blind role census are the next execution step. Greek linguistic annotation remains sealed.
 
-## Independent exploratory branch: Kato Syme site enrichment
+## Independent exploratory branch: Kato Syme / pan-Cretan ritual distribution
 
-A standalone Kato Syme epigraphic branch has been **PREREGISTERED after hostile methodological review**. It is independent of Stage 5E and does not alter the main morphology roadmap.
+The referee-approved standalone Kato Syme branch has now completed both preregistered inferential scales. It remains independent of Stage 5E and makes no semantic or historical-continuity claim.
 
-The branch asks only whether Linear A textual features are enriched at Kato Syme after inscription-level counting and controls for chronology, object/formula class, preservation, geography, sanctuary context, and proper-name-compatible behavior.
+### Phase A: Kato Syme site enrichment
 
-A strict semantic firewall prohibits using Ephorus, later Greek cult identities, youth/initiation interpretations, or phonetic resemblance to assign meanings to candidates. Ephorus survives only as historical motivation for examining the site.
+**Terminal: `INDETERMINATE_DUE_TO_SPARSITY`.**
 
-Phase A terminal states are `SITE_ENRICHMENT_DETECTED`, `NEGATIVE`, or `INDETERMINATE_DUE_TO_SPARSITY`. A null may be called `NEGATIVE` only if the frozen synthetic power gate is adequate.
+The frozen source contains 12 Syme inscriptions in the local inventory, with 11 stone-vessel observations available to the broad Phase A frame. Before any real candidate-enrichment output was opened, the exact optimistic power gate showed that the frozen minimum qualifying effect (`OR=4`) has only **48.9% maximum uncorrected power** with 29 non-Syme comparison objects. Even 100 controls raise that optimistic ceiling only to 53.4%; FDR correction and hostile matching can only reduce it.
 
-A separately preregistered Phase B pan-Cretan rare-register test may activate **only** after Phase A terminates `INDETERMINATE_DUE_TO_SPARSITY`. Phase B candidate selection is corpus-wide and may not use Phase A candidate identities.
+Accordingly, no empirical Syme null was tested or labeled negative and no Syme-local candidate was promoted.
+
+### Phase B: pan-Cretan rare recurrent register
+
+The preregistered contingency activated automatically after Phase A became indeterminate and is also **terminal: `INDETERMINATE_DUE_TO_SPARSITY`**.
+
+The independently frozen frame contains **31 inscriptions across 14 sites**. After the diplomatic damage rule, 2–8-sign filter, numeral/logogram exclusion, and independently frozen core-formula mask, **29 eligible non-core exact types** remain across 13 inscriptions. All **29/29 are document singletons**. Therefore the preregistered `DF=2..6` candidate band contains **zero types** and the cross-site recurrence statistic cannot open as an adequately powered confirmatory test.
+
+This is not evidence that a rare ritual register is absent. The permitted descriptive statement is only that, in this frozen frame and primary diplomatic stratum, no surviving non-core exact sign group recurs on two independent inscriptions.
+
+The semantic firewall remains absolute: Ephorus, later Greek cult identity, youth/initiation, hunting, communal dining, and phonetic resemblance do not enter either result.
 
 Phase A protocol: [`experiments/kato-syme-site-enrichment-v01.md`](experiments/kato-syme-site-enrichment-v01.md)  
-Phase B contingency: [`experiments/pan-cretan-rare-ritual-register-v01.md`](experiments/pan-cretan-rare-ritual-register-v01.md)  
+Phase A power result: [`results/kato-syme-site-enrichment-v01/POWER_GATE.md`](results/kato-syme-site-enrichment-v01/POWER_GATE.md)  
+Phase B protocol: [`experiments/pan-cretan-rare-ritual-register-v01.md`](experiments/pan-cretan-rare-ritual-register-v01.md)  
+Phase B result: [`results/pan-cretan-rare-ritual-register-v01/RESULT.md`](results/pan-cretan-rare-ritual-register-v01/RESULT.md)  
 Referee disposition: [`audits/kato-syme-ephorus-referee-review.md`](audits/kato-syme-ephorus-referee-review.md)
 
 ## Current interpretation
@@ -141,7 +153,7 @@ The strongest new negative result is structural: there is no clean-v2.1 evidence
 
 The project is now testing a more consequential proposition: whether morphology can predict independently defined administrative structure under a method first validated on deciphered-but-blinded Linear B.
 
-The Kato Syme branch is a separate site-distribution experiment and currently carries **no semantic or continuity result**.
+The Kato Syme / pan-Cretan ritual-distribution branch is separately complete at its preregistered scales, with **two sparsity-limited indeterminate outcomes and no semantic result**.
 
 ## Roadmap
 
@@ -151,8 +163,8 @@ The Kato Syme branch is a separate site-distribution experiment and currently ca
 - Stage 5D multi-stage chaining: **COMPLETE — ZERO VALIDATED CHAINS**
 - Stage 5E0 Linear B positive control: **ACTIVE — PROTOCOL FROZEN**
 - Stage 5E1 Linear A contextual morphology: **BLOCKED pending Level-3 PY <-> KN authorization**
-- Kato Syme Phase A site enrichment: **PREREGISTERED — DATA FREEZE/POWER ANALYSIS NEXT**
-- Pan-Cretan rare-register Phase B: **PREREGISTERED CONTINGENCY — INACTIVE**
+- Kato Syme Phase A site enrichment: **COMPLETE — INDETERMINATE_DUE_TO_SPARSITY**
+- Pan-Cretan rare-register Phase B: **COMPLETE — INDETERMINATE_DUE_TO_SPARSITY**
 - Kato Syme -> historical Cretan institution semantics: **CLOSED pending independent evidence**
 - Phase 6 grammatical inference: **NOT OPEN**
 
