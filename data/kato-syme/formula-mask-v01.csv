@@ -1,0 +1,9 @@
+mask_id,regex,rationale,source
+FM01,"^(A-TA-I-\*301-(WA-(JA|E)|DE-KA)|A-NA-TI-\*301-WA-JA|JA-TA-I-\*301-U-JA)$","Primary opening family and documented variants","Ferrara et al. Archanes formula postprint; UCL From Linear A to Linear B"
+FM02,"^TA-NA-I-\*301.*$","Alternative/secondary opening family","Ferrara et al. Archanes formula postprint"
+FM03,"^TA-NA-RA-TE-U-TI-NU$","Documented recurring formula sequence","UCL From Linear A to Linear B / IO Za 2 structural tradition"
+FM04,"^(JA-|A-)?SA-SA-RA-(ME|MA)$","JA/A-SA-SA-RA-ME family including fragmentary prefixless realization","Ferrara et al. Archanes formula postprint"
+FM05,"^U-NA-(RU-)?KA-NA-(SI|TI)$","U-NA-KA-NA-SI / U-NA-RU-KA-NA-TI family","Ferrara et al. Archanes formula postprint"
+FM06,"^I-PI-NA-(MA|MI-NA)$","I-PI-NA-MA / I-PI-NA-MI-NA family","Ferrara et al. Archanes formula postprint"
+FM07,"^SI-RU-TE$","Recurring SI-RU-TE component","Ferrara et al. Archanes formula postprint"
+FM08,"^(I-NA-)?JA-PA-QA$","Documented terminal formula component / preserved fragment","UCL From Linear A to Linear B"

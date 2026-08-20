@@ -1,0 +1,5 @@
+n_syme,n_control,true_or,max_power,p_control_at_max,p_syme_at_max,passes_80pct
+11,29,4.0,0.489239,0.257,0.580463,false
+11,35,4.0,0.500013,0.314,0.646756,false
+11,50,4.0,0.526245,0.293,0.623736,false
+11,100,4.0,0.533504,0.381,0.711153,false
