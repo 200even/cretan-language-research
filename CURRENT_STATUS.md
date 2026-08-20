@@ -117,6 +117,22 @@ Extractor: [`scripts/stage5e0/extract_structural_roles.py`](scripts/stage5e0/ext
 
 **Current Stage 5E0 status:** architecture/source/role grammar frozen; corpus extraction and blind role census are the next execution step. Greek linguistic annotation remains sealed.
 
+## Independent exploratory branch: Kato Syme site enrichment
+
+A standalone Kato Syme epigraphic branch has been **PREREGISTERED after hostile methodological review**. It is independent of Stage 5E and does not alter the main morphology roadmap.
+
+The branch asks only whether Linear A textual features are enriched at Kato Syme after inscription-level counting and controls for chronology, object/formula class, preservation, geography, sanctuary context, and proper-name-compatible behavior.
+
+A strict semantic firewall prohibits using Ephorus, later Greek cult identities, youth/initiation interpretations, or phonetic resemblance to assign meanings to candidates. Ephorus survives only as historical motivation for examining the site.
+
+Phase A terminal states are `SITE_ENRICHMENT_DETECTED`, `NEGATIVE`, or `INDETERMINATE_DUE_TO_SPARSITY`. A null may be called `NEGATIVE` only if the frozen synthetic power gate is adequate.
+
+A separately preregistered Phase B pan-Cretan rare-register test may activate **only** after Phase A terminates `INDETERMINATE_DUE_TO_SPARSITY`. Phase B candidate selection is corpus-wide and may not use Phase A candidate identities.
+
+Phase A protocol: [`experiments/kato-syme-site-enrichment-v01.md`](experiments/kato-syme-site-enrichment-v01.md)  
+Phase B contingency: [`experiments/pan-cretan-rare-ritual-register-v01.md`](experiments/pan-cretan-rare-ritual-register-v01.md)  
+Referee disposition: [`audits/kato-syme-ephorus-referee-review.md`](audits/kato-syme-ephorus-referee-review.md)
+
 ## Current interpretation
 
 > **clean-v2.1 supports several replicated local one-stage terminal-extension relations, but no recoverable multi-stage suffix-transition network.**
@@ -124,6 +140,8 @@ Extractor: [`scripts/stage5e0/extract_structural_roles.py`](scripts/stage5e0/ext
 The strongest new negative result is structural: there is no clean-v2.1 evidence satisfying the preregistered definition of an agglutinative `X -> X-Y -> X-Y-Z` chain.
 
 The project is now testing a more consequential proposition: whether morphology can predict independently defined administrative structure under a method first validated on deciphered-but-blinded Linear B.
+
+The Kato Syme branch is a separate site-distribution experiment and currently carries **no semantic or continuity result**.
 
 ## Roadmap
 
@@ -133,6 +151,9 @@ The project is now testing a more consequential proposition: whether morphology 
 - Stage 5D multi-stage chaining: **COMPLETE — ZERO VALIDATED CHAINS**
 - Stage 5E0 Linear B positive control: **ACTIVE — PROTOCOL FROZEN**
 - Stage 5E1 Linear A contextual morphology: **BLOCKED pending Level-3 PY <-> KN authorization**
+- Kato Syme Phase A site enrichment: **PREREGISTERED — DATA FREEZE/POWER ANALYSIS NEXT**
+- Pan-Cretan rare-register Phase B: **PREREGISTERED CONTINGENCY — INACTIVE**
+- Kato Syme -> historical Cretan institution semantics: **CLOSED pending independent evidence**
 - Phase 6 grammatical inference: **NOT OPEN**
 
 Phase 1B report: [`results/phase1b-confirmatory-v2.1/`](results/phase1b-confirmatory-v2.1/)  
