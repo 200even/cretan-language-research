@@ -6,6 +6,11 @@ on:
       - '.github/workflows/stage5e0-blind.yml'
       - 'scripts/stage5e0/**'
       - 'results/stage5e0-linearb-control/**'
+  pull_request:
+    paths:
+      - '.github/workflows/stage5e0-blind.yml'
+      - 'scripts/stage5e0/**'
+      - 'results/stage5e0-linearb-control/**'
   workflow_dispatch:
 
 permissions:
