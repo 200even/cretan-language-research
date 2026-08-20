@@ -1,0 +1,51 @@
+name: Stage 5E0 blind calibration
+
+on:
+  push:
+    paths:
+      - '.github/workflows/stage5e0-blind.yml'
+      - 'scripts/stage5e0/**'
+      - 'results/stage5e0-linearb-control/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  blind-calibration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install frozen analysis dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy pandas scipy scikit-learn pytest
+          pip install 'git+https://github.com/ryanpavlicek/pyaegean.git@47c3f126afa9d1f09d836c38f8be437bd2868783'
+      - name: Fetch and verify frozen DAMOS v2
+        run: |
+          mkdir -p .stage5e0-data
+          curl -L --fail --retry 4 -o .stage5e0-data/damos-corpus.json 'https://github.com/ryanpavlicek/pyaegean/releases/download/damos-corpus-v2/damos-corpus.json'
+          echo 'eab9ccdfc4324b62f015bccd5e3f917f256cab8c058840842127eadecfbca2d2  .stage5e0-data/damos-corpus.json' | sha256sum -c -
+      - name: Run semantic-firewall tests
+        run: pytest -q scripts/stage5e0/test_structural_roles.py
+      - name: Extract anonymous structural roles
+        run: |
+          mkdir -p .stage5e0-out
+          python scripts/stage5e0/extract_structural_roles.py .stage5e0-data/damos-corpus.json .stage5e0-out/anonymous_roles.csv --summary .stage5e0-out/extraction_summary.json
+      - name: Run blind power and morphology calibration
+        run: |
+          python scripts/stage5e0/run_stage5e0_blind.py .stage5e0-out/anonymous_roles.csv .stage5e0-out/blind
+          cat .stage5e0-out/blind/blind_summary.json
+      - name: Hash complete blind output
+        run: |
+          (cd .stage5e0-out && find . -type f -print0 | sort -z | xargs -0 sha256sum) > .stage5e0-out/WORKFLOW_OUTPUT_SHA256.txt
+          cat .stage5e0-out/WORKFLOW_OUTPUT_SHA256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stage5e0-blind-${{ github.sha }}
+          path: .stage5e0-out/
+          retention-days: 90
