@@ -1,8 +1,8 @@
 # Current Research Status
 
-**Authoritative project status as of 2026-08-20.**
+**Authoritative project status as of 2026-08-21.**
 
-This file supersedes stronger productiveness wording in older discovery-run READMEs and candidate audits wherever they conflict with the clean-v2.1 confirmatory and Stage 5D results. Historical files are retained rather than rewritten out of the record.
+This file supersedes stronger productiveness wording in older discovery-run READMEs and candidate audits wherever they conflict with the clean-v2.1 confirmatory, Stage 5D, or Stage 5E0 results. Historical files are retained rather than rewritten out of the record.
 
 ## Phase 1B is complete
 
@@ -79,51 +79,66 @@ They are fan-outs, not chains.
 - `U -> JA`: **not recovered**.
 - `KU-PA3` extension family: **not represented in clean-v2.1**, so Stage 5D makes no linguistic claim about it.
 
-## Stage 5E0: Linear B positive control has begun
+## Stage 5E0: Linear B positive control is complete and failed authorization
 
-The referee-approved context-conditioned morphology architecture is now **FROZEN before any Linear B edge-sign results are inspected**.
-
-Primary control domains:
-
-- Pylos (PY)
-- Knossos (KN)
-
-Mandatory Level-3 authorization requires **bidirectional PY -> KN and KN -> PY transfer** on structural roles that independently pass the cross-site isomorphism and power gates.
-
-Mycenae/Thebes remain a sealed Level-4 holdout. Failure there can invalidate only an adequately powered test; underpowered Level-4 results are `INDETERMINATE_DUE_TO_SPARSITY` and cannot trigger PY/KN retuning.
-
-### Frozen semantic firewall
-
-- All logograms collapse immediately to one `[LOGOGRAM]` class.
-- All numeric values collapse to `[NUMBER]`.
-- Structural roles are generated only from raw line breaks, token order, character-column geometry and generic token classes.
-- No translations, lemmas, Greek morphology, commodity identities, tablet-series labels or known administrative interpretations may enter role construction or prediction.
-- Confirmatory suffix models see only `[MASKED_STEM] + FINAL_SIGN`; confirmatory prefix models see only `INITIAL_SIGN + [MASKED_STEM]`.
-- Stem and document leakage are jointly prevented with connected components of a stem-document bipartite graph.
-- Word length is explicitly included in baseline `M0`; edge signs enter only in `M1`, so the primary statistic asks whether the edge improves held-out prediction beyond length/document controls.
-
-### Frozen structural outcomes
-
-Nine anonymous roles (`SR01`-`SR09`) are mechanically defined from generic layout predicates, including direct numeric adjacency, generic-logogram adjacency, repeated parallel rows, quantified parallel entries, indented child blocks, geometric parent rows and sole-lexical rows. Human-readable aliases are descriptive only and carry no administrative semantics.
-
-A role is Level-3 transfer-eligible only if it has at least 100 positives, 100 negatives and 30 positive documents at **both** PY and KN, passes document-concentration control, and passes the frozen anonymous synthetic-effect power gate.
+Stage 5E0 tested whether a semantics-blind, length-controlled edge-sign detector could predict mechanically defined administrative structure in Linear B before any equivalent method was applied to Linear A.
 
 Frozen DĀMOS v2 asset SHA-256:
 
 `eab9ccdfc4324b62f015bccd5e3f917f256cab8c058840842127eadecfbca2d2`
 
-Protocol: [`results/stage5e0-linearb-control/STAGE5E0_PROTOCOL_LOCK.md`](results/stage5e0-linearb-control/STAGE5E0_PROTOCOL_LOCK.md)  
-Extractor: [`scripts/stage5e0/extract_structural_roles.py`](scripts/stage5e0/extract_structural_roles.py)
+Secure PY/KN lexical rows analyzed: **9,287**
 
-**Current Stage 5E0 status:** architecture/source/role grammar frozen; corpus extraction and blind role census are the next execution step. Greek linguistic annotation remains sealed.
+- Pylos: **5,830**
+- Knossos: **3,457**
+
+Five roles passed cross-site abundance/isomorphism screening: `SR01`, `SR02`, `SR03`, `SR05`, `SR09`.
+
+All **10** eligible role/direction combinations passed the frozen cross-site synthetic-effect power gate, but **0** passed the mandatory bidirectional PY <-> KN real-data criterion.
+
+### Level 1: Pylos
+
+**INDETERMINATE / NOT ESTABLISHED.** The leakage-proof stem-document component rule collapsed almost the whole site into one connected component:
+
+- suffix grouping largest component: **98.46%** of rows
+- prefix grouping largest component: **98.20%** of rows
+
+No Pylos role/direction cleared the within-site power gate, so real Pylos tests were correctly not scored.
+
+### Level 2: Knossos
+
+**NO POSITIVE; partially testable.** The largest connected components still contained roughly 90–91% of rows. Five role/direction combinations cleared within-site power (`SR02` suffix/prefix, `SR03` suffix/prefix, `SR05` suffix), and all five had negative held-out DeltaLL.
+
+### Level 3: mandatory bidirectional transfer
+
+**FAILED.** Cross-site transfer was adequately powered under the preregistered synthetic OR=2.0 effect.
+
+Two one-direction `KN -> PY` results for `SR01` were positive after Holm correction, but neither corresponding `PY -> KN` transfer passed. Every other eligible role/direction also failed bidirectional replication.
+
+Therefore:
+
+- `level3_positive = []`
+- `linear_a_authorized = false`
+- Stage 5E1 remains **BLOCKED**
+- Phase 6 remains **NOT OPEN**
+
+The correct conclusion is:
+
+> **The frozen Stage 5E0 edge-sign detector did not validate as a site-portable morphosyntactic predictor on blinded Linear B and therefore cannot be applied confirmatorily to Linear A.**
+
+This does not imply that Linear B lacks contextual morphology. It falsifies the sufficiency of this particular frozen detector architecture for the required positive control.
+
+Blind outputs and hashes are archived under `results/stage5e0-linearb-control/blind-run/`. Full result report: [`results/stage5e0-linearb-control/STAGE5E0_BLIND_RESULT.md`](results/stage5e0-linearb-control/STAGE5E0_BLIND_RESULT.md).
+
+Greek annotations may now be opened only for **diagnostic unblinding**. Stage 5E0 itself may not be retuned. Any revised detector must be preregistered as a separate experiment.
 
 ## Current interpretation
 
-> **clean-v2.1 supports several replicated local one-stage terminal-extension relations, but no recoverable multi-stage suffix-transition network.**
+> **clean-v2.1 supports several replicated local one-stage terminal-extension relations, but no recoverable multi-stage suffix-transition network. The first context-conditioned detector failed its Linear B positive-control authorization gate.**
 
-The strongest new negative result is structural: there is no clean-v2.1 evidence satisfying the preregistered definition of an agglutinative `X -> X-Y -> X-Y-Z` chain.
+The strongest current positive Linear A evidence remains the shallow local JA/TI/PA extension structure from Stage 5D. No grammatical function is licensed.
 
-The project is now testing a more consequential proposition: whether morphology can predict independently defined administrative structure under a method first validated on deciphered-but-blinded Linear B.
+The next scientifically justified action is diagnostic unblinding of the frozen Linear B control to determine why the edge-sign-only detector failed: whether the failure arises from Linear B orthographic realization of morphology, over-coarse edge representation, structural-role mismatch, or another identifiable mechanism. That diagnosis may motivate a separately preregistered Stage 5E0b, but cannot alter Stage 5E0.
 
 ## Roadmap
 
@@ -131,10 +146,11 @@ The project is now testing a more consequential proposition: whether morphology 
 - Stage 5C global TI/JA edge productivity: **COMPLETE — NEGATIVE**
 - Stage 5D one-stage morphotactic network: **COMPLETE**
 - Stage 5D multi-stage chaining: **COMPLETE — ZERO VALIDATED CHAINS**
-- Stage 5E0 Linear B positive control: **ACTIVE — PROTOCOL FROZEN**
-- Stage 5E1 Linear A contextual morphology: **BLOCKED pending Level-3 PY <-> KN authorization**
+- Stage 5E0 Linear B positive control: **COMPLETE — LEVEL 3 NOT ESTABLISHED**
+- Stage 5E0 diagnostic Greek unblinding: **AUTHORIZED, NOT YET EXECUTED**
+- Stage 5E1 Linear A contextual morphology: **BLOCKED**
 - Phase 6 grammatical inference: **NOT OPEN**
 
 Phase 1B report: [`results/phase1b-confirmatory-v2.1/`](results/phase1b-confirmatory-v2.1/)  
 Stage 5D report: [`results/stage5d-clean-v2.1/`](results/stage5d-clean-v2.1/)  
-Stage 5E0 preregistration: [`results/stage5e0-linearb-control/`](results/stage5e0-linearb-control/)
+Stage 5E0 control: [`results/stage5e0-linearb-control/`](results/stage5e0-linearb-control/)
