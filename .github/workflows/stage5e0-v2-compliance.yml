@@ -1,0 +1,101 @@
+name: Stage 5E0 v2 compliance sensitivity
+
+on:
+  push:
+    paths:
+      - '.github/workflows/stage5e0-v2-compliance.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  compliance-sensitivity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify frozen scientific inputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          check_blob() {
+            local path="$1" expected="$2"
+            actual="$(git hash-object "$path")"
+            echo "$path $actual"
+            test "$actual" = "$expected"
+          }
+          check_blob results/stage5e0-linearb-control/STAGE5E0_PROTOCOL_LOCK.md b11bf997c2037e7146efadaf8eb3527eb72d6f45
+          check_blob scripts/stage5e0/extract_structural_roles.py b9023f37486b94c139d9ecde458529c333494cf5
+          check_blob scripts/stage5e0/run_stage5e0_blind_v2.py dd457b11b9c36ef812f7f4f305da88aa688f62fc
+          check_blob scripts/stage5e0/test_structural_roles.py 88e30e34f465a6253ebd8ae4de187330bb697b77
+          check_blob scripts/stage5e0/test_blind_v2_compliance.py 8545c2ce80815cd2f87759962b11aee17efbef41
+
+      - name: Install frozen dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy pandas scipy scikit-learn pytest
+          pip install 'git+https://github.com/ryanpavlicek/pyaegean.git@47c3f126afa9d1f09d836c38f8be437bd2868783'
+
+      - name: Fetch and verify frozen DAMOS v2
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .stage5e0-data
+          curl -L --fail --retry 4 -o .stage5e0-data/damos-corpus.json 'https://github.com/ryanpavlicek/pyaegean/releases/download/damos-corpus-v2/damos-corpus.json'
+          echo 'eab9ccdfc4324b62f015bccd5e3f917f256cab8c058840842127eadecfbca2d2  .stage5e0-data/damos-corpus.json' | sha256sum -c -
+
+      - name: Run semantic-firewall and v2 compliance tests
+        run: |
+          pytest -q scripts/stage5e0/test_structural_roles.py scripts/stage5e0/test_blind_v2_compliance.py
+
+      - name: Execute unchanged v2 blind compliance sensitivity
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .stage5e0-v2
+          python scripts/stage5e0/extract_structural_roles.py .stage5e0-data/damos-corpus.json .stage5e0-v2/anonymous_roles.csv --summary .stage5e0-v2/extraction_summary.json
+          python scripts/stage5e0/run_stage5e0_blind_v2.py .stage5e0-v2/anonymous_roles.csv .stage5e0-v2/blind
+          (cd .stage5e0-v2 && find . -type f -print0 | sort -z | xargs -0 sha256sum) > .stage5e0-v2/WORKFLOW_OUTPUT_SHA256.txt
+
+      - name: Publish compliance outputs without MY/TH lexical data
+        shell: bash
+        run: |
+          set -euo pipefail
+          PUB='published/stage5e0-v2-compliance'
+          rm -rf "$PUB"
+          mkdir -p "$PUB"
+          cp .stage5e0-v2/blind/blind_summary.json "$PUB/"
+          cp .stage5e0-v2/blind/BLIND_MANIFEST.json "$PUB/"
+          cp .stage5e0-v2/blind/role_census.csv "$PUB/"
+          cp .stage5e0-v2/blind/synthetic_power.csv "$PUB/"
+          cp .stage5e0-v2/blind/blind_real_tests.csv "$PUB/"
+          cp .stage5e0-v2/WORKFLOW_OUTPUT_SHA256.txt "$PUB/"
+          cat > "$PUB/COMPLIANCE_METADATA.json" <<'JSON'
+          {
+            "purpose": "pre-unblinding Stage 5E0 protocol-compliance sensitivity",
+            "v1_result_retained": true,
+            "greek_edge_unblinding_performed_before_run": false,
+            "my_th_lexical_or_role_outputs_published": false,
+            "protocol_blob": "b11bf997c2037e7146efadaf8eb3527eb72d6f45",
+            "extractor_blob": "b9023f37486b94c139d9ecde458529c333494cf5",
+            "v2_runner_blob": "dd457b11b9c36ef812f7f4f305da88aa688f62fc",
+            "v2_tests_blob": "8545c2ce80815cd2f87759962b11aee17efbef41",
+            "damos_sha256": "eab9ccdfc4324b62f015bccd5e3f917f256cab8c058840842127eadecfbca2d2"
+          }
+          JSON
+
+      - name: Commit compliance outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add published/stage5e0-v2-compliance
+          git diff --cached --quiet && exit 0
+          git commit -m 'Publish Stage 5E0 v2 compliance sensitivity [skip ci]'
+          git push
