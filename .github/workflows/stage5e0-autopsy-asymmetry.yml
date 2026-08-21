@@ -1,0 +1,66 @@
+name: Stage 5E0 blinded asymmetry autopsy
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/stage5e0/AUTOPSY_DIAGNOSTIC_TRIGGER.txt'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  blinded-asymmetry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify diagnostic inputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git hash-object results/stage5e0-linearb-control/STAGE5E0_PROTOCOL_LOCK.md)" = b11bf997c2037e7146efadaf8eb3527eb72d6f45
+          test "$(git hash-object scripts/stage5e0/extract_structural_roles.py)" = b9023f37486b94c139d9ecde458529c333494cf5
+          test "$(git hash-object scripts/stage5e0/autopsy_blind_asymmetry.py)" = 656e86183f45acd5872b656b4e1a6d1fba0be068
+      - name: Install extraction dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas
+          pip install 'git+https://github.com/ryanpavlicek/pyaegean.git@47c3f126afa9d1f09d836c38f8be437bd2868783'
+      - name: Fetch frozen DAMOS and extract anonymous roles
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .autopsy
+          curl -L --fail --retry 4 -o .autopsy/damos-corpus.json 'https://github.com/ryanpavlicek/pyaegean/releases/download/damos-corpus-v2/damos-corpus.json'
+          echo 'eab9ccdfc4324b62f015bccd5e3f917f256cab8c058840842127eadecfbca2d2  .autopsy/damos-corpus.json' | sha256sum -c -
+          python scripts/stage5e0/extract_structural_roles.py .autopsy/damos-corpus.json .autopsy/anonymous_roles.csv
+      - name: Run PY/KN-only anonymous asymmetry audit
+        run: |
+          python scripts/stage5e0/autopsy_blind_asymmetry.py .autopsy/anonymous_roles.csv .autopsy/asymmetry.json
+      - name: Publish aggregate diagnostic only
+        shell: bash
+        run: |
+          set -euo pipefail
+          PUB='published/stage5e0-autopsy-blind-asymmetry'
+          mkdir -p "$PUB"
+          cp .autopsy/asymmetry.json "$PUB/"
+          sha256sum .autopsy/asymmetry.json > "$PUB/SHA256.txt"
+          cat > "$PUB/METADATA.json" <<'JSON'
+          {
+            "scope": "PY_KN_ONLY",
+            "edge_ids": "ANONYMOUS_HASHES_ONLY",
+            "greek_annotations_read": false,
+            "my_th_outcome_data_published": false,
+            "diagnostic_script_blob": "656e86183f45acd5872b656b4e1a6d1fba0be068"
+          }
+          JSON
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$PUB"
+          git diff --cached --quiet && exit 0
+          git commit -m 'Publish blinded Stage 5E0 asymmetry autopsy [skip ci]'
+          git push
