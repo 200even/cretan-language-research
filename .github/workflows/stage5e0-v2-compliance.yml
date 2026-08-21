@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - '.github/workflows/stage5e0-v2-compliance.yml'
+  pull_request:
+    paths:
+      - 'scripts/stage5e0/V2_COMPLIANCE_TRIGGER.txt'
   workflow_dispatch:
 
 permissions:
