@@ -1,0 +1,15 @@
+{
+  "damos_sha256": "eab9ccdfc4324b62f015bccd5e3f917f256cab8c058840842127eadecfbca2d2",
+  "frozen_git_blobs": {
+    "STAGE5E0_PROTOCOL_LOCK.md": "b11bf997c2037e7146efadaf8eb3527eb72d6f45",
+    "extract_structural_roles.py": "b9023f37486b94c139d9ecde458529c333494cf5",
+    "run_stage5e0_blind.py": "e6e4ddad022ac70541b2d2bbcfbef5e0868f7fed",
+    "test_structural_roles.py": "88e30e34f465a6253ebd8ae4de187330bb697b77"
+  },
+  "original_successful_job_id": 96537149540,
+  "original_successful_run_id": 32403542332,
+  "purpose": "transport-only recovery of frozen Stage 5E0 blind results",
+  "scientific_changes": "NONE",
+  "transport_source_commit": "cc799cc0db61507f29b6f2feda4895698aa09d7d",
+  "unblinding_performed": false
+}
