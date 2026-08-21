@@ -1,0 +1,108 @@
+name: Stage 5E0 blind result transport
+
+on:
+  push:
+    paths:
+      - '.github/workflows/stage5e0-transport.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-frozen-blind-results:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Verify frozen scientific files by Git blob SHA
+        shell: bash
+        run: |
+          set -euo pipefail
+          check_blob() {
+            local path="$1" expected="$2"
+            actual="$(git hash-object "$path")"
+            echo "$path  $actual"
+            test "$actual" = "$expected"
+          }
+          check_blob results/stage5e0-linearb-control/STAGE5E0_PROTOCOL_LOCK.md b11bf997c2037e7146efadaf8eb3527eb72d6f45
+          check_blob scripts/stage5e0/extract_structural_roles.py b9023f37486b94c139d9ecde458529c333494cf5
+          check_blob scripts/stage5e0/run_stage5e0_blind.py e6e4ddad022ac70541b2d2bbcfbef5e0868f7fed
+          check_blob scripts/stage5e0/test_structural_roles.py 88e30e34f465a6253ebd8ae4de187330bb697b77
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install same analysis dependencies as successful run 5
+        run: |
+          python -m pip install --upgrade pip
+          pip install numpy pandas scipy scikit-learn pytest
+          pip install 'git+https://github.com/ryanpavlicek/pyaegean.git@47c3f126afa9d1f09d836c38f8be437bd2868783'
+
+      - name: Fetch and verify frozen DAMOS v2
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .stage5e0-data
+          curl -L --fail --retry 4 -o .stage5e0-data/damos-corpus.json 'https://github.com/ryanpavlicek/pyaegean/releases/download/damos-corpus-v2/damos-corpus.json'
+          echo 'eab9ccdfc4324b62f015bccd5e3f917f256cab8c058840842127eadecfbca2d2  .stage5e0-data/damos-corpus.json' | sha256sum -c -
+
+      - name: Execute unchanged frozen blind pipeline
+        shell: bash
+        run: |
+          set -euo pipefail
+          pytest -q scripts/stage5e0/test_structural_roles.py
+          mkdir -p .stage5e0-out
+          python scripts/stage5e0/extract_structural_roles.py .stage5e0-data/damos-corpus.json .stage5e0-out/anonymous_roles.csv --summary .stage5e0-out/extraction_summary.json
+          python scripts/stage5e0/run_stage5e0_blind.py .stage5e0-out/anonymous_roles.csv .stage5e0-out/blind
+          (cd .stage5e0-out && find . -type f -print0 | sort -z | xargs -0 sha256sum) > .stage5e0-out/WORKFLOW_OUTPUT_SHA256.txt
+
+      - name: Publish transport-safe blind outputs into repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          PUB='published/stage5e0-blind-run5'
+          rm -rf "$PUB"
+          mkdir -p "$PUB"
+          cp .stage5e0-out/blind/blind_summary.json "$PUB/"
+          cp .stage5e0-out/blind/BLIND_MANIFEST.json "$PUB/"
+          cp .stage5e0-out/blind/role_census.csv "$PUB/"
+          cp .stage5e0-out/blind/synthetic_power.csv "$PUB/"
+          cp .stage5e0-out/blind/blind_real_tests.csv "$PUB/"
+          cp .stage5e0-out/extraction_summary.json "$PUB/"
+          cp .stage5e0-out/WORKFLOW_OUTPUT_SHA256.txt "$PUB/"
+          python - <<'PY'
+          import json, subprocess
+          from pathlib import Path
+          meta = {
+              'purpose': 'transport-only recovery of frozen Stage 5E0 blind results',
+              'original_successful_run_id': 32403542332,
+              'original_successful_job_id': 96537149540,
+              'transport_source_commit': subprocess.check_output(['git','rev-parse','HEAD'], text=True).strip(),
+              'damos_sha256': 'eab9ccdfc4324b62f015bccd5e3f917f256cab8c058840842127eadecfbca2d2',
+              'frozen_git_blobs': {
+                  'STAGE5E0_PROTOCOL_LOCK.md': 'b11bf997c2037e7146efadaf8eb3527eb72d6f45',
+                  'extract_structural_roles.py': 'b9023f37486b94c139d9ecde458529c333494cf5',
+                  'run_stage5e0_blind.py': 'e6e4ddad022ac70541b2d2bbcfbef5e0868f7fed',
+                  'test_structural_roles.py': '88e30e34f465a6253ebd8ae4de187330bb697b77'
+              },
+              'scientific_changes': 'NONE',
+              'unblinding_performed': False
+          }
+          Path('published/stage5e0-blind-run5/TRANSPORT_METADATA.json').write_text(json.dumps(meta, indent=2, sort_keys=True)+'\n')
+          PY
+
+      - name: Commit published blind results
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add published/stage5e0-blind-run5
+          git diff --cached --quiet && exit 0
+          git commit -m 'Publish frozen Stage 5E0 blind transport outputs'
+          git push
