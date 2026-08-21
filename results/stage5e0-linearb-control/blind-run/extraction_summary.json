@@ -1,0 +1,27 @@
+{
+  "by_site": {
+    "Knossos": {
+      "documents": 2765,
+      "secure_words": 3457,
+      "words": 6101
+    },
+    "Mycenae": {
+      "documents": 76,
+      "secure_words": 264,
+      "words": 378
+    },
+    "Pylos": {
+      "documents": 874,
+      "secure_words": 5830,
+      "words": 6998
+    },
+    "Thebes": {
+      "documents": 267,
+      "secure_words": 451,
+      "words": 811
+    }
+  },
+  "documents": 3982,
+  "secure_words": 10002,
+  "words": 14288
+}

@@ -1,0 +1,62 @@
+{
+  "data_rows_secure_py_kn": 9287,
+  "holm_family_size": 25,
+  "isomorphism_abundance_roles": [
+    "SR01",
+    "SR02",
+    "SR03",
+    "SR05",
+    "SR09"
+  ],
+  "level1_positive": [],
+  "level2_positive": [],
+  "level3_positive": [],
+  "level3_power_eligible_role_directions": [
+    {
+      "direction": "suffix",
+      "role": "SR01"
+    },
+    {
+      "direction": "prefix",
+      "role": "SR01"
+    },
+    {
+      "direction": "suffix",
+      "role": "SR02"
+    },
+    {
+      "direction": "prefix",
+      "role": "SR02"
+    },
+    {
+      "direction": "suffix",
+      "role": "SR03"
+    },
+    {
+      "direction": "prefix",
+      "role": "SR03"
+    },
+    {
+      "direction": "suffix",
+      "role": "SR05"
+    },
+    {
+      "direction": "prefix",
+      "role": "SR05"
+    },
+    {
+      "direction": "suffix",
+      "role": "SR09"
+    },
+    {
+      "direction": "prefix",
+      "role": "SR09"
+    }
+  ],
+  "linear_a_authorized": false,
+  "site_rows": {
+    "Knossos": 3457,
+    "Pylos": 5830
+  },
+  "status": "LEVEL3_NOT_ESTABLISHED"
+}
