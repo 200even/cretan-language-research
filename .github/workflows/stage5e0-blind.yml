@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   blind-calibration:
@@ -49,6 +49,23 @@ jobs:
         run: |
           (cd .stage5e0-out && find . -type f -print0 | sort -z | xargs -0 sha256sum) > .stage5e0-out/WORKFLOW_OUTPUT_SHA256.txt
           cat .stage5e0-out/WORKFLOW_OUTPUT_SHA256.txt
+      - name: Persist blinded outputs for audit
+        run: |
+          target='results/stage5e0-linearb-control/blind-run'
+          rm -rf "$target"
+          mkdir -p "$target"
+          cp .stage5e0-out/extraction_summary.json "$target/"
+          cp .stage5e0-out/WORKFLOW_OUTPUT_SHA256.txt "$target/"
+          cp .stage5e0-out/blind/blind_summary.json "$target/"
+          cp .stage5e0-out/blind/role_census.csv "$target/"
+          cp .stage5e0-out/blind/synthetic_power.csv "$target/"
+          cp .stage5e0-out/blind/blind_real_tests.csv "$target/"
+          cp .stage5e0-out/blind/BLIND_MANIFEST.json "$target/"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$target"
+          git commit -m 'Archive Stage 5E0 blind outputs [skip ci]' || exit 0
+          git push
       - uses: actions/upload-artifact@v4
         with:
           name: stage5e0-blind-${{ github.sha }}
