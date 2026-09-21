@@ -1,30 +1,42 @@
 # Stage 5E0b — gold acquisition checkpoint
 
-Status (2026-09-21): **GOLD SOURCES ACQUIRED; TARGETED EXTRACTION AND OCCURRENCE JOIN IN PROGRESS; GOLD NOT FROZEN**.
+Status (2026-09-21): **TARGETED DĀMOS ACQUISITION AND OCCURRENCE JOIN COMPLETE; STRUCTURAL AUDIT PASSED; GOLD NOT FROZEN DUE TO SPARSITY**.
 
-This is a separate preregistered Kober–Paradigm positive control. Stage 5E0 remains frozen and negative. Neither Stage 5E1 nor Phase 6 is authorized by this acquisition checkpoint.
+This is a separate preregistered Kober–Paradigm positive control. Stage 5E0 remains frozen and negative. Neither Stage 5E1 nor Phase 6 is authorized by this checkpoint.
 
-## Acquired, not yet validated
+## Acquired and reconciled
 
-- Juan Piquero Rodríguez supplied the 2019 *El léxico del griego micénico* (LGM) PDF on 2026-09-21 for research use and requested that the PDF not be redistributed. The PDF is **not committed**.
-- Three normalized-exact DĀMOS acquisition probes (`wa-na-ka`, `qa-si-re-u`, `e-qe-ta`) yielded 26 occurrence-level records: 5, 4, and 17 respectively. The 26 records are a pilot, not corpus frequencies or the full stratified sample.
-- Initial inspection identifies 20 intact and 6 damaged/uncertain token readings. These are preliminary acquisition classifications, not gold labels. The 6 flagged occurrences are KN Vd 136, PY Na 1013, TH Of 36 (`wa-na-ka[`); KN As 4493 (`e-qe-ṭạ`); PY An 614 (`ẹ-qe-ta`); PY Wa 917 (`]e-qe-ta`). Preserve exact DĀMOS reading and token identity.
-- LGM family-level forms have been inspected; the acquisition manifest includes `wa-na-ka-to` (noting LGM's damaged `]wa-na-ka-to`), `wa-na-ka-te`, `wa-na-ke-te`, `e-qe-ta-e`, `e-qe-ta-i`, and `qa-si-re-we`. Search forms are probes, not proof of occurrence-level morphology.
+Juan Piquero Rodríguez supplied the 2019 *El léxico del griego micénico* (LGM) PDF for research use with an explicit non-redistribution request. The PDF is not committed.
 
-## Mandatory epigraphic override
+Nine DĀMOS normalized-exact searches are archived for the pilot: `wa-na-ka`, `wa-na-ka-to`, `wa-na-ka-te`, `wa-na-ke-te`, `qa-si-re-u`, `qa-si-re-we`, `e-qe-ta`, `e-qe-ta-e`, and `e-qe-ta-i`. They contain 37 occurrence rows in total. `qa-si-re-we` is an archived zero-result search.
 
-Join DĀMOS occurrence epigraphy to LGM linguistic analyses by document/tablet, normalized form, and line/token when available. DĀMOS wins on readings, segmentation, damage, and uncertainty. Conflicts are quarantined and excluded from primary `G_eval`; never silently repair epigraphy from LGM or algorithm output. LGM's omission of proper names is **unlabeled**, not negative evidence. Only highest-confidence, occurrence-resolved linguistic analyses enter the primary evaluation. An ambiguous surface form such as `e-qe-ta` must not receive a single blanket case/number label.
+The 37-row DĀMOS–LGM join was independently reconciled against the saved source exports: zero missing rows, zero extras, zero duplicate source pointers, and no source-field mismatches. All package checksums and all nine acquisition-manifest hashes matched the saved Library copies.
 
-## Gate and next actions
+## Epigraphic override
 
-`ACQUIRE → JOIN → QUARANTINE → AUDIT → FREEZE → RESUME`.
+DĀMOS remains authoritative for readings, segmentation, damage and uncertainty. The joined ledger partitions into 11 `PRIMARY_GOLD_CANDIDATE` rows and 26 `QUARANTINED` rows with no overlap or unclassified rows.
 
-1. Complete the stratified DĀMOS acquisition and retain occurrence IDs, exact readings, document/line, export provenance and source versions.
-2. Verify LGM form, lemma, morphology, confidence, reference and page; resolve each occurrence or quarantine ambiguity.
-3. Audit conflict/exclusion counts, archive coverage and the prerequisite of at least two distinct secure syllabographic surface forms per eligible lemma.
-4. Freeze `linear_b_gold_v1.csv`, schema, manifest and SHA-256 only after audit. No score, baseline comparison, or tuning until then.
-5. Run the frozen Stage 5E0b protocol only after independent verification of the freeze; MY/TH remains an external holdout, not a tuning set.
+The principal quarantine decisions were confirmed against the saved LGM passages: fragmentary `]wa-na-ka-to`; damaged `wa-]na-ka-te`; disputed TH X 105; morphologically ambiguous `e-qe-ta`; uncertain `e-qe-ta-e` line context; unclear PY An 607 interpretation for `e-qe-ta-i`; and damaged/uncertain LGM evidence for `qa-si-re-we`.
+
+Four otherwise admissible candidates have damage elsewhere in their line context while the target word itself is intact. These require explicit human adjudication before any freeze.
+
+## Sufficiency result
+
+The pilot does not yet support a Stage 5E0b gold freeze.
+
+- `ἄναξ`: 7 primary candidates and at least two distinct secure surface forms. Eligible on the form-diversity prerequisite.
+- `βασιλεύς`: 4 candidates but only the secure surface `qa-si-re-u`. Not eligible.
+- `ἑπέτᾱς`: no primary candidates after mandatory quarantine. Not eligible.
+- Candidate archive coverage: PY 10, KN 1, MY 0, TH 0. The MY/TH external holdout cannot be evaluated.
+
+Disposition: **INDETERMINATE_DUE_TO_SPARSITY / GOLD NOT FROZEN / SCORING PROHIBITED**.
+
+See `AUDIT_REPORT_2026-09-21.md` for the reconciliation and sufficiency audit.
+
+## Next action
+
+Expand the candidate-blind LGM→DĀMOS acquisition to additional common-word lemmas with independently secure multi-form paradigms and sufficient archive coverage, including MY/TH where possible. Do not choose forms based on detector behavior. Re-run the same audit after expansion. Freeze `linear_b_gold_v1.csv`, schema, provenance manifest and SHA-256 only when the preregistered sufficiency and adjudication requirements are met.
 
 ## Publication/access policy
 
-Do not commit or redistribute LGM PDF, restricted source exports, or derived occurrence-level datasets without verified redistribution rights. Commit protocols, extraction/validation code, schemas, aggregate counts, source citations, and cryptographic hashes when available. This document does not assert a gold CSV, complete join, completed audit, or a passing validation test.
+Do not commit or redistribute the LGM PDF, restricted source exports, or occurrence-level source data without verified redistribution rights. Public GitHub may contain protocols, code, aggregate counts, citations, audit results and cryptographic hashes.
