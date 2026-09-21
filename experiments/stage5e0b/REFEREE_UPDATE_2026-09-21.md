@@ -1,34 +1,52 @@
 # Referee update — Stage 5E0b, 2026-09-21
 
-**Disposition requested:** acknowledge acquisition progress only; maintain **GOLD NOT FROZEN / SCORING PROHIBITED**. No approval of a linguistic result is requested.
+**Disposition requested:** acknowledge completion of the targeted occurrence join and its structural audit, but maintain **GOLD NOT FROZEN / SCORING PROHIBITED** because the surviving primary sample is insufficient.
 
-## What changed
+## Completed since the prior checkpoint
 
-Juan Piquero Rodríguez replied on September 21 and supplied the LGM PDF for research use with an explicit non-redistribution request. Three DĀMOS normalized-exact occurrence probes (`wa-na-ka`, `qa-si-re-u`, `e-qe-ta`) are acquired: 5 + 4 + 17 = 26 rows. Preliminary epigraphic screening identifies 20 intact readings and six damaged/uncertain readings. LGM initial-family extraction informed six follow-up search targets (`wa-na-ka-to`, `wa-na-ka-te`, `wa-na-ke-te`, `e-qe-ta-e`, `e-qe-ta-i`, `qa-si-re-we`). The six targets are not claimed to be complete paradigm coverage or occurrence-verified morphology.
+The six follow-up DĀMOS searches previously listed as outstanding were already present in the saved research package. Together with the original three probes, the pilot now contains nine archived searches and 37 DĀMOS occurrence rows. `qa-si-re-we` is an archived zero-result search.
+
+A source-level reconciliation has now been performed:
+
+- all nine acquisition-manifest SHA-256 values match the saved Library copies;
+- all 14 package checksums match;
+- 37 source occurrences map bijectively to 37 joined rows;
+- zero source-field mismatches, missing rows, extra rows, duplicate source pointers or duplicate physical-word IDs were detected;
+- the joined ledger partitions exactly into 11 primary-gold candidates and 26 quarantined records.
+
+The detailed audit is recorded in `AUDIT_REPORT_2026-09-21.md`.
+
+## Epigraphic-override result
+
+The strict quarantine architecture is behaving as intended at the encoded rule level. Fragmentary or uncertain targets, disputed LGM contexts, morphologically ambiguous `e-qe-ta`, and the unclear `e-qe-ta-i` occurrence remain outside primary gold.
+
+Four candidate rows have damage elsewhere in the same line while the target reading itself is intact. The automation treats such damage as disqualifying only when it is decisive to the morphological interpretation. Independent human adjudication of those four records is still required before any freeze.
+
+## Scientific sufficiency result
+
+The mandatory quarantine leaves:
+
+- `ἄναξ`: 7 candidates spanning secure nominative singular and dative singular surface forms;
+- `βασιλεύς`: 4 candidates, all `qa-si-re-u` nominative singular, so it fails the two-distinct-secure-form prerequisite;
+- `ἑπέτᾱς`: zero primary candidates.
+
+Only one lemma therefore satisfies the preregistered form-diversity prerequisite.
+
+Archive coverage among candidates is PY 10, KN 1, MY 0, TH 0. The preregistered MY/TH external holdout has no primary-gold observations, so Gate E cannot be evaluated.
+
+**Project-side audit disposition: INDETERMINATE_DUE_TO_SPARSITY.**
 
 ## Controls retained
 
-1. Stage 5E0 remains frozen and negative. Stage 5E0b is a separate preregistered architecture.
-2. DĀMOS epigraphy overrides LGM in every conflict. Preserve exact readings; quarantine disagreement, damage, uncertain signs, segmentation changes, unresolved homographs and morphology ambiguity from primary gold.
-3. Proper names omitted from LGM are unlabeled, never negative controls by default.
-4. Primary evaluation requires highest-confidence occurrence-resolved analyses and at least two distinct secure syllabographic surface forms per eligible lemma.
-5. Development PY/KN; external MY/TH is not available for tuning. Do not infer external transfer success from this pilot.
-6. No Gate P/M scores, model selection, baseline comparisons, or Linear A authorization before audited gold freeze.
+1. Stage 5E0 remains frozen and negative.
+2. DĀMOS epigraphy overrides LGM in every conflict.
+3. LGM omission of proper names remains unlabeled, not negative.
+4. No model behavior was used to select or promote records.
+5. No Gate P/M/E scoring, baseline comparison, model selection or Linear A authorization is permitted before a later audited freeze.
+6. Restricted LGM and DĀMOS source material remains outside the public repository.
 
-## Repository changes proposed in this PR
+## Referee question
 
-- Acquisition status and access policy in `ACQUISITION_STATUS.md`.
-- Fail-closed structural freeze validator requiring provenance, explicit audit attestation, SHA-256, unique occurrence IDs, secure readings, matched joins, highest confidence, and lemma form diversity. It cannot substitute for independent scholarly adjudication.
-- GitHub Actions job compiles the validator and asserts no gold CSV is committed; it deliberately has no scoring job.
+Does the referee agree that the present 37-row pilot should **not** be frozen as the Stage 5E0b evaluation gold because only one lemma remains eligible and MY/TH externality is empty? If so, the next authorized action is candidate-blind expansion to additional LGM common-word lemmas with secure multi-form paradigms and broader archive coverage, followed by the same occurrence-level audit.
 
-## Outstanding evidence / requested referee scrutiny
-
-- Complete stratified DĀMOS exports and occurrence-level LGM joins; document/line/token disambiguation, especially repeated occurrences within a tablet.
-- Verify all LGM page references and form-specific confidence before promoting any provisional ledger row.
-- Produce quarantine ledger and independently audit conflict/exclusion counts, archive and morphology coverage.
-- Freeze `linear_b_gold_v1.csv`, schema, provenance manifest and SHA-256 with restricted source handling.
-- Review whether the structural validator adequately handles set-valued morphology and avoids conflating repeated token IDs or normalized spellings; strengthen before gold freeze as needed.
-
-**Referee question:** Does this checkpoint correctly preserve the preregistered epigraphic override and prevent premature scoring, and what additional acquisition or adjudication controls are required before authorizing the gold freeze?
-
-This is a submitted project-side referee update, **not** a claim that an independent referee has responded or approved it.
+This is a project-side referee submission, not a claim of independent referee approval.
