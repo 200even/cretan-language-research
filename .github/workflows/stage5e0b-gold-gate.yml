@@ -1,0 +1,25 @@
+name: Stage 5E0b gold gate
+on:
+  pull_request:
+    paths:
+      - 'scripts/stage5e0b/**'
+      - 'experiments/stage5e0b/**'
+      - '.github/workflows/stage5e0b-gold-gate.yml'
+  workflow_dispatch:
+jobs:
+  gold-structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile validator
+        run: python -m py_compile scripts/stage5e0b/validate_gold.py
+      - name: Verify scoring remains disabled
+        run: |
+          test ! -e experiments/stage5e0b/linear_b_gold_v1.csv
+          echo 'Stage 5E0b gold not frozen: scoring disabled.'
+# This workflow deliberately does not run Stage 5E0b scoring.
+# A future separate reviewed PR must introduce an audited freeze manifest,
+# controlled access to gold, independent approval, and an explicit scoring job.
